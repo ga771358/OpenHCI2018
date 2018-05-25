@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title OpenHCI 2018 | 實物鏈
+	link(rel="stylesheet", href="assets/styles/main.css")
+	meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+	meta(name="title" content="")
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	meta(property="og:title" content="")
+	meta(property="og:type" content="website")
+	meta(property="og:url" content="")
+	meta(property="og:image" content="")
+	meta(property="og:description" content="")
+	meta(property="og:site_name" content="")
+body
+	header
+		a.logo(href="#landing")
+			img(src="assets/images/title.png", alt="")
+		//- .menu-cir .menu-fade-in .menu-slidein
+		.menu.menu-cir
+			.menu-bg
+			.menu-container
+				.in-site
+					a.menu-btn#menu1(href="#intro") 介紹
+					a.menu-btn#menu2(href="#program") 活動
+					a.menu-btn#menu3(href="#registration") 報名方式
+					a.menu-btn#menu4(href="#taichi") TAICHI合作
+					a.menu-btn#menu5(href="#crew") 籌備團隊
+					a.menu-btn#menu6(href="#organizer") 主辦單位
+					a.menu-btn#menu7(href="#contact") 聯絡我們
+		.m-menu-opener
+			span
+			span
+			span
+	.loading
+
+	.page-wrapper
+		section#landing
+			.section-wrapper
+				canvas#screen
+				img.landing-title(src="assets/images/title.png", alt="")
+		section#intro
+			.section-wrapper
+				.section-title 介紹
+		section#interlude
+			.section-wrapper
+				.section-title 過場標準字
+		section#program
+			.section-wrapper
+				.section-title 活動
+		section#registration
+			.section-wrapper
+				.section-title 報名方式
+		section#taichi
+			.section-wrapper
+				.section-title TAICHI合作
+		section#crew
+			.section-wrapper
+				.section-title 籌備團隊
+		section#organizer
+			.section-wrapper
+				.section-title 主辦單位
+		section#contact
+			.section-wrapper
+				.section-title 聯絡我們
+
+
+
+script(src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous")
+script(src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js")
+script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js")
+script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js")
+script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js")
+//- script(src="https://hammerjs.github.io/dist/hammer.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.4/pixi.min.js")
+script(src="assets/scripts/main.js")
+script(src="assets/scripts/screen.js")
