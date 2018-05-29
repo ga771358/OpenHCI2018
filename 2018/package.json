@@ -1,0 +1,24 @@
+{
+  "name": "openhci2018",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean": "^0.3.2",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifycss": "^1.0.8",
+    "gulp-webserver": "^0.9.1"
+  }
+}
