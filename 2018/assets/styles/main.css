@@ -284,14 +284,14 @@ header {
       width: 30%; }
   .page-wrapper #taichi .section-wrapper .section-left {
     vertical-align: top;
-    text-align: top;
+    text-align: right;
     display: inline-block;
-    width: 48%;
+    width: 49%;
     height: 100%; }
     .page-wrapper #taichi .section-wrapper .section-left .section-left-wrapper {
-      padding-left: 18%;
+      display: inline-block;
       padding-right: 2%;
-      width: 100%;
+      width: 75%;
       text-align: right; }
       .page-wrapper #taichi .section-wrapper .section-left .section-left-wrapper .img-top {
         transform: translateX(-117px);
@@ -303,14 +303,16 @@ header {
         height: 200px; }
   .page-wrapper #taichi .section-wrapper .section-right {
     vertical-align: top;
+    text-align: left;
     display: inline-block;
-    width: 48%;
+    width: 49%;
     height: 100%; }
     .page-wrapper #taichi .section-wrapper .section-right .section-right-wrapper {
-      width: 100%;
-      padding-left: 10%;
-      padding-right: 18%; }
+      display: inline-block;
+      width: 70%;
+      padding-left: 10%; }
       .page-wrapper #taichi .section-wrapper .section-right .section-right-wrapper .section-right-wrapper-title {
+        width: 100%;
         font-family: NotoSansUI;
         font-size: 28px;
         font-weight: bold;
@@ -321,6 +323,7 @@ header {
         text-align: left;
         color: #50e6b4; }
       .page-wrapper #taichi .section-wrapper .section-right .section-right-wrapper .section-right-wrapper-content {
+        width: 100%;
         padding-top: 67px;
         font-family: PingFangTC;
         font-size: 14px;
