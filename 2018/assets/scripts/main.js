@@ -120,3 +120,17 @@ $(".step-header").on("click", function(argument) {
 		}
 	}
 })
+
+
+//program tabs
+$("#program .tab").on("click", function(){
+	if($(this).hasClass('active')) return;
+	var index = $(this).data("index");
+	$("#program .tab").removeClass('active');
+	$(this).addClass('active');
+	$(".program-content").removeClass('active');
+	setTimeout(function(){
+		$(".program-content[data-index="+index+"]").addClass('active');
+	},500);
+	
+})
