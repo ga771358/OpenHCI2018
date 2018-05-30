@@ -57,7 +57,7 @@ for(i=0; i<sections.length; i++) {
 
 //過場標準字動畫
 var tl = new TimelineMax({repeat:0});
-tl.fromTo($("#interlude img"), 1, {x:500}, {x:-500, ease:Linear.easeNone}, 0);
+tl.fromTo($("#interlude .moving"), 1, {x:0}, {x:-1000, ease:Linear.easeNone}, 0);
 var sceneInterlude = new ScrollMagic.Scene({
 		triggerElement: "#interlude",
 		duration: 1500,

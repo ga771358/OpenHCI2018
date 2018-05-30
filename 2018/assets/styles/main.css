@@ -397,6 +397,16 @@ header {
         -ms-transform: translateY(-50%);
         transform: translateY(-50%); }
   .page-wrapper #interlude {
-    height: auto; }
-    .page-wrapper #interlude img {
-      width: 100%; }
+    height: auto;
+    padding: 50px; }
+    .page-wrapper #interlude .moving {
+      width: 100%;
+      height: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .page-wrapper #interlude .moving img {
+        width: 100%; }
