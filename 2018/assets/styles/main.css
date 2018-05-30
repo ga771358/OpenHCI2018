@@ -297,11 +297,17 @@ header {
       text-align: left;
       color: #50e6b4; }
     .page-wrapper #crew .section-wrapper .crew-content {
+      cursor: pointer;
       margin-top: 60px;
       display: inline-block;
-      height: calc(100% - 30px); }
+      height: calc(100% - 30px);
+      width: 99%;
+      overflow: hidden; }
       .page-wrapper #crew .section-wrapper .crew-content .slide-block {
-        height: 100%; }
+        left: 0px;
+        height: 100%;
+        white-space: nowrap;
+        transition: 0.5s; }
         .page-wrapper #crew .section-wrapper .crew-content .slide-block .need-margin-left {
           margin-left: 160px; }
         .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block {
@@ -314,7 +320,7 @@ header {
             height: 100%; }
             .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-left .team-name {
               display: inline-block;
-              transform: rotate(-90deg) translateY(-66px) translateX(-63px);
+              transform: rotate(-90deg) translateY(-63px) translateX(-61px);
               background-color: #d70050;
               font-weight: 800;
               font-size: 20px;

@@ -315,16 +315,22 @@ header
 				text-align: left
 				color: #50e6b4
 			.crew-content
+				cursor: pointer
 				margin-top: 60px
 				display: inline-block
 				height: calc(100% - 30px)
-				// width: 500px
+				// border: solid 1px white
+				width: 99%
+				overflow: hidden
 				.slide-block
+					left: 0px
 					height: 100%
+					white-space: nowrap
+					transition: 0.5s
 					.need-margin-left
 						margin-left: 160px
 					.crew-content-block
-						// border: solid 1px block
+						// border: solid 1px white
 						display: inline-block
 						height: 100%
 						.crew-content-block-left
@@ -334,7 +340,7 @@ header
 							height: 100%
 							.team-name
 								display: inline-block
-								transform: rotate(-90deg) translateY(-66px) translateX(-63px)
+								transform: rotate(-90deg) translateY(-63px) translateX(-61px)
 								background-color: #d70050
 								font-weight: 800
 								font-size: 20px

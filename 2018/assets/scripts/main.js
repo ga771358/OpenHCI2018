@@ -79,3 +79,25 @@ $(function() {
 		}
 	});
 });
+
+var page = 0;
+
+//crew section
+$(".crew-content").click(function(){
+	if(page==0){
+		$(".slide-block").css("left","-360px");
+		page=1;
+	}
+	else if(page==1){
+		$(".slide-block").css("left","-720px");
+		page=2;
+	}
+	else if(page==2){
+		$(".slide-block").css("left","-1080px");
+		page=3;
+	}
+	else if(page==3){
+		$(".slide-block").css("left","0px");
+		page=0;
+	}
+});
