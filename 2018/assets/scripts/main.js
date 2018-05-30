@@ -28,17 +28,20 @@ function changeMenuAnimate(index) {
 }
 
 //menu隱藏＆出現
-// var prevScrollpos = window.pageYOffset;
-// $(window).on("scroll", function(e){
-// 	if(isScrolling) return;
-// 	var currentScrollPos = window.pageYOffset;
-// 	if (prevScrollpos > currentScrollPos) {
-// 		$("header").removeClass('hide');
-// 	} else {
-// 		$("header").addClass('hide');
-// 	}
-// 	prevScrollpos = currentScrollPos;
-// })
+var canHideHeader = true;
+
+var prevScrollpos = window.pageYOffset;
+$(window).on("scroll", function(e){
+	if(!canHideHeader) return;
+	if(isScrolling) return;
+	var currentScrollPos = window.pageYOffset;
+	if (prevScrollpos > currentScrollPos) {
+		$("header").removeClass('hide');
+	} else {
+		$("header").addClass('hide');
+	}
+	prevScrollpos = currentScrollPos;
+})
 
 //導航列位置指示
 var controller = new ScrollMagic.Controller();
@@ -46,12 +49,22 @@ var sections = [$("#intro"),$("#program"),$("#registration"),$("#taichi"),$("#cr
 
 for(i=0; i<sections.length; i++) {
 	var sectionId = sections[i].attr("id");
-	var sectionHeight = sections[i].outerHeight();//s - (window.innerHeight / 2);
-	console.log(sectionHeight);
+	var sectionHeight = sections[i].outerHeight();
 	var scene = new ScrollMagic.Scene({triggerElement: "#"+sectionId, duration: sectionHeight, triggerHook: 0.5})
 	.setClassToggle("#menu"+(i+1), "menu-here")
 	.addTo(controller);
 }
+
+//過場標準字動畫
+var tl = new TimelineMax({repeat:0});
+tl.fromTo($("#interlude img"), 1, {x:500}, {x:-500, ease:Linear.easeNone}, 0);
+var sceneInterlude = new ScrollMagic.Scene({
+		triggerElement: "#interlude",
+		duration: 1500,
+		triggerHook: 1
+});
+sceneInterlude.setTween(tl);
+sceneInterlude.addTo(controller);
 
 
 

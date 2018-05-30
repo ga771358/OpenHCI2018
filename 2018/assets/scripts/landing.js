@@ -22,6 +22,7 @@ var img = new Image();
 var imageData;
 img.addEventListener("load", function() {
 	isLoaded = true;
+	resize();
 }, false);
 img.src = './assets/images/animism.png'; 
 
@@ -31,6 +32,10 @@ function resize() {
 	wh = $(".screen").innerHeight();
 	c.width = c2.width = ww*resolution;
 	c.height = c2.height = wh*resolution;
+
+	//put mask
+	ctx.clearRect(0,0,c.width,c.height);
+	ctx.drawImage(img,0,0,c.width,c.height);
 }
 $(window).on("resize", resize);
 
@@ -41,19 +46,17 @@ function draw() {
 	if(!isLoaded) return;
 
 	//clear
-	ctx.clearRect(0,0,c.width,c.height);
 	ctx2.clearRect(0,0,c.width,c.height);
 
 	gradientAnimate();
 	mouseAnimate();
 
-	//put mask
-	ctx.drawImage(img,0,0,c.width,c.height);
+	
 }
 draw();
 
 
-var redColor = "rgba(199,43,83,0.5)";
+var redColor = "rgba(199,43,83,0.8)";
 var mouse = {x: c.width/2, y: c.height/2};
 
 function mouseAnimate() {

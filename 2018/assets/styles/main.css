@@ -85,6 +85,9 @@ header {
   -webkit-transition: top 0.5s;
   -o-transition: top 0.5s;
   transition: top 0.5s; }
+  @media screen and (max-width: 1000px) {
+    header {
+      padding: 0 20px; } }
   header.hide {
     top: -100px; }
   header .logo {
@@ -393,8 +396,7 @@ header {
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%); }
-        .page-wrapper #landing .titles .title-logo img {
-          position: relative;
-          width: 100%; }
   .page-wrapper #interlude {
-    height: 200px; }
+    height: auto; }
+    .page-wrapper #interlude img {
+      width: 100%; }
