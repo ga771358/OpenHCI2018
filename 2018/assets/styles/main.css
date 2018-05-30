@@ -128,6 +128,17 @@ header {
           width: 100%; }
         header .menu .menu-container .menu-btn.menu-here::before {
           width: 100% !important; }
+      header .menu .menu-container #sign-up {
+        background-color: #d70050;
+        padding: 10px 20px;
+        border-radius: 5px;
+        -webkit-transition: 0.1s;
+        -o-transition: 0.1s;
+        transition: 0.1s; }
+        header .menu .menu-container #sign-up::before {
+          display: none; }
+        header .menu .menu-container #sign-up:hover {
+          background-color: #ff0b66; }
     @media screen and (max-width: 1000px) {
       header .menu {
         position: fixed;
@@ -410,3 +421,111 @@ header {
       align-items: center; }
       .page-wrapper #interlude .moving img {
         width: 100%; }
+  .page-wrapper #registration {
+    height: auto; }
+    .page-wrapper #registration .section-wrapper {
+      height: auto; }
+      .page-wrapper #registration .section-wrapper .accordion {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        .page-wrapper #registration .section-wrapper .accordion .step-container {
+          width: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          margin: 4px 0; }
+          .page-wrapper #registration .section-wrapper .accordion .step-container:first-child .step-header {
+            border-top: none; }
+          .page-wrapper #registration .section-wrapper .accordion .step-container.active .step-header {
+            border-radius: 5px 5px 0 0; }
+            .page-wrapper #registration .section-wrapper .accordion .step-container.active .step-header .arrow {
+              -webkit-transform: rotate(-90deg);
+              -ms-transform: rotate(-90deg);
+              transform: rotate(-90deg); }
+          .page-wrapper #registration .section-wrapper .accordion .step-container .step-header {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            width: 100%;
+            height: 80px;
+            background-color: #28286e;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 0 70px;
+            cursor: pointer;
+            z-index: 1;
+            font-size: 1.3em;
+            -webkit-transition: 0.5s, top 0s, bottom 0s;
+            -o-transition: 0.5s, top 0s, bottom 0s;
+            transition: 0.5s, top 0s, bottom 0s; }
+            .page-wrapper #registration .section-wrapper .accordion .step-container .step-header.sticky {
+              position: fixed;
+              top: 80px;
+              width: 190px;
+              padding: 0 30px;
+              border: 1px solid #fff;
+              border-radius: 25px; }
+            .page-wrapper #registration .section-wrapper .accordion .step-container .step-header.stay {
+              position: absolute;
+              top: auto;
+              bottom: 30px; }
+            .page-wrapper #registration .section-wrapper .accordion .step-container .step-header .step-title {
+              color: #d70050;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              align-items: center; }
+              .page-wrapper #registration .section-wrapper .accordion .step-container .step-header .step-title .no {
+                color: #fff;
+                display: block;
+                width: 60px; }
+            .page-wrapper #registration .section-wrapper .accordion .step-container .step-header .arrow {
+              margin-left: 15px;
+              height: 22px;
+              width: 15px;
+              fill: none;
+              stroke: #fff;
+              stroke-width: 5px;
+              -webkit-transition: 0.2s;
+              -o-transition: 0.2s;
+              transition: 0.2s;
+              -webkit-transform: rotate(90deg);
+              -ms-transform: rotate(90deg);
+              transform: rotate(90deg); }
+          .page-wrapper #registration .section-wrapper .accordion .step-container .step-content-wrapper {
+            width: 100%;
+            height: 0;
+            margin-top: 80px;
+            overflow: hidden; }
+            .page-wrapper #registration .section-wrapper .accordion .step-container .step-content-wrapper .step-content {
+              width: 100%;
+              margin: 0 auto;
+              padding: 20px 130px;
+              -webkit-transition: 0.5s, margin-top 0s;
+              -o-transition: 0.5s, margin-top 0s;
+              transition: 0.5s, margin-top 0s;
+              line-height: 1.5em;
+              color: #fff; }
+              .page-wrapper #registration .section-wrapper .accordion .step-container .step-content-wrapper .step-content .br {
+                height: 10px; }
