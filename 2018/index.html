@@ -16,7 +16,7 @@
   <meta property="og:site_name" content=""/>
 </head>
 <body>
-  <header><a href="#landing" class="logo"><img src="assets/images/title.png" alt=""/></a>
+  <header><a href="#landing" class="logo"><img src="assets/images/nav-logo.svg" alt=""/></a>
     <div class="menu menu-cir">
       <div class="menu-bg"></div>
       <div class="menu-container">
@@ -29,7 +29,13 @@
   <div class="page-wrapper">
     <section id="landing">
       <div class="section-wrapper">
-        <canvas id="screen"></canvas><img src="assets/images/title.png" alt="" class="landing-title"/>
+        <div class="screen">
+          <canvas id="light"></canvas>
+          <canvas id="mask"></canvas>
+        </div>
+        <div class="titles"><img src="assets/images/title1.svg" alt="" class="title1"/><img src="assets/images/title2.svg" alt="" class="title2"/><img src="assets/images/title3.svg" alt="" class="title3"/>
+          <div class="title-logo"><img src="assets/images/logo.svg" alt=""/></div>
+        </div>
       </div>
     </section>
     <section id="intro">
@@ -81,4 +87,4 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.4/pixi.min.js"></script>
 <script src="assets/scripts/main.js"></script>
-<script src="assets/scripts/screen.js"></script>
+<script src="assets/scripts/landing.js"></script>
