@@ -1,6 +1,9 @@
 $bg: #191456
 $header_menu_font: #fff
 $green: #36a97b
+$red: #d70050
+
+$registration-bg : #28286e
 
 $breakpoint: 1000px
 $breakpoint-sm: 375px
@@ -126,6 +129,15 @@ header
 				&.menu-here
 					&::before
 						width: 100% !important
+			#sign-up
+				background-color: $red
+				padding: 10px 20px
+				border-radius: 5px
+				transition: 0.1s
+				&::before
+					display: none
+				&:hover
+					background-color: lighten($red, 10)
 		@media screen and (max-width: $breakpoint)
 			position: fixed
 			width: 100%
@@ -342,3 +354,100 @@ header
 
 				// height: auto
 				// float: left
+
+	#registration
+		height: auto
+		.section-wrapper
+			height: auto
+			.accordion
+				width: 100%
+				display: flex
+				flex-direction: column
+				align-items: center
+				.step-container
+					width: 100%
+					display: flex
+					margin: 4px 0
+					&:first-child
+						.step-header
+							border-top: none
+					&.active
+						.step-header
+							border-radius: 5px 5px 0 0
+							// width: 150px
+							.arrow
+								transform: rotate(-90deg)
+					.step-header
+						position: absolute
+						top: 0
+						left: 50%
+						transform: translateX(-50%)
+						width: 100%
+						// max-width: 600px
+						height: 80px
+						// width: auto
+						background-color: $registration-bg
+						display: flex
+						justify-content: space-between
+						align-items: center
+						padding: 0 70px
+						cursor: pointer
+						z-index: 1
+						font-size: 1.3em
+						transition: 0.5s, top 0s, bottom 0s
+
+						&.sticky
+							position: fixed
+							top: 80px
+							width: 190px
+							// padding: 0 40px
+							padding: 0 30px
+							// box-shadow: 0px 0px 25px 5px rgba(#000,0.1)
+							border: 1px solid #fff
+							border-radius: 25px
+							// justify-content: center
+						&.stay
+							position: absolute
+							top: auto
+							bottom: 30px
+
+						.step-title
+							color: $red
+							display: flex
+							align-items: center
+							.no
+								color: #fff
+								display: block
+								width: 60px
+
+						.arrow
+							margin-left: 15px
+							height: 22px
+							width: 15px
+							fill: none
+							stroke: #fff
+							stroke-width: 5px
+							transition: 0.2s
+							transform: rotate(90deg)
+							// &.active
+							// 	transform: rotate(90deg)
+					.step-content-wrapper
+						width: 100%
+						// max-height: 0
+						height: 0
+						margin-top: 80px
+						overflow: hidden
+						// transition: 0.5s
+						// background-color: darken($info_content_bg, 5)
+						&.active
+							// max-height: 1000px
+						.step-content
+							width: 100%
+							// max-width: 600px
+							margin: 0 auto
+							padding: 20px 130px
+							transition: 0.5s, margin-top 0s
+							line-height: 1.5em
+							color: #fff
+							.br
+								height: 10px

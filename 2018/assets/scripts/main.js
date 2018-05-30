@@ -28,7 +28,7 @@ function changeMenuAnimate(index) {
 }
 
 //menu隱藏＆出現
-var canHideHeader = true;
+var canHideHeader = false;
 
 var prevScrollpos = window.pageYOffset;
 $(window).on("scroll", function(e){
@@ -92,3 +92,31 @@ $(function() {
 		}
 	});
 });
+
+
+
+//steps accordion
+var stepOpenTime = 500;
+var isStepChanging = false;
+$(".step-header").on("click", function(argument) {
+	if(!isStepChanging) {
+		var container = $(this).parents(".step-container")
+		var wrapper = container.find('.step-content-wrapper');
+		var content = container.find('.step-content');
+		
+		var contentHeight = content.height() + 40;
+
+		container.toggleClass('active');
+		if(container.hasClass('active')) {
+			isStepChanging = true;
+			wrapper.animate({"height":contentHeight+"px"}, stepOpenTime, "linear", function(){
+				isStepChanging = false;
+			});
+		} else {
+			isStepChanging = true;
+			wrapper.animate({"height":"0"}, stepOpenTime, "linear", function(){
+				isStepChanging = false;
+			});
+		}
+	}
+})
