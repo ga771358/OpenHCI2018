@@ -17,7 +17,7 @@ head
 body
 	header
 		a.logo(href="#landing")
-			img(src="assets/images/title.png", alt="")
+			img(src="assets/images/nav-logo.svg", alt="")
 		//- .menu-cir .menu-fade-in .menu-slidein
 		.menu.menu-cir
 			.menu-bg
@@ -39,8 +39,16 @@ body
 	.page-wrapper
 		section#landing
 			.section-wrapper
-				canvas#screen
-				img.landing-title(src="assets/images/title.png", alt="")
+				.screen
+					canvas#light
+					canvas#mask
+				.titles
+					img.title1(src="assets/images/title1.svg", alt="")
+					img.title2(src="assets/images/title2.svg", alt="")
+					img.title3(src="assets/images/title3.svg", alt="")
+					.title-logo
+						img(src="assets/images/logo.svg", alt="")
+				//- img.landing-title(src="assets/images/title.png", alt="")
 		section#intro
 			.section-wrapper
 				.section-title 介紹
@@ -76,4 +84,6 @@ script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation
 //- script(src="https://hammerjs.github.io/dist/hammer.js")
 script(src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.4/pixi.min.js")
 script(src="assets/scripts/main.js")
-script(src="assets/scripts/screen.js")
+script(src="assets/scripts/landing.js")
+	
+//- script(src="assets/scripts/screen.js")
