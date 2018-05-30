@@ -85,6 +85,8 @@ header
 	background: linear-gradient(rgba($bg,1), rgba($bg,0.8), rgba($bg,0))
 	padding: 0 50px
 	transition: top 0.5s
+	@media screen and (max-width: $breakpoint) 
+		padding: 0 20px
 	&.hide
 		top: -100px
 
@@ -325,9 +327,18 @@ header
 				left: 20%
 				width: 25%
 				transform: translateY(-50%)
-				img
-					position: relative
-					width: 100%
 
 	#interlude
-		height: 200px
+		height: auto
+		padding: 50px
+		.moving
+			width: 100%
+			height: auto
+			display: flex
+			align-items: center
+			img
+				// flex: 1
+				width: 100%
+
+				// height: auto
+				// float: left
