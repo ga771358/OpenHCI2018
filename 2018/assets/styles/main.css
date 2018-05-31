@@ -434,7 +434,7 @@ header {
     justify-content: center; }
     .page-wrapper #intro .section-wrapper {
       width: 90%;
-      max-width: 1200px;
+      max-width: 1400px;
       min-width: 800px; }
       .page-wrapper #intro .section-wrapper .section-left {
         padding-left: 5%;
@@ -444,7 +444,8 @@ header {
         height: 100%;
         text-align: right; }
         .page-wrapper #intro .section-wrapper .section-left .section-left-wrapper {
-          display: inline-block; }
+          display: inline-block;
+          margin-right: 15%; }
           .page-wrapper #intro .section-wrapper .section-left .section-left-wrapper .section-left-block-need-margin-top {
             margin-top: 40px; }
           .page-wrapper #intro .section-wrapper .section-left .section-left-wrapper .section-left-block {
