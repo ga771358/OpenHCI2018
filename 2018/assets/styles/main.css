@@ -819,7 +819,7 @@ header {
     -ms-flex-pack: center;
     justify-content: center; }
     .page-wrapper #contact .section-wrapper {
-      width: 85%;
+      width: 1100px;
       min-width: 714px;
       background-color: #50e6b4; }
       .page-wrapper #contact .section-wrapper .contact-section-map {
