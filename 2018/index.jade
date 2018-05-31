@@ -17,7 +17,7 @@ head
 body
 	header
 		a.logo(href="#landing")
-			img(src="assets/images/title.png", alt="")
+			img(src="assets/images/nav-logo.svg", alt="")
 		//- .menu-cir .menu-fade-in .menu-slidein
 		.menu.menu-cir
 			.menu-bg
@@ -30,6 +30,7 @@ body
 					a.menu-btn#menu5(href="#crew") 籌備團隊
 					a.menu-btn#menu6(href="#organizer") 主辦單位
 					a.menu-btn#menu7(href="#contact") 聯絡我們
+					a.menu-btn#sign-up(href="") 我要報名
 		.m-menu-opener
 			span
 			span
@@ -39,23 +40,318 @@ body
 	.page-wrapper
 		section#landing
 			.section-wrapper
-				canvas#screen
-				img.landing-title(src="assets/images/title.png", alt="")
+				.screen
+					canvas#light
+					canvas#mask
+				.titles
+					img.title1(src="assets/images/title1.svg", alt="")
+					img.title2(src="assets/images/title2.svg", alt="")
+					img.title3(src="assets/images/title3.svg", alt="")
+					img.title-logo(src="assets/images/logo.svg", alt="")
 		section#intro
 			.section-wrapper
-				.section-title 介紹
+				.section-left
+					.section-left-wrapper
+						.section-left-block
+							.title What is HCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							.content Human-Computer Interaction （HCI）為近年來相當活躍的跨領域學門。相較於其他專門領域，HCI學門獨特的複合特性，使得其創造過程需要高度的跨領域合作。研究的著眼點不但訴求技術、更試圖從以人為本的角度去探討，以創造更佳的使用者經驗。
+						br
+						.section-left-block.section-left-block-need-margin-top
+							.title History of OpenHCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							.content OpenHCI 2017是第八屆由學生自治籌備的人機互動工作坊，旨在推廣人機互動學門與跨領域合作。 在六天的營期間，來自不同領域的學員會經歷一系列講座與課後實作演練，深入完整 HCI 設計流程，透過合作溝通以實踐構想，將無盡的創意展現給世界！
+						br
+						.section-left-block.section-left-block-need-margin-top
+							.title Goals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							.content 本活動希望能夠以推廣HCI為主要宗旨，招收工程與設計背景的學生、共同學習並進行跨領域的合作，探索人類生活空間中與周遭環境、物件或工具的互動模式。為期六天的工作坊，期盼參與者能以此概念體察其日常經驗裡的互動缺口或議題，實際動手解決問題或創造出新的意義的能力，進而尋思更和諧的人機互動遠景。
+
+				.section-right
+					.section-right-wrapper
+						img.intro-pic(src="assets/images/X.jpg", alt="")
 		section#interlude
 			.section-wrapper
-				.section-title 過場標準字
+				.moving
+					img(src="assets/images/animism-en@3x.png", alt="")
+					img(src="assets/images/animism-en@3x.png", alt="")
 		section#program
 			.section-wrapper
-				.section-title 活動
+				.tabs
+					.tab.active(data-index=0)
+						p 
+							span Day 01 | 08.19
+						p 
+							span 前置工作坊
+					.tab(data-index=1)
+						p 
+							span Day 02 | 08.20
+						p 
+							span 行為與觀察
+					.tab(data-index=2)
+						p 
+							span Day 03 | 08.21
+						p 
+							span 實作與媒材 I
+					.tab(data-index=3)
+						p 
+							span Day 04 | 08.22
+						p 
+							span 實作與媒材 II
+					.tab(data-index=4)
+						p 
+							span Day 05 | 08.23
+						p 
+							span 實作與媒材 III
+					.tab(data-index=5)
+						p 
+							span Day 06 | 08.24
+						p 
+							span 發表與展覽
+				.program-container
+					.program-content.active(data-index=0)
+						img.program-img(src="https://www.onlinetaxaustralia.com.au/wp-content/uploads/2017/07/claiming-tools-on-tax.jpg", alt="")
+						.program-schedule
+							.schedule-title 
+								p Day 01  前置工作坊
+							.schedule-content
+								p 0830 - 0920   學員報到
+								p 0920 - 0930   開場
+								p 0930 - 1000   破冰遊戲
+								p 1000 - 1010   中場休息
+								p 1010 - 1200   互動設計之應用教學(Arduino)
+								p 1200 - 1330   午餐時間
+								p 1330 - 1430   演講 I Tuck Wah Leong
+								p 1430 - 1440   中場休息
+								p 1440 - 1630   模型設計與實作(Lo-fi prototyping)
+								p 1630 - 1640   中場休息
+								p 1640 - 1740   團體創意實作
+								p 1740 - 1830   實作發表
+					.program-content(data-index=1)
+						img.program-img(src="https://productvision.pl/wp-content/uploads/2017/01/art.jpg", alt="")
+						.program-schedule
+							.schedule-title 
+								p Day 01  前置工作坊
+							.schedule-content
+								p 0830 - 0920   學員報到
+								p 0920 - 0930   開場
+								p 0930 - 1000   破冰遊戲
+								p 1000 - 1010   中場休息
+								p 1010 - 1200   互動設計之應用教學(Arduino)
+								p 1200 - 1330   午餐時間
+								p 1330 - 1430   演講 I Tuck Wah Leong
+								p 1430 - 1440   中場休息
+								p 1440 - 1630   模型設計與實作(Lo-fi prototyping)
+								p 1630 - 1640   中場休息
+								p 1640 - 1740   團體創意實作
+								p 1740 - 1830   實作發表
+					.program-content(data-index=2)
+						img.program-img(src="https://www.roofingcontractor.com/ext/resources/Issues/2017/March/sustainableroofing_main.jpg?1489678753", alt="")
+						.program-schedule
+							.schedule-title 
+								p Day 01  前置工作坊
+							.schedule-content
+								p 0830 - 0920   學員報到
+								p 0920 - 0930   開場
+								p 0930 - 1000   破冰遊戲
+								p 1000 - 1010   中場休息
+								p 1010 - 1200   互動設計之應用教學(Arduino)
+								p 1200 - 1330   午餐時間
+								p 1330 - 1430   演講 I Tuck Wah Leong
+								p 1430 - 1440   中場休息
+								p 1440 - 1630   模型設計與實作(Lo-fi prototyping)
+								p 1630 - 1640   中場休息
+								p 1640 - 1740   團體創意實作
+								p 1740 - 1830   實作發表
+					.program-content(data-index=3)
+						img.program-img(src="https://www.growly.io/wp-content/uploads/2016/08/15-must-have-tools-for-small-business.jpg", alt="")
+						.program-schedule
+							.schedule-title 
+								p Day 01  前置工作坊
+							.schedule-content
+								p 0830 - 0920   學員報到
+								p 0920 - 0930   開場
+								p 0930 - 1000   破冰遊戲
+								p 1000 - 1010   中場休息
+								p 1010 - 1200   互動設計之應用教學(Arduino)
+								p 1200 - 1330   午餐時間
+								p 1330 - 1430   演講 I Tuck Wah Leong
+								p 1430 - 1440   中場休息
+								p 1440 - 1630   模型設計與實作(Lo-fi prototyping)
+								p 1630 - 1640   中場休息
+								p 1640 - 1740   團體創意實作
+								p 1740 - 1830   實作發表
+					.program-content(data-index=4)
+						img.program-img(src="http://setofsail.com/wp-content/uploads/2014/01/SOS-organized-tools.jpg", alt="")
+						.program-schedule
+							.schedule-title 
+								p Day 01  前置工作坊
+							.schedule-content
+								p 0830 - 0920   學員報到
+								p 0920 - 0930   開場
+								p 0930 - 1000   破冰遊戲
+								p 1000 - 1010   中場休息
+								p 1010 - 1200   互動設計之應用教學(Arduino)
+								p 1200 - 1330   午餐時間
+								p 1330 - 1430   演講 I Tuck Wah Leong
+								p 1430 - 1440   中場休息
+								p 1440 - 1630   模型設計與實作(Lo-fi prototyping)
+								p 1630 - 1640   中場休息
+								p 1640 - 1740   團體創意實作
+								p 1740 - 1830   實作發表
+					.program-content(data-index=5)
+						img.program-img(src="https://www.onlinetaxaustralia.com.au/wp-content/uploads/2017/07/claiming-tools-on-tax.jpg", alt="")
+						.program-schedule
+							.schedule-title 
+								p Day 01  前置工作坊
+							.schedule-content
+								p 0830 - 0920   學員報到
+								p 0920 - 0930   開場
+								p 0930 - 1000   破冰遊戲
+								p 1000 - 1010   中場休息
+								p 1010 - 1200   互動設計之應用教學(Arduino)
+								p 1200 - 1330   午餐時間
+								p 1330 - 1430   演講 I Tuck Wah Leong
+								p 1430 - 1440   中場休息
+								p 1440 - 1630   模型設計與實作(Lo-fi prototyping)
+								p 1630 - 1640   中場休息
+								p 1640 - 1740   團體創意實作
+								p 1740 - 1830   實作發表
 		section#registration
 			.section-wrapper
-				.section-title 報名方式
+				.accordion
+					.step-container#step1
+						.step-header
+							.step-title
+								span.no 01.
+								span 活動資訊說明
+							svg.arrow(x='0px', y='0px', viewbox='0 0 36.7 71.9')
+								polyline.st0(points='0.4,0.4 36,36 0.4,71.6 ')
+						.step-content-wrapper
+							.step-content
+								p 【 日期時間 】 
+								p 2017 年 6 月 27 日 (二) 至 2017 年 7 月 2 日 (日) ，共 6 天。
+								p 每日活動開始時間皆為 09:00，結束時間為 18:00 – 18:30 不等。
+								.br
+								p 【 活動地點 】 
+								p 國立台灣大學水源校區 D-School（台北市中正區思源街18號、永福橋旁）
+					.step-container#step2
+						.step-header
+							.step-title
+								span.no 02.
+								span 報名資訊與時程
+							svg.arrow(x='0px', y='0px', viewbox='0 0 36.7 71.9')
+								polyline.st0(points='0.4,0.4 36,36 0.4,71.6 ')
+						.step-content-wrapper
+							.step-content
+								p 【 報名學員資格 】 
+								p 全國各大專院校在學學生，包含大學部三年級以上與碩/博生。
+								.br
+								p 【 招生時程 】
+								p 線上報名時間：5/31(三) 00:00 至 6/11(日) 23:59 前
+								p 正取名單公佈：6/15(四) 10:00網路公佈與信件通知，請自行上網查看
+								p 遞補備取通知：6/17(六) 個別電話通知
+								.br
+								p 【 報名方式 】
+								p 在報名期限內，備妥報名相關資料後，經報名連結線上報名。
+								p 公佈與通知正/備取之學員，請於指定時間內繳交1000元保證金以及100元保險費用，
+								p 並回覆系統匯款資訊以確認成功匯款，經由查證後完成報名程序。
+								p 未依照指定報名期限內完成報名程序者，視為放棄報名資格，會依據備取順序遞補。
+								p 正取學員請於6/17(六) 17:00 前繳交保證金及保險費用以完成報名程序。
+								p 備取名單會於6/17(六) 後個別電話通知，經電話通知錄取的備取學員請於6/19(一) 17:00 前繳交保證金及保險費用以完成報名程序。
+								.br
+								p （本活動透過報名資料作為錄取參考依據，挑選正/備取學員並於網站公佈與通知，與報名順序時間無關。）
+					.step-container#step3
+						.step-header
+							.step-title
+								span.no 03.
+								span 繳交資料｜線上報名表單說明
+							svg.arrow(x='0px', y='0px', viewbox='0 0 36.7 71.9')
+								polyline.st0(points='0.4,0.4 36,36 0.4,71.6 ')
+						.step-content-wrapper
+							.step-content
+								p 進入線上報名系統前需準備兩份報名資料，包含「線上問卷」與「IDCard」兩部分：
+								.br
+								p 1.「線上問卷」為線上填寫作業，包含個人基本資料、教育背景兩部分。
+								p 2.「IDCard」為一份三頁之投影片，包含 “個人簡歷” 與“觀察發想”。
+								.br
+								p PS.檔案請自行製作與編排，並存檔輸出PDF檔可於"觀察發想"內容中附加輔助說明之素材(手繪、電繪圖片、照片或另附影片，格式不限)
+								p PDF檔名標題請依格式填寫： [2017 IDCard] 校系_姓名 (範例：[2017 iDCard] 台科大工商業設計系_王曉明)
+								p 若有其他輔助說明之素材，請將檔案放至上傳空間(ex. dropbox)後將上傳連結附於報名系統內。
+								p 若檔名或檔案格式不符，造成漏檔，報名者請自行負責。
+					.step-container#step4
+						.step-header
+							.step-title
+								span.no 04.
+								span 繳交資料｜ID Card 說明與範例
+							svg.arrow(x='0px', y='0px', viewbox='0 0 36.7 71.9')
+								polyline.st0(points='0.4,0.4 36,36 0.4,71.6 ')
+						.step-content-wrapper
+							.step-content
+								p IDCard為線上報名之第二份需預先準備之作業檔案，並於線上報名時上傳。
+								p 第一頁請放個人簡歷，表達格式不限。
+								p 第二頁請放上個人最滿意的作品(研究、專題、設計皆可)，可透過文字、圖片或另附影片表達。
+								p 第三頁請從你的經驗中去發想並回答以下兩問題，可透過文字、圖片或另附影片表達，數量、格式均不限。
+								.br
+								p 1. 請從自己與互動物（包括電腦、智慧裝置、圖形化介面、互動設計、互動藝術）認知或相處的經驗中，舉一自己最喜歡或印象深刻的例子，並說明原因。
+								.br
+								p 2. 本次活動主題為「重構Re:__ 」，請你想像我們能如何給予被淘汰的物品一項新的功能，讓他能夠有新的使命，重新賦予物件內在的平衡與外裝的非凡意義？並描述一例。
+								p 具體描述內容包括：
+								p a. 過去的那項物品為何。
+								p b. 你賦予它的新功能為何。
+								p c. 可以達到什麼新的互動。
+
+
+					.step-container#step5
+						.step-header
+							.step-title
+								span.no 05.
+								span 錄取名單公佈
+							svg.arrow(x='0px', y='0px', viewbox='0 0 36.7 71.9')
+								polyline.st0(points='0.4,0.4 36,36 0.4,71.6 ')
+						.step-content-wrapper
+							.step-content
+								p IDCard為線上報名之第二份需預先準備之作業檔案，並於線上報名時上傳。
+								p 第一頁請放個人簡歷，表達格式不限。
+								p 第二頁請放上個人最滿意的作品(研究、專題、設計皆可)，可透過文字、圖片或另附影片表達。
+								p 第三頁請從你的經驗中去發想並回答以下兩問題，可透過文字、圖片或另附影片表達，數量、格式均不限。
+								.br
+								p 1. 請從自己與互動物（包括電腦、智慧裝置、圖形化介面、互動設計、互動藝術）認知或相處的經驗中，舉一自己最喜歡或印象深刻的例子，並說明原因。
+								.br
+								p 2. 本次活動主題為「重構Re:__ 」，請你想像我們能如何給予被淘汰的物品一項新的功能，讓他能夠有新的使命，重新賦予物件內在的平衡與外裝的非凡意義？並描述一例。
+								p 具體描述內容包括：
+								p a. 過去的那項物品為何。
+								p b. 你賦予它的新功能為何。
+								p c. 可以達到什麼新的互動。
+					.step-container#step6
+						.step-header
+							.step-title
+								span.no 06.
+								span 繳交保證金
+							svg.arrow(x='0px', y='0px', viewbox='0 0 36.7 71.9')
+								polyline.st0(points='0.4,0.4 36,36 0.4,71.6 ')
+						.step-content-wrapper
+							.step-content
+								p IDCard為線上報名之第二份需預先準備之作業檔案，並於線上報名時上傳。
+								p 第一頁請放個人簡歷，表達格式不限。
+								p 第二頁請放上個人最滿意的作品(研究、專題、設計皆可)，可透過文字、圖片或另附影片表達。
+								p 第三頁請從你的經驗中去發想並回答以下兩問題，可透過文字、圖片或另附影片表達，數量、格式均不限。
+								.br
+								p 1. 請從自己與互動物（包括電腦、智慧裝置、圖形化介面、互動設計、互動藝術）認知或相處的經驗中，舉一自己最喜歡或印象深刻的例子，並說明原因。
+								.br
+								p 2. 本次活動主題為「重構Re:__ 」，請你想像我們能如何給予被淘汰的物品一項新的功能，讓他能夠有新的使命，重新賦予物件內在的平衡與外裝的非凡意義？並描述一例。
+								p 具體描述內容包括：
+								p a. 過去的那項物品為何。
+								p b. 你賦予它的新功能為何。
+								p c. 可以達到什麼新的互動。
+								
 		section#taichi
 			.section-wrapper
-				.section-title TAICHI合作
+				.section-left
+					.section-left-wrapper
+						img.img-top(src="assets/images/taichi_section_pic1.png", alt="")
+						img.img-btm(src="assets/images/taichi_section_pic2.png", alt="")
+				.section-right
+					.section-right-wrapper
+						.section-right-wrapper-title OpenHCI 與 TAICHI 合作
+						.section-right-wrapper-content 台灣人機互動研討會 TAICHI 為臺灣人機互動學會的年度會議，為國內跨領域人機互動學者與社群，提供一個代表台灣人機互動(Human Computer Interaction)研究最前緣之意見交換以及成果交流的年度盛會。<br><br>TAICHI 2018 (第四屆台灣人機互動研討會)由人機互動學會主辦，並持續各領域、校、院間的合作，由交大、台大、清大、政大、台科大、輔大等大專院校之人機互動相關學者共同籌辦，於8月26日至28日在國立交通大學舉辦。此次大會主題為「Bang」，旨在產學、師生、專業人士們之間產生激盪與火花，讓2018成為台灣人機互動成長重要的一年。
 		section#crew
 			.section-wrapper
 				h3.crew-title TEAM
@@ -162,7 +458,42 @@ body
 
 		section#organizer
 			.section-wrapper
-				.section-title 主辦單位
+				.og-section-block
+					.og-section-title ORGANIZER
+					.og-section-logo-wrapper
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+				.og-section-block.need-padding-top
+					.og-section-title CO-ORGANIZER
+					.og-section-logo-wrapper
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+				.og-section-block.need-padding-top
+					.og-section-title SPONSOR
+					.og-section-logo-wrapper
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
+						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
 		section#contact
 			.section-wrapper
 				.section-title 聯絡我們
@@ -177,4 +508,6 @@ script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation
 //- script(src="https://hammerjs.github.io/dist/hammer.js")
 script(src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.4/pixi.min.js")
 script(src="assets/scripts/main.js")
-script(src="assets/scripts/screen.js")
+script(src="assets/scripts/landing.js")
+	
+//- script(src="assets/scripts/screen.js")
