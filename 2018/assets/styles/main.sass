@@ -1,6 +1,10 @@
 $bg: #191456
 $header_menu_font: #fff
+$blue: #191456
 $green: #36a97b
+$red: #d70050
+
+$registration-bg : #28286e
 
 $breakpoint: 1000px
 $breakpoint-sm: 375px
@@ -85,6 +89,8 @@ header
 	background: linear-gradient(rgba($bg,1), rgba($bg,0.8), rgba($bg,0))
 	padding: 0 50px
 	transition: top 0.5s
+	@media screen and (max-width: $breakpoint) 
+		padding: 0 20px
 	&.hide
 		top: -100px
 
@@ -97,6 +103,9 @@ header
 		display: flex
 		.menu-container
 			display: flex
+			.in-site,.out-site
+				display: flex
+				align-items: center
 			.out-site
 				border-left: 1px solid $header_menu_font
 			.menu-btn
@@ -124,6 +133,20 @@ header
 				&.menu-here
 					&::before
 						width: 100% !important
+			#sign-up
+				background-color: $red
+				// padding: 10px 20px
+				width: 100px
+				height: 35px
+				display: flex
+				align-items: center
+				justify-content: center
+				border-radius: 5px
+				transition: 0.1s
+				&::before
+					display: none
+				&:hover
+					background-color: lighten($red, 10)
 		@media screen and (max-width: $breakpoint)
 			position: fixed
 			width: 100%
@@ -288,39 +311,70 @@ header
 		.section-wrapper
 			display: flex
 			align-items: center
-		#screen
+		.screen
+			width: 70%
+			position: absolute
+			top: 50%
+			right: 10%
+			transform: translateY(-50%)
+			background-color: #28286E
+			&::before
+				content: ""
+				display: block
+				width: 100%
+				padding-top: 70%
+			canvas
+				width: 100%
+				height: 100%
+				position: absolute
+				top: 0
+				left: 0
+		.titles
 			width: 100%
 			height: 100%
-			position: absolute
-			top: 0
-			left: 0
-		.landing-title
-			margin-left: 5%
-			width: 30%
+			img
+				position: absolute
+			.title1
+				top: 130px
+				left: 100px
+			.title2
+				top: 130px
+				right: 100px
+			.title3
+				bottom: 100px
+				left: 100px
+			.title-logo
+				top: 50%
+				left: 20%
+				width: 25%
+				transform: translateY(-50%)
+
 	#intro
+		height: auto
+		display: flex
+		justify-content: center
 		.section-wrapper
-			// *
-			// 	border: solid 1px white
+			width: 90%
+			max-width: 1200px
+			min-width: 800px
 			.section-left
+				padding-left: 5%
 				vertical-align: top
 				display: inline-block
 				width: 49%
 				height: 100%
 				text-align: right
 				.section-left-wrapper
-					padding-right: 10%
 					display: inline-block
-					width: 70%
 					.section-left-block-need-margin-top
 						margin-top: 40px
 					.section-left-block
 						display: inline-block
 						text-align: left
 						.title
-							transform: translateX(-100px)
+							transform: translateX(-25%)
 							display: inline-block
 							height: 28px
-							width: 250px
 							font-family: NotoSansUI
 							font-size: 21px
 							font-weight: bold
@@ -353,8 +407,206 @@ header
 					text-align: left
 					width: 100%
 					height: 100%
+					padding-left: 5%
 					.intro-pic
 						width: 100%
-						height: 100%
+
 	#interlude
-		height: 200px
+		height: auto
+		padding: 50px
+		.moving
+			width: 100%
+			height: auto
+			display: flex
+			align-items: center
+			img
+				// flex: 1
+				width: 100%
+
+				// height: auto
+				// float: left
+
+	#program
+		height: auto
+		display: flex
+		justify-content: center
+		.section-wrapper
+			height: auto
+			width: 90%
+			max-width: 1200px
+			display: flex
+			flex-direction: column
+			.tabs
+				width: 100%
+				display: flex
+				justify-content: space-between
+				.tab
+					line-height: 1.5em
+					font-weight: 500
+					display: flex
+					flex-direction: column
+					align-items: flex-start
+					cursor: pointer
+					p
+						&::before
+							content: ""
+							display: block
+							width: 0
+							height: 100%
+							background-color: rgba($green,0)
+							position: absolute
+							top: 0
+							left: -5px
+							// top: 50%
+							// left: 50%
+							// transform: translate(-50%,-50%)
+							z-index: 1
+							transition: 0.5s
+						span 
+							z-index: 2
+							transition: 0.5s
+					p:first-child
+						span
+							color: #fff
+					p:last-child
+						span
+							color: $red
+
+					&.active
+						p
+							&::before
+								background-color: rgba($green,1)
+								width: calc(100% + 10px)
+							span 
+								color: $blue
+			.program-container
+				width: 100%
+				margin-top: 100px
+				.program-content
+					width: 100%
+					display: flex
+					align-items: flex-start
+					position: absolute
+					top: 0
+					left: 0
+					visibility: hidden
+					opacity: 0
+					transition: 0.5s
+					&:first-child
+						position: relative
+					&.active
+						visibility: visible
+						opacity: 1
+					.program-img
+						width: 50%
+						margin-right: 30px
+					.program-schedule
+						flex: 1
+						flex-direction: column
+						align-items: flex-start
+						.schedule-title 
+							color: $green
+							font-size: 1.3em
+							margin-bottom: 20px
+							font-weight: 500
+						.schedule-content
+							color: #fff
+							line-height: 2em
+					
+
+	#registration
+		height: auto
+		.section-wrapper
+			height: auto
+			.accordion
+				width: 100%
+				display: flex
+				flex-direction: column
+				align-items: center
+				.step-container
+					width: 100%
+					display: flex
+					margin: 4px 0
+					&:first-child
+						.step-header
+							border-top: none
+					&.active
+						.step-header
+							border-radius: 5px 5px 0 0
+							// width: 150px
+							.arrow
+								transform: rotate(-90deg)
+					.step-header
+						position: absolute
+						top: 0
+						left: 50%
+						transform: translateX(-50%)
+						width: 100%
+						// max-width: 600px
+						height: 80px
+						// width: auto
+						background-color: $registration-bg
+						display: flex
+						justify-content: space-between
+						align-items: center
+						padding: 0 70px
+						cursor: pointer
+						z-index: 1
+						font-size: 1.3em
+						transition: 0.5s, top 0s, bottom 0s
+
+						&.sticky
+							position: fixed
+							top: 80px
+							width: 190px
+							// padding: 0 40px
+							padding: 0 30px
+							// box-shadow: 0px 0px 25px 5px rgba(#000,0.1)
+							border: 1px solid #fff
+							border-radius: 25px
+							// justify-content: center
+						&.stay
+							position: absolute
+							top: auto
+							bottom: 30px
+
+						.step-title
+							color: $red
+							display: flex
+							align-items: center
+							.no
+								color: #fff
+								display: block
+								width: 60px
+
+						.arrow
+							margin-left: 15px
+							height: 22px
+							width: 15px
+							fill: none
+							stroke: #fff
+							stroke-width: 5px
+							transition: 0.2s
+							transform: rotate(90deg)
+							// &.active
+							// 	transform: rotate(90deg)
+					.step-content-wrapper
+						width: 100%
+						// max-height: 0
+						height: 0
+						margin-top: 80px
+						overflow: hidden
+						// transition: 0.5s
+						// background-color: darken($info_content_bg, 5)
+						&.active
+							// max-height: 1000px
+						.step-content
+							width: 100%
+							// max-width: 600px
+							margin: 0 auto
+							padding: 20px 130px
+							transition: 0.5s, margin-top 0s
+							line-height: 1.5em
+							color: #fff
+							.br
+								height: 10px

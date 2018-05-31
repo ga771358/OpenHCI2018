@@ -29,7 +29,7 @@ gulp.task('clean-css', function() {
     //     .pipe(clean());
 });
 gulp.task('css', ['clean-css'], function() {
-    return gulp.src('assets/styles/*.scss')
+    return gulp.src('assets/styles/*.sass')
         .pipe(compass({
             css: 'assets/styles/',
             sass: 'assets/styles/',
@@ -87,7 +87,7 @@ gulp.task('html', ['clean-html'], function() {
 
 // 監聽檔案
 gulp.task('watch', function() {
-    gulp.watch('assets/styles/*.scss', ['css']);
+    gulp.watch('assets/styles/*.sass', ['css']);
     gulp.watch('assets/scripts/*', ['js']);
     gulp.watch('assets/images/**', ['images']);
     gulp.watch('**/*.jade', ['html']);

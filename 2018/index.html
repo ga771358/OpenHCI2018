@@ -16,11 +16,11 @@
   <meta property="og:site_name" content=""/>
 </head>
 <body>
-  <header><a href="#landing" class="logo"><img src="assets/images/title.png" alt=""/></a>
+  <header><a href="#landing" class="logo"><img src="assets/images/nav-logo.svg" alt=""/></a>
     <div class="menu menu-cir">
       <div class="menu-bg"></div>
       <div class="menu-container">
-        <div class="in-site"><a id="menu1" href="#intro" class="menu-btn">介紹</a><a id="menu2" href="#program" class="menu-btn">活動</a><a id="menu3" href="#registration" class="menu-btn">報名方式</a><a id="menu4" href="#taichi" class="menu-btn">TAICHI合作</a><a id="menu5" href="#crew" class="menu-btn">籌備團隊</a><a id="menu6" href="#organizer" class="menu-btn">主辦單位</a><a id="menu7" href="#contact" class="menu-btn">聯絡我們</a></div>
+        <div class="in-site"><a id="menu1" href="#intro" class="menu-btn">介紹</a><a id="menu2" href="#program" class="menu-btn">活動</a><a id="menu3" href="#registration" class="menu-btn">報名方式</a><a id="menu4" href="#taichi" class="menu-btn">TAICHI合作</a><a id="menu5" href="#crew" class="menu-btn">籌備團隊</a><a id="menu6" href="#organizer" class="menu-btn">主辦單位</a><a id="menu7" href="#contact" class="menu-btn">聯絡我們</a><a id="sign-up" href="" class="menu-btn">我要報名</a></div>
       </div>
     </div>
     <div class="m-menu-opener"><span></span><span></span><span></span></div>
@@ -29,7 +29,11 @@
   <div class="page-wrapper">
     <section id="landing">
       <div class="section-wrapper">
-        <canvas id="screen"></canvas><img src="assets/images/title.png" alt="" class="landing-title"/>
+        <div class="screen">
+          <canvas id="light"></canvas>
+          <canvas id="mask"></canvas>
+        </div>
+        <div class="titles"><img src="assets/images/title1.svg" alt="" class="title1"/><img src="assets/images/title2.svg" alt="" class="title2"/><img src="assets/images/title3.svg" alt="" class="title3"/><img src="assets/images/logo.svg" alt="" class="title-logo"/></div>
       </div>
     </section>
     <section id="intro">
@@ -37,15 +41,15 @@
         <div class="section-left">
           <div class="section-left-wrapper">
             <div class="section-left-block">
-              <div class="title">What is HCI</div>
+              <div class="title">What is HCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
               <div class="content">Human-Computer Interaction （HCI）為近年來相當活躍的跨領域學門。相較於其他專門領域，HCI學門獨特的複合特性，使得其創造過程需要高度的跨領域合作。研究的著眼點不但訴求技術、更試圖從以人為本的角度去探討，以創造更佳的使用者經驗。</div>
             </div><br/>
             <div class="section-left-block section-left-block-need-margin-top">
-              <div class="title">History of OpenHCI</div>
+              <div class="title">History of OpenHCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
               <div class="content">OpenHCI 2017是第八屆由學生自治籌備的人機互動工作坊，旨在推廣人機互動學門與跨領域合作。 在六天的營期間，來自不同領域的學員會經歷一系列講座與課後實作演練，深入完整 HCI 設計流程，透過合作溝通以實踐構想，將無盡的創意展現給世界！</div>
             </div><br/>
             <div class="section-left-block section-left-block-need-margin-top">
-              <div class="title">Goals</div>
+              <div class="title">Goals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
               <div class="content">本活動希望能夠以推廣HCI為主要宗旨，招收工程與設計背景的學生、共同學習並進行跨領域的合作，探索人類生活空間中與周遭環境、物件或工具的互動模式。為期六天的工作坊，期盼參與者能以此概念體察其日常經驗裡的互動缺口或議題，實際動手解決問題或創造出新的意義的能力，進而尋思更和諧的人機互動遠景。</div>
             </div>
           </div>
@@ -57,17 +61,311 @@
     </section>
     <section id="interlude">
       <div class="section-wrapper">
-        <div class="section-title">過場標準字</div>
+        <div class="moving"><img src="assets/images/animism-en@3x.png" alt=""/><img src="assets/images/animism-en@3x.png" alt=""/></div>
       </div>
     </section>
     <section id="program">
       <div class="section-wrapper">
-        <div class="section-title">活動</div>
+        <div class="tabs">
+          <div data-index='0' class="tab active">
+            <p> <span>Day 01 | 08.19</span></p>
+            <p> <span>前置工作坊</span></p>
+          </div>
+          <div data-index='1' class="tab">
+            <p> <span>Day 02 | 08.20</span></p>
+            <p> <span>行為與觀察</span></p>
+          </div>
+          <div data-index='2' class="tab">
+            <p> <span>Day 03 | 08.21</span></p>
+            <p> <span>實作與媒材 I</span></p>
+          </div>
+          <div data-index='3' class="tab">
+            <p> <span>Day 04 | 08.22</span></p>
+            <p> <span>實作與媒材 II</span></p>
+          </div>
+          <div data-index='4' class="tab">
+            <p> <span>Day 05 | 08.23</span></p>
+            <p> <span>實作與媒材 III</span></p>
+          </div>
+          <div data-index='5' class="tab">
+            <p> <span>Day 06 | 08.24</span></p>
+            <p> <span>發表與展覽</span></p>
+          </div>
+        </div>
+        <div class="program-container">
+          <div data-index='0' class="program-content active"><img src="https://www.onlinetaxaustralia.com.au/wp-content/uploads/2017/07/claiming-tools-on-tax.jpg" alt="" class="program-img"/>
+            <div class="program-schedule">
+              <div class="schedule-title"> 
+                <p>Day 01  前置工作坊</p>
+              </div>
+              <div class="schedule-content">
+                <p>0830 - 0920   學員報到</p>
+                <p>0920 - 0930   開場</p>
+                <p>0930 - 1000   破冰遊戲</p>
+                <p>1000 - 1010   中場休息</p>
+                <p>1010 - 1200   互動設計之應用教學(Arduino)</p>
+                <p>1200 - 1330   午餐時間</p>
+                <p>1330 - 1430   演講 I Tuck Wah Leong</p>
+                <p>1430 - 1440   中場休息</p>
+                <p>1440 - 1630   模型設計與實作(Lo-fi prototyping)</p>
+                <p>1630 - 1640   中場休息</p>
+                <p>1640 - 1740   團體創意實作</p>
+                <p>1740 - 1830   實作發表</p>
+              </div>
+            </div>
+          </div>
+          <div data-index='1' class="program-content"><img src="https://productvision.pl/wp-content/uploads/2017/01/art.jpg" alt="" class="program-img"/>
+            <div class="program-schedule">
+              <div class="schedule-title"> 
+                <p>Day 01  前置工作坊</p>
+              </div>
+              <div class="schedule-content">
+                <p>0830 - 0920   學員報到</p>
+                <p>0920 - 0930   開場</p>
+                <p>0930 - 1000   破冰遊戲</p>
+                <p>1000 - 1010   中場休息</p>
+                <p>1010 - 1200   互動設計之應用教學(Arduino)</p>
+                <p>1200 - 1330   午餐時間</p>
+                <p>1330 - 1430   演講 I Tuck Wah Leong</p>
+                <p>1430 - 1440   中場休息</p>
+                <p>1440 - 1630   模型設計與實作(Lo-fi prototyping)</p>
+                <p>1630 - 1640   中場休息</p>
+                <p>1640 - 1740   團體創意實作</p>
+                <p>1740 - 1830   實作發表</p>
+              </div>
+            </div>
+          </div>
+          <div data-index='2' class="program-content"><img src="https://www.roofingcontractor.com/ext/resources/Issues/2017/March/sustainableroofing_main.jpg?1489678753" alt="" class="program-img"/>
+            <div class="program-schedule">
+              <div class="schedule-title"> 
+                <p>Day 01  前置工作坊</p>
+              </div>
+              <div class="schedule-content">
+                <p>0830 - 0920   學員報到</p>
+                <p>0920 - 0930   開場</p>
+                <p>0930 - 1000   破冰遊戲</p>
+                <p>1000 - 1010   中場休息</p>
+                <p>1010 - 1200   互動設計之應用教學(Arduino)</p>
+                <p>1200 - 1330   午餐時間</p>
+                <p>1330 - 1430   演講 I Tuck Wah Leong</p>
+                <p>1430 - 1440   中場休息</p>
+                <p>1440 - 1630   模型設計與實作(Lo-fi prototyping)</p>
+                <p>1630 - 1640   中場休息</p>
+                <p>1640 - 1740   團體創意實作</p>
+                <p>1740 - 1830   實作發表</p>
+              </div>
+            </div>
+          </div>
+          <div data-index='3' class="program-content"><img src="https://www.growly.io/wp-content/uploads/2016/08/15-must-have-tools-for-small-business.jpg" alt="" class="program-img"/>
+            <div class="program-schedule">
+              <div class="schedule-title"> 
+                <p>Day 01  前置工作坊</p>
+              </div>
+              <div class="schedule-content">
+                <p>0830 - 0920   學員報到</p>
+                <p>0920 - 0930   開場</p>
+                <p>0930 - 1000   破冰遊戲</p>
+                <p>1000 - 1010   中場休息</p>
+                <p>1010 - 1200   互動設計之應用教學(Arduino)</p>
+                <p>1200 - 1330   午餐時間</p>
+                <p>1330 - 1430   演講 I Tuck Wah Leong</p>
+                <p>1430 - 1440   中場休息</p>
+                <p>1440 - 1630   模型設計與實作(Lo-fi prototyping)</p>
+                <p>1630 - 1640   中場休息</p>
+                <p>1640 - 1740   團體創意實作</p>
+                <p>1740 - 1830   實作發表</p>
+              </div>
+            </div>
+          </div>
+          <div data-index='4' class="program-content"><img src="http://setofsail.com/wp-content/uploads/2014/01/SOS-organized-tools.jpg" alt="" class="program-img"/>
+            <div class="program-schedule">
+              <div class="schedule-title"> 
+                <p>Day 01  前置工作坊</p>
+              </div>
+              <div class="schedule-content">
+                <p>0830 - 0920   學員報到</p>
+                <p>0920 - 0930   開場</p>
+                <p>0930 - 1000   破冰遊戲</p>
+                <p>1000 - 1010   中場休息</p>
+                <p>1010 - 1200   互動設計之應用教學(Arduino)</p>
+                <p>1200 - 1330   午餐時間</p>
+                <p>1330 - 1430   演講 I Tuck Wah Leong</p>
+                <p>1430 - 1440   中場休息</p>
+                <p>1440 - 1630   模型設計與實作(Lo-fi prototyping)</p>
+                <p>1630 - 1640   中場休息</p>
+                <p>1640 - 1740   團體創意實作</p>
+                <p>1740 - 1830   實作發表</p>
+              </div>
+            </div>
+          </div>
+          <div data-index='5' class="program-content"><img src="https://www.onlinetaxaustralia.com.au/wp-content/uploads/2017/07/claiming-tools-on-tax.jpg" alt="" class="program-img"/>
+            <div class="program-schedule">
+              <div class="schedule-title"> 
+                <p>Day 01  前置工作坊</p>
+              </div>
+              <div class="schedule-content">
+                <p>0830 - 0920   學員報到</p>
+                <p>0920 - 0930   開場</p>
+                <p>0930 - 1000   破冰遊戲</p>
+                <p>1000 - 1010   中場休息</p>
+                <p>1010 - 1200   互動設計之應用教學(Arduino)</p>
+                <p>1200 - 1330   午餐時間</p>
+                <p>1330 - 1430   演講 I Tuck Wah Leong</p>
+                <p>1430 - 1440   中場休息</p>
+                <p>1440 - 1630   模型設計與實作(Lo-fi prototyping)</p>
+                <p>1630 - 1640   中場休息</p>
+                <p>1640 - 1740   團體創意實作</p>
+                <p>1740 - 1830   實作發表</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section id="registration">
       <div class="section-wrapper">
-        <div class="section-title">報名方式</div>
+        <div class="accordion">
+          <div id="step1" class="step-container">
+            <div class="step-header">
+              <div class="step-title"><span class="no">01.</span><span>活動資訊說明</span></div>
+              <svg x="0px" y="0px" viewbox="0 0 36.7 71.9" class="arrow">
+                <polyline points="0.4,0.4 36,36 0.4,71.6 " class="st0"></polyline>
+              </svg>
+            </div>
+            <div class="step-content-wrapper">
+              <div class="step-content">
+                <p>【 日期時間 】 </p>
+                <p>2017 年 6 月 27 日 (二) 至 2017 年 7 月 2 日 (日) ，共 6 天。</p>
+                <p>每日活動開始時間皆為 09:00，結束時間為 18:00 – 18:30 不等。</p>
+                <div class="br"></div>
+                <p>【 活動地點 】 </p>
+                <p>國立台灣大學水源校區 D-School（台北市中正區思源街18號、永福橋旁）</p>
+              </div>
+            </div>
+          </div>
+          <div id="step2" class="step-container">
+            <div class="step-header">
+              <div class="step-title"><span class="no">02.</span><span>報名資訊與時程</span></div>
+              <svg x="0px" y="0px" viewbox="0 0 36.7 71.9" class="arrow">
+                <polyline points="0.4,0.4 36,36 0.4,71.6 " class="st0"></polyline>
+              </svg>
+            </div>
+            <div class="step-content-wrapper">
+              <div class="step-content">
+                <p>【 報名學員資格 】 </p>
+                <p>全國各大專院校在學學生，包含大學部三年級以上與碩/博生。</p>
+                <div class="br"></div>
+                <p>【 招生時程 】</p>
+                <p>線上報名時間：5/31(三) 00:00 至 6/11(日) 23:59 前</p>
+                <p>正取名單公佈：6/15(四) 10:00網路公佈與信件通知，請自行上網查看</p>
+                <p>遞補備取通知：6/17(六) 個別電話通知</p>
+                <div class="br"></div>
+                <p>【 報名方式 】</p>
+                <p>在報名期限內，備妥報名相關資料後，經報名連結線上報名。</p>
+                <p>公佈與通知正/備取之學員，請於指定時間內繳交1000元保證金以及100元保險費用，</p>
+                <p>並回覆系統匯款資訊以確認成功匯款，經由查證後完成報名程序。</p>
+                <p>未依照指定報名期限內完成報名程序者，視為放棄報名資格，會依據備取順序遞補。</p>
+                <p>正取學員請於6/17(六) 17:00 前繳交保證金及保險費用以完成報名程序。</p>
+                <p>備取名單會於6/17(六) 後個別電話通知，經電話通知錄取的備取學員請於6/19(一) 17:00 前繳交保證金及保險費用以完成報名程序。</p>
+                <div class="br"></div>
+                <p>（本活動透過報名資料作為錄取參考依據，挑選正/備取學員並於網站公佈與通知，與報名順序時間無關。）</p>
+              </div>
+            </div>
+          </div>
+          <div id="step3" class="step-container">
+            <div class="step-header">
+              <div class="step-title"><span class="no">03.</span><span>繳交資料｜線上報名表單說明</span></div>
+              <svg x="0px" y="0px" viewbox="0 0 36.7 71.9" class="arrow">
+                <polyline points="0.4,0.4 36,36 0.4,71.6 " class="st0"></polyline>
+              </svg>
+            </div>
+            <div class="step-content-wrapper">
+              <div class="step-content">
+                <p>進入線上報名系統前需準備兩份報名資料，包含「線上問卷」與「IDCard」兩部分：</p>
+                <div class="br"></div>
+                <p>1.「線上問卷」為線上填寫作業，包含個人基本資料、教育背景兩部分。</p>
+                <p>2.「IDCard」為一份三頁之投影片，包含 “個人簡歷” 與“觀察發想”。</p>
+                <div class="br"></div>
+                <p>PS.檔案請自行製作與編排，並存檔輸出PDF檔可於"觀察發想"內容中附加輔助說明之素材(手繪、電繪圖片、照片或另附影片，格式不限)</p>
+                <p>PDF檔名標題請依格式填寫： [2017 IDCard] 校系_姓名 (範例：[2017 iDCard] 台科大工商業設計系_王曉明)</p>
+                <p>若有其他輔助說明之素材，請將檔案放至上傳空間(ex. dropbox)後將上傳連結附於報名系統內。</p>
+                <p>若檔名或檔案格式不符，造成漏檔，報名者請自行負責。</p>
+              </div>
+            </div>
+          </div>
+          <div id="step4" class="step-container">
+            <div class="step-header">
+              <div class="step-title"><span class="no">04.</span><span>繳交資料｜ID Card 說明與範例</span></div>
+              <svg x="0px" y="0px" viewbox="0 0 36.7 71.9" class="arrow">
+                <polyline points="0.4,0.4 36,36 0.4,71.6 " class="st0"></polyline>
+              </svg>
+            </div>
+            <div class="step-content-wrapper">
+              <div class="step-content">
+                <p>IDCard為線上報名之第二份需預先準備之作業檔案，並於線上報名時上傳。</p>
+                <p>第一頁請放個人簡歷，表達格式不限。</p>
+                <p>第二頁請放上個人最滿意的作品(研究、專題、設計皆可)，可透過文字、圖片或另附影片表達。</p>
+                <p>第三頁請從你的經驗中去發想並回答以下兩問題，可透過文字、圖片或另附影片表達，數量、格式均不限。</p>
+                <div class="br"></div>
+                <p>1. 請從自己與互動物（包括電腦、智慧裝置、圖形化介面、互動設計、互動藝術）認知或相處的經驗中，舉一自己最喜歡或印象深刻的例子，並說明原因。</p>
+                <div class="br"></div>
+                <p>2. 本次活動主題為「重構Re:__ 」，請你想像我們能如何給予被淘汰的物品一項新的功能，讓他能夠有新的使命，重新賦予物件內在的平衡與外裝的非凡意義？並描述一例。</p>
+                <p>具體描述內容包括：</p>
+                <p>a. 過去的那項物品為何。</p>
+                <p>b. 你賦予它的新功能為何。</p>
+                <p>c. 可以達到什麼新的互動。</p>
+              </div>
+            </div>
+          </div>
+          <div id="step5" class="step-container">
+            <div class="step-header">
+              <div class="step-title"><span class="no">05.</span><span>錄取名單公佈</span></div>
+              <svg x="0px" y="0px" viewbox="0 0 36.7 71.9" class="arrow">
+                <polyline points="0.4,0.4 36,36 0.4,71.6 " class="st0"></polyline>
+              </svg>
+            </div>
+            <div class="step-content-wrapper">
+              <div class="step-content">
+                <p>IDCard為線上報名之第二份需預先準備之作業檔案，並於線上報名時上傳。</p>
+                <p>第一頁請放個人簡歷，表達格式不限。</p>
+                <p>第二頁請放上個人最滿意的作品(研究、專題、設計皆可)，可透過文字、圖片或另附影片表達。</p>
+                <p>第三頁請從你的經驗中去發想並回答以下兩問題，可透過文字、圖片或另附影片表達，數量、格式均不限。</p>
+                <div class="br"></div>
+                <p>1. 請從自己與互動物（包括電腦、智慧裝置、圖形化介面、互動設計、互動藝術）認知或相處的經驗中，舉一自己最喜歡或印象深刻的例子，並說明原因。</p>
+                <div class="br"></div>
+                <p>2. 本次活動主題為「重構Re:__ 」，請你想像我們能如何給予被淘汰的物品一項新的功能，讓他能夠有新的使命，重新賦予物件內在的平衡與外裝的非凡意義？並描述一例。</p>
+                <p>具體描述內容包括：</p>
+                <p>a. 過去的那項物品為何。</p>
+                <p>b. 你賦予它的新功能為何。</p>
+                <p>c. 可以達到什麼新的互動。</p>
+              </div>
+            </div>
+          </div>
+          <div id="step6" class="step-container">
+            <div class="step-header">
+              <div class="step-title"><span class="no">06.</span><span>繳交保證金</span></div>
+              <svg x="0px" y="0px" viewbox="0 0 36.7 71.9" class="arrow">
+                <polyline points="0.4,0.4 36,36 0.4,71.6 " class="st0"></polyline>
+              </svg>
+            </div>
+            <div class="step-content-wrapper">
+              <div class="step-content">
+                <p>IDCard為線上報名之第二份需預先準備之作業檔案，並於線上報名時上傳。</p>
+                <p>第一頁請放個人簡歷，表達格式不限。</p>
+                <p>第二頁請放上個人最滿意的作品(研究、專題、設計皆可)，可透過文字、圖片或另附影片表達。</p>
+                <p>第三頁請從你的經驗中去發想並回答以下兩問題，可透過文字、圖片或另附影片表達，數量、格式均不限。</p>
+                <div class="br"></div>
+                <p>1. 請從自己與互動物（包括電腦、智慧裝置、圖形化介面、互動設計、互動藝術）認知或相處的經驗中，舉一自己最喜歡或印象深刻的例子，並說明原因。</p>
+                <div class="br"></div>
+                <p>2. 本次活動主題為「重構Re:__ 」，請你想像我們能如何給予被淘汰的物品一項新的功能，讓他能夠有新的使命，重新賦予物件內在的平衡與外裝的非凡意義？並描述一例。</p>
+                <p>具體描述內容包括：</p>
+                <p>a. 過去的那項物品為何。</p>
+                <p>b. 你賦予它的新功能為何。</p>
+                <p>c. 可以達到什麼新的互動。</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section id="taichi">
@@ -99,4 +397,4 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.4/pixi.min.js"></script>
 <script src="assets/scripts/main.js"></script>
-<script src="assets/scripts/screen.js"></script>
+<script src="assets/scripts/landing.js"></script>
