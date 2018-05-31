@@ -728,3 +728,61 @@ header {
               color: #fff; }
               .page-wrapper #registration .section-wrapper .accordion .step-container .step-content-wrapper .step-content .br {
                 height: 10px; }
+  .page-wrapper #taichi {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .page-wrapper #taichi .section-wrapper {
+      width: 85%;
+      max-width: 1400px;
+      min-width: 600px; }
+      .page-wrapper #taichi .section-wrapper .section-left {
+        vertical-align: top;
+        display: inline-block;
+        width: 49%;
+        height: 100%;
+        text-align: right; }
+        .page-wrapper #taichi .section-wrapper .section-left .section-left-wrapper {
+          display: inline-block;
+          width: 76%;
+          text-align: right; }
+          .page-wrapper #taichi .section-wrapper .section-left .section-left-wrapper .img-top {
+            -webkit-transform: translateX(-90px);
+            -ms-transform: translateX(-90px);
+            transform: translateX(-90px);
+            width: 100%; }
+          .page-wrapper #taichi .section-wrapper .section-left .section-left-wrapper .img-btm {
+            width: 100%; }
+      .page-wrapper #taichi .section-wrapper .section-right {
+        padding-left: 7%;
+        vertical-align: top;
+        display: inline-block;
+        width: 49%;
+        height: 100%; }
+        .page-wrapper #taichi .section-wrapper .section-right .section-right-wrapper-title {
+          width: 100%;
+          font-family: NotoSansUI;
+          font-size: 28px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: 1px;
+          text-align: left;
+          color: #50e6b4; }
+        .page-wrapper #taichi .section-wrapper .section-right .section-right-wrapper-content {
+          width: 100%;
+          padding-top: 67px;
+          font-family: PingFangTC;
+          font-size: 14px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 2;
+          letter-spacing: 1px;
+          text-align: left;
+          color: #ffffff; }
