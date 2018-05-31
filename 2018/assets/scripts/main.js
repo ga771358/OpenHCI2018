@@ -28,17 +28,20 @@ function changeMenuAnimate(index) {
 }
 
 //menu隱藏＆出現
-// var prevScrollpos = window.pageYOffset;
-// $(window).on("scroll", function(e){
-// 	if(isScrolling) return;
-// 	var currentScrollPos = window.pageYOffset;
-// 	if (prevScrollpos > currentScrollPos) {
-// 		$("header").removeClass('hide');
-// 	} else {
-// 		$("header").addClass('hide');
-// 	}
-// 	prevScrollpos = currentScrollPos;
-// })
+var canHideHeader = false;
+
+var prevScrollpos = window.pageYOffset;
+$(window).on("scroll", function(e){
+	if(!canHideHeader) return;
+	if(isScrolling) return;
+	var currentScrollPos = window.pageYOffset;
+	if (prevScrollpos > currentScrollPos) {
+		$("header").removeClass('hide');
+	} else {
+		$("header").addClass('hide');
+	}
+	prevScrollpos = currentScrollPos;
+})
 
 //導航列位置指示
 var controller = new ScrollMagic.Controller();
@@ -46,12 +49,22 @@ var sections = [$("#intro"),$("#program"),$("#registration"),$("#taichi"),$("#cr
 
 for(i=0; i<sections.length; i++) {
 	var sectionId = sections[i].attr("id");
-	var sectionHeight = sections[i].outerHeight();//s - (window.innerHeight / 2);
-	console.log(sectionHeight);
+	var sectionHeight = sections[i].outerHeight();
 	var scene = new ScrollMagic.Scene({triggerElement: "#"+sectionId, duration: sectionHeight, triggerHook: 0.5})
 	.setClassToggle("#menu"+(i+1), "menu-here")
 	.addTo(controller);
 }
+
+//過場標準字動畫
+var tl = new TimelineMax({repeat:0});
+tl.fromTo($("#interlude .moving"), 1, {x:0}, {x:-1000, ease:Linear.easeNone}, 0);
+var sceneInterlude = new ScrollMagic.Scene({
+		triggerElement: "#interlude",
+		duration: 1500,
+		triggerHook: 1
+});
+sceneInterlude.setTween(tl);
+sceneInterlude.addTo(controller);
 
 
 
@@ -79,3 +92,45 @@ $(function() {
 		}
 	});
 });
+
+
+
+//steps accordion
+var stepOpenTime = 500;
+var isStepChanging = false;
+$(".step-header").on("click", function(argument) {
+	if(!isStepChanging) {
+		var container = $(this).parents(".step-container")
+		var wrapper = container.find('.step-content-wrapper');
+		var content = container.find('.step-content');
+		
+		var contentHeight = content.height() + 40;
+
+		container.toggleClass('active');
+		if(container.hasClass('active')) {
+			isStepChanging = true;
+			wrapper.animate({"height":contentHeight+"px"}, stepOpenTime, "linear", function(){
+				isStepChanging = false;
+			});
+		} else {
+			isStepChanging = true;
+			wrapper.animate({"height":"0"}, stepOpenTime, "linear", function(){
+				isStepChanging = false;
+			});
+		}
+	}
+})
+
+
+//program tabs
+$("#program .tab").on("click", function(){
+	if($(this).hasClass('active')) return;
+	var index = $(this).data("index");
+	$("#program .tab").removeClass('active');
+	$(this).addClass('active');
+	$(".program-content").removeClass('active');
+	setTimeout(function(){
+		$(".program-content[data-index="+index+"]").addClass('active');
+	},500);
+	
+})
