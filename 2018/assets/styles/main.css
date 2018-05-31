@@ -410,3 +410,32 @@ header {
       align-items: center; }
       .page-wrapper #interlude .moving img {
         width: 100%; }
+  .page-wrapper #organizer {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .page-wrapper #organizer .section-wrapper {
+      width: 85%; }
+      .page-wrapper #organizer .section-wrapper .need-padding-top {
+        margin-top: 60px; }
+      .page-wrapper #organizer .section-wrapper .og-section-block {
+        text-align: left; }
+        .page-wrapper #organizer .section-wrapper .og-section-block .og-section-title {
+          height: 38px;
+          font-family: NotoSansUI;
+          font-size: 28px;
+          font-weight: bold;
+          letter-spacing: 1px;
+          color: #50e6b4; }
+        .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper {
+          padding-top: 40px; }
+          .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-padding {
+            padding-right: 80px; }
+          .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .og-logo {
+            height: 60px;
+            padding-top: 10px;
+            padding-bottom: 10px; }
