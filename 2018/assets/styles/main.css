@@ -810,3 +810,44 @@ header {
             height: 60px;
             padding-top: 10px;
             padding-bottom: 10px; }
+  .page-wrapper #contact {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .page-wrapper #contact .section-wrapper {
+      width: 85%;
+      min-width: 714px;
+      background-color: #50e6b4; }
+      .page-wrapper #contact .section-wrapper .contact-section-map {
+        vertical-align: top;
+        width: 59%;
+        height: 327px;
+        display: inline-block; }
+      .page-wrapper #contact .section-wrapper .contact-section-info {
+        vertical-align: top;
+        width: 40%;
+        height: 327px;
+        display: inline-block; }
+        .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block {
+          left: 10%;
+          margin-top: 44px; }
+          .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block .contact-section-title {
+            display: inline-block;
+            line-height: 1.06;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #ffffff; }
+          .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block .contact-section-content {
+            display: inline-block;
+            padding-top: 10px;
+            left: 12%;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-align: left;
+            color: #191455; }
