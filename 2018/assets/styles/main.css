@@ -803,8 +803,7 @@ header {
         margin-top: 60px;
         display: inline-block;
         border: solid 1px white;
-        width: 100%;
-        overflow: hidden; }
+        width: 100%; }
         .page-wrapper #crew .section-wrapper .crew-content .slide-block {
           left: 0px;
           height: 100%;
@@ -824,14 +823,14 @@ header {
               height: 100%; }
               .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-left .team-name {
                 display: inline-block;
-                -webkit-transform: rotate(-90deg) translateY(-63px) translateX(-61px);
-                -ms-transform: rotate(-90deg) translateY(-63px) translateX(-61px);
-                transform: rotate(-90deg) translateY(-63px) translateX(-61px);
+                -webkit-transform: rotate(-90deg) translateY(-52px) translateX(-52px);
+                -ms-transform: rotate(-90deg) translateY(-52px) translateX(-52px);
+                transform: rotate(-90deg) translateY(-52px) translateX(-52px);
                 background-color: #d70050;
                 font-weight: 800;
                 font-size: 20px;
                 color: #191456;
-                padding: 1px; }
+                padding: 3px; }
             .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right {
               margin-left: 16px;
               display: inline-block;
@@ -866,7 +865,6 @@ header {
           border-bottom: solid 3px white;
           display: inline-block;
           opacity: 0.6;
-          font-family: anticon;
           font-size: 41px;
           font-weight: 600;
           font-style: normal;
