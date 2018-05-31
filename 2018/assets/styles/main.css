@@ -282,77 +282,100 @@ header {
     .page-wrapper #landing .landing-title {
       margin-left: 5%;
       width: 30%; }
-  .page-wrapper #crew .section-wrapper {
-    display: inline-block;
-    width: 90%;
-    margin-left: 10%; }
-    .page-wrapper #crew .section-wrapper .crew-title {
-      font-family: NotoSansUI;
-      font-size: 28px;
-      font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: 1px;
-      text-align: left;
-      color: #50e6b4; }
-    .page-wrapper #crew .section-wrapper .crew-content {
-      cursor: pointer;
-      margin-top: 60px;
-      display: inline-block;
-      height: calc(100% - 30px);
-      width: 99%;
-      overflow: hidden; }
-      .page-wrapper #crew .section-wrapper .crew-content .slide-block {
-        left: 0px;
-        height: 100%;
-        white-space: nowrap;
-        transition: 0.5s; }
-        .page-wrapper #crew .section-wrapper .crew-content .slide-block .need-margin-left {
-          margin-left: 160px; }
-        .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block {
-          display: inline-block;
-          height: 100%; }
-          .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-left {
+  .page-wrapper #crew {
+    height: auto; }
+    .page-wrapper #crew .section-wrapper {
+      width: 90%;
+      max-width: 1400px;
+      min-width: 600px;
+      margin-left: 9%; }
+      .page-wrapper #crew .section-wrapper .crew-title {
+        font-size: 28px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 1px;
+        text-align: left;
+        color: #50e6b4; }
+      .page-wrapper #crew .section-wrapper .crew-content {
+        cursor: pointer;
+        margin-top: 60px;
+        display: inline-block;
+        border: solid 1px white;
+        width: 100%;
+        overflow: hidden; }
+        .page-wrapper #crew .section-wrapper .crew-content .slide-block {
+          left: 0px;
+          height: 100%;
+          white-space: nowrap;
+          transition: 0.5s; }
+          .page-wrapper #crew .section-wrapper .crew-content .slide-block .need-margin-left {
+            margin-left: 160px; }
+          .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block {
             display: inline-block;
-            vertical-align: top;
-            width: 22px;
             height: 100%; }
-            .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-left .team-name {
+            .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-left {
               display: inline-block;
-              transform: rotate(-90deg) translateY(-63px) translateX(-61px);
-              background-color: #d70050;
-              font-weight: 800;
-              font-size: 20px;
-              color: #191456;
-              padding: 1px; }
-          .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right {
-            margin-left: 16px;
-            display: inline-block;
-            vertical-align: top;
-            width: calc(100%-20px); }
-            .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right .need-margin-top {
-              margin-top: 48px; }
-            .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right .one-person .person-name {
-              font-family: PingFangTC;
-              font-size: 16px;
-              font-weight: 600;
-              font-style: normal;
-              font-stretch: normal;
-              line-height: normal;
-              letter-spacing: 1px;
-              text-align: left;
-              color: #50e6b4; }
-            .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right .one-person .person-detail {
-              margin-top: 6px;
-              font-family: PingFangTC;
-              font-size: 16px;
-              font-weight: normal;
-              font-style: normal;
-              font-stretch: normal;
-              line-height: normal;
-              letter-spacing: 1px;
-              text-align: left;
-              color: #ffffff; }
+              vertical-align: top;
+              width: 22px;
+              height: 100%; }
+              .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-left .team-name {
+                display: inline-block;
+                transform: rotate(-90deg) translateY(-63px) translateX(-61px);
+                background-color: #d70050;
+                font-weight: 800;
+                font-size: 20px;
+                color: #191456;
+                padding: 1px; }
+            .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right {
+              margin-left: 16px;
+              display: inline-block;
+              vertical-align: top;
+              width: calc(100%-20px); }
+              .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right .need-margin-top {
+                margin-top: 48px; }
+              .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right .one-person .person-name {
+                font-size: 16px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: 1px;
+                text-align: left;
+                color: #50e6b4; }
+              .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right .one-person .person-detail {
+                margin-top: 6px;
+                font-size: 16px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: 1px;
+                text-align: left;
+                color: #ffffff; }
+      .page-wrapper #crew .section-wrapper .crew-button {
+        text-align: right;
+        margin-top: 40px; }
+        .page-wrapper #crew .section-wrapper .crew-button .button {
+          cursor: pointer;
+          border-bottom: solid 3px white;
+          display: inline-block;
+          opacity: 0.6;
+          font-family: anticon;
+          font-size: 41px;
+          font-weight: 600;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: 2px;
+          text-align: center;
+          color: #50e6b4;
+          padding: 6px;
+          padding-bottom: 2px; }
+        .page-wrapper #crew .section-wrapper .crew-button .button-left {
+          right: 100px; }
+        .page-wrapper #crew .section-wrapper .crew-button .button-right {
+          right: 85px; }
   .page-wrapper #interlude {
     height: 200px; }

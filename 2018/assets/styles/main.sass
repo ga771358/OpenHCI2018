@@ -298,14 +298,13 @@ header
 			margin-left: 5%
 			width: 30%
 	#crew
-		// *
-		// 	border: solid 1px white
+		height: auto
 		.section-wrapper
-			display: inline-block
-			width: 90%
-			margin-left: 10%
+			width: 90%	
+			max-width: 1400px
+			min-width: 600px
+			margin-left: 9%
 			.crew-title
-				font-family: NotoSansUI
 				font-size: 28px
 				font-weight: bold
 				font-style: normal
@@ -318,9 +317,8 @@ header
 				cursor: pointer
 				margin-top: 60px
 				display: inline-block
-				height: calc(100% - 30px)
-				// border: solid 1px white
-				width: 99%
+				border: solid 1px white
+				width: 100%
 				overflow: hidden
 				.slide-block
 					left: 0px
@@ -355,7 +353,6 @@ header
 								margin-top: 48px
 							.one-person
 								.person-name
-									font-family: PingFangTC
 									font-size: 16px
 									font-weight: 600
 									font-style: normal
@@ -366,7 +363,6 @@ header
 									color: #50e6b4
 								.person-detail
 									margin-top: 6px
-									font-family: PingFangTC
 									font-size: 16px
 									font-weight: normal
 									font-style: normal
@@ -375,5 +371,28 @@ header
 									letter-spacing: 1px
 									text-align: left
 									color: #ffffff
+			.crew-button
+				text-align: right
+				margin-top: 40px
+				.button
+					cursor: pointer
+					border-bottom: solid 3px white
+					display: inline-block
+					opacity: 0.6
+					font-family: anticon
+					font-size: 41px
+					font-weight: 600
+					font-style: normal
+					font-stretch: normal
+					line-height: normal
+					letter-spacing: 2px
+					text-align: center
+					color: #50e6b4
+					padding: 6px
+					padding-bottom: 1px
+				.button-left
+					right: 100px
+				.button-right
+					right: 85px
 	#interlude
 		height: 200px
