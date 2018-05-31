@@ -804,9 +804,13 @@ header {
           color: #50e6b4; }
         .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper {
           padding-top: 40px; }
-          .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-padding {
-            padding-right: 80px; }
           .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .og-logo {
+
+            height: 80px;
+            padding: 1%;
+            padding-left: 5%;
+            padding-right: 5%; }
+
             height: 60px;
             padding-top: 10px;
             padding-bottom: 10px; }
@@ -851,3 +855,4 @@ header {
             letter-spacing: 1px;
             text-align: left;
             color: #191455; }
+
