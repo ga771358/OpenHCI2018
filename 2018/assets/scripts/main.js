@@ -100,26 +100,34 @@ var stepOpenTime = 500;
 var isStepChanging = false;
 $(".step-header").on("click", function(argument) {
 	if(!isStepChanging) {
-		var container = $(this).parents(".step-container")
-		var wrapper = container.find('.step-content-wrapper');
-		var content = container.find('.step-content');
-		
-		var contentHeight = content.height() + 40;
-
-		container.toggleClass('active');
-		if(container.hasClass('active')) {
-			isStepChanging = true;
-			wrapper.animate({"height":contentHeight+"px"}, stepOpenTime, "linear", function(){
-				isStepChanging = false;
-			});
+		if($(this).parents(".step-container").hasClass('active')) {
+			toggleAccordion($(".step-container.active"));
 		} else {
-			isStepChanging = true;
-			wrapper.animate({"height":"0"}, stepOpenTime, "linear", function(){
-				isStepChanging = false;
-			});
-		}
+			toggleAccordion($(".step-container.active"));
+			toggleAccordion($(this).parents(".step-container"));
+		}	
 	}
 })
+
+function toggleAccordion(container) {
+	// var container = $(this).parents(".step-container");
+	var wrapper = container.find('.step-content-wrapper');
+	var content = container.find('.step-content');
+	
+	var contentHeight = content.height() + 40;
+
+	isStepChanging = true;
+	if(container.hasClass('active')) {
+		wrapper.animate({"height":"0"}, stepOpenTime, "linear", function(){
+			isStepChanging = false;
+		});
+	} else {
+		wrapper.animate({"height":contentHeight+"px"}, stepOpenTime, "linear", function(){
+			isStepChanging = false;
+		});
+	}
+	container.toggleClass('active');
+}
 
 
 //program tabs
