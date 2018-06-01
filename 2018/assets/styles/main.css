@@ -835,10 +835,14 @@ header {
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    padding-top: 200px; }
     .page-wrapper #contact .section-wrapper {
       width: 90%;
       background-color: #50e6b4; }
+      @media screen and (min-width: 1150px) {
+        .page-wrapper #contact .section-wrapper {
+          width: 1150px; } }
       .page-wrapper #contact .section-wrapper .contact-section-map {
         vertical-align: top;
         width: 60%;

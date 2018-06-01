@@ -721,18 +721,20 @@ header
 		height: auto
 		display: flex
 		justify-content: center
+		padding-top: 200px
 		//*
 		//	border: solid 1px white
 		.section-wrapper
 			width: 90%
 			//min-width: 714px
+			@media screen and (min-width: 1150px)
+				width: 1150px
 			background-color: #50e6b4
 			.contact-section-map
 				vertical-align: top
 				width: 60%
 				height: 327px
 				display: inline-block
-				//@media screen and (max-width: $breakpoint)
 			.contact-section-info
 				vertical-align: top
 				width: 30% //
