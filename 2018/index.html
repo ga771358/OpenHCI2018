@@ -406,7 +406,9 @@
       </div>
     </section>
     <section id="contact">
-      <div class="section-wrapper"><img src="assets/images/fake_map.png" alt="" class="contact-section-map"/>
+      <div class="section-wrapper">
+        <!--img.contact-section-map(src="assets/images/fake_map.png", alt="")-->
+        <div id="map" class="contact-section-map"></div>
         <div class="contact-section-info">
           <div class="contact-section-block">
             <div class="contact-section-title">LOCATION</div><br/>
@@ -433,3 +435,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.4/pixi.min.js"></script>
 <script src="assets/scripts/main.js"></script>
 <script src="assets/scripts/landing.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcF4jmxdoDeeDWS_1TdOmkFZ8Hs4kzQxs&amp;callback=initMap" async="" defer=""></script>
