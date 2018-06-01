@@ -93,8 +93,6 @@ $(function() {
 	});
 });
 
-
-
 //steps accordion
 var stepOpenTime = 500;
 var isStepChanging = false;
@@ -143,6 +141,64 @@ $("#program .tab").on("click", function(){
 	
 })
 
+//crew section
+var crew = -1;
+var all_block = $('.crew-content-block');
+var total_block_size = 0; // total size of all crew block
+var temp_left_now; // record slide block 's left now
+
+for(var j=0;j<12;j++){
+	total_block_size += 150;
+	total_block_size += $(all_block[i]).width();
+}
+
+$("#button-crew-left").click(function(){
+	//最右邊了
+	if(crew == -1){
+		return;
+	}
+	
+	crew--;
+
+	//計算位移的大小（包括margin）
+	var total_size_need_to_slide = 150;
+	for(var i=0;i<=crew;i++){
+		total_size_need_to_slide += 150;
+		total_size_need_to_slide += $(all_block[i]).width();
+	}
+
+	temp_left_now = total_size_need_to_slide;
+	//變負數
+	total_size_need_to_slide = -total_size_need_to_slide;
+
+	$(".slide-block").css("left",total_size_need_to_slide+"px");
+	temp_left_now = -total_size_need_to_slide;
+});
+
+$("#button-crew-right").click(function(){
+	//最右邊了
+	var screen_size_now = $(".crew-content").width();
+	if((total_block_size - screen_size_now) < (temp_left_now - 300)){
+		return;
+	}
+
+	crew++;
+
+	//計算位移的大小（包括margin）
+	var total_size_need_to_slide = 150;
+	for(var i=0;i<=crew;i++){
+		total_size_need_to_slide += 150;
+		total_size_need_to_slide += $(all_block[i]).width();
+	}
+
+	//變負數
+	total_size_need_to_slide = -total_size_need_to_slide;
+	
+	$(".slide-block").css("left",total_size_need_to_slide+"px");
+	temp_left_now = -total_size_need_to_slide;
+});
+
+// map section
 var map, styledMapType;
 function initMap() {
   styledMapType = new google.maps.StyledMapType(

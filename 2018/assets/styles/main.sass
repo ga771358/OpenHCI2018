@@ -689,6 +689,112 @@ header
 					text-align: left
 					color: #ffffff
 
+	#crew
+		height: auto
+		.section-wrapper
+			width: 90%	
+			max-width: 1400px
+			min-width: 600px
+			margin-left: 9%
+			.crew-title
+				font-size: 28px
+				font-weight: bold
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: 1px
+				text-align: left
+				color: #50e6b4
+			.crew-content
+				margin-top: 60px
+				display: inline-block
+				box-shadow: -70px 0px inset rgba(255,255,255,0.3)
+				width: 100%
+				overflow: hidden
+				.slide-block
+					left: -150px
+					height: 100%
+					white-space: nowrap
+					transition: 0.75s
+					.crew-content-block
+						margin-left: 150px
+						display: inline-block
+						height: 100%
+						.crew-content-block-left
+							display: inline-block
+							vertical-align: top
+							width: 22px
+							height: 100%
+							.team-name
+								display: inline-block
+								transform: rotate(-90deg) translateY(-52px) translateX(-52px)
+								background-color: #d70050
+								font-weight: 800
+								font-size: 20px
+								color: $bg
+								padding: 3px
+						.need-more-margin-left
+							margin-left: 25px
+						.crew-content-block-right
+							margin-left: 16px
+							display: inline-block
+							vertical-align: top
+							width: calc(100%-20px)
+							.need-margin-top
+								margin-top: 48px
+							.one-person
+								.person-name
+									font-size: 16px
+									font-weight: 600
+									font-style: normal
+									font-stretch: normal
+									line-height: normal
+									letter-spacing: 1px
+									text-align: left
+									color: #50e6b4
+								.person-detail
+									margin-top: 6px
+									font-size: 16px
+									font-weight: normal
+									font-style: normal
+									font-stretch: normal
+									line-height: normal
+									letter-spacing: 1px
+									text-align: left
+									color: #ffffff
+			.crew-button
+				text-align: right
+				margin-top: 40px
+				.button
+					cursor: pointer
+					border-bottom: solid 3px white
+					display: inline-block
+					opacity: 0.6
+					font-size: 41px
+					font-weight: 600
+					font-style: normal
+					font-stretch: normal
+					line-height: normal
+					letter-spacing: 2px
+					text-align: center
+					color: #50e6b4
+					padding-left: 7px
+					padding-right: 7px
+					padding-bottom: 1px
+					transition: 0.2s
+					transform: scale(1)
+					-webkit-user-select: none
+					&:hover
+						border-bottom: solid 4px white
+						opacity: 1
+						padding-left: 12px
+						padding-right: 12px
+						transform: scale(1.2)
+				#button-crew-left
+					right: 100px
+				#button-crew-right
+					right: 85px
+
 	#organizer
 		height: auto
 		display: flex
