@@ -395,7 +395,8 @@ body
 						img.og-logo.logo-padding(src="assets/images/organizer_logo/logo-b-01.png", alt="")
 		section#contact
 			.section-wrapper
-				img.contact-section-map(src="assets/images/fake_map.png", alt="")
+				//img.contact-section-map(src="assets/images/fake_map.png", alt="")
+				#map.contact-section-map
 				.contact-section-info
 					.contact-section-block
 						.contact-section-title LOCATION
@@ -422,5 +423,6 @@ script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation
 script(src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.4/pixi.min.js")
 script(src="assets/scripts/main.js")
 script(src="assets/scripts/landing.js")
+script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDcF4jmxdoDeeDWS_1TdOmkFZ8Hs4kzQxs&callback=initMap', async='', defer='')
 	
 //- script(src="assets/scripts/screen.js")
