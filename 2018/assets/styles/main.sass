@@ -679,21 +679,18 @@ header
 				text-align: left
 				color: #50e6b4
 			.crew-content
-				cursor: pointer
 				margin-top: 60px
 				display: inline-block
 				border: solid 1px white
 				width: 100%
-				// overflow: hidden
+				overflow: hidden
 				.slide-block
-					left: 0px
+					left: -150px
 					height: 100%
 					white-space: nowrap
 					transition: 0.5s
-					.need-margin-left
-						margin-left: 160px
 					.crew-content-block
-						// border: solid 1px white
+						margin-left: 150px
 						display: inline-block
 						height: 100%
 						.crew-content-block-left
@@ -709,6 +706,8 @@ header
 								font-size: 20px
 								color: $bg
 								padding: 3px
+						.need-more-margin-left
+							margin-left: 25px
 						.crew-content-block-right
 							margin-left: 16px
 							display: inline-block
@@ -754,9 +753,9 @@ header
 					color: #50e6b4
 					padding: 6px
 					padding-bottom: 1px
-				.button-left
+				#button-crew-left
 					right: 100px
-				.button-right
+				#button-crew-right
 					right: 85px
 
 	#organizer

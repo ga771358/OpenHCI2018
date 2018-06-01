@@ -799,21 +799,20 @@ header {
         text-align: left;
         color: #50e6b4; }
       .page-wrapper #crew .section-wrapper .crew-content {
-        cursor: pointer;
         margin-top: 60px;
         display: inline-block;
         border: solid 1px white;
-        width: 100%; }
+        width: 100%;
+        overflow: hidden; }
         .page-wrapper #crew .section-wrapper .crew-content .slide-block {
-          left: 0px;
+          left: -150px;
           height: 100%;
           white-space: nowrap;
           -webkit-transition: 0.5s;
           -o-transition: 0.5s;
           transition: 0.5s; }
-          .page-wrapper #crew .section-wrapper .crew-content .slide-block .need-margin-left {
-            margin-left: 160px; }
           .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block {
+            margin-left: 150px;
             display: inline-block;
             height: 100%; }
             .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-left {
@@ -831,6 +830,8 @@ header {
                 font-size: 20px;
                 color: #191456;
                 padding: 3px; }
+            .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .need-more-margin-left {
+              margin-left: 25px; }
             .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right {
               margin-left: 16px;
               display: inline-block;
@@ -875,9 +876,9 @@ header {
           color: #50e6b4;
           padding: 6px;
           padding-bottom: 1px; }
-        .page-wrapper #crew .section-wrapper .crew-button .button-left {
+        .page-wrapper #crew .section-wrapper .crew-button #button-crew-left {
           right: 100px; }
-        .page-wrapper #crew .section-wrapper .crew-button .button-right {
+        .page-wrapper #crew .section-wrapper .crew-button #button-crew-right {
           right: 85px; }
   .page-wrapper #organizer {
     height: auto;
