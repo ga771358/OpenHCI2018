@@ -178,7 +178,7 @@ $("#button-crew-left").click(function(){
 $("#button-crew-right").click(function(){
 	//最右邊了
 	var screen_size_now = $(".crew-content").width();
-	if((total_block_size - screen_size_now) < (temp_left_now - 300)){
+	if((total_block_size - screen_size_now) < (temp_left_now - 450)){
 		return;
 	}
 
