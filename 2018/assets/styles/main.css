@@ -1018,7 +1018,7 @@ header {
       display: inline-block;
       height: 327px;
       width: 100%; }
-      @media screen and (min-width: 1150px) {
+      @media screen and (min-width: 1000px) {
         .page-wrapper #contact .section-wrapper {
           width: 1150px; } }
       .page-wrapper #contact .section-wrapper .contact-section-map {
@@ -1026,15 +1026,33 @@ header {
         height: 327px;
         display: inline-block; }
       .page-wrapper #contact .section-wrapper .contact-section-info {
-        z-index: 100;
         background-color: #50e6b4;
+        position: absolute;
         top: 0;
         left: 0;
-        position: absolute;
         width: 380px;
         height: 86px;
         display: inline-block; }
-        .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block .contact-section-title {
+        @media screen and (max-width: 768px) {
+          .page-wrapper #contact .section-wrapper .contact-section-info {
+            top: 0;
+            left: initial;
+            right: 0;
+            width: 258px;
+            height: 131px; } }
+        @media screen and (max-width: 768px) {
+          .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block {
+            display: none; } }
+        @media screen and (min-width: 768px) {
+          .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block {
+            display: block; } }
+        @media screen and (max-width: 768px) {
+          .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block-mid {
+            display: block; } }
+        @media screen and (min-width: 768px) {
+          .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block-mid {
+            display: none; } }
+        .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-title {
           left: 25px;
           top: 20px;
           line-height: 1.06;
@@ -1043,7 +1061,11 @@ header {
           letter-spacing: 1px;
           text-align: left;
           color: #ffffff; }
-        .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block .contact-section-content {
+          @media screen and (max-width: 768px) {
+            .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-title {
+              left: 35px;
+              top: 30px; } }
+        .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-content {
           left: 25px;
           top: 10px;
           font-size: 16px;
@@ -1052,3 +1074,7 @@ header {
           letter-spacing: 1px;
           text-align: left;
           color: #191455; }
+          @media screen and (max-width: 768px) {
+            .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-content {
+              left: 35px;
+              top: 20px; } }

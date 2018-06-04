@@ -8,6 +8,7 @@ $registration-bg : #28286e
 
 $breakpoint: 1000px
 $breakpoint-sm: 375px
+$breakpoint-mid: 768px
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
 	 v2.0 | 20110126
@@ -858,7 +859,7 @@ header
 		.section-wrapper
 			width: 90%
 			//min-width: 714px
-			@media screen and (min-width: 1150px)
+			@media screen and (min-width: $breakpoint)
 				width: 1150px
 			//background-color: #50e6b4
 			
@@ -871,33 +872,54 @@ header
 				height: 327px
 				display: inline-block
 			.contact-section-info
-				z-index: 100
+				//z-index: 100
 				background-color: #50e6b4
+				position: absolute
 				top: 0
 				left: 0
+				@media screen and (max-width: $breakpoint-mid)
+					top: 0
+					left: initial
+					right: 0
+					width: 258px
+					height: 131px
 				//vertical-align: top
-				position: absolute
 				width: 380px
 				height: 86px
 				display: inline-block
 				.contact-section-block
-					.contact-section-title
-						left: 25px
+					@media screen and (max-width: $breakpoint-mid)
+						display: none
+					@media screen and (min-width: $breakpoint-mid)
+						display: block
+				.contact-section-block-mid
+					@media screen and (max-width: $breakpoint-mid)
+						display: block
+					@media screen and (min-width: $breakpoint-mid)
+						display: none
+				.contact-section-title
+					@media screen and (max-width: $breakpoint-mid)
+						left: 35px
+						top: 30px
+					left: 25px
+					top: 20px
+					line-height: 1.06
+					font-size: 14px
+					font-weight: bold
+					letter-spacing: 1px
+					text-align: left
+					color: #ffffff
+				.contact-section-content
+					@media screen and (max-width: $breakpoint-mid)
+						left: 35px
 						top: 20px
-						line-height: 1.06
-						font-size: 14px
-						font-weight: bold
-						letter-spacing: 1px
-						text-align: left
-						color: #ffffff
-					.contact-section-content
-						left: 25px
-						top: 10px
-						font-size: 16px
-						line-height: 1.2
-						font-weight: 600
-						letter-spacing: 1px
-						text-align: left
-						color: #191455
+					left: 25px
+					top: 10px
+					font-size: 16px
+					line-height: 1.2
+					font-weight: 600
+					letter-spacing: 1px
+					text-align: left
+					color: #191455
 
 
