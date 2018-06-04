@@ -952,11 +952,30 @@ header {
           color: #50e6b4; }
         .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper {
           padding-top: 40px; }
+<<<<<<< HEAD
+          .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block {
+            display: inline-block;
+            height: 45px;
+            width: 400px;
+            margin-bottom: 50px; }
+            .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block .og-logo {
+              height: 100%; }
+          .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small {
+            display: inline-block;
+            height: 45px;
+            width: 300px;
+            margin-bottom: 50px; }
+            .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small .og-logo {
+              height: 100%;
+              display: block;
+              margin: auto; }
+=======
           .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .og-logo {
             height: 80px;
             padding: 1%;
             padding-left: 5%;
             padding-right: 5%; }
+>>>>>>> master
   .page-wrapper #contact {
     height: auto;
     display: -webkit-box;
