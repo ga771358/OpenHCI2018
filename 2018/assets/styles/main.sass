@@ -92,6 +92,7 @@ header
 	transition: top 0.5s
 	@media screen and (max-width: $breakpoint) 
 		padding: 0 20px
+		height: 70px
 	&.hide
 		top: -100px
 
@@ -151,7 +152,7 @@ header
 		@media screen and (max-width: $breakpoint)
 			position: fixed
 			width: 100%
-			height: 100vh
+			height: 80vh
 			top: 0
 			left: 0
 			transition: 0.5s
@@ -172,69 +173,34 @@ header
 				.in-site,.out-site
 					display: flex
 					flex-direction: column
-					justify-content: space-around
+					justify-content: space-between
 					align-items: center
-					padding: 10px 0
-					max-height: 500px
+					width: 100%
+					height: 100%
+					padding: 50px 0
 					border: 0
 					.menu-btn
+						width: 90%
+						height: 45px
 						color: #fff
-						padding: 0 20px 
-						margin: 10px 0
-						font-size: 2.2em
-						font-weight: 500
-						@media screen and (max-width: $breakpoint)
-							font-size: 1.8em
-						@media screen and (max-width: $breakpoint-sm)
-							font-size: 1.5em
-				.out-site
-					border-top: 3px solid #fff
-	.menu-cir
-		@media screen and (max-width: $breakpoint)
-			&.active
-				visibility: visible
-				.menu-bg
-					width: 10000px
-					height: 10000px	
-					@media screen and (max-width: 1500px) 
-						width: 6000px
-						height: 6000px
-					@media screen and (max-width: 700px) 
-						width: 4000px
-						height: 4000px
-					@media screen and (max-width: 400px) 
-						width: 3000px
-						height: 3000px
-					transition: 0.5s ease-in
-				.menu-container
-					opacity: 1
-					transition-delay: 0.3s
-			.menu-bg
-				position: fixed
-				top: 25px
-				right: 30px
-				transform: translate(50%,-50%)
-				width: 0
-				height: 0
-				border-radius: 100%
-				background-color: $bg
-				transition: 0.5s ease-out
-	.menu-fadein
-		@media screen and (max-width: $breakpoint)
-			&.active
-				visibility: visible
-				.menu-container
-					opacity: 1
-			.menu-container
-				background-color: #fbc63c
+						display: flex
+						justify-content: center
+						align-items: center
+						margin: 0
+						font-size: 1.3em
+						&::before
+							display: none
+					#sign-up
+						width: 90%
+						height: 45px
 	.menu-slidein
 		@media screen and (max-width: $breakpoint)
-			left: 100%
+			top: -100%
 			&.active
 				visibility: visible
-				left: 0
+				top: 0
 			.menu-container
-				background-color: #fbc63c
+				background-color: rgba($bg,0.9)
 				transition: none
 				opacity: 1
 
@@ -277,6 +243,20 @@ header
 	height: 100%
 	display: none
 
+.lightbox
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	background-color: rgba(#000,0.5)
+	visibility: hidden
+	opacity: 0
+	z-index: 90
+	transition: 0.3s
+	&.active
+		visibility: visible
+		opacity: 1
 
 .page-wrapper
 	width: 100%
@@ -454,21 +434,38 @@ header
 		justify-content: center
 		.section-wrapper
 			height: auto
-			width: 90%
-			max-width: 1200px
+			width: 85%	
+			max-width: 1400px
 			display: flex
 			flex-direction: column
 			.tabs
 				width: 100%
 				display: flex
 				justify-content: space-between
+				flex-wrap: wrap
 				.tab
 					line-height: 1.5em
 					font-weight: 500
+					flex: 0 0 auto
+					width: calc(100% / 6)
 					display: flex
 					flex-direction: column
 					align-items: flex-start
 					cursor: pointer
+					@media screen and (max-width: $breakpoint) 
+						width: calc(100% / 2)
+						&:nth-child(1)
+							order: 1
+						&:nth-child(2)
+							order: 3
+						&:nth-child(3)
+							order: 5
+						&:nth-child(4)
+							order: 2
+						&:nth-child(5)
+							order: 4
+						&:nth-child(6)
+							order: 6
 					p
 						&::before
 							content: ""
@@ -493,8 +490,6 @@ header
 					p:last-child
 						span
 							color: $red
-
-
 					&.active
 						p
 							&::before
@@ -508,6 +503,8 @@ header
 			.program-container
 				width: 100%
 				margin-top: 100px
+				@media screen and (max-width: $breakpoint) 
+					margin-top: 30px
 				.program-content
 					width: 100%
 					display: flex
@@ -523,9 +520,15 @@ header
 					&.active
 						visibility: visible
 						opacity: 1
+					@media screen and (max-width: $breakpoint) 
+						flex-direction: column
 					.program-img
 						width: 50%
 						margin-right: 30px
+						@media screen and (max-width: $breakpoint) 
+							width: 100%
+							margin: 0
+							margin-bottom: 30px
 					.program-schedule
 						flex: 1
 						flex-direction: column
@@ -537,106 +540,103 @@ header
 							font-weight: 500
 						.schedule-content
 							color: #fff
-							line-height: 2em
-					
-
+							line-height: 1.5em
+							p
+								margin-bottom: 15px
+							@media screen and (max-width: $breakpoint) 
+								font-size: 0.8em
+								p
+									margin-bottom: 10px
 	#registration
 		height: auto
+		display: flex
+		justify-content: center
 		.section-wrapper
 			height: auto
-			.accordion
+			display: flex
+			flex-direction: column
+			width: 85%	
+			max-width: 1400px
+			.registration-title
+				color: $green
+				font-size: 2em
+				font-weight: 500
+				margin: 40px 0
+				align-self: flex-start
+			.step
 				width: 100%
+				border-top: 2px solid rgba(#fff,0.3)
+				padding: 40px 100px 40px 20px
 				display: flex
-				flex-direction: column
-				align-items: center
-				.step-container
-					width: 100%
-					display: flex
-					margin: 4px 0
-					&:first-child
-						.step-header
-							border-top: none
-					&.active
-						.step-header
-							border-radius: 5px 5px 0 0
-							// width: 150px
-							.arrow
-								transform: rotate(-90deg)
-					.step-header
-						position: absolute
-						top: 0
-						left: 50%
-						transform: translateX(-50%)
+				line-height: 1.5em
+				@media screen and (max-width: $breakpoint) 
+					flex-direction: column
+					padding: 40px 0
+					>*
+						flex: 0 0 auto
 						width: 100%
-						// max-width: 600px
-						height: 80px
-						// width: auto
-						background-color: $registration-bg
-						display: flex
-						justify-content: space-between
-						align-items: center
-						padding: 0 70px
-						cursor: pointer
-						z-index: 1
-						font-size: 1.3em
-						transition: 0.5s, top 0s, bottom 0s
-						font-weight: 500
-
-						&.sticky
-							position: fixed
-							top: 80px
-							width: 190px
-							// padding: 0 40px
-							padding: 0 30px
-							// box-shadow: 0px 0px 25px 5px rgba(#000,0.1)
-							border: 1px solid #fff
-							border-radius: 25px
-							// justify-content: center
-						&.stay
+						
+				&:last-child
+					border-bottom: 2px solid rgba(#fff,0.3)
+				.no
+					color: #fff
+					width: 100px
+					flex: 1
+					font-size: 1.3em
+					font-weight: 500
+					// margin-right: 100px
+					@media screen and (max-width: $breakpoint) 
+						margin-bottom: 10px
+				.step-title 
+					color: $red
+					width: 300px
+					flex: 2
+					font-size: 1.3em
+					font-weight: 500
+					// margin-right: 100px
+					@media screen and (max-width: $breakpoint) 
+						margin-bottom: 40px
+				.step-content
+					color: #fff
+					flex: 6
+					p
+						margin-bottom: 15px
+					@media screen and (max-width: $breakpoint) 
+						font-size: 0.8em
+						p
+							margin-bottom: 10px
+					.dot
+						margin-left: 40px
+						&::before
+							content: "·"
 							position: absolute
-							top: auto
-							bottom: 30px
+							top: 0
+							left: -40px
+						@media screen and (max-width: $breakpoint) 
+							margin-left: 20px
+							&::before
+								left: -20px
+					.q1,.q2
+						margin-left: 40px
+						&::before
+							// content: "·"
+							position: absolute
+							top: 0
+							left: -40px
+						@media screen and (max-width: $breakpoint) 
+							margin-left: 20px
+							&::before
+								left: -20px
+					.q1::before
+						content: "1."
+					.q2::before
+						content: "2." 
+					.tab
+						margin-left: 40px
+						@media screen and (max-width: $breakpoint) 
+							margin-left: 20px
 
-						.step-title
-							color: $red
-							display: flex
-							align-items: center
-							.no
-								color: #fff
-								display: block
-								width: 60px
 
-						.arrow
-							margin-left: 15px
-							height: 22px
-							width: 15px
-							fill: none
-							stroke: #fff
-							stroke-width: 5px
-							transition: 0.2s
-							transform: rotate(90deg)
-							// &.active
-							// 	transform: rotate(90deg)
-					.step-content-wrapper
-						width: 100%
-						// max-height: 0
-						height: 0
-						margin-top: 80px
-						overflow: hidden
-						// transition: 0.5s
-						// background-color: darken($info_content_bg, 5)
-						&.active
-							// max-height: 1000px
-						.step-content
-							width: 100%
-							// max-width: 600px
-							margin: 0 auto
-							padding: 20px 130px
-							transition: 0.5s, margin-top 0s
-							line-height: 1.5em
-							color: #fff
-							.br
-								height: 10px
 
 	#taichi
 		height: auto
