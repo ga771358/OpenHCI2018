@@ -93,33 +93,39 @@ $(function() {
 	});
 });
 
-
-
 //steps accordion
 var stepOpenTime = 500;
 var isStepChanging = false;
 $(".step-header").on("click", function(argument) {
 	if(!isStepChanging) {
-		var container = $(this).parents(".step-container")
-		var wrapper = container.find('.step-content-wrapper');
-		var content = container.find('.step-content');
-		
-		var contentHeight = content.height() + 40;
-
-		container.toggleClass('active');
-		if(container.hasClass('active')) {
-			isStepChanging = true;
-			wrapper.animate({"height":contentHeight+"px"}, stepOpenTime, "linear", function(){
-				isStepChanging = false;
-			});
+		if($(this).parents(".step-container").hasClass('active')) {
+			toggleAccordion($(".step-container.active"));
 		} else {
-			isStepChanging = true;
-			wrapper.animate({"height":"0"}, stepOpenTime, "linear", function(){
-				isStepChanging = false;
-			});
-		}
+			toggleAccordion($(".step-container.active"));
+			toggleAccordion($(this).parents(".step-container"));
+		}	
 	}
 })
+
+function toggleAccordion(container) {
+	// var container = $(this).parents(".step-container");
+	var wrapper = container.find('.step-content-wrapper');
+	var content = container.find('.step-content');
+	
+	var contentHeight = content.height() + 40;
+
+	isStepChanging = true;
+	if(container.hasClass('active')) {
+		wrapper.animate({"height":"0"}, stepOpenTime, "linear", function(){
+			isStepChanging = false;
+		});
+	} else {
+		wrapper.animate({"height":contentHeight+"px"}, stepOpenTime, "linear", function(){
+			isStepChanging = false;
+		});
+	}
+	container.toggleClass('active');
+}
 
 
 //program tabs
@@ -134,3 +140,231 @@ $("#program .tab").on("click", function(){
 	},500);
 	
 })
+
+//crew section
+var crew = -1;
+var all_block = $('.crew-content-block');
+var total_block_size = 0; // total size of all crew block
+var temp_left_now; // record slide block 's left now
+
+for(var j=0;j<12;j++){
+	total_block_size += 150;
+	total_block_size += $(all_block[i]).width();
+}
+
+$("#button-crew-left").click(function(){
+	//最右邊了
+	if(crew == -1){
+		return;
+	}
+	
+	crew--;
+
+	//計算位移的大小（包括margin）
+	var total_size_need_to_slide = 150;
+	for(var i=0;i<=crew;i++){
+		total_size_need_to_slide += 150;
+		total_size_need_to_slide += $(all_block[i]).width();
+	}
+
+	temp_left_now = total_size_need_to_slide;
+	//變負數
+	total_size_need_to_slide = -total_size_need_to_slide;
+
+	$(".slide-block").css("left",total_size_need_to_slide+"px");
+	temp_left_now = -total_size_need_to_slide;
+});
+
+$("#button-crew-right").click(function(){
+	//最右邊了
+	var screen_size_now = $(".crew-content").width();
+	if((total_block_size - screen_size_now) < (temp_left_now - 450)){
+		return;
+	}
+
+	crew++;
+
+	//計算位移的大小（包括margin）
+	var total_size_need_to_slide = 150;
+	for(var i=0;i<=crew;i++){
+		total_size_need_to_slide += 150;
+		total_size_need_to_slide += $(all_block[i]).width();
+	}
+
+	//變負數
+	total_size_need_to_slide = -total_size_need_to_slide;
+	
+	$(".slide-block").css("left",total_size_need_to_slide+"px");
+	temp_left_now = -total_size_need_to_slide;
+});
+
+// map section
+var map, styledMapType;
+function initMap() {
+  styledMapType = new google.maps.StyledMapType(
+	[
+		{
+			"featureType": "all",
+			"elementType": "labels.text.fill",
+			"stylers": [
+				{
+					"color": "#ffffff"
+				}
+			]
+		},
+		{
+			"featureType": "all",
+			"elementType": "labels.text.stroke",
+			"stylers": [
+				{
+					"color": "#000000"
+				},
+				{
+					"lightness": 13
+				}
+			]
+		},
+		{
+			"featureType": "administrative",
+			"elementType": "geometry.fill",
+			"stylers": [
+				{
+					"color": "#000000"
+				}
+			]
+		},
+		{
+			"featureType": "administrative",
+			"elementType": "geometry.stroke",
+			"stylers": [
+				{
+					"color": "#144b53"
+				},
+				{
+					"lightness": 14
+				},
+				{
+					"weight": 1.4
+				}
+			]
+		},
+		{
+			"featureType": "administrative.locality",
+			"elementType": "all",
+			"stylers": [
+				{
+					"visibility": "on"
+				}
+			]
+		},
+		{
+			"featureType": "administrative.locality",
+			"elementType": "labels.icon",
+			"stylers": [
+				{
+					"visibility": "on"
+				}
+			]
+		},
+		{
+			"featureType": "landscape",
+			"elementType": "all",
+			"stylers": [
+				{
+					"color": "#08304b"
+				}
+			]
+		},
+		{
+			"featureType": "poi",
+			"elementType": "geometry",
+			"stylers": [
+				{
+					"color": "#0c4152"
+				},
+				{
+					"lightness": 5
+				}
+			]
+		},
+		{
+			"featureType": "road.highway",
+			"elementType": "geometry.fill",
+			"stylers": [
+				{
+					"color": "#000000"
+				}
+			]
+		},
+		{
+			"featureType": "road.highway",
+			"elementType": "geometry.stroke",
+			"stylers": [
+				{
+					"color": "#0b434f"
+				},
+				{
+					"lightness": 25
+				}
+			]
+		},
+		{
+			"featureType": "road.arterial",
+			"elementType": "geometry.fill",
+			"stylers": [
+				{
+					"color": "#000000"
+				}
+			]
+		},
+		{
+			"featureType": "road.arterial",
+			"elementType": "geometry.stroke",
+			"stylers": [
+				{
+					"color": "#0b3d51"
+				},
+				{
+					"lightness": 16
+				}
+			]
+		},
+		{
+			"featureType": "road.local",
+			"elementType": "geometry",
+			"stylers": [
+				{
+					"color": "#000000"
+				}
+			]
+		},
+		{
+			"featureType": "transit",
+			"elementType": "all",
+			"stylers": [
+				{
+					"color": "#146474"
+				}
+			]
+		},
+		{
+			"featureType": "water",
+			"elementType": "all",
+			"stylers": [
+				{
+					"color": "#021019"
+				}
+			]
+		}
+	],
+	{name: 'OPEN HCI'});
+  map = new google.maps.Map(document.getElementById('map'), {
+	center: {lat: 25.013681, lng: 121.540733},
+	zoom: 15,
+	mapTypeControlOptions: {
+		mapTypeIds: ['roadmap','styled_map']
+	}
+  });
+  map.mapTypes.set('styled_map', styledMapType);
+  map.setMapTypeId('styled_map');
+}

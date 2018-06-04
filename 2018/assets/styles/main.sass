@@ -1,7 +1,7 @@
 $bg: #191456
 $header_menu_font: #fff
 $blue: #191456
-$green: #36a97b
+$green: #50E6B4
 $red: #d70050
 
 $registration-bg : #28286e
@@ -58,6 +58,7 @@ table
 	border-spacing: 0
 
 a
+	//nothing
 
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css)
 
@@ -318,17 +319,26 @@ header
 			right: 10%
 			transform: translateY(-50%)
 			background-color: #28286E
+			// border: 5px solid #fff
 			&::before
 				content: ""
 				display: block
 				width: 100%
 				padding-top: 70%
-			canvas
+			.animate-light,.mouse-light,.mask
 				width: 100%
 				height: 100%
 				position: absolute
 				top: 0
 				left: 0
+				// border: 5px solid #fff
+				// box-sizing: border-box
+			.mask
+				border: 0
+				width: calc(100% + 10px)
+				height: calc(100% + 10px)
+				top: -5px
+				left: -5px
 		.titles
 			width: 100%
 			height: 100%
@@ -345,9 +355,20 @@ header
 				left: 100px
 			.title-logo
 				top: 50%
-				left: 20%
-				width: 25%
+				left: 10%
+				width: 50%
 				transform: translateY(-50%)
+				img
+					width: 100%
+					position: absolute
+					top: 0
+					left: 0
+					display: none
+					&.active
+						display: block
+				.logo-date
+					position: relative
+					display: block
 
 	#intro
 		height: auto
@@ -366,14 +387,15 @@ header
 				text-align: right
 				.section-left-wrapper
 					display: inline-block
-					margin-right: 15%
+					// margin-right: 15%
 					.section-left-block-need-margin-top
 						margin-top: 40px
 					.section-left-block
 						display: inline-block
 						text-align: left
 						.title
-							transform: translateX(-25%)
+							// transform: translateX(-25%)
+							padding-right: 60px
 							display: inline-block
 							height: 28px
 							font-size: 21px
@@ -386,9 +408,10 @@ header
 							background-color: #d70050
 							color: #191455
 						.content
+							margin-left: 50px
 							margin-top: 8px
 							display: block
-							width: 100%
+							// width: 100%
 							font-size: 14px
 							font-weight: normal
 							font-style: normal
@@ -452,7 +475,7 @@ header
 							display: block
 							width: 0
 							height: 100%
-							background-color: rgba($green,0)
+							background-color: rgba($green,1)
 							position: absolute
 							top: 0
 							left: -5px
@@ -471,6 +494,7 @@ header
 						span
 							color: $red
 
+
 					&.active
 						p
 							&::before
@@ -478,6 +502,9 @@ header
 								width: calc(100% + 10px)
 							span 
 								color: $blue
+						p:last-child
+							&::before
+								transition-delay: 0.1s
 			.program-container
 				width: 100%
 				margin-top: 100px
@@ -553,6 +580,7 @@ header
 						z-index: 1
 						font-size: 1.3em
 						transition: 0.5s, top 0s, bottom 0s
+						font-weight: 500
 
 						&.sticky
 							position: fixed
@@ -632,7 +660,6 @@ header
 						transform: translateX(-90px)
 						width: 100%
 					.img-btm
-						ma
 						width: 100%
 			.section-right
 				padding-left: 7%
@@ -661,6 +688,122 @@ header
 					letter-spacing: 1px
 					text-align: left
 					color: #ffffff
+
+	#crew
+		height: auto
+		.section-wrapper
+			width: 90%
+			margin-left: 9%
+			.crew-title
+				font-size: 28px
+				font-weight: bold
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: 1px
+				text-align: left
+				color: #50e6b4
+			.crew-content
+				margin-top: 60px
+				display: inline-block
+				width: 100%
+				overflow: hidden
+				.blur-block
+					position: absolute
+					height: 100%
+					width: 19%
+					right: 0px
+					z-index: 1
+					background-image: linear-gradient(to right, rgba(25, 20, 85, 0), #191455)
+				.slide-block
+					left: -150px
+					height: 100%
+					white-space: nowrap
+					transition: 0.75s
+					.crew-content-block
+						margin-left: 150px
+						display: inline-block
+						height: 100%
+						.crew-content-block-left
+							display: inline-block
+							vertical-align: top
+							width: 22px
+							height: 100%
+							.team-name
+								display: inline-block
+								transform: rotate(-90deg) translateY(-52px) translateX(-52px)
+								background-color: #d70050
+								font-weight: 800
+								font-size: 20px
+								color: $bg
+								padding: 3px
+								padding-right: 80px
+						.need-more-margin-left
+							margin-left: 25px
+						.crew-content-block-right
+							margin-left: 16px
+							display: inline-block
+							vertical-align: top
+							width: calc(100%-20px)
+							.need-margin-top
+								margin-top: 48px
+							.one-person
+								.person-name
+									font-size: 16px
+									font-weight: 600
+									font-style: normal
+									font-stretch: normal
+									line-height: normal
+									letter-spacing: 1px
+									text-align: left
+									color: #50e6b4
+								.person-detail
+									margin-top: 6px
+									font-size: 16px
+									font-weight: normal
+									font-style: normal
+									font-stretch: normal
+									line-height: normal
+									letter-spacing: 1px
+									text-align: left
+									color: #ffffff
+			.crew-button
+				margin-top: 40px
+				height: 50px
+				.container
+					position: absolute
+					display: inline-block
+					right: 13%
+					@media screen and (max-width: $breakpoint)
+						right: 50%
+						transform: translateX(50%)
+					.button
+						cursor: pointer
+						-webkit-user-select: none
+						border-bottom: solid 3px white
+						display: inline-block
+						opacity: 0.6
+						font-size: 41px
+						font-weight: 600
+						font-style: normal
+						font-stretch: normal
+						line-height: normal
+						letter-spacing: 2px
+						text-align: center
+						color: #50e6b4
+						padding: 5px
+						transition: 0.2s
+						transform: scale(1)
+						top: 0px
+						&:hover
+							opacity: 1
+							transform: scale(1.15)
+					#button-crew-left
+						padding-left: 30px
+					#button-crew-right
+						padding-right: 30px
+						margin-left: 30px
+						
 
 	#organizer
 		height: auto
@@ -708,25 +851,29 @@ header
 		height: auto
 		display: flex
 		justify-content: center
-		// *
-		// 	border: solid 1px white
+		padding-top: 20%
+		//*
+		//	border: solid 1px white
 		.section-wrapper
-			width: 1100px
-			min-width: 714px
+			width: 90%
+			//min-width: 714px
+			@media screen and (min-width: 1150px)
+				width: 1150px
 			background-color: #50e6b4
 			.contact-section-map
 				vertical-align: top
-				width: 59%
+				width: 60%
 				height: 327px
 				display: inline-block
 			.contact-section-info
 				vertical-align: top
-				width: 40%
+				width: 30% //
 				height: 327px
 				display: inline-block
 				.contact-section-block
 					left: 10%
-					margin-top: 44px
+					margin-top: 10%
+					margin-down: 5%
 					.contact-section-title
 						display: inline-block
 						line-height: 1.06
@@ -739,6 +886,7 @@ header
 						padding-top: 10px
 						left: 12%
 						font-size: 16px
+						line-height: 1.2
 						font-weight: 600
 						letter-spacing: 1px
 						text-align: left
