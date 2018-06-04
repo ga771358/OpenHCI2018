@@ -1126,14 +1126,52 @@ footer {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 80px;
+  height: auto;
   background-color: #28286e; }
+  @media screen and (max-width: 1000px) {
+    footer {
+      background-color: #191456; } }
   footer .footer-wrapper {
-    width: 65%;
+    width: 67%;
     padding-top: 28px;
     padding-bottom: 28px; }
+    @media screen and (max-width: 1000px) {
+      footer .footer-wrapper {
+        width: 90%; } }
+    footer .footer-wrapper .breakpoint-container {
+      display: none; }
+      @media screen and (max-width: 1000px) {
+        footer .footer-wrapper .breakpoint-container {
+          display: block; } }
+      footer .footer-wrapper .breakpoint-container .title-facebook, footer .footer-wrapper .breakpoint-container .title-copyright {
+        display: inline-block;
+        padding-right: 45px;
+        background-color: #50E6B4;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 1px;
+        text-align: left;
+        color: #ffffff;
+        margin-top: 25px; }
+      footer .footer-wrapper .breakpoint-container .content-facebook, footer .footer-wrapper .breakpoint-container .content-copyright {
+        display: block;
+        margin-top: 6px;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        text-align: left;
+        color: #50E6B4; }
     footer .footer-wrapper .url-container {
       display: inline-block; }
+      @media screen and (max-width: 1000px) {
+        footer .footer-wrapper .url-container {
+          display: none; } }
       footer .footer-wrapper .url-container .copyright {
         display: inline-block;
         font-weight: normal;
@@ -1163,5 +1201,16 @@ footer {
       display: inline-block;
       position: absolute;
       right: 0px; }
+      @media screen and (max-width: 1480px) {
+        footer .footer-wrapper .button-container {
+          margin-top: 12px;
+          display: block;
+          position: initial;
+          right: initial; } }
+      @media screen and (max-width: 1000px) {
+        footer .footer-wrapper .button-container {
+          display: none; } }
       footer .footer-wrapper .button-container a {
-        margin-left: 24px; }
+        margin-right: 24px; }
+        footer .footer-wrapper .button-container a img {
+          top: -4px; }
