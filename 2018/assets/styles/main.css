@@ -987,6 +987,10 @@ header {
           font-weight: bold;
           letter-spacing: 1px;
           color: #50e6b4; }
+          @media screen and (max-width: 375px) {
+            .page-wrapper #organizer .section-wrapper .og-section-block .og-section-title {
+              font-size: 20px;
+              height: 28px; } }
         .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper {
           padding-top: 40px; }
           .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block {
@@ -994,13 +998,22 @@ header {
             height: 45px;
             width: 400px;
             margin-bottom: 50px; }
+            @media screen and (max-width: 375px) {
+              .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block {
+                height: 35px;
+                margin-bottom: 40px; } }
             .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block .og-logo {
               height: 100%; }
           .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small {
             display: inline-block;
             height: 45px;
-            width: 300px;
+            width: 250px;
             margin-bottom: 50px; }
+            @media screen and (max-width: 375px) {
+              .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small {
+                height: 30px;
+                width: 150px;
+                margin-bottom: 40px; } }
             .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small .og-logo {
               height: 100%;
               display: block;

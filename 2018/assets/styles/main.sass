@@ -822,6 +822,9 @@ header
 				//height: 200px
 				.og-section-title
 					height: 38px
+					@media screen and (max-width: $breakpoint_sm)
+						font-size: 20px
+						height: 28px
 					font-size: 28px
 					font-weight: bold
 					letter-spacing: 1px
@@ -833,12 +836,19 @@ header
 						height: 45px
 						width: 400px
 						margin-bottom: 50px
+						@media screen and (max-width: $breakpoint_sm)
+							height: 35px
+							margin-bottom: 40px
 						.og-logo
 							height: 100%
 					.logo-small
 						display: inline-block
+						@media screen and (max-width: $breakpoint_sm)
+							height: 30px
+							width: 150px
+							margin-bottom: 40px
 						height: 45px
-						width: 300px
+						width: 250px //picture size
 						margin-bottom: 50px
 						.og-logo
 							height: 100%
