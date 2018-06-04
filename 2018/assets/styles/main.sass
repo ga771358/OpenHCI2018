@@ -58,6 +58,7 @@ table
 	border-spacing: 0
 
 a
+	//nothing
 
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css)
 
@@ -659,7 +660,6 @@ header
 						transform: translateX(-90px)
 						width: 100%
 					.img-btm
-						ma
 						width: 100%
 			.section-right
 				padding-left: 7%
@@ -692,9 +692,7 @@ header
 	#crew
 		height: auto
 		.section-wrapper
-			width: 90%	
-			max-width: 1400px
-			min-width: 600px
+			width: 90%
 			margin-left: 9%
 			.crew-title
 				font-size: 28px
@@ -708,9 +706,15 @@ header
 			.crew-content
 				margin-top: 60px
 				display: inline-block
-				box-shadow: -70px 0px inset rgba(255,255,255,0.3)
 				width: 100%
 				overflow: hidden
+				.blur-block
+					position: absolute
+					height: 100%
+					width: 19%
+					right: 0px
+					z-index: 1
+					background-image: linear-gradient(to right, rgba(25, 20, 85, 0), #191455)
 				.slide-block
 					left: -150px
 					height: 100%
@@ -733,6 +737,7 @@ header
 								font-size: 20px
 								color: $bg
 								padding: 3px
+								padding-right: 80px
 						.need-more-margin-left
 							margin-left: 25px
 						.crew-content-block-right
@@ -763,37 +768,42 @@ header
 									text-align: left
 									color: #ffffff
 			.crew-button
-				text-align: right
 				margin-top: 40px
-				.button
-					cursor: pointer
-					border-bottom: solid 3px white
+				height: 50px
+				.container
+					position: absolute
 					display: inline-block
-					opacity: 0.6
-					font-size: 41px
-					font-weight: 600
-					font-style: normal
-					font-stretch: normal
-					line-height: normal
-					letter-spacing: 2px
-					text-align: center
-					color: #50e6b4
-					padding-left: 7px
-					padding-right: 7px
-					padding-bottom: 1px
-					transition: 0.2s
-					transform: scale(1)
-					-webkit-user-select: none
-					&:hover
-						border-bottom: solid 4px white
-						opacity: 1
-						padding-left: 12px
-						padding-right: 12px
-						transform: scale(1.2)
-				#button-crew-left
-					right: 100px
-				#button-crew-right
-					right: 85px
+					right: 13%
+					@media screen and (max-width: $breakpoint)
+						right: 50%
+						transform: translateX(50%)
+					.button
+						cursor: pointer
+						-webkit-user-select: none
+						border-bottom: solid 3px white
+						display: inline-block
+						opacity: 0.6
+						font-size: 41px
+						font-weight: 600
+						font-style: normal
+						font-stretch: normal
+						line-height: normal
+						letter-spacing: 2px
+						text-align: center
+						color: #50e6b4
+						padding: 5px
+						transition: 0.2s
+						transform: scale(1)
+						top: 0px
+						&:hover
+							opacity: 1
+							transform: scale(1.15)
+					#button-crew-left
+						padding-left: 30px
+					#button-crew-right
+						padding-right: 30px
+						margin-left: 30px
+						
 
 	#organizer
 		height: auto
