@@ -805,8 +805,6 @@ header {
     height: auto; }
     .page-wrapper #crew .section-wrapper {
       width: 90%;
-      max-width: 1400px;
-      min-width: 600px;
       margin-left: 9%; }
       .page-wrapper #crew .section-wrapper .crew-title {
         font-size: 28px;
@@ -820,10 +818,18 @@ header {
       .page-wrapper #crew .section-wrapper .crew-content {
         margin-top: 60px;
         display: inline-block;
-        -webkit-box-shadow: -70px 0px inset rgba(255, 255, 255, 0.3);
-        box-shadow: -70px 0px inset rgba(255, 255, 255, 0.3);
         width: 100%;
         overflow: hidden; }
+        .page-wrapper #crew .section-wrapper .crew-content .blur-block {
+          position: absolute;
+          height: 100%;
+          width: 19%;
+          right: 0px;
+          z-index: 1;
+          background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 20, 85, 0)), to(#191455));
+          background-image: -webkit-linear-gradient(left, rgba(25, 20, 85, 0), #191455);
+          background-image: -o-linear-gradient(left, rgba(25, 20, 85, 0), #191455);
+          background-image: linear-gradient(to right, rgba(25, 20, 85, 0), #191455); }
         .page-wrapper #crew .section-wrapper .crew-content .slide-block {
           left: -150px;
           height: 100%;
@@ -849,7 +855,8 @@ header {
                 font-weight: 800;
                 font-size: 20px;
                 color: #191456;
-                padding: 3px; }
+                padding: 3px;
+                padding-right: 80px; }
             .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .need-more-margin-left {
               margin-left: 25px; }
             .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right {
@@ -879,10 +886,12 @@ header {
                 text-align: left;
                 color: #ffffff; }
       .page-wrapper #crew .section-wrapper .crew-button {
-        text-align: right;
-        margin-top: 40px; }
+        margin-top: 40px;
+        height: 50px; }
         .page-wrapper #crew .section-wrapper .crew-button .button {
+          position: absolute;
           cursor: pointer;
+          -webkit-user-select: none;
           border-bottom: solid 3px white;
           display: inline-block;
           opacity: 0.6;
@@ -894,28 +903,25 @@ header {
           letter-spacing: 2px;
           text-align: center;
           color: #50e6b4;
-          padding-left: 7px;
-          padding-right: 7px;
-          padding-bottom: 1px;
+          padding: 5px;
           -webkit-transition: 0.2s;
           -o-transition: 0.2s;
           transition: 0.2s;
           -webkit-transform: scale(1);
           -ms-transform: scale(1);
           transform: scale(1);
-          -webkit-user-select: none; }
+          top: 0px; }
           .page-wrapper #crew .section-wrapper .crew-button .button:hover {
-            border-bottom: solid 4px white;
             opacity: 1;
-            padding-left: 12px;
-            padding-right: 12px;
-            -webkit-transform: scale(1.2);
-            -ms-transform: scale(1.2);
-            transform: scale(1.2); }
+            -webkit-transform: scale(1.15);
+            -ms-transform: scale(1.15);
+            transform: scale(1.15); }
         .page-wrapper #crew .section-wrapper .crew-button #button-crew-left {
-          right: 100px; }
+          right: calc(10% + 100px);
+          padding-left: 30px; }
         .page-wrapper #crew .section-wrapper .crew-button #button-crew-right {
-          right: 85px; }
+          right: 10%;
+          padding-right: 30px; }
   .page-wrapper #organizer {
     height: auto;
     display: -webkit-box;
