@@ -803,7 +803,7 @@ header
 					#button-crew-right
 						padding-right: 30px
 						margin-left: 30px
-						
+
 
 	#organizer
 		height: auto
@@ -851,7 +851,8 @@ header
 		height: auto
 		display: flex
 		justify-content: center
-		padding-top: 20%
+		//margin-top: 20%
+		//margin-bottom: 20%
 		//*
 		//	border: solid 1px white
 		.section-wrapper
@@ -859,32 +860,39 @@ header
 			//min-width: 714px
 			@media screen and (min-width: 1150px)
 				width: 1150px
-			background-color: #50e6b4
+			//background-color: #50e6b4
+			
+			display: inline-block
+			height: 327px
+			width: 100%
 			.contact-section-map
-				vertical-align: top
-				width: 60%
+				//vertical-align: top
+				width: 100%
 				height: 327px
 				display: inline-block
 			.contact-section-info
-				vertical-align: top
-				width: 30% //
-				height: 327px
+				z-index: 100
+				background-color: #50e6b4
+				top: 0
+				left: 0
+				//vertical-align: top
+				position: absolute
+				width: 380px
+				height: 86px
 				display: inline-block
 				.contact-section-block
-					left: 10%
-					margin-top: 10%
-					margin-down: 5%
 					.contact-section-title
-						display: inline-block
+						left: 25px
+						top: 20px
 						line-height: 1.06
-						font-size: 16px
+						font-size: 14px
 						font-weight: bold
 						letter-spacing: 1px
+						text-align: left
 						color: #ffffff
 					.contact-section-content
-						display: inline-block
-						padding-top: 10px
-						left: 12%
+						left: 25px
+						top: 10px
 						font-size: 16px
 						line-height: 1.2
 						font-weight: 600

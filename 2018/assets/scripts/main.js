@@ -360,10 +360,7 @@ function initMap() {
 	{name: 'OPEN HCI'});
   map = new google.maps.Map(document.getElementById('map'), {
 	center: {lat: 25.013681, lng: 121.540733},
-	zoom: 15,
-	mapTypeControlOptions: {
-		mapTypeIds: ['roadmap','styled_map']
-	}
+	zoom: 18,
   });
   map.mapTypes.set('styled_map', styledMapType);
   map.setMapTypeId('styled_map');

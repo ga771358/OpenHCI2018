@@ -952,7 +952,6 @@ header {
           color: #50e6b4; }
         .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper {
           padding-top: 40px; }
-<<<<<<< HEAD
           .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block {
             display: inline-block;
             height: 45px;
@@ -969,13 +968,6 @@ header {
               height: 100%;
               display: block;
               margin: auto; }
-=======
-          .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .og-logo {
-            height: 80px;
-            padding: 1%;
-            padding-left: 5%;
-            padding-right: 5%; }
->>>>>>> master
   .page-wrapper #contact {
     height: auto;
     display: -webkit-box;
@@ -983,42 +975,43 @@ header {
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
-    padding-top: 20%; }
+    justify-content: center; }
     .page-wrapper #contact .section-wrapper {
       width: 90%;
-      background-color: #50e6b4; }
+      display: inline-block;
+      height: 327px;
+      width: 100%; }
       @media screen and (min-width: 1150px) {
         .page-wrapper #contact .section-wrapper {
           width: 1150px; } }
       .page-wrapper #contact .section-wrapper .contact-section-map {
-        vertical-align: top;
-        width: 60%;
+        width: 100%;
         height: 327px;
         display: inline-block; }
       .page-wrapper #contact .section-wrapper .contact-section-info {
-        vertical-align: top;
-        width: 30%;
-        height: 327px;
+        z-index: 100;
+        background-color: #50e6b4;
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 380px;
+        height: 86px;
         display: inline-block; }
-        .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block {
-          left: 10%;
-          margin-top: 10%;
-          margin-down: 5%; }
-          .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block .contact-section-title {
-            display: inline-block;
-            line-height: 1.06;
-            font-size: 16px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            color: #ffffff; }
-          .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block .contact-section-content {
-            display: inline-block;
-            padding-top: 10px;
-            left: 12%;
-            font-size: 16px;
-            line-height: 1.2;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-align: left;
-            color: #191455; }
+        .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block .contact-section-title {
+          left: 25px;
+          top: 20px;
+          line-height: 1.06;
+          font-size: 14px;
+          font-weight: bold;
+          letter-spacing: 1px;
+          text-align: left;
+          color: #ffffff; }
+        .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block .contact-section-content {
+          left: 25px;
+          top: 10px;
+          font-size: 16px;
+          line-height: 1.2;
+          font-weight: 600;
+          letter-spacing: 1px;
+          text-align: left;
+          color: #191455; }
