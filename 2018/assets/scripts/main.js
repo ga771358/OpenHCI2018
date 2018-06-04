@@ -358,10 +358,34 @@ function initMap() {
 		}
 	],
 	{name: 'OPEN HCI'});
+  var pos = {lat: 25.013462, lng: 121.541603};
   map = new google.maps.Map(document.getElementById('map'), {
-	center: {lat: 25.013681, lng: 121.540733},
+	center: pos,
+	zoom: 18,
+  });
+
+  map = new google.maps.Map(document.getElementById('map'), {
+	center: pos,
 	zoom: 18,
   });
   map.mapTypes.set('styled_map', styledMapType);
   map.setMapTypeId('styled_map');
+  var marker = new google.maps.Marker({
+    position: pos,
+	map: map,
+	animation: google.maps.Animation.DROP,
+	icon: '../assets/images/icon-location.png'
+  });
+  
+  map.mapTypes.set('styled_map', styledMapType);
+  map.setMapTypeId('styled_map');
+  marker.addListener('click', toggleBounce);
 }
+
+function toggleBounce() {
+	if (marker.getAnimation() !== null) {
+	  marker.setAnimation(null);
+	} else {
+	  marker.setAnimation(google.maps.Animation.BOUNCE);
+	}
+  }
