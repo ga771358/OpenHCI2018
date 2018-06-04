@@ -753,7 +753,7 @@ header {
           .page-wrapper #registration .section-wrapper .step .step-content .dot {
             margin-left: 40px; }
             .page-wrapper #registration .section-wrapper .step .step-content .dot::before {
-              content: "·";
+              content: "┬╖";
               position: absolute;
               top: 0;
               left: -40px; }
@@ -1118,3 +1118,50 @@ header {
             .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-content {
               left: 10px;
               top: 10px; } }
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 80px;
+  background-color: #28286e; }
+  footer .footer-wrapper {
+    width: 65%;
+    padding-top: 28px;
+    padding-bottom: 28px; }
+    footer .footer-wrapper .url-container {
+      display: inline-block; }
+      footer .footer-wrapper .url-container .copyright {
+        display: inline-block;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 1px;
+        text-align: left;
+        color: #ffffff; }
+      footer .footer-wrapper .url-container .need-margin-right {
+        margin-right: 20px; }
+      footer .footer-wrapper .url-container .div-url {
+        margin-left: 18px;
+        display: inline-block;
+        opacity: 0.5;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 1px;
+        text-align: left;
+        color: #ffffff; }
+        footer .footer-wrapper .url-container .div-url:hover {
+          opacity: 1;
+          color: #d70050; }
+    footer .footer-wrapper .button-container {
+      display: inline-block;
+      position: absolute;
+      right: 0px; }
+      footer .footer-wrapper .button-container a {
+        margin-left: 24px; }
