@@ -1,11 +1,13 @@
 //手機menu相關
 $(".m-menu-opener").on("click", function() {
 	$(".menu").toggleClass('active');
+	$(".lightbox").toggleClass('active');
 	$(".m-menu-opener").toggleClass('close');
 })
 
-$(".menu-btn").on("click", function() {
+$(".menu-btn,.lightbox").on("click", function() {
 	$(".menu").removeClass('active');
+	$(".lightbox").removeClass('active');
 	$(".m-menu-opener").removeClass('close');
 })
 
@@ -358,13 +360,34 @@ function initMap() {
 		}
 	],
 	{name: 'OPEN HCI'});
+  var pos = {lat: 25.013462, lng: 121.541603};
   map = new google.maps.Map(document.getElementById('map'), {
-	center: {lat: 25.013681, lng: 121.540733},
-	zoom: 15,
-	mapTypeControlOptions: {
-		mapTypeIds: ['roadmap','styled_map']
-	}
+	center: pos,
+	zoom: 18,
+  });
+
+  map = new google.maps.Map(document.getElementById('map'), {
+	center: pos,
+	zoom: 18,
   });
   map.mapTypes.set('styled_map', styledMapType);
   map.setMapTypeId('styled_map');
+  var marker = new google.maps.Marker({
+    position: pos,
+	map: map,
+	animation: google.maps.Animation.DROP,
+	icon: '../assets/images/icon-location.png'
+  });
+  
+  map.mapTypes.set('styled_map', styledMapType);
+  map.setMapTypeId('styled_map');
+  marker.addListener('click', toggleBounce);
 }
+
+function toggleBounce() {
+	if (marker.getAnimation() !== null) {
+	  marker.setAnimation(null);
+	} else {
+	  marker.setAnimation(google.maps.Animation.BOUNCE);
+	}
+  }
