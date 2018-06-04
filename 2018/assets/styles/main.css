@@ -1015,3 +1015,7 @@ header {
           letter-spacing: 1px;
           text-align: left;
           color: #191455; }
+
+footer {
+  height: 80px;
+  background-color: #28286e; }
