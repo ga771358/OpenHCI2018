@@ -1021,10 +1021,16 @@ header {
       @media screen and (min-width: 1000px) {
         .page-wrapper #contact .section-wrapper {
           width: 1150px; } }
+      @media screen and (max-width: 375px) {
+        .page-wrapper #contact .section-wrapper {
+          width: 335px; } }
       .page-wrapper #contact .section-wrapper .contact-section-map {
         width: 100%;
         height: 327px;
         display: inline-block; }
+        @media screen and (max-width: 375px) {
+          .page-wrapper #contact .section-wrapper .contact-section-map {
+            height: 180px; } }
       .page-wrapper #contact .section-wrapper .contact-section-info {
         background-color: #50e6b4;
         position: absolute;
@@ -1040,16 +1046,29 @@ header {
             right: 0;
             width: 258px;
             height: 131px; } }
+        @media screen and (max-width: 375px) {
+          .page-wrapper #contact .section-wrapper .contact-section-info {
+            position: relative;
+            display: block;
+            margin: auto;
+            width: 335px;
+            height: 88px; } }
         @media screen and (max-width: 768px) {
           .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block {
             display: none; } }
         @media screen and (min-width: 768px) {
           .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block {
             display: block; } }
+        @media screen and (max-width: 375px) {
+          .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block {
+            display: block; } }
         @media screen and (max-width: 768px) {
           .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block-mid {
             display: block; } }
         @media screen and (min-width: 768px) {
+          .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block-mid {
+            display: none; } }
+        @media screen and (max-width: 375px) {
           .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block-mid {
             display: none; } }
         .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-title {
@@ -1065,6 +1084,10 @@ header {
             .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-title {
               left: 35px;
               top: 30px; } }
+          @media screen and (max-width: 375px) {
+            .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-title {
+              left: 10px;
+              top: 20px; } }
         .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-content {
           left: 25px;
           top: 10px;
@@ -1078,3 +1101,7 @@ header {
             .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-content {
               left: 35px;
               top: 20px; } }
+          @media screen and (max-width: 375px) {
+            .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-content {
+              left: 10px;
+              top: 10px; } }
