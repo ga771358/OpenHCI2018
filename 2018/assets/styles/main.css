@@ -951,7 +951,7 @@ header {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding-top: 200px; }
+    padding-top: 20%; }
     .page-wrapper #contact .section-wrapper {
       width: 90%;
       background-color: #50e6b4; }
