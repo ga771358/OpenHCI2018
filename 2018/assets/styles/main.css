@@ -888,40 +888,48 @@ header {
       .page-wrapper #crew .section-wrapper .crew-button {
         margin-top: 40px;
         height: 50px; }
-        .page-wrapper #crew .section-wrapper .crew-button .button {
+        .page-wrapper #crew .section-wrapper .crew-button .container {
           position: absolute;
-          cursor: pointer;
-          -webkit-user-select: none;
-          border-bottom: solid 3px white;
           display: inline-block;
-          opacity: 0.6;
-          font-size: 41px;
-          font-weight: 600;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: normal;
-          letter-spacing: 2px;
-          text-align: center;
-          color: #50e6b4;
-          padding: 5px;
-          -webkit-transition: 0.2s;
-          -o-transition: 0.2s;
-          transition: 0.2s;
-          -webkit-transform: scale(1);
-          -ms-transform: scale(1);
-          transform: scale(1);
-          top: 0px; }
-          .page-wrapper #crew .section-wrapper .crew-button .button:hover {
-            opacity: 1;
-            -webkit-transform: scale(1.15);
-            -ms-transform: scale(1.15);
-            transform: scale(1.15); }
-        .page-wrapper #crew .section-wrapper .crew-button #button-crew-left {
-          right: calc(10% + 100px);
-          padding-left: 30px; }
-        .page-wrapper #crew .section-wrapper .crew-button #button-crew-right {
-          right: 10%;
-          padding-right: 30px; }
+          right: 13%; }
+          @media screen and (max-width: 1000px) {
+            .page-wrapper #crew .section-wrapper .crew-button .container {
+              right: 50%;
+              -webkit-transform: translateX(50%);
+              -ms-transform: translateX(50%);
+              transform: translateX(50%); } }
+          .page-wrapper #crew .section-wrapper .crew-button .container .button {
+            cursor: pointer;
+            -webkit-user-select: none;
+            border-bottom: solid 3px white;
+            display: inline-block;
+            opacity: 0.6;
+            font-size: 41px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 2px;
+            text-align: center;
+            color: #50e6b4;
+            padding: 5px;
+            -webkit-transition: 0.2s;
+            -o-transition: 0.2s;
+            transition: 0.2s;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            top: 0px; }
+            .page-wrapper #crew .section-wrapper .crew-button .container .button:hover {
+              opacity: 1;
+              -webkit-transform: scale(1.15);
+              -ms-transform: scale(1.15);
+              transform: scale(1.15); }
+          .page-wrapper #crew .section-wrapper .crew-button .container #button-crew-left {
+            padding-left: 30px; }
+          .page-wrapper #crew .section-wrapper .crew-button .container #button-crew-right {
+            padding-right: 30px;
+            margin-left: 30px; }
   .page-wrapper #organizer {
     height: auto;
     display: -webkit-box;
