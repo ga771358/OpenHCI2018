@@ -10,6 +10,7 @@ $footer-bg: #28286e
 $breakpoint: 1000px
 $breakpoint-sm: 375px
 $breakpoint-mid: 768px
+$breakpoint-of-footer: 1100px
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
 	 v2.0 | 20110126
@@ -1011,59 +1012,44 @@ footer
 	justify-content: center
 	height: auto
 	background-color: $footer-bg
-	@media screen and (max-width: $breakpoint)
-		background-color: $bg
+	min-width: 350px
 	.footer-wrapper
-		width: 67%
+		width: 90%
+		max-width: 1150px
 		padding-top: 28px
 		padding-bottom: 28px
-		@media screen and (max-width: $breakpoint)
-			width: 90%
-		.breakpoint-container
+		br
 			display: none
-			@media screen and (max-width: $breakpoint)
-				display: block
-			.title-facebook,.title-copyright
-				display: inline-block
-				padding-right: 45px
-				background-color: $green
-				font-size: 14px
-				font-weight: bold
-				font-style: normal
-				font-stretch: normal
-				line-height: normal
-				letter-spacing: 1px
-				text-align: left
-				color: #ffffff
-				margin-top: 25px
-			.content-facebook,.content-copyright
-				display: block
-				margin-top: 6px
-				font-size: 14px
-				font-weight: bold
-				font-style: normal
-				font-stretch: normal
-				line-height: 1.5
-				letter-spacing: 1px
-				text-align: left
-				color: $green
-		.url-container
+			@media screen and (max-width: $breakpoint-of-footer)
+				display: initial
+		.copyright
 			display: inline-block
-			@media screen and (max-width: $breakpoint)
-				display: none
-			.copyright
+			font-weight: normal
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: 1px
+			text-align: left
+			color: #ffffff
+			@media screen and (max-width: $breakpoint-of-footer)
+				left: 50%
+				transform: translateX(-50%)
+		.need-margin-right
+			margin-right: 38px	
+		.url-group
+			display: inline-block
+			@media screen and (max-width: $breakpoint-of-footer)
+				margin-top: 28px
+				left: 50%
+				transform: translateX(-50%)
+					display: initial
+			.part1,.part2
 				display: inline-block
-				font-weight: normal
-				font-style: normal
-				font-stretch: normal
-				line-height: normal
-				letter-spacing: 1px
-				text-align: left
-				color: #ffffff
-			.need-margin-right
-				margin-right: 20px	
+				@media screen and (max-width: 550px)
+					display: block
+					margin: auto,0
 			.div-url
-				margin-left: 18px
+				margin-right: 18px
 				display: inline-block
 				opacity: 0.5
 				font-weight: normal
@@ -1076,18 +1062,16 @@ footer
 				&:hover
 					opacity: 1
 					color: $red
-		.button-container
+		.button-group
 			display: inline-block
 			position: absolute
 			right: 0px
-			@media screen and (max-width: 1480px)
-				margin-top: 12px
-				display: block
-				position: initial
+			@media screen and (max-width: $breakpoint-of-footer)
+				margin-top: 28px
+				position: relative
 				right: initial
-			@media screen and (max-width: $breakpoint)
-				display: none
+				left: 50%
+				transform: translateX(-50%)
 			a
-				margin-right: 24px
 				img
-			top: -4px
+					top: -4px
