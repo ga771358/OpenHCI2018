@@ -143,7 +143,37 @@ $("#program .tab").on("click", function(){
 	
 })
 
-//taichi section
+//taichi animation
+var tlTaichi, sceneTaichi;
+
+//網頁載入(load)後與改變視窗大小(resize)後皆會觸發的事件
+$(window).on("load resize", function(){
+	// 算出要移動的那張圖與旁邊文字區塊的高度差 = offset
+	var taichiImg = $("#taichi .section-left");
+	var taichiTextContainer = $("#taichi .section-right");
+	var offset = taichiTextContainer.height() - taichiImg.height();
+
+	//建立tweenmax動畫：讓圖片從y=0移動到y=offset（對齊文字的頭->對齊文字的底）
+	tlTaichi = new TimelineMax({repeat:0});
+	tlTaichi.fromTo(taichiImg, 1, {y:0}, {y:offset, ease:Linear.easeNone}, 0);
+
+	//如果已經建立過scrollmagic的scene就要先將他移除（不然會重複）
+	if(sceneTaichi !== undefined) {
+		sceneTaichi.remove();
+	}
+
+	//建立scrollmagic的scene：觸發區域是#taichi這個section、影響期間是offset這個範圍內、觸發點是#taichi的頂碰到螢幕高度從上面開始10%的地方
+	sceneTaichi = new ScrollMagic.Scene({
+		triggerElement: "#taichi",
+		duration: offset,
+		triggerHook: 0.1
+	});
+	//把剛剛的tweenmax動畫交給scrollmagic使用（本來tweenmax是隨著時間做動畫，交給scrollmagic使用變成隨著滾動向下的程度做動畫）
+	sceneTaichi.setTween(tlTaichi);
+	sceneTaichi.addTo(controller);
+
+	//最後就會變成：在滑過這區域時，每往下滾動1px，圖片就會跟著向下移動1px，直到圖片的底對齊文字區塊的底，所以看起來會像是圖片固定在螢幕上不動！
+})
 
 
 //crew section

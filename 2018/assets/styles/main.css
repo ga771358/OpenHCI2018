@@ -835,18 +835,12 @@ header {
         display: inline-block;
         width: 49.3%;
         height: 100%; }
-        @media screen and (max-width: 1000px) {
-          .page-wrapper #taichi .section-wrapper .section-right {
-            display: none; } }
         .page-wrapper #taichi .section-wrapper .section-right img {
           width: 75%;
           left: 50%;
           -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
           transform: translateX(-50%); }
-          @media screen and (max-width: 1000px) {
-            .page-wrapper #taichi .section-wrapper .section-right img {
-              width: 70%; } }
   .page-wrapper #crew {
     height: auto; }
     .page-wrapper #crew .section-wrapper {
