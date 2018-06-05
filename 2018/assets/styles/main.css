@@ -796,7 +796,8 @@ header {
     justify-content: center; }
     .page-wrapper #taichi .section-wrapper {
       width: 85%;
-      max-width: 1400px; }
+      max-width: 1400px;
+      overflow: hidden; }
       .page-wrapper #taichi .section-wrapper .section-left {
         vertical-align: top;
         display: inline-block;
@@ -842,6 +843,7 @@ header {
           -ms-transform: translateX(-50%);
           transform: translateX(-50%); }
   .page-wrapper #crew {
+    visibility: hidden;
     height: auto; }
     .page-wrapper #crew .section-wrapper {
       width: 90%;
