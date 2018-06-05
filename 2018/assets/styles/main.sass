@@ -356,9 +356,10 @@ header
 		height: auto
 		display: flex
 		justify-content: center
+		padding-top: 50px
 		.section-wrapper
 			width: 90%
-			max-width: 1300px 
+			max-width: 1450px
 			.descript-left
 				@media screen and (max-width: $breakpoint)
 					display: block
@@ -366,7 +367,7 @@ header
 				width: 30%
 				vertical-align: top
 				display: inline-block
-				margin-top: 40px
+				margin-top: 100px
 				font-size: 28px
 				font-weight: 400
 				letter-spacing: 1px
@@ -378,21 +379,28 @@ header
 					height: auto
 					width: 100%
 				width: 69%
-				height: 542px
+				height: 500px
 				vertical-align: top
 				display: inline-block
-				background-image: url("../images/img-pattern-animism.png")
-				background-repeat: no-repeat
+				.descript-img
+					right: 0px
+					top: 0px
+					@media screen and (max-width: $breakpoint)
+						top: -45px
+					height: 100%
+					display: inline-block
+					position: absolute
+					//width: 100%
+					//background-image: url("../images/img-pattern-animism.png")
+					//background-repeat: no-repeat
 				.descript-content
 					@media screen and (max-width: $breakpoint)
 						margin-top: 30px
 						left: 0px
 						position: relative
-					
-					max-width: 840px
-					position: absolute
-					margin-top: 40px
-					left: -35px
+					//max-width: 840px
+					width: 100%
+					margin-top: 100px
 					font-size: 14px
 					line-height: 2
 					letter-spacing: 1px

@@ -426,15 +426,16 @@ header {
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    padding-top: 50px; }
     .page-wrapper #description .section-wrapper {
       width: 90%;
-      max-width: 1300px; }
+      max-width: 1450px; }
       .page-wrapper #description .section-wrapper .descript-left {
         width: 30%;
         vertical-align: top;
         display: inline-block;
-        margin-top: 40px;
+        margin-top: 100px;
         font-size: 28px;
         font-weight: 400;
         letter-spacing: 1px;
@@ -446,21 +447,26 @@ header {
             width: 100%; } }
       .page-wrapper #description .section-wrapper .descript-right {
         width: 69%;
-        height: 542px;
+        height: 500px;
         vertical-align: top;
-        display: inline-block;
-        background-image: url("../images/img-pattern-animism.png");
-        background-repeat: no-repeat; }
+        display: inline-block; }
         @media screen and (max-width: 1000px) {
           .page-wrapper #description .section-wrapper .descript-right {
             display: block;
             height: auto;
             width: 100%; } }
+        .page-wrapper #description .section-wrapper .descript-right .descript-img {
+          right: 0px;
+          top: 0px;
+          height: 100%;
+          display: inline-block;
+          position: absolute; }
+          @media screen and (max-width: 1000px) {
+            .page-wrapper #description .section-wrapper .descript-right .descript-img {
+              top: -45px; } }
         .page-wrapper #description .section-wrapper .descript-right .descript-content {
-          max-width: 840px;
-          position: absolute;
-          margin-top: 40px;
-          left: -35px;
+          width: 100%;
+          margin-top: 100px;
           font-size: 14px;
           line-height: 2;
           letter-spacing: 1px;
@@ -809,7 +815,7 @@ header {
           .page-wrapper #registration .section-wrapper .step .step-content .dot {
             margin-left: 40px; }
             .page-wrapper #registration .section-wrapper .step .step-content .dot::before {
-              content: "·";
+              content: "┬╖";
               position: absolute;
               top: 0;
               left: -40px; }
