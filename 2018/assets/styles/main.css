@@ -796,57 +796,40 @@ header {
     justify-content: center; }
     .page-wrapper #taichi .section-wrapper {
       width: 85%;
-      max-width: 1400px;
-      height: 55vh; }
+      max-width: 1400px; }
       .page-wrapper #taichi .section-wrapper .section-left {
         vertical-align: top;
         display: inline-block;
         width: 49.3%;
-        height: 100%;
-        overflow: hidden; }
-        .page-wrapper #taichi .section-wrapper .section-left .blur-block {
-          position: absolute;
-          height: 15%;
-          width: 100%;
-          bottom: 0px;
-          z-index: 1;
-          background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 20, 85, 0)), to(#191455));
-          background-image: -webkit-linear-gradient(top, rgba(25, 20, 85, 0), #191455);
-          background-image: -o-linear-gradient(top, rgba(25, 20, 85, 0), #191455);
-          background-image: linear-gradient(to bottom, rgba(25, 20, 85, 0), #191455); }
-        .page-wrapper #taichi .section-wrapper .section-left #taichi-slide-window {
-          top: 0;
-          -webkit-transition-duration: 1s;
-          -o-transition-duration: 1s;
-          transition-duration: 1s; }
-          .page-wrapper #taichi .section-wrapper .section-left #taichi-slide-window .need-margin-top {
-            margin-top: 80px; }
-          .page-wrapper #taichi .section-wrapper .section-left #taichi-slide-window .container {
-            width: 95%;
-            left: 50%;
-            -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            transform: translateX(-50%); }
-            .page-wrapper #taichi .section-wrapper .section-left #taichi-slide-window .container .title {
-              width: 100%;
-              font-size: 28px;
-              font-weight: bold;
-              font-style: normal;
-              font-stretch: normal;
-              line-height: normal;
-              letter-spacing: 1px;
-              text-align: left;
-              color: #50E6B4; }
-            .page-wrapper #taichi .section-wrapper .section-left #taichi-slide-window .container .content {
-              margin-top: 30px;
-              font-size: 14px;
-              font-weight: normal;
-              font-style: normal;
-              font-stretch: normal;
-              line-height: 2;
-              letter-spacing: 1px;
-              text-align: left;
-              color: #ffffff; }
+        height: 100%; }
+        .page-wrapper #taichi .section-wrapper .section-left .need-margin-top {
+          margin-top: 80px; }
+        .page-wrapper #taichi .section-wrapper .section-left .container {
+          width: 80%;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%); }
+          .page-wrapper #taichi .section-wrapper .section-left .container .title {
+            width: 100%;
+            font-size: 28px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-align: left;
+            color: #50E6B4; }
+          .page-wrapper #taichi .section-wrapper .section-left .container .content {
+            margin-top: 30px;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 2;
+            letter-spacing: 1px;
+            text-align: left;
+            color: #ffffff; }
       .page-wrapper #taichi .section-wrapper .section-right {
         vertical-align: top;
         display: inline-block;
@@ -856,7 +839,7 @@ header {
           .page-wrapper #taichi .section-wrapper .section-right {
             display: none; } }
         .page-wrapper #taichi .section-wrapper .section-right img {
-          width: 85%;
+          width: 75%;
           left: 50%;
           -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
