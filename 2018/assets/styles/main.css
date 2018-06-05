@@ -426,14 +426,15 @@ header {
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    padding-top: 50px; }
     .page-wrapper #description .section-wrapper {
       width: 90%; }
       .page-wrapper #description .section-wrapper .descript-left {
         width: 30%;
         vertical-align: top;
         display: inline-block;
-        margin-top: 40px;
+        margin-top: 100px;
         font-size: 28px;
         font-weight: 400;
         letter-spacing: 1px;
@@ -445,6 +446,7 @@ header {
             width: 100%; } }
       .page-wrapper #description .section-wrapper .descript-right {
         width: 69%;
+        height: 500px;
         vertical-align: top;
         display: inline-block; }
         @media screen and (max-width: 1000px) {
@@ -453,17 +455,17 @@ header {
             height: auto;
             width: 100%; } }
         .page-wrapper #description .section-wrapper .descript-right .descript-img {
-          width: 100%;
           right: 0px;
           top: 0px;
-          height: 542px;
+          height: 100%;
           display: inline-block;
-          position: absolute;
-          background-image: url("../images/img-pattern-animism.png");
-          background-repeat: no-repeat; }
+          position: absolute; }
+          @media screen and (max-width: 1000px) {
+            .page-wrapper #description .section-wrapper .descript-right .descript-img {
+              top: -45px; } }
         .page-wrapper #description .section-wrapper .descript-right .descript-content {
-          max-width: 840px;
-          margin-top: 40px;
+          width: 100%;
+          margin-top: 100px;
           font-size: 14px;
           line-height: 2;
           letter-spacing: 1px;
