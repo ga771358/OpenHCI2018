@@ -143,6 +143,28 @@ $("#program .tab").on("click", function(){
 	
 })
 
+//taichi section
+var record = 0;
+
+function delay_unlock_body(){
+	$.scrollLock(false);
+	record == 2;
+}
+
+$(document).on('scroll', function() {
+    if( ((record == 0) && ($(this).scrollTop() >= $('#taichi').position().top-100)) && ((record == 0) && ($(this).scrollTop() <= $('#taichi').position().top+50)) ){
+		record = 1;
+		$.scrollLock(true);
+	}
+	if((record == 1)){
+		var h = -$("#taichi1").height() - 80;
+		$("#taichi-slide-window").css("top",h+"px");
+		setTimeout(delay_unlock_body, 1300);
+	}
+	// else if( (record == 2) && ($(this).scrollTop() <= $('#taichi').position().top) ){
+    // }
+})
+
 //crew section
 var crew = -1;
 var all_block = $('.crew-content-block');
@@ -391,3 +413,174 @@ function toggleBounce() {
 	  marker.setAnimation(google.maps.Animation.BOUNCE);
 	}
   }
+
+// special function
+$.scrollLock = ( function scrollLockClosure() {
+    'use strict';
+
+    var $html      = $( 'html' ),
+        // State: unlocked by default
+        locked     = false,
+        // State: scroll to revert to
+        prevScroll = {
+            scrollLeft : $( window ).scrollLeft(),
+            scrollTop  : $( window ).scrollTop()
+        },
+        // State: styles to revert to
+        prevStyles = {},
+        lockStyles = {
+            'overflow-y' : 'scroll',
+            'position'   : 'fixed',
+            'width'      : '100%'
+        };
+
+    // Instantiate cache in case someone tries to unlock before locking
+    saveStyles();
+
+    // Save context's inline styles in cache
+    function saveStyles() {
+        var styleAttr = $html.attr( 'style' ),
+            styleStrs = [],
+            styleHash = {};
+
+        if( !styleAttr ){
+            return;
+        }
+
+        styleStrs = styleAttr.split( /;\s/ );
+
+        $.each( styleStrs, function serializeStyleProp( styleString ){
+            if( !styleString ) {
+                return;
+            }
+
+            var keyValue = styleString.split( /\s:\s/ );
+
+            if( keyValue.length < 2 ) {
+                return;
+            }
+
+            styleHash[ keyValue[ 0 ] ] = keyValue[ 1 ];
+        } );
+
+        $.extend( prevStyles, styleHash );
+    }
+
+    function lock() {
+        var appliedLock = {};
+
+        // Duplicate execution will break DOM statefulness
+        if( locked ) {
+            return;
+        }
+
+        // Save scroll state...
+        prevScroll = {
+            scrollLeft : $( window ).scrollLeft(),
+            scrollTop  : $( window ).scrollTop()
+        };
+
+        // ...and styles
+        saveStyles();
+
+        // Compose our applied CSS
+        $.extend( appliedLock, lockStyles, {
+            // And apply scroll state as styles
+            'left' : - prevScroll.scrollLeft + 'px',
+            'top'  : - prevScroll.scrollTop  + 'px'
+        } );
+
+        // Then lock styles...
+        $html.css( appliedLock );
+
+        // ...and scroll state
+        $( window )
+            .scrollLeft( 0 )
+            .scrollTop( 0 );
+
+        locked = true;
+    }
+
+    function unlock() {
+        // Duplicate execution will break DOM statefulness
+        if( !locked ) {
+            return;
+        }
+
+        // Revert styles
+        $html.attr( 'style', $( '<x>' ).css( prevStyles ).attr( 'style' ) || '' );
+
+        // Revert scroll values
+        $( window )
+            .scrollLeft( prevScroll.scrollLeft )
+            .scrollTop(  prevScroll.scrollTop );
+
+        locked = false;
+    }
+
+    return function scrollLock( on ) {
+        // If an argument is passed, lock or unlock depending on truthiness
+        if( arguments.length ) {
+            if( on ) {
+                lock();
+            }
+            else {
+                unlock();
+            }
+        }
+        // Otherwise, toggle
+        else {
+            if( locked ){
+                unlock();
+            }
+            else {
+                lock();
+            }
+        }
+    };
+}() );
+ jquery.scrollLock.simple.js
+$.scrollLock = ( function scrollLockSimple(){
+	var locked   = false;
+	var $body;
+	var previous;
+
+	function lock(){
+	  if( !$body ){
+	    $body = $( 'body' );
+	  }
+	  
+	  previous = $body.css( 'overflow' );
+		
+	  $body.css( 'overflow', 'hidden' );
+
+	  locked = true;
+	}
+
+	function unlock(){
+	  $body.css( 'overflow', previous );
+
+	  locked = false;
+	}
+
+	return function scrollLock( on ) {
+		// If an argument is passed, lock or unlock depending on truthiness
+		if( arguments.length ) {
+			if( on ) {
+				lock();
+			}
+			else {
+				unlock();
+			}
+		}
+		// Otherwise, toggle
+		else {
+			if( locked ){
+				unlock();
+			}
+			else {
+				lock();
+			}
+		}
+	};
+}() );
