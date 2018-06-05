@@ -1021,8 +1021,7 @@ header {
                 margin-bottom: 40px; } }
             .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small .og-logo {
               height: 100%;
-              display: block;
-              margin: auto; }
+              display: block; }
   .page-wrapper #contact {
     height: auto;
     display: -webkit-box;
