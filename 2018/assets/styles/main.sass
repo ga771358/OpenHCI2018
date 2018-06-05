@@ -694,9 +694,8 @@ header
 		height: auto
 		display: flex
 		justify-content: center
-		// *
-		// 	border: solid 1px white
 		.section-wrapper
+			margin-top: 50px
 			width: 85%	
 			max-width: 1400px
 			overflow: hidden
@@ -704,7 +703,19 @@ header
 				vertical-align: top
 				display: inline-block
 				width: 49.3%
-				height: 100%
+				height: 60vh
+				overflow: hidden
+				@media screen and (max-width: $breakpoint)
+					width: 100%
+				.blur-block
+					position: absolute
+					height: 5%
+					bottom: 0px
+					width: 100%
+					z-index: 1
+					background-image: linear-gradient(to bottom, rgba(25, 20, 85, 0), #191455)
+					@media screen and (max-width: $breakpoint)
+						display: none
 				.need-margin-top
 					margin-top: 80px
 				.container
@@ -736,13 +747,15 @@ header
 				display: inline-block
 				width: 49.3%
 				height: 100%
+				@media screen and (max-width: $breakpoint)
+					display: none
 				img
+					top: -13px
 					width: 75%
 					left: 50%
 					transform: translateX(-50%)
 
 	#crew
-		visibility: hidden
 		height: auto
 		.section-wrapper
 			width: 90%

@@ -795,6 +795,7 @@ header {
     -ms-flex-pack: center;
     justify-content: center; }
     .page-wrapper #taichi .section-wrapper {
+      margin-top: 50px;
       width: 85%;
       max-width: 1400px;
       overflow: hidden; }
@@ -802,7 +803,24 @@ header {
         vertical-align: top;
         display: inline-block;
         width: 49.3%;
-        height: 100%; }
+        height: 60vh;
+        overflow: hidden; }
+        @media screen and (max-width: 1000px) {
+          .page-wrapper #taichi .section-wrapper .section-left {
+            width: 100%; } }
+        .page-wrapper #taichi .section-wrapper .section-left .blur-block {
+          position: absolute;
+          height: 5%;
+          bottom: 0px;
+          width: 100%;
+          z-index: 1;
+          background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 20, 85, 0)), to(#191455));
+          background-image: -webkit-linear-gradient(top, rgba(25, 20, 85, 0), #191455);
+          background-image: -o-linear-gradient(top, rgba(25, 20, 85, 0), #191455);
+          background-image: linear-gradient(to bottom, rgba(25, 20, 85, 0), #191455); }
+          @media screen and (max-width: 1000px) {
+            .page-wrapper #taichi .section-wrapper .section-left .blur-block {
+              display: none; } }
         .page-wrapper #taichi .section-wrapper .section-left .need-margin-top {
           margin-top: 80px; }
         .page-wrapper #taichi .section-wrapper .section-left .container {
@@ -836,14 +854,17 @@ header {
         display: inline-block;
         width: 49.3%;
         height: 100%; }
+        @media screen and (max-width: 1000px) {
+          .page-wrapper #taichi .section-wrapper .section-right {
+            display: none; } }
         .page-wrapper #taichi .section-wrapper .section-right img {
+          top: -13px;
           width: 75%;
           left: 50%;
           -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
           transform: translateX(-50%); }
   .page-wrapper #crew {
-    visibility: hidden;
     height: auto; }
     .page-wrapper #crew .section-wrapper {
       width: 90%;
