@@ -809,7 +809,7 @@ header {
           .page-wrapper #registration .section-wrapper .step .step-content .dot {
             margin-left: 40px; }
             .page-wrapper #registration .section-wrapper .step .step-content .dot::before {
-              content: "·";
+              content: "┬╖";
               position: absolute;
               top: 0;
               left: -40px; }
@@ -845,12 +845,29 @@ header {
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    min-width: 570px; }
     .page-wrapper #taichi .section-wrapper {
       margin-top: 50px;
       width: 85%;
       max-width: 1400px;
       overflow: hidden; }
+      @media screen and (max-width: 1000px) {
+        .page-wrapper #taichi .section-wrapper {
+          margin-top: 0px; } }
+      .page-wrapper #taichi .section-wrapper .breakpoint-block {
+        width: 90%;
+        display: none; }
+        @media screen and (max-width: 1000px) {
+          .page-wrapper #taichi .section-wrapper .breakpoint-block {
+            display: inline-block;
+            margin-bottom: 50px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%); } }
+        .page-wrapper #taichi .section-wrapper .breakpoint-block img {
+          width: 100%; }
       .page-wrapper #taichi .section-wrapper .section-left {
         vertical-align: top;
         display: inline-block;

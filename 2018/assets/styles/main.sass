@@ -739,11 +739,24 @@ header
 		height: auto
 		display: flex
 		justify-content: center
+		min-width: 570px
 		.section-wrapper
 			margin-top: 50px
 			width: 85%	
 			max-width: 1400px
 			overflow: hidden
+			@media screen and (max-width: $breakpoint)
+				margin-top: 0px
+			.breakpoint-block
+				width: 90%
+				display: none
+				@media screen and (max-width: $breakpoint)
+					display: inline-block
+					margin-bottom: 50px
+					left: 50%
+					transform: translateX(-50%)
+				img
+					width: 100%
 			.section-left
 				vertical-align: top
 				display: inline-block
