@@ -442,7 +442,8 @@ header {
         color: #50e6b4; }
         @media screen and (max-width: 1000px) {
           .page-wrapper #description .section-wrapper .descript-left {
-            display: block; } }
+            display: block;
+            width: 100%; } }
       .page-wrapper #description .section-wrapper .descript-right {
         width: 69%;
         height: 542px;
@@ -453,11 +454,13 @@ header {
         @media screen and (max-width: 1000px) {
           .page-wrapper #description .section-wrapper .descript-right {
             display: block;
+            height: auto;
             width: 100%; } }
         .page-wrapper #description .section-wrapper .descript-right .descript-content {
+          max-width: 840px;
           position: absolute;
           margin-top: 40px;
-          left: -15px;
+          left: -35px;
           font-size: 14px;
           line-height: 2;
           letter-spacing: 1px;
@@ -466,7 +469,8 @@ header {
           @media screen and (max-width: 1000px) {
             .page-wrapper #description .section-wrapper .descript-right .descript-content {
               margin-top: 30px;
-              left: 0px; } }
+              left: 0px;
+              position: relative; } }
   .page-wrapper #intro {
     height: auto;
     display: -webkit-box;

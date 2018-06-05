@@ -362,6 +362,7 @@ header
 			.descript-left
 				@media screen and (max-width: $breakpoint)
 					display: block
+					width: 100%
 				width: 30%
 				vertical-align: top
 				display: inline-block
@@ -374,6 +375,7 @@ header
 			.descript-right
 				@media screen and (max-width: $breakpoint)
 					display: block
+					height: auto
 					width: 100%
 				width: 69%
 				height: 542px
@@ -385,9 +387,12 @@ header
 					@media screen and (max-width: $breakpoint)
 						margin-top: 30px
 						left: 0px
+						position: relative
+					
+					max-width: 840px
 					position: absolute
 					margin-top: 40px
-					left: -15px
+					left: -35px
 					font-size: 14px
 					line-height: 2
 					letter-spacing: 1px
