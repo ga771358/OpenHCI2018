@@ -434,11 +434,15 @@ header {
         width: 30%;
         vertical-align: top;
         display: inline-block;
+        margin-top: 40px;
         font-size: 28px;
-        font-weight: 600;
+        font-weight: 400;
         letter-spacing: 1px;
         text-align: left;
         color: #50e6b4; }
+        @media screen and (max-width: 1000px) {
+          .page-wrapper #description .section-wrapper .descript-left {
+            display: block; } }
       .page-wrapper #description .section-wrapper .descript-right {
         width: 69%;
         height: 542px;
@@ -446,13 +450,23 @@ header {
         display: inline-block;
         background-image: url("../images/img-pattern-animism.png");
         background-repeat: no-repeat; }
+        @media screen and (max-width: 1000px) {
+          .page-wrapper #description .section-wrapper .descript-right {
+            display: block;
+            width: 100%; } }
         .page-wrapper #description .section-wrapper .descript-right .descript-content {
-          margin-top: 50px;
+          position: absolute;
+          margin-top: 40px;
+          left: -15px;
           font-size: 14px;
           line-height: 2;
           letter-spacing: 1px;
           text-align: left;
           color: #ffffff; }
+          @media screen and (max-width: 1000px) {
+            .page-wrapper #description .section-wrapper .descript-right .descript-content {
+              margin-top: 30px;
+              left: 0px; } }
   .page-wrapper #intro {
     height: auto;
     display: -webkit-box;

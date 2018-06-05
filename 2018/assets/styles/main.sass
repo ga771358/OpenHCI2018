@@ -360,15 +360,21 @@ header
 			width: 90%
 			max-width: 1300px 
 			.descript-left
+				@media screen and (max-width: $breakpoint)
+					display: block
 				width: 30%
 				vertical-align: top
 				display: inline-block
+				margin-top: 40px
 				font-size: 28px
-				font-weight: 600
+				font-weight: 400
 				letter-spacing: 1px
 				text-align: left
 				color: #50e6b4
 			.descript-right
+				@media screen and (max-width: $breakpoint)
+					display: block
+					width: 100%
 				width: 69%
 				height: 542px
 				vertical-align: top
@@ -376,7 +382,12 @@ header
 				background-image: url("../images/img-pattern-animism.png")
 				background-repeat: no-repeat
 				.descript-content
-					margin-top: 50px
+					@media screen and (max-width: $breakpoint)
+						margin-top: 30px
+						left: 0px
+					position: absolute
+					margin-top: 40px
+					left: -15px
 					font-size: 14px
 					line-height: 2
 					letter-spacing: 1px
