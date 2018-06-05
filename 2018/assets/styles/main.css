@@ -801,47 +801,47 @@ header {
       .page-wrapper #taichi .section-wrapper .section-left {
         vertical-align: top;
         display: inline-block;
-        width: 49%;
-        height: 100%;
-        text-align: right; }
-        .page-wrapper #taichi .section-wrapper .section-left .section-left-wrapper {
-          display: inline-block;
-          width: 76%;
-          text-align: right; }
-          .page-wrapper #taichi .section-wrapper .section-left .section-left-wrapper .img-top {
-            -webkit-transform: translateX(-90px);
-            -ms-transform: translateX(-90px);
-            transform: translateX(-90px);
-            width: 100%; }
-          .page-wrapper #taichi .section-wrapper .section-left .section-left-wrapper .img-btm {
-            width: 100%; }
+        width: 49.3%;
+        height: 100%; }
+        .page-wrapper #taichi .section-wrapper .section-left .need-margin-top {
+          margin-top: 80px; }
+        .page-wrapper #taichi .section-wrapper .section-left .container {
+          width: 85%;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%); }
+          .page-wrapper #taichi .section-wrapper .section-left .container .title {
+            width: 100%;
+            font-size: 28px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-align: left;
+            color: #50E6B4; }
+          .page-wrapper #taichi .section-wrapper .section-left .container .content {
+            margin-top: 30px;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 2;
+            letter-spacing: 1px;
+            text-align: left;
+            color: #ffffff; }
       .page-wrapper #taichi .section-wrapper .section-right {
-        padding-left: 7%;
         vertical-align: top;
         display: inline-block;
-        width: 49%;
+        width: 49.3%;
         height: 100%; }
-        .page-wrapper #taichi .section-wrapper .section-right .section-right-wrapper-title {
-          width: 100%;
-          font-size: 28px;
-          font-weight: bold;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: normal;
-          letter-spacing: 1px;
-          text-align: left;
-          color: #50e6b4; }
-        .page-wrapper #taichi .section-wrapper .section-right .section-right-wrapper-content {
-          width: 100%;
-          padding-top: 67px;
-          font-size: 14px;
-          font-weight: normal;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 2;
-          letter-spacing: 1px;
-          text-align: left;
-          color: #ffffff; }
+        .page-wrapper #taichi .section-wrapper .section-right img {
+          width: 80%;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%); }
   .page-wrapper #crew {
     height: auto; }
     .page-wrapper #crew .section-wrapper {
@@ -855,7 +855,7 @@ header {
         line-height: normal;
         letter-spacing: 1px;
         text-align: left;
-        color: #50e6b4; }
+        color: #50E6B4; }
       .page-wrapper #crew .section-wrapper .crew-content {
         margin-top: 45px;
         display: inline-block;
@@ -915,7 +915,7 @@ header {
                 line-height: normal;
                 letter-spacing: 1px;
                 text-align: left;
-                color: #50e6b4; }
+                color: #50E6B4; }
               .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right .one-person .person-detail {
                 margin-top: 6px;
                 font-size: 16px;
@@ -953,7 +953,7 @@ header {
           line-height: normal;
           letter-spacing: 2px;
           text-align: center;
-          color: #50e6b4;
+          color: #50E6B4;
           padding: 5px;
           -webkit-transition: 0.2s;
           -o-transition: 0.2s;
