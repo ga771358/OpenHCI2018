@@ -419,6 +419,39 @@ header {
         .page-wrapper #landing .titles .title-logo .logo-date {
           position: relative;
           display: block; }
+  .page-wrapper #description {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .page-wrapper #description .section-wrapper {
+      width: 90%; }
+      .page-wrapper #description .section-wrapper .descript-left {
+        width: 30%;
+        vertical-align: top;
+        display: inline-block;
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-align: left;
+        color: #50e6b4; }
+      .page-wrapper #description .section-wrapper .descript-right {
+        width: 69%;
+        vertical-align: top;
+        display: inline-block; }
+        .page-wrapper #description .section-wrapper .descript-right .fixedimg {
+          position: absolute;
+          top: -90px;
+          right: 0px; }
+        .page-wrapper #description .section-wrapper .descript-right .descript-content {
+          font-size: 14px;
+          line-height: 2;
+          letter-spacing: 1px;
+          text-align: left;
+          color: #ffffff; }
   .page-wrapper #intro {
     height: auto;
     display: -webkit-box;
@@ -757,7 +790,7 @@ header {
           .page-wrapper #registration .section-wrapper .step .step-content .dot {
             margin-left: 40px; }
             .page-wrapper #registration .section-wrapper .step .step-content .dot::before {
-              content: "┬╖";
+              content: "·";
               position: absolute;
               top: 0;
               left: -40px; }
