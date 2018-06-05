@@ -5,6 +5,7 @@ $green: #50E6B4
 $red: #d70050
 
 $registration-bg : #28286e
+$footer-bg: #28286e
 
 $breakpoint: 1000px
 $breakpoint-sm: 375px
@@ -955,4 +956,88 @@ header
 					text-align: left
 					color: #191455
 
-
+footer
+	display: flex
+	justify-content: center
+	height: auto
+	background-color: $footer-bg
+	@media screen and (max-width: $breakpoint)
+		background-color: $bg
+	.footer-wrapper
+		width: 67%
+		padding-top: 28px
+		padding-bottom: 28px
+		@media screen and (max-width: $breakpoint)
+			width: 90%
+		.breakpoint-container
+			display: none
+			@media screen and (max-width: $breakpoint)
+				display: block
+			.title-facebook,.title-copyright
+				display: inline-block
+				padding-right: 45px
+				background-color: $green
+				font-size: 14px
+				font-weight: bold
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: 1px
+				text-align: left
+				color: #ffffff
+				margin-top: 25px
+			.content-facebook,.content-copyright
+				display: block
+				margin-top: 6px
+				font-size: 14px
+				font-weight: bold
+				font-style: normal
+				font-stretch: normal
+				line-height: 1.5
+				letter-spacing: 1px
+				text-align: left
+				color: $green
+		.url-container
+			display: inline-block
+			@media screen and (max-width: $breakpoint)
+				display: none
+			.copyright
+				display: inline-block
+				font-weight: normal
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: 1px
+				text-align: left
+				color: #ffffff
+			.need-margin-right
+				margin-right: 20px	
+			.div-url
+				margin-left: 18px
+				display: inline-block
+				opacity: 0.5
+				font-weight: normal
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: 1px
+				text-align: left
+				color: #ffffff
+				&:hover
+					opacity: 1
+					color: $red
+		.button-container
+			display: inline-block
+			position: absolute
+			right: 0px
+			@media screen and (max-width: 1480px)
+				margin-top: 12px
+				display: block
+				position: initial
+				right: initial
+			@media screen and (max-width: $breakpoint)
+				display: none
+			a
+				margin-right: 24px
+				img
+					top: -4px
