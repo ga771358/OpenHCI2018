@@ -419,6 +419,58 @@ header {
         .page-wrapper #landing .titles .title-logo .logo-date {
           position: relative;
           display: block; }
+  .page-wrapper #description {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .page-wrapper #description .section-wrapper {
+      width: 90%;
+      max-width: 1300px; }
+      .page-wrapper #description .section-wrapper .descript-left {
+        width: 30%;
+        vertical-align: top;
+        display: inline-block;
+        margin-top: 40px;
+        font-size: 28px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-align: left;
+        color: #50e6b4; }
+        @media screen and (max-width: 1000px) {
+          .page-wrapper #description .section-wrapper .descript-left {
+            display: block;
+            width: 100%; } }
+      .page-wrapper #description .section-wrapper .descript-right {
+        width: 69%;
+        height: 542px;
+        vertical-align: top;
+        display: inline-block;
+        background-image: url("../images/img-pattern-animism.png");
+        background-repeat: no-repeat; }
+        @media screen and (max-width: 1000px) {
+          .page-wrapper #description .section-wrapper .descript-right {
+            display: block;
+            height: auto;
+            width: 100%; } }
+        .page-wrapper #description .section-wrapper .descript-right .descript-content {
+          max-width: 840px;
+          position: absolute;
+          margin-top: 40px;
+          left: -35px;
+          font-size: 14px;
+          line-height: 2;
+          letter-spacing: 1px;
+          text-align: left;
+          color: #ffffff; }
+          @media screen and (max-width: 1000px) {
+            .page-wrapper #description .section-wrapper .descript-right .descript-content {
+              margin-top: 30px;
+              left: 0px;
+              position: relative; } }
   .page-wrapper #intro {
     height: auto;
     display: -webkit-box;
@@ -757,7 +809,7 @@ header {
           .page-wrapper #registration .section-wrapper .step .step-content .dot {
             margin-left: 40px; }
             .page-wrapper #registration .section-wrapper .step .step-content .dot::before {
-              content: "┬╖";
+              content: "·";
               position: absolute;
               top: 0;
               left: -40px; }
