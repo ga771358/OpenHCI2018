@@ -19,6 +19,7 @@ body
 		a.logo(href="#landing")
 			img(src="assets/images/nav-logo.svg", alt="")
 		//- .menu-cir .menu-fade-in .menu-slidein
+		.black-screen
 		.menu.menu-slidein
 			.menu-bg
 			.menu-container
@@ -32,23 +33,22 @@ body
 					a.menu-btn#menu6(href="#organizer") 籌辦單位
 					//- a.menu-btn#menu7(href="#contact") 聯絡我們
 					a.menu-btn#sign-up(href="") 我要報名
+
 		.m-menu-opener
 			span
 			span
 			span
 	.loading
-		
-	.lightbox
 
 	.page-wrapper
 		section#landing
 			.section-wrapper
+				//- include ./assets/images/landing.svg
 				.screen
-					//- canvas#light
-					//- canvas#mask
 					.animate-light
 					.mouse-light
 					img.mask(src="assets/images/animism.png", alt="")
+
 				.titles
 					.title-wrapper
 						.left

@@ -1,13 +1,13 @@
 //手機menu相關
 $(".m-menu-opener").on("click", function() {
 	$(".menu").toggleClass('active');
-	$(".lightbox").toggleClass('active');
+	$(".black-screen").toggleClass('active');
 	$(".m-menu-opener").toggleClass('close');
 })
 
-$(".menu-btn,.lightbox").on("click", function() {
+$(".menu-btn,.black-screen").on("click", function() {
 	$(".menu").removeClass('active');
-	$(".lightbox").removeClass('active');
+	$(".black-screen").removeClass('active');
 	$(".m-menu-opener").removeClass('close');
 })
 

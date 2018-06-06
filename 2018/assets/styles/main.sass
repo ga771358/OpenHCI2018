@@ -63,7 +63,7 @@ table
 a
 	//nothing
 
-@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css)
+// @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css)
 
 *
 	box-sizing: border-box
@@ -209,6 +209,19 @@ header
 				transition: none
 				opacity: 1
 
+	.black-screen
+		position: fixed
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		background-color: rgba(#000,0.5)
+		visibility: hidden
+		opacity: 0
+		transition: 0.3s
+		&.active
+			visibility: visible
+			opacity: 1
 	.m-menu-opener
 		cursor: pointer
 		height: 30px
@@ -248,21 +261,6 @@ header
 	height: 100%
 	display: none
 
-.lightbox
-	position: fixed
-	width: 100%
-	height: 100%
-	top: 0
-	left: 0
-	background-color: rgba(#000,0.5)
-	visibility: hidden
-	opacity: 0
-	z-index: 90
-	transition: 0.3s
-	&.active
-		visibility: visible
-		opacity: 1
-
 .page-wrapper
 	width: 100%
 	overflow: hidden
@@ -297,6 +295,16 @@ header
 		.section-wrapper
 			display: flex
 			align-items: center
+		svg
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0 
+
+			>*
+				fill: lighten($blue,3)
+				&:hover
+					fill: $red
 		.screen
 			width: 70%
 			position: absolute
