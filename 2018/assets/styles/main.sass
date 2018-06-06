@@ -5,10 +5,12 @@ $green: #50E6B4
 $red: #d70050
 
 $registration-bg : #28286e
+$footer-bg: #28286e
 
 $breakpoint: 1000px
 $breakpoint-sm: 375px
 $breakpoint-mid: 768px
+$breakpoint-of-footer: 1100px
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
 	 v2.0 | 20110126
@@ -90,12 +92,14 @@ header
 	// background-color: rgba($bg, 0.7)
 	background: linear-gradient(rgba($bg,1), rgba($bg,0.8), rgba($bg,0))
 	padding: 0 50px
-	transition: top 0.5s
 	@media screen and (max-width: $breakpoint) 
 		padding: 0 20px
 		height: 70px
-	&.hide
-		top: -100px
+	&.atLanding
+		position: absolute
+		top: calc(100vh - 100px)
+		@media screen and (max-width: $breakpoint) 
+			top: calc(100vh - 70px)
 
 	.logo
 		width: 100px
@@ -350,7 +354,60 @@ header
 				.logo-date
 					position: relative
 					display: block
-
+	#description
+		height: auto
+		display: flex
+		justify-content: center
+		padding-top: 50px
+		.section-wrapper
+			width: 90%
+			max-width: 1450px
+			.descript-left
+				@media screen and (max-width: $breakpoint)
+					display: block
+					width: 100%
+				width: 30%
+				vertical-align: top
+				display: inline-block
+				margin-top: 100px
+				font-size: 28px
+				font-weight: 400
+				letter-spacing: 1px
+				text-align: left
+				color: #50e6b4
+			.descript-right
+				@media screen and (max-width: $breakpoint)
+					display: block
+					height: auto
+					width: 100%
+				width: 69%
+				height: 500px
+				vertical-align: top
+				display: inline-block
+				.descript-img
+					right: 0px
+					top: 0px
+					@media screen and (max-width: $breakpoint)
+						top: -45px
+					height: 100%
+					display: inline-block
+					position: absolute
+					//width: 100%
+					//background-image: url("../images/img-pattern-animism.png")
+					//background-repeat: no-repeat
+				.descript-content
+					@media screen and (max-width: $breakpoint)
+						margin-top: 30px
+						left: 0px
+						position: relative
+					//max-width: 840px
+					width: 100%
+					margin-top: 100px
+					font-size: 14px
+					line-height: 2
+					letter-spacing: 1px
+					text-align: left
+					color: #ffffff
 	#intro
 		height: auto
 		display: flex
@@ -358,25 +415,34 @@ header
 		.section-wrapper
 			width: 90%	
 			max-width: 1400px
-			min-width: 800px
-			.section-left
-				padding-left: 5%
-				vertical-align: top
-				display: inline-block
-				width: 49%
-				height: 100%
-				text-align: right
-				.section-left-wrapper
+			.intro-top
+				display: flex
+				justify-content: center
+				.video-here
+					width: 100%
+					height: 400px
+					background-color: #bbb
+			.intro-bottom
+				margin-top: 75px
+				.empty-block
 					display: inline-block
-					// margin-right: 15%
-					.section-left-block-need-margin-top
-						margin-top: 40px
-					.section-left-block
-						display: inline-block
-						text-align: left
+					width: 3.7%
+					@media screen and (max-width: $breakpoint)
+						display: none
+				.detail-block
+					width: 30%
+					height: auto
+					display: inline-block
+					vertical-align: top
+					@media screen and (max-width: $breakpoint) 
+						display: block
+						width: 100%
+						margin-bottom: 40px
+					.container
+						@media screen and (max-width: $breakpoint)
+							width: 95%
 						.title
-							// transform: translateX(-25%)
-							padding-right: 60px
+							padding-right: 50px
 							display: inline-block
 							height: 28px
 							font-size: 21px
@@ -386,13 +452,11 @@ header
 							line-height: normal
 							letter-spacing: normal
 							text-align: left
-							background-color: #d70050
+							background-color: $green
 							color: #191455
 						.content
-							margin-left: 50px
-							margin-top: 8px
+							margin-top: 20px
 							display: block
-							// width: 100%
 							font-size: 14px
 							font-weight: normal
 							font-style: normal
@@ -401,18 +465,60 @@ header
 							letter-spacing: 1px
 							text-align: left
 							color: #ffffff
-			.section-right
-				vertical-align: top
-				display: inline-block
-				width: 49%
-				height: 100%
-				.section-right-wrapper
-					text-align: left
-					width: 100%
-					height: 100%
-					padding-left: 5%
-					.intro-pic
-						width: 100%
+			// .section-left
+			// 	padding-left: 5%
+			// 	vertical-align: top
+			// 	display: inline-block
+			// 	width: 49%
+			// 	height: 100%
+			// 	text-align: right
+			// 	.section-left-wrapper
+			// 		display: inline-block
+			// 		// margin-right: 15%
+			// 		.section-left-block-need-margin-top
+			// 			margin-top: 40px
+			// 		.section-left-block
+			// 			display: inline-block
+			// 			text-align: left
+			// 			.title
+			// 				// transform: translateX(-25%)
+			// 				padding-right: 60px
+			// 				display: inline-block
+			// 				height: 28px
+			// 				font-size: 21px
+			// 				font-weight: bold
+			// 				font-style: normal
+			// 				font-stretch: normal
+			// 				line-height: normal
+			// 				letter-spacing: normal
+			// 				text-align: left
+			// 				background-color: #d70050
+			// 				color: #191455
+			// 			.content
+			// 				margin-left: 50px
+			// 				margin-top: 8px
+			// 				display: block
+			// 				// width: 100%
+			// 				font-size: 14px
+			// 				font-weight: normal
+			// 				font-style: normal
+			// 				font-stretch: normal
+			// 				line-height: 2
+			// 				letter-spacing: 1px
+			// 				text-align: left
+			// 				color: #ffffff
+			// .section-right
+			// 	vertical-align: top
+			// 	display: inline-block
+			// 	width: 49%
+			// 	height: 100%
+			// 	.section-right-wrapper
+			// 		text-align: left
+			// 		width: 100%
+			// 		height: 100%
+			// 		padding-left: 5%
+			// 		.intro-pic
+			// 			width: 100%
 
 	#interlude
 		height: auto
@@ -425,6 +531,9 @@ header
 			img
 				// flex: 1
 				width: 100%
+				@media screen and (max-width: $breakpoint) 
+					width: 200%
+
 
 				// height: auto
 				// float: left
@@ -454,6 +563,9 @@ header
 					align-items: flex-start
 					cursor: pointer
 					@media screen and (max-width: $breakpoint) 
+						width: calc(100% / 3)
+						margin: 10px 0
+					@media screen and (max-width: 500px) 
 						width: calc(100% / 2)
 						&:nth-child(1)
 							order: 1
@@ -467,6 +579,8 @@ header
 							order: 4
 						&:nth-child(6)
 							order: 6
+					@media screen and (max-width: $breakpoint-sm)
+						font-size: 0.8em 
 					p
 						&::before
 							content: ""
@@ -521,15 +635,31 @@ header
 					&.active
 						visibility: visible
 						opacity: 1
-					@media screen and (max-width: $breakpoint) 
+					@media screen and (max-width: 500px) 
 						flex-direction: column
 					.program-img
 						width: 50%
+						// height: 100%
+						align-self: stretch
+						overflow: hidden
 						margin-right: 30px
-						@media screen and (max-width: $breakpoint) 
+						@media screen and (max-width: 500px) 
 							width: 100%
 							margin: 0
 							margin-bottom: 30px
+							align-self: center
+						img
+							position: absolute
+							top: 0
+							left: 50%
+							transform: translateX(-50%)
+							height: 100%
+							@media screen and (max-width: 500px) 
+								position: relative
+								transform: translateX(0)
+								width: 100%
+								height: auto
+								left: 0
 					.program-schedule
 						flex: 1
 						flex-direction: column
@@ -607,23 +737,23 @@ header
 						p
 							margin-bottom: 10px
 					.dot
-						margin-left: 40px
+						margin-left: 20px
 						&::before
 							content: "·"
 							position: absolute
 							top: 0
-							left: -40px
+							left: -20px
 						@media screen and (max-width: $breakpoint) 
 							margin-left: 20px
 							&::before
 								left: -20px
 					.q1,.q2
-						margin-left: 40px
+						margin-left: 20px
 						&::before
 							// content: "·"
 							position: absolute
 							top: 0
-							left: -40px
+							left: -20px
 						@media screen and (max-width: $breakpoint) 
 							margin-left: 20px
 							&::before
@@ -633,9 +763,17 @@ header
 					.q2::before
 						content: "2." 
 					.tab
-						margin-left: 40px
+						margin-left: 20px
 						@media screen and (max-width: $breakpoint) 
 							margin-left: 20px
+					.highlight
+						display: inline
+						padding: 10px
+						line-height: 4em
+						font-weight: 500
+						margin: 10px 0
+						background-color: $green
+						color: $blue
 
 
 
@@ -705,7 +843,7 @@ header
 				text-align: left
 				color: #50e6b4
 			.crew-content
-				margin-top: 60px
+				margin-top: 45px
 				display: inline-block
 				width: 100%
 				overflow: hidden
@@ -768,42 +906,43 @@ header
 									letter-spacing: 1px
 									text-align: left
 									color: #ffffff
-			.crew-button
-				margin-top: 40px
-				height: 50px
-				.container
-					position: absolute
+		.crew-button
+			margin-top: 40px
+			height: 50px
+			.container
+				position: absolute
+				display: inline-block
+				right: 15%
+				@media screen and (max-width: $breakpoint)
+					right: 50%
+					transform: translateX(50%)
+					min-width: 170px 
+				.button
+					cursor: pointer
+					-webkit-user-select: none
+					border-bottom: solid 3px white
 					display: inline-block
-					right: 13%
-					@media screen and (max-width: $breakpoint)
-						right: 50%
-						transform: translateX(50%)
-					.button
-						cursor: pointer
-						-webkit-user-select: none
-						border-bottom: solid 3px white
-						display: inline-block
-						opacity: 0.6
-						font-size: 41px
-						font-weight: 600
-						font-style: normal
-						font-stretch: normal
-						line-height: normal
-						letter-spacing: 2px
-						text-align: center
-						color: #50e6b4
-						padding: 5px
-						transition: 0.2s
-						transform: scale(1)
-						top: 0px
-						&:hover
-							opacity: 1
-							transform: scale(1.15)
-					#button-crew-left
-						padding-left: 30px
-					#button-crew-right
-						padding-right: 30px
-						margin-left: 30px
+					opacity: 0.6
+					font-size: 41px
+					font-weight: 600
+					font-style: normal
+					font-stretch: normal
+					line-height: normal
+					letter-spacing: 2px
+					text-align: center
+					color: #50e6b4
+					padding: 5px
+					transition: 0.2s
+					transform: scale(1)
+					top: 0px
+					&:hover
+						opacity: 1
+						transform: scale(1.15)
+				#button-crew-left
+					padding-left: 30px
+				#button-crew-right
+					padding-right: 30px
+					margin-left: 30px
 
 
 	#organizer
@@ -822,6 +961,9 @@ header
 				//height: 200px
 				.og-section-title
 					height: 38px
+					@media screen and (max-width: $breakpoint_sm)
+						font-size: 20px
+						height: 28px
 					font-size: 28px
 					font-weight: bold
 					letter-spacing: 1px
@@ -833,17 +975,24 @@ header
 						height: 45px
 						width: 400px
 						margin-bottom: 50px
+						@media screen and (max-width: $breakpoint_sm)
+							height: 35px
+							margin-bottom: 40px
 						.og-logo
 							height: 100%
 					.logo-small
 						display: inline-block
+						@media screen and (max-width: $breakpoint_sm)
+							height: 30px
+							width: 150px
+							margin-bottom: 40px
 						height: 45px
-						width: 300px
+						width: 250px //picture size
 						margin-bottom: 50px
 						.og-logo
 							height: 100%
 							display: block
-							margin: auto
+						//	margin: auto
 						// padding: 1%
 						// padding-left: 5%
 						// padding-right: 5%
@@ -943,4 +1092,71 @@ header
 					text-align: left
 					color: #191455
 
-
+footer
+	display: flex
+	justify-content: center
+	height: auto
+	background-color: $footer-bg
+	min-width: 350px
+	.footer-wrapper
+		width: 90%
+		max-width: 1150px
+		padding-top: 28px
+		padding-bottom: 28px
+		br
+			display: none
+			@media screen and (max-width: $breakpoint-of-footer)
+				display: initial
+		.copyright
+			display: inline-block
+			font-weight: normal
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: 1px
+			text-align: left
+			color: #ffffff
+			@media screen and (max-width: $breakpoint-of-footer)
+				left: 50%
+				transform: translateX(-50%)
+		.need-margin-right
+			margin-right: 38px	
+		.url-group
+			display: inline-block
+			@media screen and (max-width: $breakpoint-of-footer)
+				margin-top: 28px
+				left: 50%
+				transform: translateX(-50%)
+					display: initial
+			.part1,.part2
+				display: inline-block
+				@media screen and (max-width: 550px)
+					display: block
+					margin: auto,0
+			.div-url
+				margin-right: 18px
+				display: inline-block
+				opacity: 0.5
+				font-weight: normal
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: 1px
+				text-align: left
+				color: #ffffff
+				&:hover
+					opacity: 1
+					color: $red
+		.button-group
+			display: inline-block
+			position: absolute
+			right: 0px
+			@media screen and (max-width: $breakpoint-of-footer)
+				margin-top: 28px
+				position: relative
+				right: initial
+				left: 50%
+				transform: translateX(-50%)
+			a
+				img
+					top: -4px
