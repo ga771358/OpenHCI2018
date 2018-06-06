@@ -142,6 +142,25 @@ $("#program .tab").on("click", function(){
 	
 })
 
+//intro section
+var player;
+function onYouTubeIframeAPIReady() {
+player = new YT.Player('our-video', {
+	videoId: 'kfXdP7nZIiE' //Youtube 影片ID
+});
+}
+
+$(document).on('scroll', function() {
+    if( ($(this).scrollTop() >= $('#intro').position().top - 300) && ($(this).scrollTop() <= $('#interlude').position().top - 300 ) ){
+		player.playVideo();
+		return;
+	}
+	else{
+		player.pauseVideo();
+	}
+	
+})
+
 //crew section
 var crew = -1;
 var all_block = $('.crew-content-block');
