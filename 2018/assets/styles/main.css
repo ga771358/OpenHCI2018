@@ -445,7 +445,8 @@ header {
         @media screen and (max-width: 1000px) {
           .page-wrapper #description .section-wrapper .descript-left {
             display: block;
-            width: 100%; } }
+            width: 100%;
+            margin-top: 0px; } }
       .page-wrapper #description .section-wrapper .descript-right {
         width: 69%;
         height: 500px;
@@ -1081,9 +1082,12 @@ header {
     -ms-flex-pack: center;
     justify-content: center; }
     .page-wrapper #organizer .section-wrapper {
-      width: 85%; }
+      width: 90%; }
       .page-wrapper #organizer .section-wrapper .need-padding-top {
         margin-top: 60px; }
+        @media screen and (max-width: 375px) {
+          .page-wrapper #organizer .section-wrapper .need-padding-top {
+            margin-top: 30px; } }
       .page-wrapper #organizer .section-wrapper .og-section-block {
         text-align: left; }
         .page-wrapper #organizer .section-wrapper .og-section-block .og-section-title {
@@ -1100,28 +1104,27 @@ header {
           padding-top: 40px; }
           .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block {
             display: inline-block;
-            height: 45px;
-            width: 400px;
+            width: 30%;
             margin-bottom: 50px; }
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: 1000px) {
               .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block {
-                height: 35px;
+                width: 45%;
                 margin-bottom: 40px; } }
             .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block .og-logo {
-              height: 100%; }
+              width: 85%; }
+              @media screen and (max-width: 375px) {
+                .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block .og-logo {
+                  width: 95%; } }
           .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small {
             display: inline-block;
-            height: 45px;
-            width: 250px;
+            width: 18%;
             margin-bottom: 50px; }
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: 1000px) {
               .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small {
-                height: 30px;
-                width: 150px;
+                width: 30%;
                 margin-bottom: 40px; } }
             .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small .og-logo {
-              height: 100%;
-              display: block; }
+              width: 85%; }
   .page-wrapper #contact {
     height: auto;
     display: -webkit-box;
