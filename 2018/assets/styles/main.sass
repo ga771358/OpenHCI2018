@@ -366,6 +366,7 @@ header
 				@media screen and (max-width: $breakpoint)
 					display: block
 					width: 100%
+					margin-top: 0px
 				width: 30%
 				vertical-align: top
 				display: inline-block
@@ -418,10 +419,10 @@ header
 			.intro-top
 				display: flex
 				justify-content: center
-				.video-here
-					width: 100%
-					height: 400px
-					background-color: #bbb
+				#our-video
+					width: 60%
+					@media screen and (max-width: $breakpoint)
+						width: 80%
 			.intro-bottom
 				margin-top: 75px
 				.empty-block
@@ -870,13 +871,36 @@ header
 							height: 100%
 							.team-name
 								display: inline-block
-								transform: rotate(-90deg) translateY(-52px) translateX(-52px)
 								background-color: #d70050
 								font-weight: 800
 								font-size: 20px
 								color: $bg
 								padding: 3px
-								padding-right: 80px
+								padding-right: 60px
+							.program
+								transform: rotate(-90deg) translateY(-79px) translateX(-74px)
+							.human-resource
+								transform: rotate(-90deg) translateY(-130px) translateX(-126px)
+							.web-service
+								transform: rotate(-90deg) translateY(-99px) translateX(-94px)
+							.tech
+								transform: rotate(-90deg) translateY(-51px) translateX(-48px)
+							.lecture
+								transform: rotate(-90deg) translateY(-74px) translateX(-71px)
+							.exhibition
+								transform: rotate(-90deg) translateY(-136px) translateX(-133px)
+							.publicity
+								transform: rotate(-90deg) translateY(-83px) translateX(-79px)
+							.visual-design
+								transform: rotate(-90deg) translateY(-110px) translateX(-107px)
+							.sponsorship
+								transform: rotate(-90deg) translateY(-106px) translateX(-102px)
+							.treasurer
+								transform: rotate(-90deg) translateY(-90px) translateX(-86px)
+							.film-crew
+								transform: rotate(-90deg) translateY(-85px) translateX(-81px)
+							.TA
+								transform: rotate(-90deg) translateY(-68px) translateX(-66px)
 						.need-more-margin-left
 							margin-left: 25px
 						.crew-content-block-right
@@ -952,10 +976,12 @@ header
 		// *
 		// 	border: solid 1px white
 		.section-wrapper
-			width: 85%
+			width: 90%
 			//max-width: 1200px
 			.need-padding-top
 				margin-top: 60px
+				@media screen and (max-width: $breakpoint_sm)
+					margin-top: 30px
 			.og-section-block
 				text-align: left
 				//height: 200px
@@ -972,30 +998,40 @@ header
 					padding-top: 40px
 					.logo-block
 						display: inline-block
-						height: 45px
-						width: 400px
+						//height: 45px
+						//width: 400px
+						width: 30%
+						max-width: 260px
 						margin-bottom: 50px
-						@media screen and (max-width: $breakpoint_sm)
-							height: 35px
+						@media screen and (max-width: $breakpoint)
+							//height: 35px
+							width: 45%
 							margin-bottom: 40px
 						.og-logo
-							height: 100%
+							//height: 100%
+							width: 85%
+							@media screen and (max-width: $breakpoint-sm)
+								width: 95%
 					.logo-small
 						display: inline-block
-						@media screen and (max-width: $breakpoint_sm)
-							height: 30px
-							width: 150px
+						@media screen and (max-width: $breakpoint)
+							//height: 30px
+							//width: 150px
+							width: 30%
 							margin-bottom: 40px
-						height: 45px
-						width: 250px //picture size
+						//height: 45px
+						//width: 250px //picture size
+						width: 18%
+						max-width: 234px
 						margin-bottom: 50px
 						.og-logo
-							height: 100%
-							display: block
-						//	margin: auto
-						// padding: 1%
-						// padding-left: 5%
-						// padding-right: 5%
+							//height: 80%
+							width: 85%
+							// display: block
+							// margin: auto
+							// padding: 1%
+							// padding-left: 5%
+							// padding-right: 5%
 
 	#contact
 		height: auto

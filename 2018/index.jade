@@ -80,7 +80,7 @@ body
 		section#intro
 			.section-wrapper
 				.intro-top
-					.video-here
+					#our-video
 				.intro-bottom
 					.detail-block
 						.container
@@ -328,7 +328,7 @@ body
 					.slide-block
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 總召
+								.team-name.program PROGRAM
 							.crew-content-block-right
 								.one-person
 									.person-name 曾唯哲
@@ -347,7 +347,7 @@ body
 									.person-detail 碩一
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 人事
+								.team-name.human-resource HUMAN RESOURCE
 							.crew-content-block-right
 								.one-person
 									.person-name 劉孟錡
@@ -366,7 +366,7 @@ body
 									.person-detail 指導教授 彭瑞玟老師
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 網管
+								.team-name.web-service WEB SERVICE
 							.crew-content-block-right
 								.one-person
 									.person-name 張文瀚
@@ -385,7 +385,7 @@ body
 									.person-detail 指導教授 陳志成老師
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 技術
+								.team-name.tech TECH
 							.crew-content-block-right
 								.one-person
 									.person-name 古健樺
@@ -410,7 +410,7 @@ body
 									.person-detail 指導教授 陳玲玲老師
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 演講
+								.team-name.lecture LECTURE
 							.crew-content-block-right
 								.one-person
 									.person-name 黃姿螢
@@ -424,7 +424,7 @@ body
 									.person-detail 大四
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 策展
+								.team-name.exhibition EXHIBITION / DEMO
 							.crew-content-block-right
 								.one-person
 									.person-name 羅開晉
@@ -438,7 +438,7 @@ body
 									.person-detail 指導教授 陳建宇老師
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 媒體
+								.team-name.publicity PUBLICITY
 							.crew-content-block-right
 								.one-person
 									.person-name 黃子倫
@@ -457,7 +457,7 @@ body
 									.person-detail 指導教授 陳建雄老師
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 視覺
+								.team-name.visual-design VISUAL DESIGN
 							.crew-content-block-right
 								.one-person
 									.person-name 曹仲
@@ -476,7 +476,7 @@ body
 									.person-detail 指導教授 陳聖智老師
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 贊助
+								.team-name.sponsorship SPONSORSHIP
 							.crew-content-block-right
 								.one-person
 									.person-name 陳靖玟
@@ -490,7 +490,7 @@ body
 									.person-detail 大四
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 總務
+								.team-name.treasurer TREASURER
 							.crew-content-block-right
 								.one-person
 									.person-name 王琦
@@ -509,7 +509,7 @@ body
 									.person-detail 指導教授 陳彥仰老師
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 攝影
+								.team-name.film-crew FILM CREW
 							.crew-content-block-right
 								.one-person
 									.person-name 王惠萱
@@ -523,7 +523,7 @@ body
 									.person-detail 指導教授 陳煥宗老師
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name TA長
+								.team-name.TA TA CHIEF
 							.crew-content-block-right
 								.one-person
 									.person-name 賴柏恩
@@ -575,13 +575,13 @@ body
 					.og-section-title SPONSOR
 					.og-section-logo-wrapper
 						.logo-small
-							img.og-logo.lo(src="assets/images/organizer_logo/s15.png", alt="")
+							img(src="assets/images/organizer_logo/s15.png", alt="", width="40%")
 						.logo-small
 							img.og-logo(src="assets/images/organizer_logo/s14.png", alt="")
 						.logo-small
 							img.og-logo(src="assets/images/organizer_logo/s8.png", alt="")
 						.logo-small
-							img.og-logo(src="assets/images/organizer_logo/s9.svg", alt="")
+							img(src="assets/images/organizer_logo/s9.svg", alt="", width="55%")
 						.logo-small
 							img.og-logo(src="assets/images/organizer_logo/s16.png", alt="")
 						.logo-small
@@ -647,5 +647,5 @@ script(src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.4/pixi.min.js")
 script(src="assets/scripts/main.js")
 script(src="assets/scripts/landing.js")
 script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDcF4jmxdoDeeDWS_1TdOmkFZ8Hs4kzQxs&callback=initMap', async='', defer='')
-	
+script(src="https://www.youtube.com/iframe_api")
 //- script(src="assets/scripts/screen.js")
