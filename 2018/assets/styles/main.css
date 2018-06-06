@@ -443,7 +443,8 @@ header {
         @media screen and (max-width: 1000px) {
           .page-wrapper #description .section-wrapper .descript-left {
             display: block;
-            width: 100%; } }
+            width: 100%;
+            margin-top: 0px; } }
       .page-wrapper #description .section-wrapper .descript-right {
         width: 69%;
         height: 500px;
