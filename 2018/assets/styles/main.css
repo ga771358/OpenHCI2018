@@ -82,16 +82,17 @@ header {
   background: -webkit-linear-gradient(#191456, rgba(25, 20, 86, 0.8), rgba(25, 20, 86, 0));
   background: -o-linear-gradient(#191456, rgba(25, 20, 86, 0.8), rgba(25, 20, 86, 0));
   background: linear-gradient(#191456, rgba(25, 20, 86, 0.8), rgba(25, 20, 86, 0));
-  padding: 0 50px;
-  -webkit-transition: top 0.5s;
-  -o-transition: top 0.5s;
-  transition: top 0.5s; }
+  padding: 0 50px; }
   @media screen and (max-width: 1000px) {
     header {
       padding: 0 20px;
       height: 70px; } }
-  header.hide {
-    top: -100px; }
+  header.atLanding {
+    position: absolute;
+    top: calc(100vh - 100px); }
+    @media screen and (max-width: 1000px) {
+      header.atLanding {
+        top: calc(100vh - 70px); } }
   header .logo {
     width: 100px;
     margin-left: 15px; }
@@ -558,6 +559,9 @@ header {
       align-items: center; }
       .page-wrapper #interlude .moving img {
         width: 100%; }
+        @media screen and (max-width: 1000px) {
+          .page-wrapper #interlude .moving img {
+            width: 200%; } }
   .page-wrapper #program {
     height: auto;
     display: -webkit-box;
@@ -607,6 +611,10 @@ header {
           cursor: pointer; }
           @media screen and (max-width: 1000px) {
             .page-wrapper #program .section-wrapper .tabs .tab {
+              width: calc(100% / 3);
+              margin: 10px 0; } }
+          @media screen and (max-width: 500px) {
+            .page-wrapper #program .section-wrapper .tabs .tab {
               width: calc(100% / 2); }
               .page-wrapper #program .section-wrapper .tabs .tab:nth-child(1) {
                 -webkit-box-ordinal-group: 2;
@@ -632,6 +640,9 @@ header {
                 -webkit-box-ordinal-group: 7;
                 -ms-flex-order: 6;
                 order: 6; } }
+          @media screen and (max-width: 375px) {
+            .page-wrapper #program .section-wrapper .tabs .tab {
+              font-size: 0.8em; } }
           .page-wrapper #program .section-wrapper .tabs .tab p::before {
             content: "";
             display: block;
@@ -690,7 +701,7 @@ header {
           .page-wrapper #program .section-wrapper .program-container .program-content.active {
             visibility: visible;
             opacity: 1; }
-          @media screen and (max-width: 1000px) {
+          @media screen and (max-width: 500px) {
             .page-wrapper #program .section-wrapper .program-container .program-content {
               -webkit-box-orient: vertical;
               -webkit-box-direction: normal;
@@ -698,12 +709,34 @@ header {
               flex-direction: column; } }
           .page-wrapper #program .section-wrapper .program-container .program-content .program-img {
             width: 50%;
+            -ms-flex-item-align: stretch;
+            align-self: stretch;
+            overflow: hidden;
             margin-right: 30px; }
-            @media screen and (max-width: 1000px) {
+            @media screen and (max-width: 500px) {
               .page-wrapper #program .section-wrapper .program-container .program-content .program-img {
                 width: 100%;
                 margin: 0;
-                margin-bottom: 30px; } }
+                margin-bottom: 30px;
+                -ms-flex-item-align: center;
+                align-self: center; } }
+            .page-wrapper #program .section-wrapper .program-container .program-content .program-img img {
+              position: absolute;
+              top: 0;
+              left: 50%;
+              -webkit-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+              height: 100%; }
+              @media screen and (max-width: 500px) {
+                .page-wrapper #program .section-wrapper .program-container .program-content .program-img img {
+                  position: relative;
+                  -webkit-transform: translateX(0);
+                  -ms-transform: translateX(0);
+                  transform: translateX(0);
+                  width: 100%;
+                  height: auto;
+                  left: 0; } }
           .page-wrapper #program .section-wrapper .program-container .program-content .program-schedule {
             -webkit-box-flex: 1;
             -ms-flex: 1;
@@ -813,23 +846,23 @@ header {
               .page-wrapper #registration .section-wrapper .step .step-content p {
                 margin-bottom: 10px; } }
           .page-wrapper #registration .section-wrapper .step .step-content .dot {
-            margin-left: 40px; }
+            margin-left: 20px; }
             .page-wrapper #registration .section-wrapper .step .step-content .dot::before {
-              content: "┬╖";
+              content: "·";
               position: absolute;
               top: 0;
-              left: -40px; }
+              left: -20px; }
             @media screen and (max-width: 1000px) {
               .page-wrapper #registration .section-wrapper .step .step-content .dot {
                 margin-left: 20px; }
                 .page-wrapper #registration .section-wrapper .step .step-content .dot::before {
                   left: -20px; } }
           .page-wrapper #registration .section-wrapper .step .step-content .q1, .page-wrapper #registration .section-wrapper .step .step-content .q2 {
-            margin-left: 40px; }
+            margin-left: 20px; }
             .page-wrapper #registration .section-wrapper .step .step-content .q1::before, .page-wrapper #registration .section-wrapper .step .step-content .q2::before {
               position: absolute;
               top: 0;
-              left: -40px; }
+              left: -20px; }
             @media screen and (max-width: 1000px) {
               .page-wrapper #registration .section-wrapper .step .step-content .q1, .page-wrapper #registration .section-wrapper .step .step-content .q2 {
                 margin-left: 20px; }
@@ -840,10 +873,18 @@ header {
           .page-wrapper #registration .section-wrapper .step .step-content .q2::before {
             content: "2."; }
           .page-wrapper #registration .section-wrapper .step .step-content .tab {
-            margin-left: 40px; }
+            margin-left: 20px; }
             @media screen and (max-width: 1000px) {
               .page-wrapper #registration .section-wrapper .step .step-content .tab {
                 margin-left: 20px; } }
+          .page-wrapper #registration .section-wrapper .step .step-content .highlight {
+            display: inline;
+            padding: 10px;
+            line-height: 4em;
+            font-weight: 500;
+            margin: 10px 0;
+            background-color: #50E6B4;
+            color: #191456; }
   .page-wrapper #taichi {
     height: auto;
     display: -webkit-box;
