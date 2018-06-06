@@ -50,16 +50,22 @@ body
 					.mouse-light
 					img.mask(src="assets/images/animism.png", alt="")
 				.titles
-					img.title1(src="assets/images/title1.svg", alt="")
-					img.title2(src="assets/images/title2.svg", alt="")
-					img.title3(src="assets/images/title3.svg", alt="")
-					.title-logo
-						img.glitch#logo0.active(src="assets/images/logo-glitch/0.png", alt="")
-						img.glitch#logo1(src="assets/images/logo-glitch/1.png", alt="")
-						img.glitch#logo2(src="assets/images/logo-glitch/2.png", alt="")
-						img.glitch#logo3(src="assets/images/logo-glitch/3.png", alt="")
-						img.glitch#logo4(src="assets/images/logo-glitch/4.png", alt="")
-						img.logo-date(src="assets/images/logo-glitch/date.png", alt="")
+					.title-wrapper
+						.left
+							.placeholder
+							.placeholder
+							.placeholder
+							.title-logo
+								img.empty(src="assets/images/logo-glitch/empty.png", alt="")
+								img.glitch#logo0.active(src="assets/images/logo-glitch/0.svg", alt="")
+								img.glitch#logo1(src="assets/images/logo-glitch/1.svg", alt="")
+								img.glitch#logo2(src="assets/images/logo-glitch/2.svg", alt="")
+								img.glitch#logo3(src="assets/images/logo-glitch/3.svg", alt="")
+								img.glitch#logo4(src="assets/images/logo-glitch/4.svg", alt="")
+							.col
+								img.title1(src="assets/images/title1.svg", alt="")
+						.right
+							img.title2(src="assets/images/title2.svg", alt="")
 
 		section#description
 			.section-wrapper
