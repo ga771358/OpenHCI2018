@@ -19,6 +19,7 @@ body
 		a.logo(href="#landing")
 			img(src="assets/images/nav-logo.svg", alt="")
 		//- .menu-cir .menu-fade-in .menu-slidein
+		.black-screen
 		.menu.menu-slidein
 			.menu-bg
 			.menu-container
@@ -32,34 +33,39 @@ body
 					a.menu-btn#menu6(href="#organizer") 籌辦單位
 					//- a.menu-btn#menu7(href="#contact") 聯絡我們
 					a.menu-btn#sign-up(href="") 我要報名
+
 		.m-menu-opener
 			span
 			span
 			span
 	.loading
-		
-	.lightbox
 
 	.page-wrapper
 		section#landing
 			.section-wrapper
+				//- include ./assets/images/landing.svg
 				.screen
-					//- canvas#light
-					//- canvas#mask
 					.animate-light
 					.mouse-light
 					img.mask(src="assets/images/animism.png", alt="")
+
 				.titles
-					img.title1(src="assets/images/title1.svg", alt="")
-					img.title2(src="assets/images/title2.svg", alt="")
-					img.title3(src="assets/images/title3.svg", alt="")
-					.title-logo
-						img.glitch#logo0.active(src="assets/images/logo-glitch/0.png", alt="")
-						img.glitch#logo1(src="assets/images/logo-glitch/1.png", alt="")
-						img.glitch#logo2(src="assets/images/logo-glitch/2.png", alt="")
-						img.glitch#logo3(src="assets/images/logo-glitch/3.png", alt="")
-						img.glitch#logo4(src="assets/images/logo-glitch/4.png", alt="")
-						img.logo-date(src="assets/images/logo-glitch/date.png", alt="")
+					.title-wrapper
+						.left
+							.placeholder
+							.placeholder
+							.placeholder
+							.title-logo
+								img.empty(src="assets/images/logo-glitch/empty.png", alt="")
+								img.glitch#logo0.active(src="assets/images/logo-glitch/0.svg", alt="")
+								img.glitch#logo1(src="assets/images/logo-glitch/1.svg", alt="")
+								img.glitch#logo2(src="assets/images/logo-glitch/2.svg", alt="")
+								img.glitch#logo3(src="assets/images/logo-glitch/3.svg", alt="")
+								img.glitch#logo4(src="assets/images/logo-glitch/4.svg", alt="")
+							.col
+								img.title1(src="assets/images/title1.svg", alt="")
+						.right
+							img.title2(src="assets/images/title2.svg", alt="")
 
 		section#description
 			.section-wrapper

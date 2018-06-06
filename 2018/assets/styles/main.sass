@@ -63,7 +63,7 @@ table
 a
 	//nothing
 
-@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css)
+// @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css)
 
 *
 	box-sizing: border-box
@@ -209,6 +209,19 @@ header
 				transition: none
 				opacity: 1
 
+	.black-screen
+		position: fixed
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		background-color: rgba(#000,0.5)
+		visibility: hidden
+		opacity: 0
+		transition: 0.3s
+		&.active
+			visibility: visible
+			opacity: 1
 	.m-menu-opener
 		cursor: pointer
 		height: 30px
@@ -248,21 +261,6 @@ header
 	height: 100%
 	display: none
 
-.lightbox
-	position: fixed
-	width: 100%
-	height: 100%
-	top: 0
-	left: 0
-	background-color: rgba(#000,0.5)
-	visibility: hidden
-	opacity: 0
-	z-index: 90
-	transition: 0.3s
-	&.active
-		visibility: visible
-		opacity: 1
-
 .page-wrapper
 	width: 100%
 	overflow: hidden
@@ -297,6 +295,16 @@ header
 		.section-wrapper
 			display: flex
 			align-items: center
+		svg
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0 
+
+			>*
+				fill: lighten($blue,3)
+				&:hover
+					fill: $red
 		.screen
 			width: 70%
 			position: absolute
@@ -325,35 +333,125 @@ header
 				top: -5px
 				left: -5px
 		.titles
-			width: 100%
-			height: 100%
-			img
+			width: 85%
+			// max-width: 1000px
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			&::before
+				content: ""
+				display: block
+				width: 100%
+				padding-top: 25%
+			.title-wrapper
 				position: absolute
-			.title1
-				top: 130px
-				left: 100px
-			.title2
-				top: 130px
-				right: 100px
-			.title3
-				bottom: 100px
-				left: 100px
-			.title-logo
-				top: 50%
-				left: 10%
-				width: 50%
-				transform: translateY(-50%)
-				img
-					width: 100%
-					position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				display: flex
+				justify-content: space-between
+				.left
+					display: flex
+					height: 100%
+					.title-logo
+						height: 100%
+						margin-right: 100px
+						z-index: 1
+						.glitch
+							height: 100%
+							position: absolute
+							top: 0
+							left: 50%
+							transform: translateX(-50%)
+							display: none
+							&.active
+								display: block
+						.empty
+							height: 100%
+					.col
+						display: flex
+						flex-direction: column
+						justify-content: space-between
+						align-items: flex-start
+						padding: 15px 0
+						.title1
+							height: 100%
+				.right
+					height: 100%
+					img
+						height: 100%
+			@media screen and (max-width: $breakpoint)
+				width: 100%
+				height: 100%
+				padding: 40px 80px
+				// max-width: 1000px
+				position: relative
+				top: 0
+				left: 0
+				transform: translate(0,0)
+				&::before
+					display: none
+				.title-wrapper
+					position: relative
 					top: 0
 					left: 0
-					display: none
-					&.active
-						display: block
-				.logo-date
-					position: relative
-					display: block
+					width: 100%
+					height: 100%
+					display: flex
+					justify-content: space-between
+					.left
+						display: flex
+						// height: 70%
+						width: 90%
+						align-self: flex-end
+						flex-direction: column
+						justify-content: space-between
+						padding-bottom: 50px
+						.title-logo
+							height: auto
+							width: 75%
+							max-width: 270px
+							margin-right: 0
+							margin-bottom: 50px
+							z-index: 1
+							.glitch
+								height: 100%
+								position: absolute
+								top: 0
+								left: 50%
+								transform: translateX(-50%)
+								display: none
+								&.active
+									display: block
+							.empty
+								height: auto
+								width: 100%
+						.col
+							display: flex
+							flex-direction: column
+							justify-content: space-between
+							align-items: flex-start
+							padding: 0
+							width: 45%
+							flex: 0 0 auto
+							max-width: 160px
+							.title1
+								height: auto
+								width: 100%
+					.right
+						height: 100%
+						width: 10%
+						max-width: 40px
+						img
+							height: auto
+							width: 100%
+			@media screen and (max-width: 500px)
+				padding: 30px
+
+
+			
 	#description
 		height: auto
 		display: flex
