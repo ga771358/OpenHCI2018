@@ -1208,11 +1208,8 @@ header {
         display: inline-block; }
         @media screen and (max-width: 768px) {
           .page-wrapper #contact .section-wrapper .contact-section-info {
-            top: 0;
-            left: initial;
-            right: 0;
-            width: 258px;
-            height: 131px; } }
+            width: 313px;
+            height: 70px; } }
         @media screen and (max-width: 375px) {
           .page-wrapper #contact .section-wrapper .contact-section-info {
             position: relative;
@@ -1222,7 +1219,7 @@ header {
             height: 88px; } }
         @media screen and (max-width: 768px) {
           .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block {
-            display: none; } }
+            display: block; } }
         @media screen and (min-width: 768px) {
           .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block {
             display: block; } }
@@ -1231,7 +1228,7 @@ header {
             display: block; } }
         @media screen and (max-width: 768px) {
           .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block-mid {
-            display: block; } }
+            display: none; } }
         @media screen and (min-width: 768px) {
           .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-block-mid {
             display: none; } }
@@ -1249,8 +1246,8 @@ header {
           color: #ffffff; }
           @media screen and (max-width: 768px) {
             .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-title {
-              left: 35px;
-              top: 30px; } }
+              left: 14px;
+              top: 14px; } }
           @media screen and (max-width: 375px) {
             .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-title {
               left: 10px;
@@ -1266,8 +1263,9 @@ header {
           color: #191455; }
           @media screen and (max-width: 768px) {
             .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-content {
-              left: 35px;
-              top: 20px; } }
+              left: 14px;
+              top: 5px;
+              font-size: 14px; } }
           @media screen and (max-width: 375px) {
             .page-wrapper #contact .section-wrapper .contact-section-info .contact-section-content {
               left: 10px;
