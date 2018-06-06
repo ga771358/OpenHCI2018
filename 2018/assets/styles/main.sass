@@ -92,12 +92,14 @@ header
 	// background-color: rgba($bg, 0.7)
 	background: linear-gradient(rgba($bg,1), rgba($bg,0.8), rgba($bg,0))
 	padding: 0 50px
-	transition: top 0.5s
 	@media screen and (max-width: $breakpoint) 
 		padding: 0 20px
 		height: 70px
-	&.hide
-		top: -100px
+	&.atLanding
+		position: absolute
+		top: calc(100vh - 100px)
+		@media screen and (max-width: $breakpoint) 
+			top: calc(100vh - 70px)
 
 	.logo
 		width: 100px
@@ -529,6 +531,9 @@ header
 			img
 				// flex: 1
 				width: 100%
+				@media screen and (max-width: $breakpoint) 
+					width: 200%
+
 
 				// height: auto
 				// float: left
@@ -558,6 +563,9 @@ header
 					align-items: flex-start
 					cursor: pointer
 					@media screen and (max-width: $breakpoint) 
+						width: calc(100% / 3)
+						margin: 10px 0
+					@media screen and (max-width: 500px) 
 						width: calc(100% / 2)
 						&:nth-child(1)
 							order: 1
@@ -571,6 +579,8 @@ header
 							order: 4
 						&:nth-child(6)
 							order: 6
+					@media screen and (max-width: $breakpoint-sm)
+						font-size: 0.8em 
 					p
 						&::before
 							content: ""
@@ -625,15 +635,31 @@ header
 					&.active
 						visibility: visible
 						opacity: 1
-					@media screen and (max-width: $breakpoint) 
+					@media screen and (max-width: 500px) 
 						flex-direction: column
 					.program-img
 						width: 50%
+						// height: 100%
+						align-self: stretch
+						overflow: hidden
 						margin-right: 30px
-						@media screen and (max-width: $breakpoint) 
+						@media screen and (max-width: 500px) 
 							width: 100%
 							margin: 0
 							margin-bottom: 30px
+							align-self: center
+						img
+							position: absolute
+							top: 0
+							left: 50%
+							transform: translateX(-50%)
+							height: 100%
+							@media screen and (max-width: 500px) 
+								position: relative
+								transform: translateX(0)
+								width: 100%
+								height: auto
+								left: 0
 					.program-schedule
 						flex: 1
 						flex-direction: column
@@ -711,23 +737,23 @@ header
 						p
 							margin-bottom: 10px
 					.dot
-						margin-left: 40px
+						margin-left: 20px
 						&::before
 							content: "·"
 							position: absolute
 							top: 0
-							left: -40px
+							left: -20px
 						@media screen and (max-width: $breakpoint) 
 							margin-left: 20px
 							&::before
 								left: -20px
 					.q1,.q2
-						margin-left: 40px
+						margin-left: 20px
 						&::before
 							// content: "·"
 							position: absolute
 							top: 0
-							left: -40px
+							left: -20px
 						@media screen and (max-width: $breakpoint) 
 							margin-left: 20px
 							&::before
@@ -737,9 +763,17 @@ header
 					.q2::before
 						content: "2." 
 					.tab
-						margin-left: 40px
+						margin-left: 20px
 						@media screen and (max-width: $breakpoint) 
 							margin-left: 20px
+					.highlight
+						display: inline
+						padding: 10px
+						line-height: 4em
+						font-weight: 500
+						margin: 10px 0
+						background-color: $green
+						color: $blue
 
 
 

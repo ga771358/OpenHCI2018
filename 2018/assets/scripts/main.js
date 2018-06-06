@@ -29,31 +29,30 @@ function changeMenuAnimate(index) {
 	}
 }
 
-//menu隱藏＆出現
-var canHideHeader = false;
+//scrollmagic init
+var controller = new ScrollMagic.Controller();
 
-var prevScrollpos = window.pageYOffset;
-$(window).on("scroll", function(e){
-	if(!canHideHeader) return;
-	if(isScrolling) return;
-	var currentScrollPos = window.pageYOffset;
-	if (prevScrollpos > currentScrollPos) {
-		$("header").removeClass('hide');
-	} else {
-		$("header").addClass('hide');
-	}
-	prevScrollpos = currentScrollPos;
+//header sticky
+var sectionHeight = $("#landing").height() - $("header").height();
+var sceneHeader = new ScrollMagic.Scene({triggerElement: "#landing", duration: sectionHeight, triggerHook: 0})
+.setClassToggle("header", "atLanding")
+.addTo(controller);
+$(window).on("resize", function(){
+	sectionHeight = $("#landing").height() - $("header").height();
+	sceneHeader.remove();
+	sceneHeader = new ScrollMagic.Scene({triggerElement: "#landing", duration: sectionHeight, triggerHook: 0})
+	.setClassToggle("header", "atLanding")
+	.addTo(controller);
 })
 
 //導航列位置指示
-var controller = new ScrollMagic.Controller();
-var sections = [$("#intro"),$("#program"),$("#registration"),$("#taichi"),$("#crew"),$("#organizer"),$("#contact")];
+var sections = [$("#description"),$("#intro"),$("#program"),$("#registration"),$("#taichi"),$("#crew"),$("#organizer")];
 
 for(i=0; i<sections.length; i++) {
 	var sectionId = sections[i].attr("id");
 	var sectionHeight = sections[i].outerHeight();
 	var scene = new ScrollMagic.Scene({triggerElement: "#"+sectionId, duration: sectionHeight, triggerHook: 0.5})
-	.setClassToggle("#menu"+(i+1), "menu-here")
+	.setClassToggle("#menu"+i, "menu-here")
 	.addTo(controller);
 }
 
