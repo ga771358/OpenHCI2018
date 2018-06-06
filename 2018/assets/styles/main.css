@@ -429,7 +429,8 @@ header {
     justify-content: center;
     padding-top: 50px; }
     .page-wrapper #description .section-wrapper {
-      width: 90%; }
+      width: 90%;
+      max-width: 1450px; }
       .page-wrapper #description .section-wrapper .descript-left {
         width: 30%;
         vertical-align: top;
@@ -815,7 +816,7 @@ header {
           .page-wrapper #registration .section-wrapper .step .step-content .dot {
             margin-left: 40px; }
             .page-wrapper #registration .section-wrapper .step .step-content .dot::before {
-              content: "·";
+              content: "┬╖";
               position: absolute;
               top: 0;
               left: -40px; }
