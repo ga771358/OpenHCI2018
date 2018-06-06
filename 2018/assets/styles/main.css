@@ -497,10 +497,11 @@ header {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center; }
-        .page-wrapper #intro .section-wrapper .intro-top .video-here {
-          width: 100%;
-          height: 400px;
-          background-color: #bbb; }
+        .page-wrapper #intro .section-wrapper .intro-top #our-video {
+          width: 60%; }
+          @media screen and (max-width: 1000px) {
+            .page-wrapper #intro .section-wrapper .intro-top #our-video {
+              width: 80%; } }
       .page-wrapper #intro .section-wrapper .intro-bottom {
         margin-top: 75px; }
         .page-wrapper #intro .section-wrapper .intro-bottom .empty-block {
@@ -849,7 +850,7 @@ header {
           .page-wrapper #registration .section-wrapper .step .step-content .dot {
             margin-left: 20px; }
             .page-wrapper #registration .section-wrapper .step .step-content .dot::before {
-              content: "·";
+              content: "┬╖";
               position: absolute;
               top: 0;
               left: -20px; }
