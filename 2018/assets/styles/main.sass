@@ -739,12 +739,11 @@ header
 		height: auto
 		display: flex
 		justify-content: center
-		min-width: 570px
+		min-width: 510px
 		.section-wrapper
 			margin-top: 50px
 			width: 85%	
 			max-width: 1400px
-			overflow: hidden
 			@media screen and (max-width: $breakpoint)
 				margin-top: 0px
 			.breakpoint-block
@@ -762,18 +761,12 @@ header
 				display: inline-block
 				width: 49.3%
 				height: 60vh
-				overflow: hidden
+				@media screen and (max-width: 1200px)
+					width: 59.3%
+				@media screen and (max-width: 1100px)
+					width: 66.3%
 				@media screen and (max-width: $breakpoint)
 					width: 100%
-				.blur-block
-					position: absolute
-					height: 5%
-					bottom: 0px
-					width: 100%
-					z-index: 1
-					background-image: linear-gradient(to bottom, rgba(25, 20, 85, 0), #191455)
-					@media screen and (max-width: $breakpoint)
-						display: none
 				.need-margin-top
 					margin-top: 80px
 				.container
@@ -805,6 +798,10 @@ header
 				display: inline-block
 				width: 49.3%
 				height: 100%
+				@media screen and (max-width: 1200px)
+					width: 39.3%
+				@media screen and (max-width: 1100px)
+					width: 32.3%
 				@media screen and (max-width: $breakpoint)
 					display: none
 				img
@@ -812,6 +809,10 @@ header
 					width: 75%
 					left: 50%
 					transform: translateX(-50%)
+					@media screen and (max-width: 1200px)
+						width: 85%
+					@media screen and (max-width: 1100px)
+						width: 95%
 
 	#crew
 		height: auto
