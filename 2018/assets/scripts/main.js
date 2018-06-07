@@ -161,60 +161,61 @@ function detect_at_video_now() {
 $(document).on('scroll', detect_at_video_now);
 
 //crew section
-var crew = -1;
-var all_block = $('.crew-content-block');
-var total_block_size = 0; // total size of all crew block
-var temp_left_now; // record slide block 's left now
+var crew = 0;
+var block_list = $("#crew-slide-id").children();
+var block_list_length = block_list.length;
+var total_block_size = 0;
+var temp_left_now; // record last slide block 's left
 
-for(var j=0;j<12;j++){
-	total_block_size += 150;
-	total_block_size += $(all_block[i]).width();
+// calc the total width
+for(var j=0;j<block_list_length;j++){
+	total_block_size += $(block_list[j]).width() + 8;
 }
 
 $("#button-crew-left").click(function(){
 	//最右邊了
-	if(crew == -1){
+	if(crew == 0){
 		return;
 	}
 	
-	crew--;
+	crew = crew - 2;
 
-	//計算位移的大小（包括margin）
-	var total_size_need_to_slide = 150;
-	for(var i=0;i<=crew;i++){
-		total_size_need_to_slide += 150;
-		total_size_need_to_slide += $(all_block[i]).width();
+	//計算位移的大小（crew-content-block & empty-block)
+	var total_size_need_to_slide = 0;
+	for(var i=0;i<crew;i++){
+		total_size_need_to_slide += $(block_list[i]).width() + 8;
 	}
 
+	//record left size
 	temp_left_now = total_size_need_to_slide;
 	//變負數
 	total_size_need_to_slide = -total_size_need_to_slide;
-
 	$(".slide-block").css("left",total_size_need_to_slide+"px");
-	temp_left_now = -total_size_need_to_slide;
 });
 
 $("#button-crew-right").click(function(){
+	console.log(crew);
+	
 	//最右邊了
-	var screen_size_now = $(".crew-content").width();
-	if((total_block_size - screen_size_now) < (temp_left_now - 450)){
+	var parent_width = $("#crew-slide-id").width();
+	console.log(parent_width);
+	if( total_block_size < (parent_width + temp_left_now - 80)){
 		return;
 	}
 
-	crew++;
+	crew = crew + 2;
 
-	//計算位移的大小（包括margin）
-	var total_size_need_to_slide = 150;
-	for(var i=0;i<=crew;i++){
-		total_size_need_to_slide += 150;
-		total_size_need_to_slide += $(all_block[i]).width();
+	//計算位移的大小（crew-content-block & empty-block)
+	var total_size_need_to_slide = 0;
+	for(var i=0;i<crew;i++){
+		total_size_need_to_slide += $(block_list[i]).width() + 8;
 	}
 
+	//record left size
+	temp_left_now = total_size_need_to_slide;
 	//變負數
 	total_size_need_to_slide = -total_size_need_to_slide;
-	
 	$(".slide-block").css("left",total_size_need_to_slide+"px");
-	temp_left_now = -total_size_need_to_slide;
 });
 
 // map section

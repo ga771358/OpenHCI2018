@@ -969,6 +969,9 @@ header
 				text-align: left
 				color: $green
 			.crew-content
+				*
+					border: solid 1px white
+					box-sizing: border-box
 				margin-top: 45px
 				display: inline-block
 				width: 100%
@@ -981,12 +984,14 @@ header
 					z-index: 1
 					background-image: linear-gradient(to right, rgba(25, 20, 85, 0), #191455)
 				.slide-block
-					left: -150px
 					height: 100%
 					white-space: nowrap
 					transition: 0.75s
+					left: 0
+					.empty-block
+						display: inline-block
+						width: 130px
 					.crew-content-block
-						margin-left: 150px
 						display: inline-block
 						height: 100%
 						.crew-content-block-left
