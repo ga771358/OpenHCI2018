@@ -11,24 +11,6 @@ $(".menu-btn,.black-screen").on("click", function() {
 	$(".m-menu-opener").removeClass('close');
 })
 
-//切換menu動畫樣式
-function changeMenuAnimate(index) {
-	$(".menu").removeClass('menu-cir');
-	$(".menu").removeClass('menu-fadein');
-	$(".menu").removeClass('menu-slidein');
-	switch(index) {
-		case 1:
-			$(".menu").addClass('menu-cir');
-			break;
-		case 2:
-			$(".menu").addClass('menu-fadein');
-			break;
-		case 3:
-			$(".menu").addClass('menu-slidein');
-			break;
-	}
-}
-
 //scrollmagic init
 var controller = new ScrollMagic.Controller();
 
@@ -143,23 +125,23 @@ $("#program .tab").on("click", function(){
 })
 
 //intro section
-var player;
-function onYouTubeIframeAPIReady() {
-player = new YT.Player('our-video', {
-	videoId: 'kfXdP7nZIiE' //Youtube 影片ID
-});
-}
+// var player;
+// function onYouTubeIframeAPIReady() {
+// player = new YT.Player('our-video', {
+// 	videoId: 'kfXdP7nZIiE' //Youtube 影片ID
+// });
+// }
 
-$(document).on('scroll', function() {
-    if( ($(this).scrollTop() >= $('#intro').position().top - 300) && ($(this).scrollTop() <= $('#interlude').position().top - 300 ) ){
-		player.playVideo();
-		return;
-	}
-	else{
-		player.pauseVideo();
-	}
+// $(document).on('scroll', function() {
+//     if( ($(this).scrollTop() >= $('#intro').position().top - 300) && ($(this).scrollTop() <= $('#interlude').position().top - 300 ) ){
+// 		player.playVideo();
+// 		return;
+// 	}
+// 	else{
+// 		player.pauseVideo();
+// 	}
 	
-})
+// })
 
 //crew section
 var crew = -1;
