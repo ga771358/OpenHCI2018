@@ -1160,7 +1160,8 @@ header {
               display: inline-block;
               vertical-align: top;
               width: 22px;
-              height: 100%; }
+              height: 100%;
+              z-index: 1; }
               .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-left .team-name {
                 display: inline-block;
                 background-color: #d70050;
@@ -1168,7 +1169,8 @@ header {
                 font-size: 20px;
                 color: #191456;
                 padding: 3px;
-                padding-right: 60px; }
+                padding-right: 60px;
+                z-index: 2; }
               .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-left .program {
                 -webkit-transform: rotate(-90deg) translateY(-79px) translateX(-74px);
                 -ms-transform: rotate(-90deg) translateY(-79px) translateX(-74px);
@@ -1220,6 +1222,7 @@ header {
             .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .need-more-margin-left {
               margin-left: 25px; }
             .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right {
+              overflow: hidden;
               margin-left: 16px;
               display: inline-block;
               vertical-align: top;
