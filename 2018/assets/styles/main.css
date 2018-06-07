@@ -1133,10 +1133,6 @@ header {
         display: inline-block;
         width: 100%;
         overflow: hidden; }
-        .page-wrapper #crew .section-wrapper .crew-content * {
-          border: solid 1px white;
-          -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
         .page-wrapper #crew .section-wrapper .crew-content .blur-block {
           position: absolute;
           height: 100%;

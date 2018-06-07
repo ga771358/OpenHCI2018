@@ -169,7 +169,7 @@ var temp_left_now; // record last slide block 's left
 
 // calc the total width
 for(var j=0;j<block_list_length;j++){
-	total_block_size += $(block_list[j]).width() + 8;
+	total_block_size += $(block_list[j]).width() + 5;
 }
 
 $("#button-crew-left").click(function(){
@@ -183,7 +183,7 @@ $("#button-crew-left").click(function(){
 	//計算位移的大小（crew-content-block & empty-block)
 	var total_size_need_to_slide = 0;
 	for(var i=0;i<crew;i++){
-		total_size_need_to_slide += $(block_list[i]).width() + 8;
+		total_size_need_to_slide += $(block_list[i]).width() + 5;
 	}
 
 	//record left size
@@ -198,8 +198,11 @@ $("#button-crew-right").click(function(){
 	
 	//最右邊了
 	var parent_width = $("#crew-slide-id").width();
-	console.log(parent_width);
-	if( total_block_size < (parent_width + temp_left_now - 80)){
+	var document_width = $(document).width();
+	if( document_width <= 800  && total_block_size < (parent_width + temp_left_now - 80) ){
+		return;
+	}
+	if( total_block_size < (parent_width + temp_left_now - 140) ){
 		return;
 	}
 
@@ -208,7 +211,7 @@ $("#button-crew-right").click(function(){
 	//計算位移的大小（crew-content-block & empty-block)
 	var total_size_need_to_slide = 0;
 	for(var i=0;i<crew;i++){
-		total_size_need_to_slide += $(block_list[i]).width() + 8;
+		total_size_need_to_slide += $(block_list[i]).width() + 5;
 	}
 
 	//record left size
