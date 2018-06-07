@@ -419,10 +419,23 @@ header
 			.intro-top
 				display: flex
 				justify-content: center
-				#our-video
-					width: 60%
+				.video-frame
+					position: relative
+					width: 50%
+					height: auto
 					@media screen and (max-width: $breakpoint)
-						width: 80%
+						width: 90%
+					&::before
+						display: block
+						content: ""
+						width: 100%
+						padding-top: 56.25%
+					#our-video
+						width: 100%
+						height: 100%
+						top: 0
+						left: 0
+						position: absolute
 			.intro-bottom
 				margin-top: 75px
 				.empty-block

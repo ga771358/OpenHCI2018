@@ -497,11 +497,24 @@ header {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center; }
-        .page-wrapper #intro .section-wrapper .intro-top #our-video {
-          width: 60%; }
+        .page-wrapper #intro .section-wrapper .intro-top .video-frame {
+          position: relative;
+          width: 50%;
+          height: auto; }
           @media screen and (max-width: 1000px) {
-            .page-wrapper #intro .section-wrapper .intro-top #our-video {
-              width: 80%; } }
+            .page-wrapper #intro .section-wrapper .intro-top .video-frame {
+              width: 90%; } }
+          .page-wrapper #intro .section-wrapper .intro-top .video-frame::before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: 56.25%; }
+          .page-wrapper #intro .section-wrapper .intro-top .video-frame #our-video {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute; }
       .page-wrapper #intro .section-wrapper .intro-bottom {
         margin-top: 75px; }
         .page-wrapper #intro .section-wrapper .intro-bottom .empty-block {
