@@ -145,21 +145,20 @@ $("#program .tab").on("click", function(){
 //intro section
 var player;
 function onYouTubeIframeAPIReady() {
-player = new YT.Player('our-video', {
-	videoId: 'kfXdP7nZIiE' //Youtube 影片ID
-});
+	player = new YT.Player('our-video', {
+		videoId: 'kfXdP7nZIiE' //Youtube 影片ID
+	});
 }
 
-$(document).on('scroll', function() {
+function detect_at_video_now() {
     if( ($(this).scrollTop() >= $('#intro').position().top - 300) && ($(this).scrollTop() <= $('#interlude').position().top - 300 ) ){
+		player.mute();
 		player.playVideo();
-		return;
+		$(document).off("scroll", detect_at_video_now);
 	}
-	else{
-		player.pauseVideo();
-	}
-	
-})
+}
+
+$(document).on('scroll', detect_at_video_now);
 
 //crew section
 var crew = -1;
