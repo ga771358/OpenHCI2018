@@ -1,13 +1,13 @@
 //手機menu相關
 $(".m-menu-opener").on("click", function() {
 	$(".menu").toggleClass('active');
-	$(".lightbox").toggleClass('active');
+	$(".black-screen").toggleClass('active');
 	$(".m-menu-opener").toggleClass('close');
 })
 
-$(".menu-btn,.lightbox").on("click", function() {
+$(".menu-btn,.black-screen").on("click", function() {
 	$(".menu").removeClass('active');
-	$(".lightbox").removeClass('active');
+	$(".black-screen").removeClass('active');
 	$(".m-menu-opener").removeClass('close');
 })
 
@@ -29,31 +29,30 @@ function changeMenuAnimate(index) {
 	}
 }
 
-//menu隱藏＆出現
-var canHideHeader = false;
+//scrollmagic init
+var controller = new ScrollMagic.Controller();
 
-var prevScrollpos = window.pageYOffset;
-$(window).on("scroll", function(e){
-	if(!canHideHeader) return;
-	if(isScrolling) return;
-	var currentScrollPos = window.pageYOffset;
-	if (prevScrollpos > currentScrollPos) {
-		$("header").removeClass('hide');
-	} else {
-		$("header").addClass('hide');
-	}
-	prevScrollpos = currentScrollPos;
+//header sticky
+var sectionHeight = $("#landing").height() - $("header").height();
+var sceneHeader = new ScrollMagic.Scene({triggerElement: "#landing", duration: sectionHeight, triggerHook: 0})
+.setClassToggle("header", "atLanding")
+.addTo(controller);
+$(window).on("resize", function(){
+	sectionHeight = $("#landing").height() - $("header").height();
+	sceneHeader.remove();
+	sceneHeader = new ScrollMagic.Scene({triggerElement: "#landing", duration: sectionHeight, triggerHook: 0})
+	.setClassToggle("header", "atLanding")
+	.addTo(controller);
 })
 
 //導航列位置指示
-var controller = new ScrollMagic.Controller();
-var sections = [$("#intro"),$("#program"),$("#registration"),$("#taichi"),$("#crew"),$("#organizer"),$("#contact")];
+var sections = [$("#description"),$("#intro"),$("#program"),$("#registration"),$("#taichi"),$("#crew"),$("#organizer")];
 
 for(i=0; i<sections.length; i++) {
 	var sectionId = sections[i].attr("id");
 	var sectionHeight = sections[i].outerHeight();
 	var scene = new ScrollMagic.Scene({triggerElement: "#"+sectionId, duration: sectionHeight, triggerHook: 0.5})
-	.setClassToggle("#menu"+(i+1), "menu-here")
+	.setClassToggle("#menu"+i, "menu-here")
 	.addTo(controller);
 }
 
@@ -140,6 +139,25 @@ $("#program .tab").on("click", function(){
 	setTimeout(function(){
 		$(".program-content[data-index="+index+"]").addClass('active');
 	},500);
+	
+})
+
+//intro section
+var player;
+function onYouTubeIframeAPIReady() {
+player = new YT.Player('our-video', {
+	videoId: 'kfXdP7nZIiE' //Youtube 影片ID
+});
+}
+
+$(document).on('scroll', function() {
+    if( ($(this).scrollTop() >= $('#intro').position().top - 300) && ($(this).scrollTop() <= $('#interlude').position().top - 300 ) ){
+		player.playVideo();
+		return;
+	}
+	else{
+		player.pauseVideo();
+	}
 	
 })
 

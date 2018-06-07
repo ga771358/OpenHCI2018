@@ -15,56 +15,63 @@ head
 	meta(property="og:description" content="")
 	meta(property="og:site_name" content="")
 body
-	header
+	header.atLanding
 		a.logo(href="#landing")
 			img(src="assets/images/nav-logo.svg", alt="")
 		//- .menu-cir .menu-fade-in .menu-slidein
+		.black-screen
 		.menu.menu-slidein
 			.menu-bg
 			.menu-container
 				.in-site
 					a.menu-btn#menu0(href="#description") 主題敘述
-					a.menu-btn#menu1(href="#intro") 介紹
-					a.menu-btn#menu2(href="#program") 活動
+					a.menu-btn#menu1(href="#intro") 工作坊介紹
+					a.menu-btn#menu2(href="#program") 工作坊日程
 					a.menu-btn#menu3(href="#registration") 報名方式
 					a.menu-btn#menu4(href="#taichi") TAICHI合作
 					a.menu-btn#menu5(href="#crew") 籌備團隊
-					a.menu-btn#menu6(href="#organizer") 主辦單位
-					a.menu-btn#menu7(href="#contact") 聯絡我們
+					a.menu-btn#menu6(href="#organizer") 籌辦單位
+					//- a.menu-btn#menu7(href="#contact") 聯絡我們
 					a.menu-btn#sign-up(href="") 我要報名
+
 		.m-menu-opener
 			span
 			span
 			span
 	.loading
-		
-	.lightbox
 
 	.page-wrapper
 		section#landing
 			.section-wrapper
+				//- include ./assets/images/landing.svg
 				.screen
-					//- canvas#light
-					//- canvas#mask
 					.animate-light
 					.mouse-light
 					img.mask(src="assets/images/animism.png", alt="")
+
 				.titles
-					img.title1(src="assets/images/title1.svg", alt="")
-					img.title2(src="assets/images/title2.svg", alt="")
-					img.title3(src="assets/images/title3.svg", alt="")
-					.title-logo
-						img.glitch#logo0.active(src="assets/images/logo-glitch/0.png", alt="")
-						img.glitch#logo1(src="assets/images/logo-glitch/1.png", alt="")
-						img.glitch#logo2(src="assets/images/logo-glitch/2.png", alt="")
-						img.glitch#logo3(src="assets/images/logo-glitch/3.png", alt="")
-						img.glitch#logo4(src="assets/images/logo-glitch/4.png", alt="")
-						img.logo-date(src="assets/images/logo-glitch/date.png", alt="")
+					.title-wrapper
+						.left
+							.placeholder
+							.placeholder
+							.placeholder
+							.title-logo
+								img.empty(src="assets/images/logo-glitch/empty.png", alt="")
+								img.glitch#logo0.active(src="assets/images/logo-glitch/0.svg", alt="")
+								img.glitch#logo1(src="assets/images/logo-glitch/1.svg", alt="")
+								img.glitch#logo2(src="assets/images/logo-glitch/2.svg", alt="")
+								img.glitch#logo3(src="assets/images/logo-glitch/3.svg", alt="")
+								img.glitch#logo4(src="assets/images/logo-glitch/4.svg", alt="")
+							.col
+								img.title1(src="assets/images/title1.svg", alt="")
+						.right
+							img.title2(src="assets/images/title2.svg", alt="")
 
 		section#description
 			.section-wrapper
 				.descript-left 主題敘述
 				.descript-right
+					img.descript-img(src="assets/images/img-pattern-animism.png", alt="")
 					.descript-content
 						p 「萬物有靈，互聯互網，原始信仰隱喻著未來社會。」
 						p 物件本是空白主體，注入人類智慧，重獲新生。
@@ -79,7 +86,7 @@ body
 		section#intro
 			.section-wrapper
 				.intro-top
-					.video-here
+					#our-video
 				.intro-bottom
 					.detail-block
 						.container
@@ -102,9 +109,9 @@ body
 		section#interlude
 			.section-wrapper
 				.moving
-					img(src="assets/images/animism-en@3x.png", alt="")
-					img(src="assets/images/animism-en@3x.png", alt="")
-					img(src="assets/images/animism-en@3x.png", alt="")
+					img(src="assets/images/img-pattern-emoji@2x.png", alt="")
+					img(src="assets/images/img-pattern-emoji@2x.png", alt="")
+					img(src="assets/images/img-pattern-emoji@2x.png", alt="")
 		section#program
 			.section-wrapper
 				.tabs
@@ -140,7 +147,8 @@ body
 							span 發表與展覽
 				.program-container
 					.program-content.active(data-index=0)
-						img.program-img(src="https://www.onlinetaxaustralia.com.au/wp-content/uploads/2017/07/claiming-tools-on-tax.jpg", alt="")
+						.program-img
+							img(src="https://www.onlinetaxaustralia.com.au/wp-content/uploads/2017/07/claiming-tools-on-tax.jpg", alt="")
 						.program-schedule
 							.schedule-title 
 								p Day 01  前置工作坊
@@ -158,7 +166,8 @@ body
 								p 1640 - 1740   團體創意實作
 								p 1740 - 1830   實作發表
 					.program-content(data-index=1)
-						img.program-img(src="https://productvision.pl/wp-content/uploads/2017/01/art.jpg", alt="")
+						.program-img
+							img(src="https://productvision.pl/wp-content/uploads/2017/01/art.jpg", alt="")
 						.program-schedule
 							.schedule-title 
 								p Day 01  前置工作坊
@@ -176,7 +185,8 @@ body
 								p 1640 - 1740   團體創意實作
 								p 1740 - 1830   實作發表
 					.program-content(data-index=2)
-						img.program-img(src="https://www.roofingcontractor.com/ext/resources/Issues/2017/March/sustainableroofing_main.jpg?1489678753", alt="")
+						.program-img
+							img(src="https://www.roofingcontractor.com/ext/resources/Issues/2017/March/sustainableroofing_main.jpg?1489678753", alt="")
 						.program-schedule
 							.schedule-title 
 								p Day 01  前置工作坊
@@ -194,7 +204,8 @@ body
 								p 1640 - 1740   團體創意實作
 								p 1740 - 1830   實作發表
 					.program-content(data-index=3)
-						img.program-img(src="https://www.growly.io/wp-content/uploads/2016/08/15-must-have-tools-for-small-business.jpg", alt="")
+						.program-img
+							img(src="https://www.growly.io/wp-content/uploads/2016/08/15-must-have-tools-for-small-business.jpg", alt="")
 						.program-schedule
 							.schedule-title 
 								p Day 01  前置工作坊
@@ -212,7 +223,8 @@ body
 								p 1640 - 1740   團體創意實作
 								p 1740 - 1830   實作發表
 					.program-content(data-index=4)
-						img.program-img(src="http://setofsail.com/wp-content/uploads/2014/01/SOS-organized-tools.jpg", alt="")
+						.program-img
+							img(src="http://setofsail.com/wp-content/uploads/2014/01/SOS-organized-tools.jpg", alt="")
 						.program-schedule
 							.schedule-title 
 								p Day 01  前置工作坊
@@ -230,7 +242,8 @@ body
 								p 1640 - 1740   團體創意實作
 								p 1740 - 1830   實作發表
 					.program-content(data-index=5)
-						img.program-img(src="https://www.onlinetaxaustralia.com.au/wp-content/uploads/2017/07/claiming-tools-on-tax.jpg", alt="")
+						.program-img
+							img(src="https://www.onlinetaxaustralia.com.au/wp-content/uploads/2017/07/claiming-tools-on-tax.jpg", alt="")
 						.program-schedule
 							.schedule-title 
 								p Day 01  前置工作坊
@@ -257,20 +270,25 @@ body
 						p 【 活動時間 】 
 						p 2018 年 8 月 19 日 (日) 至 2017 年 8 月 24 日 (五) ，共 6 天。
 						p 每日活動開始時間皆為 09:00，結束時間為 18:00 – 18:30 不等。
+						.br
 						p 【 活動地點 】 
 						p 國立臺灣科技大學
+						.br
 						p 【 活動費用 】
-						p 獲得錄取資格之學員，請於指定時間內繳交保證金新台幣1000元以及保險費用100元 ，繳費後方能取得正式資格。為維持學習的完整性，學員獲選後需全程參與。依出席簽到為準，全程參與者，保證金將於工作坊結束後全額退還。
+						p 為推廣HCI學門，本活動僅收保險費，獲得錄取資格之學員，請於指定時間內繳交保證金新台幣1000元以及保險費用100元 ，繳費後方能取得正式資格。
+						p 為維持學習的完整性，學員獲選後需全程參與。依出席簽到為準，全程參與者，保證金將於工作坊結束後全額退還。
 				.step
 					.no 02.
 					.step-title 報名資訊與時程
 					.step-content
 						p 【 報名資格 】 
-						p 全國各大專院校升大三以上在學生，含學碩博應屆畢業生及新生
+						p 全國各大專院校升大三以上在學生，含學碩博應屆畢業生及新生。
+						.br
 						p 【 報名方式 】
 						p 一律填寫線上表單報名。本活動以報名資料填寫內容作為錄取參考依據，報名先後順序不列入計分標準。
+						.br
 						p 【 招生時程 】
-						p 線上報名時間：6/11(一) 22:00 至 7/4(三) 23:59:59 
+						p 線上報名時間：6/11(一) 21:00 至 7/4 23:59'59
 						p 正取名單公佈：7/8(日) 10:00 網路公佈與信件通知
 						p 遞補備取通知：7/11(三) 個別電話通知
 				.step
@@ -279,9 +297,10 @@ body
 						p 線上報名表單
 						p 與ID card說明
 					.step-content
-						p 報名表單包含「資料填寫」和「「IDCard 製作」兩部份：
+						p 報名表單包含「資料填寫」和「IDCard 製作」兩部份：
 						p.dot 「資料填寫」包含個人基本資料、相關經歷等內容。
 						p.dot 「IDCard 製作」內容包含 「個人簡歷」 、「作品集」與「問題回答」。請依格式製作一份三頁之A4橫式PDF檔，檔案上傳至個人雲端（Google Drive, Dropbox, etc）後，再將雲端連結貼上報名表單送出。
+						p.highlight IDCard 內容說明
 						p 第一頁｜個人簡歷：請放個人簡歷，表達格式不限。
 						p 第二頁｜作品集：請放上個人最滿意的作品（研究、專題、設計皆可），可透過文字、圖片或另附影片表達。
 						p 第三頁｜問題回答：請從你的經驗中去發想並回答以下兩問題，可透過文字、圖片或另附影片表達，數量、格式均不限。
@@ -290,6 +309,10 @@ body
 						p.tab ⁃	 那項日常物品為何
 						p.tab ⁃	 這新賦予的生命意義為何
 						p.tab ⁃	 「它」與人會有什麼樣的互動
+						p.highlight IDCard 格式設定
+						p 1. IDCard 檔案請自行製作與編排，並輸出PDF檔。
+						p 2. IDCard 檔名格式： IDCard_姓名 (範例：IDCard_王曉明)。
+						p 3. 若檔案格式或檔名格式不符，造成漏檔，報名者請自行負責。
 
 
 								
@@ -315,7 +338,7 @@ body
 					.slide-block
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 總召
+								.team-name.program PROGRAM
 							.crew-content-block-right
 								.one-person
 									.person-name 曾唯哲
@@ -334,7 +357,7 @@ body
 									.person-detail 碩一
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 人事
+								.team-name.human-resource HUMAN RESOURCE
 							.crew-content-block-right
 								.one-person
 									.person-name 劉孟錡
@@ -353,7 +376,7 @@ body
 									.person-detail 指導教授 彭瑞玟老師
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 網管
+								.team-name.web-service WEB SERVICE
 							.crew-content-block-right
 								.one-person
 									.person-name 張文瀚
@@ -372,7 +395,7 @@ body
 									.person-detail 指導教授 陳志成老師
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 技術
+								.team-name.tech TECH
 							.crew-content-block-right
 								.one-person
 									.person-name 古健樺
@@ -397,7 +420,7 @@ body
 									.person-detail 指導教授 陳玲玲老師
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 演講
+								.team-name.lecture LECTURE
 							.crew-content-block-right
 								.one-person
 									.person-name 黃姿螢
@@ -411,7 +434,7 @@ body
 									.person-detail 大四
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 策展
+								.team-name.exhibition EXHIBITION / DEMO
 							.crew-content-block-right
 								.one-person
 									.person-name 羅開晉
@@ -425,7 +448,7 @@ body
 									.person-detail 指導教授 陳建宇老師
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 媒體
+								.team-name.publicity PUBLICITY
 							.crew-content-block-right
 								.one-person
 									.person-name 黃子倫
@@ -444,7 +467,7 @@ body
 									.person-detail 指導教授 陳建雄老師
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 視覺
+								.team-name.visual-design VISUAL DESIGN
 							.crew-content-block-right
 								.one-person
 									.person-name 曹仲
@@ -463,7 +486,7 @@ body
 									.person-detail 指導教授 陳聖智老師
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 贊助
+								.team-name.sponsorship SPONSORSHIP
 							.crew-content-block-right
 								.one-person
 									.person-name 陳靖玟
@@ -477,7 +500,7 @@ body
 									.person-detail 大四
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 總務
+								.team-name.treasurer TREASURER
 							.crew-content-block-right
 								.one-person
 									.person-name 王琦
@@ -496,7 +519,7 @@ body
 									.person-detail 指導教授 陳彥仰老師
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name 攝影
+								.team-name.film-crew FILM CREW
 							.crew-content-block-right
 								.one-person
 									.person-name 王惠萱
@@ -510,7 +533,7 @@ body
 									.person-detail 指導教授 陳煥宗老師
 						.crew-content-block
 							.crew-content-block-left 
-								.team-name TA長
+								.team-name.TA TA CHIEF
 							.crew-content-block-right
 								.one-person
 									.person-name 賴柏恩
@@ -562,13 +585,13 @@ body
 					.og-section-title SPONSOR
 					.og-section-logo-wrapper
 						.logo-small
-							img.og-logo.lo(src="assets/images/organizer_logo/s15.png", alt="")
+							img(src="assets/images/organizer_logo/s15.png", alt="", width="40%")
 						.logo-small
 							img.og-logo(src="assets/images/organizer_logo/s14.png", alt="")
 						.logo-small
 							img.og-logo(src="assets/images/organizer_logo/s8.png", alt="")
 						.logo-small
-							img.og-logo(src="assets/images/organizer_logo/s9.svg", alt="")
+							img(src="assets/images/organizer_logo/s9.svg", alt="", width="55%")
 						.logo-small
 							img.og-logo(src="assets/images/organizer_logo/s16.png", alt="")
 						.logo-small
@@ -634,5 +657,5 @@ script(src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.4/pixi.min.js")
 script(src="assets/scripts/main.js")
 script(src="assets/scripts/landing.js")
 script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDcF4jmxdoDeeDWS_1TdOmkFZ8Hs4kzQxs&callback=initMap', async='', defer='')
-	
+script(src="https://www.youtube.com/iframe_api")
 //- script(src="assets/scripts/screen.js")
