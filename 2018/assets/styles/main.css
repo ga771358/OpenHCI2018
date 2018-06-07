@@ -999,7 +999,7 @@ header {
           .page-wrapper #registration .section-wrapper .step .step-content .dot {
             margin-left: 20px; }
             .page-wrapper #registration .section-wrapper .step .step-content .dot::before {
-              content: "┬╖";
+              content: "·";
               position: absolute;
               top: 0;
               left: -20px; }
@@ -1144,14 +1144,16 @@ header {
           background-image: -o-linear-gradient(left, rgba(25, 20, 85, 0), #191455);
           background-image: linear-gradient(to right, rgba(25, 20, 85, 0), #191455); }
         .page-wrapper #crew .section-wrapper .crew-content .slide-block {
-          left: -150px;
           height: 100%;
           white-space: nowrap;
           -webkit-transition: 0.75s;
           -o-transition: 0.75s;
-          transition: 0.75s; }
+          transition: 0.75s;
+          left: 0; }
+          .page-wrapper #crew .section-wrapper .crew-content .slide-block .empty-block {
+            display: inline-block;
+            width: 130px; }
           .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block {
-            margin-left: 150px;
             display: inline-block;
             height: 100%; }
             .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-left {
