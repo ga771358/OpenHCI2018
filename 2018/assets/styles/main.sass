@@ -63,7 +63,7 @@ table
 a
 	//nothing
 
-@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css)
+// @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css)
 
 *
 	box-sizing: border-box
@@ -209,6 +209,19 @@ header
 				transition: none
 				opacity: 1
 
+	.black-screen
+		position: fixed
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		background-color: rgba(#000,0.5)
+		visibility: hidden
+		opacity: 0
+		transition: 0.3s
+		&.active
+			visibility: visible
+			opacity: 1
 	.m-menu-opener
 		cursor: pointer
 		height: 30px
@@ -248,21 +261,6 @@ header
 	height: 100%
 	display: none
 
-.lightbox
-	position: fixed
-	width: 100%
-	height: 100%
-	top: 0
-	left: 0
-	background-color: rgba(#000,0.5)
-	visibility: hidden
-	opacity: 0
-	z-index: 90
-	transition: 0.3s
-	&.active
-		visibility: visible
-		opacity: 1
-
 .page-wrapper
 	width: 100%
 	overflow: hidden
@@ -297,6 +295,16 @@ header
 		.section-wrapper
 			display: flex
 			align-items: center
+		svg
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0 
+
+			>*
+				fill: lighten($blue,3)
+				&:hover
+					fill: $red
 		.screen
 			width: 70%
 			position: absolute
@@ -325,35 +333,125 @@ header
 				top: -5px
 				left: -5px
 		.titles
-			width: 100%
-			height: 100%
-			img
+			width: 85%
+			// max-width: 1000px
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			&::before
+				content: ""
+				display: block
+				width: 100%
+				padding-top: 25%
+			.title-wrapper
 				position: absolute
-			.title1
-				top: 130px
-				left: 100px
-			.title2
-				top: 130px
-				right: 100px
-			.title3
-				bottom: 100px
-				left: 100px
-			.title-logo
-				top: 50%
-				left: 10%
-				width: 50%
-				transform: translateY(-50%)
-				img
-					width: 100%
-					position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				display: flex
+				justify-content: space-between
+				.left
+					display: flex
+					height: 100%
+					.title-logo
+						height: 100%
+						margin-right: 100px
+						z-index: 1
+						.glitch
+							height: 100%
+							position: absolute
+							top: 0
+							left: 50%
+							transform: translateX(-50%)
+							display: none
+							&.active
+								display: block
+						.empty
+							height: 100%
+					.col
+						display: flex
+						flex-direction: column
+						justify-content: space-between
+						align-items: flex-start
+						padding: 15px 0
+						.title1
+							height: 100%
+				.right
+					height: 100%
+					img
+						height: 100%
+			@media screen and (max-width: $breakpoint)
+				width: 100%
+				height: 100%
+				padding: 40px 80px
+				// max-width: 1000px
+				position: relative
+				top: 0
+				left: 0
+				transform: translate(0,0)
+				&::before
+					display: none
+				.title-wrapper
+					position: relative
 					top: 0
 					left: 0
-					display: none
-					&.active
-						display: block
-				.logo-date
-					position: relative
-					display: block
+					width: 100%
+					height: 100%
+					display: flex
+					justify-content: space-between
+					.left
+						display: flex
+						// height: 70%
+						width: 90%
+						align-self: flex-end
+						flex-direction: column
+						justify-content: space-between
+						padding-bottom: 50px
+						.title-logo
+							height: auto
+							width: 75%
+							max-width: 270px
+							margin-right: 0
+							margin-bottom: 50px
+							z-index: 1
+							.glitch
+								height: 100%
+								position: absolute
+								top: 0
+								left: 50%
+								transform: translateX(-50%)
+								display: none
+								&.active
+									display: block
+							.empty
+								height: auto
+								width: 100%
+						.col
+							display: flex
+							flex-direction: column
+							justify-content: space-between
+							align-items: flex-start
+							padding: 0
+							width: 45%
+							flex: 0 0 auto
+							max-width: 160px
+							.title1
+								height: auto
+								width: 100%
+					.right
+						height: 100%
+						width: 10%
+						max-width: 40px
+						img
+							height: auto
+							width: 100%
+			@media screen and (max-width: 500px)
+				padding: 30px
+
+
+			
 	#description
 		height: auto
 		display: flex
@@ -440,7 +538,7 @@ header
 				margin-top: 75px
 				.empty-block
 					display: inline-block
-					width: 3.7%
+					width: 3.3%
 					@media screen and (max-width: $breakpoint)
 						display: none
 				.detail-block
@@ -796,51 +894,65 @@ header
 		display: flex
 		justify-content: center
 		.section-wrapper
+			margin-top: 50px
 			width: 85%	
 			max-width: 1400px
-			min-width: 600px
+			@media screen and (max-width: $breakpoint)
+				margin-top: 0px
+			.breakpoint-block
+				width: 95%
+				display: none
+				@media screen and (max-width: $breakpoint)
+					display: inline-block
+					margin-bottom: 50px
+					left: 50%
+					transform: translateX(-50%)
+				img
+					width: 100%
 			.section-left
 				vertical-align: top
 				display: inline-block
-				width: 49%
-				height: 100%
-				text-align: right
-				.section-left-wrapper
-					display: inline-block
-					width: 76%
-					text-align: right
-					.img-top
-						transform: translateX(-90px)
+				width: 49.4%
+				@media screen and (max-width: $breakpoint)
+					width: 100%
+				.need-margin-top
+					margin-top: 80px
+				.container
+					width: 80%
+					left: 50%
+					transform: translateX(-50%)
+					.title
 						width: 100%
-					.img-btm
-						width: 100%
+						font-size: 28px
+						font-weight: bold
+						font-style: normal
+						font-stretch: normal
+						line-height: normal
+						letter-spacing: 1px
+						text-align: left
+						color: $green
+					.content
+						margin-top: 30px
+						font-size: 14px
+						font-weight: normal
+						font-style: normal
+						font-stretch: normal
+						line-height: 2
+						letter-spacing: 1px
+						text-align: left
+						color: #ffffff
 			.section-right
-				padding-left: 7%
 				vertical-align: top
 				display: inline-block
-				width: 49%
+				width: 49.4%
 				height: 100%
-				.section-right-wrapper-title
-					width: 100%
-					font-size: 28px
-					font-weight: bold
-					font-style: normal
-					font-stretch: normal
-					line-height: normal
-					letter-spacing: 1px
-					text-align: left
-					color: #50e6b4
-				.section-right-wrapper-content
-					width: 100%
-					padding-top: 67px
-					font-size: 14px
-					font-weight: normal
-					font-style: normal
-					font-stretch: normal
-					line-height: 2
-					letter-spacing: 1px
-					text-align: left
-					color: #ffffff
+				@media screen and (max-width: $breakpoint)
+					display: none
+				img
+					top: -13px
+					width: 75%
+					left: 50%
+					transform: translateX(-50%)
 
 	#crew
 		height: auto
@@ -855,7 +967,7 @@ header
 				line-height: normal
 				letter-spacing: 1px
 				text-align: left
-				color: #50e6b4
+				color: $green
 			.crew-content
 				margin-top: 45px
 				display: inline-block
@@ -884,13 +996,36 @@ header
 							height: 100%
 							.team-name
 								display: inline-block
-								transform: rotate(-90deg) translateY(-52px) translateX(-52px)
 								background-color: #d70050
 								font-weight: 800
 								font-size: 20px
 								color: $bg
 								padding: 3px
-								padding-right: 80px
+								padding-right: 60px
+							.program
+								transform: rotate(-90deg) translateY(-79px) translateX(-74px)
+							.human-resource
+								transform: rotate(-90deg) translateY(-130px) translateX(-126px)
+							.web-service
+								transform: rotate(-90deg) translateY(-99px) translateX(-94px)
+							.tech
+								transform: rotate(-90deg) translateY(-51px) translateX(-48px)
+							.lecture
+								transform: rotate(-90deg) translateY(-74px) translateX(-71px)
+							.exhibition
+								transform: rotate(-90deg) translateY(-136px) translateX(-133px)
+							.publicity
+								transform: rotate(-90deg) translateY(-83px) translateX(-79px)
+							.visual-design
+								transform: rotate(-90deg) translateY(-110px) translateX(-107px)
+							.sponsorship
+								transform: rotate(-90deg) translateY(-106px) translateX(-102px)
+							.treasurer
+								transform: rotate(-90deg) translateY(-90px) translateX(-86px)
+							.film-crew
+								transform: rotate(-90deg) translateY(-85px) translateX(-81px)
+							.TA
+								transform: rotate(-90deg) translateY(-68px) translateX(-66px)
 						.need-more-margin-left
 							margin-left: 25px
 						.crew-content-block-right
@@ -909,7 +1044,7 @@ header
 									line-height: normal
 									letter-spacing: 1px
 									text-align: left
-									color: #50e6b4
+									color: $green
 								.person-detail
 									margin-top: 6px
 									font-size: 16px
@@ -944,7 +1079,7 @@ header
 					line-height: normal
 					letter-spacing: 2px
 					text-align: center
-					color: #50e6b4
+					color: $green
 					padding: 5px
 					transition: 0.2s
 					transform: scale(1)
@@ -991,6 +1126,7 @@ header
 						//height: 45px
 						//width: 400px
 						width: 30%
+						max-width: 260px
 						margin-bottom: 50px
 						@media screen and (max-width: $breakpoint)
 							//height: 35px
@@ -1011,6 +1147,7 @@ header
 						//height: 45px
 						//width: 250px //picture size
 						width: 18%
+						max-width: 234px
 						margin-bottom: 50px
 						.og-logo
 							//height: 80%
@@ -1053,11 +1190,8 @@ header
 				background-color: #50e6b4
 			
 				@media screen and (max-width: $breakpoint-mid)
-					top: 0
-					left: initial
-					right: 0
-					width: 258px
-					height: 131px
+					width: 313px
+					height: 70px
 				
 				@media screen and (max-width: $breakpoint-sm)
 					position: relative
@@ -1075,22 +1209,22 @@ header
 				display: inline-block
 				.contact-section-block
 					@media screen and (max-width: $breakpoint-mid)
-						display: none
+						display: block
 					@media screen and (min-width: $breakpoint-mid)
 						display: block
 					@media screen and (max-width: $breakpoint-sm)
 						display: block
 				.contact-section-block-mid
 					@media screen and (max-width: $breakpoint-mid)
-						display: block
+						display: none
 					@media screen and (min-width: $breakpoint-mid)
 						display: none
 					@media screen and (max-width: $breakpoint-sm)
 						display: none
 				.contact-section-title
 					@media screen and (max-width: $breakpoint-mid)
-						left: 35px
-						top: 30px
+						left: 14px
+						top: 14px
 					@media screen and (max-width: $breakpoint-sm)
 						left: 10px
 						top: 20px
@@ -1104,8 +1238,9 @@ header
 					color: #ffffff
 				.contact-section-content
 					@media screen and (max-width: $breakpoint-mid)
-						left: 35px
-						top: 20px
+						left: 14px
+						top: 5px
+						font-size: 14px
 					@media screen and (max-width: $breakpoint-sm)
 						left: 10px
 						top: 10px
