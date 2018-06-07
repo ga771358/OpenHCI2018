@@ -82,6 +82,9 @@ header {
   background: -webkit-linear-gradient(#191456, rgba(25, 20, 86, 0.8), rgba(25, 20, 86, 0));
   background: -o-linear-gradient(#191456, rgba(25, 20, 86, 0.8), rgba(25, 20, 86, 0));
   background: linear-gradient(#191456, rgba(25, 20, 86, 0.8), rgba(25, 20, 86, 0));
+  -webkit-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s;
   padding: 0 50px; }
   @media screen and (max-width: 1000px) {
     header {
@@ -89,7 +92,11 @@ header {
       height: 70px; } }
   header.atLanding {
     position: absolute;
-    top: calc(100vh - 100px); }
+    top: calc(100vh - 100px);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 20, 86, 0)), color-stop(rgba(25, 20, 86, 0.2)), to(#191456));
+    background: -webkit-linear-gradient(rgba(25, 20, 86, 0), rgba(25, 20, 86, 0.2), #191456);
+    background: -o-linear-gradient(rgba(25, 20, 86, 0), rgba(25, 20, 86, 0.2), #191456);
+    background: linear-gradient(rgba(25, 20, 86, 0), rgba(25, 20, 86, 0.2), #191456); }
     @media screen and (max-width: 1000px) {
       header.atLanding {
         top: calc(100vh - 70px); } }
@@ -368,6 +375,19 @@ header {
         fill: #1d1762; }
         .page-wrapper #landing svg > *:hover {
           fill: #d70050; }
+    .page-wrapper #landing #screen {
+      position: absolute;
+      width: auto;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+      @media screen and (min-aspect-ratio: 16 / 9) {
+        .page-wrapper #landing #screen {
+          width: 100%;
+          height: auto; } }
     .page-wrapper #landing .screen {
       width: 70%;
       position: absolute;
@@ -401,7 +421,8 @@ header {
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%, -50%);
+      pointer-events: none; }
       .page-wrapper #landing .titles::before {
         content: "";
         display: block;

@@ -44,7 +44,8 @@ body
 		section#landing
 			.section-wrapper
 				//- include ./assets/images/landing.svg
-				.screen
+				canvas#screen
+				//- .screen
 					.animate-light
 					.mouse-light
 					img.mask(src="assets/images/animism.png", alt="")
@@ -645,6 +646,7 @@ body
 
 script(src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous")
 script(src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js")
+script(src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ColorPropsPlugin.min.js")
 script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js")
 script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js")
 script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js")
@@ -653,5 +655,5 @@ script(src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.4/pixi.min.js")
 script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDcF4jmxdoDeeDWS_1TdOmkFZ8Hs4kzQxs&callback=initMap', async='', defer='')
 script(src="https://www.youtube.com/iframe_api")
 script(src="assets/scripts/main.js")
-script(src="assets/scripts/landing.js")
-//- script(src="assets/scripts/screen.js")
+//- script(src="assets/scripts/landing.js")
+script(src="assets/scripts/screen2.js")

@@ -91,6 +91,7 @@ header
 	z-index: 100
 	// background-color: rgba($bg, 0.7)
 	background: linear-gradient(rgba($bg,1), rgba($bg,0.8), rgba($bg,0))
+	transition: background 0.3s
 	padding: 0 50px
 	@media screen and (max-width: $breakpoint) 
 		padding: 0 20px
@@ -98,6 +99,7 @@ header
 	&.atLanding
 		position: absolute
 		top: calc(100vh - 100px)
+		background: linear-gradient(rgba($bg,0), rgba($bg,0.2), rgba($bg,1))
 		@media screen and (max-width: $breakpoint) 
 			top: calc(100vh - 70px)
 
@@ -305,6 +307,17 @@ header
 				fill: lighten($blue,3)
 				&:hover
 					fill: $red
+		#screen
+			position: absolute
+			width: auto
+			height: 100%
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			@media screen and (min-aspect-ratio: 16/9)
+				width: 100%
+				height: auto
+
 		.screen
 			width: 70%
 			position: absolute
@@ -339,6 +352,7 @@ header
 			top: 50%
 			left: 50%
 			transform: translate(-50%,-50%)
+			pointer-events: none
 			&::before
 				content: ""
 				display: block
