@@ -180,18 +180,21 @@ for(var j=0;j<block_list_length;j++){
 }
 
 $("#button-crew-left").click(function(){
+
+	console.log(crew);
+	
 	//最右邊了
 	if(crew == 0){
 		return;
 	}
 	
 	//判斷是tech的時候
-	if($(document).width() <501 && variable_for_six == 1 && crew == 6){
-		$(first_content_div).css("margin-left","16px");
-		$(first_content_div).animate({left: 0,width: first_content_div_width},500);
-		variable_for_six = 0;
-		return;
-	}
+	// if($(document).width() <501 && variable_for_six == 1 && crew == 6){
+	// 	$(first_content_div).css("margin-left","16px");
+	// 	$(first_content_div).animate({left: 0,width: first_content_div_width},500);
+	// 	variable_for_six = 0;
+	// 	return;
+	// }
 
 	crew = crew - 2;
 
@@ -202,36 +205,35 @@ $("#button-crew-left").click(function(){
 	}
 
 	//record left size
-	temp_left_now = total_size_need_to_slide;
+	// temp_left_now = total_size_need_to_slide;
 	//變負數
-	total_size_need_to_slide = -total_size_need_to_slide;
-	$(".slide-block").css("left",total_size_need_to_slide+"px");
-	console.log(crew);
+	$(".slide-block").css("left",-total_size_need_to_slide+"px");
+	// console.log(crew);
 });
 
-$("#button-crew-right").click(function(){
-	
+$("#button-crew-right").click(function(){	
+	console.log(crew);
 	//最右邊了
-	var parent_width = $("#crew-slide-id").width();
-	var document_width = $(document).width();
+	// var parent_width = $("#crew-slide-id").width();
+	// var document_width = $(document).width();
 	
-	if(crew == 22 ){
-		return;
-	}
-	if( document_width <= 800  && total_block_size < (parent_width + temp_left_now - 80) ){
-		return;
-	}
-	if( total_block_size < (parent_width + temp_left_now - 140) ){
-		return;
-	}
+	// if(crew == 22 ){
+	// 	return;
+	// }
+	// if( document_width <= 800  && total_block_size < (parent_width + temp_left_now - 80) ){
+	// 	return;
+	// }
+	// if( total_block_size < (parent_width + temp_left_now - 140) ){
+	// 	return;
+	// }
 
-	//判斷是tech的時候
-	if($(document).width() <501 && variable_for_six == 0 && crew == 6){
-		$(first_content_div).css("margin-left","0px");
-		$(first_content_div).animate({left: -first_content_div_width,width: 0},500);
-		variable_for_six = 1;
-		return;
-	}
+	// //判斷是tech的時候
+	// if($(document).width() <501 && variable_for_six == 0 && crew == 6){
+	// 	$(first_content_div).css("margin-left","0px");
+	// 	$(first_content_div).animate({left: -first_content_div_width,width: 0},500);
+	// 	variable_for_six = 1;
+	// 	return;
+	// }
 	crew = crew + 2;
 
 	//計算位移的大小（crew-content-block & empty-block)
@@ -241,11 +243,10 @@ $("#button-crew-right").click(function(){
 	}
 
 	//record left size
-	temp_left_now = total_size_need_to_slide;
+	// temp_left_now = total_size_need_to_slide;
 	//變負數
-	total_size_need_to_slide = -total_size_need_to_slide;
-	$(".slide-block").css("left",total_size_need_to_slide+"px");
-	console.log(crew);
+	// total_size_need_to_slide = -total_size_need_to_slide;
+	$(".slide-block").css("left",-total_size_need_to_slide+"px");
 });
 
 // map section
