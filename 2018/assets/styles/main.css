@@ -1182,9 +1182,8 @@ header {
         margin-top: 45px;
         display: inline-block;
         width: 100%;
+        border-left: solid 1px white;
         overflow: hidden; }
-        .page-wrapper #crew .section-wrapper .crew-content * {
-          border: solid 1px white; }
         .page-wrapper #crew .section-wrapper .crew-content .blur-block {
           position: absolute;
           height: 100%;
@@ -1326,7 +1325,6 @@ header {
           -webkit-user-select: none;
           border-bottom: solid 3px white;
           display: inline-block;
-          opacity: 0.6;
           font-size: 41px;
           font-weight: 400;
           font-style: normal;
@@ -1344,12 +1342,12 @@ header {
           transform: scale(1);
           top: 0px; }
           .page-wrapper #crew .crew-button .container .button:hover {
-            opacity: 1;
             -webkit-transform: scale(1.15);
             -ms-transform: scale(1.15);
             transform: scale(1.15); }
         .page-wrapper #crew .crew-button .container #button-crew-left {
-          padding-left: 30px; }
+          padding-left: 30px;
+          opacity: 0.6; }
         .page-wrapper #crew .crew-button .container #button-crew-right {
           padding-right: 30px;
           margin-left: 30px; }

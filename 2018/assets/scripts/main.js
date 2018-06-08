@@ -166,36 +166,71 @@ $(document).on('scroll', detect_at_video_now);
 var crew = 0;
 var block_list = $("#crew-slide-id").children();
 var block_list_length = block_list.length;
-var total_block_size = 0;
 var temp_left_now;
 
-  // variable for tect block
-var variable_for_six = 0;
-var first_content_div = $(block_list[6]).children(".crew-content-block-right")[0];
-var first_content_div_width = $(first_content_div).width();
+// variable for block of more than one line
+var variable_for_tech_studio = 0;
+var tech_studio_right_div = $(block_list[6]).children(".crew-content-block-right")[0];
+var tech_studio_right_div_width = $(tech_studio_right_div).width();
+
+var variable_for_TA_team_design = 0;
+var TA_team_design_first_right_div = $(block_list[22]).children(".crew-content-block-right")[0];
+var TA_team_design_first_right_div_width = $(TA_team_design_first_right_div).width();
+var TA_team_design_second_right_div = $(block_list[22]).children(".crew-content-block-right2")[0];
+var TA_team_design_second_right_div_width = $(TA_team_design_second_right_div).width();
+
+var variable_for_TA_team_tech = 0;
+var TA_team_tech_first_right_div = $(block_list[24]).children(".crew-content-block-right")[0];
+var TA_team_tech_first_right_div_width = $(TA_team_tech_first_right_div).width();
+var TA_team_tech_second_right_div = $(block_list[24]).children(".crew-content-block-right2")[0];
+var TA_team_tech_second_right_div_width = $(TA_team_tech_second_right_div).width();
 
 // calc the total width
+var total_block_list_size = 0;
 for(var j=0;j<block_list_length;j++){
-	total_block_size += $(block_list[j]).width() + 5;
+	total_block_list_size += $(block_list[j]).width() + 5;
 }
 
 $("#button-crew-left").click(function(){
 
-	console.log(crew);
+	console.log("from:" + crew);
+
+	//如果是最左了，則不進行任何動作
+	if(crew == 0){ return;}
 	
-	//最右邊了
-	if(crew == 0){
+	//上面沒被return的話，就表示可以滑了，所以右按鈕開啟
+	$("#button-crew-right").css("opacity","1");
+
+	// //判斷是TA_team_tech的時候
+	if( variable_for_TA_team_tech == 2 && crew == 24){
+		$(TA_team_tech_second_right_div).animate({left: 0,width: TA_team_tech_second_right_div_width,marginLeft: '+=16px'},500);
+		variable_for_TA_team_tech = 1;
 		return;
 	}
-	
-	//判斷是tech的時候
-	// if($(document).width() <501 && variable_for_six == 1 && crew == 6){
-	// 	$(first_content_div).css("margin-left","16px");
-	// 	$(first_content_div).animate({left: 0,width: first_content_div_width},500);
-	// 	variable_for_six = 0;
-	// 	return;
-	// }
+	if( variable_for_TA_team_tech == 1 && crew == 24){
+		$(TA_team_tech_first_right_div).animate({left: 0,width: TA_team_tech_first_right_div_width,marginLeft: '+=16px'},500);
+		variable_for_TA_team_tech = 0;
+		return;
+	}
+	// //判斷是TA_team_design的時候
+	if( variable_for_TA_team_design == 2 && crew == 22){
+		$(TA_team_design_second_right_div).animate({left: 0,width: TA_team_design_second_right_div_width,marginLeft: '+=16px'},500);
+		variable_for_TA_team_design = 1;
+		return;
+	}
+	if( variable_for_TA_team_design == 1 && crew == 22){
+		$(TA_team_design_first_right_div).animate({left: 0,width: TA_team_design_first_right_div_width,marginLeft: '+=16px'},500);
+		variable_for_TA_team_design = 0;
+		return;
+	}
+	// //判斷是tech的時候
+	if( variable_for_tech_studio == 1 && crew == 6){
+		$(tech_studio_right_div).animate({left: 0,width: tech_studio_right_div_width,marginLeft: '+=16px'},500);
+		variable_for_tech_studio = 0;
+		return;
+	}
 
+	
 	crew = crew - 2;
 
 	//計算位移的大小（crew-content-block & empty-block)
@@ -205,35 +240,64 @@ $("#button-crew-left").click(function(){
 	}
 
 	//record left size
-	// temp_left_now = total_size_need_to_slide;
-	//變負數
+	temp_left_now = total_size_need_to_slide;
+	//do scroll
 	$(".slide-block").css("left",-total_size_need_to_slide+"px");
-	// console.log(crew);
+	
+	//如果是最左了，就讓左按鈕暗
+	if(crew == 0){ $("#button-crew-left").css("opacity","0.6"); }
 });
 
 $("#button-crew-right").click(function(){	
-	console.log(crew);
-	//最右邊了
-	// var parent_width = $("#crew-slide-id").width();
-	// var document_width = $(document).width();
-	
-	// if(crew == 22 ){
-	// 	return;
-	// }
-	// if( document_width <= 800  && total_block_size < (parent_width + temp_left_now - 80) ){
-	// 	return;
-	// }
-	// if( total_block_size < (parent_width + temp_left_now - 140) ){
-	// 	return;
-	// }
 
-	// //判斷是tech的時候
-	// if($(document).width() <501 && variable_for_six == 0 && crew == 6){
-	// 	$(first_content_div).css("margin-left","0px");
-	// 	$(first_content_div).animate({left: -first_content_div_width,width: 0},500);
-	// 	variable_for_six = 1;
-	// 	return;
-	// }
+	console.log("from:" + crew);
+	var parent_width = $("#crew-slide-id").width();
+	var document_width = $(document).width();
+
+
+	//如果是最左了，則不進行任何動作
+	if(crew == 24 && variable_for_TA_team_tech == 2){ return; }
+	// if( document_width <= 800  && total_block_list_size < (parent_width + temp_left_now - 80) ){ return; }
+	// if( total_block_list_size < (parent_width + temp_left_now - 130) ){ return; }
+
+	//上面沒被return的話，就表示可以滑了，所以右按鈕開啟
+	$("#button-crew-left").css("opacity","1");
+	
+
+	// //判斷是tech-studio的時候
+	if( variable_for_tech_studio == 0 && crew == 6){
+		// $(tech_studio_right_div).css("margin-left","0px");
+		$(tech_studio_right_div).animate({left: -tech_studio_right_div_width,width: 0,marginLeft: '-=16px'},500);
+		variable_for_tech_studio = 1;
+		return;
+	}
+	// //判斷是TA_team_design的時候
+	if( variable_for_TA_team_design == 0 && crew == 22){
+		// $(TA_team_design_first_right_div).css("margin-left","0px");
+		$(TA_team_design_first_right_div).animate({left: -TA_team_design_first_right_div_width,width: 0,marginLeft: '-=16px'},500);
+		variable_for_TA_team_design = 1;
+		return;
+	}
+	if( variable_for_TA_team_design == 1 && crew == 22){
+		// $(TA_team_design_second_right_div).css("margin-left","0px");
+		$(TA_team_design_second_right_div).animate({left: -TA_team_design_second_right_div_width,width: 0,marginLeft: '-=16px'},500);
+		variable_for_TA_team_design = 2;
+		return;
+	}
+	// //判斷是TA_team_tech的時候
+	if( variable_for_TA_team_tech == 0 && crew == 24){
+		// $(TA_team_tech_first_right_div).css("margin-left","0px");
+		$(TA_team_tech_first_right_div).animate({left: -TA_team_tech_first_right_div_width,width: 0,marginLeft: '-=16px'},500);
+		variable_for_TA_team_tech = 1;
+		return;
+	}
+	if( variable_for_TA_team_tech == 1 && crew == 24){
+		// $(TA_team_tech_second_right_div).css("margin-left","0px");
+		$(TA_team_tech_second_right_div).animate({left: -TA_team_tech_second_right_div_width,width: 0,marginLeft: '-=16px'},500);
+		variable_for_TA_team_tech = 2;
+		return;
+	}
+
 	crew = crew + 2;
 
 	//計算位移的大小（crew-content-block & empty-block)
@@ -243,10 +307,15 @@ $("#button-crew-right").click(function(){
 	}
 
 	//record left size
-	// temp_left_now = total_size_need_to_slide;
-	//變負數
-	// total_size_need_to_slide = -total_size_need_to_slide;
+	temp_left_now = total_size_need_to_slide;
+	//do scroll
 	$(".slide-block").css("left",-total_size_need_to_slide+"px");
+
+	//如果是最左了，就讓右按鈕暗
+	if(crew == 24 && variable_for_TA_team_tech == 2){ $("#button-crew-right").css("opacity","0.6"); }
+	// if( total_block_list_size < (parent_width + temp_left_now - 130) ){ $("#button-crew-right").css("opacity","0.6"); }
+	// if( document_width <= 800  && total_block_list_size < (parent_width + temp_left_now - 80) ){ $("#button-crew-right").css("opacity","0.6") }
+
 });
 
 // map section
