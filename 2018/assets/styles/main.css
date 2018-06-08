@@ -564,7 +564,7 @@ header {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding-top: 50px; }
+    padding-top: 30px; }
     .page-wrapper #description .section-wrapper {
       width: 90%;
       max-width: 1450px; }
@@ -595,7 +595,7 @@ header {
             width: 100%; } }
         .page-wrapper #description .section-wrapper .descript-right .descript-img {
           right: 0px;
-          top: 0px;
+          top: 20px;
           height: 100%;
           display: inline-block;
           position: absolute; }
