@@ -2,6 +2,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/
  * v2.0 | 20110126
  * License: none (public domain) */
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -81,6 +82,9 @@ header {
   background: -webkit-linear-gradient(#191456, rgba(25, 20, 86, 0.8), rgba(25, 20, 86, 0));
   background: -o-linear-gradient(#191456, rgba(25, 20, 86, 0.8), rgba(25, 20, 86, 0));
   background: linear-gradient(#191456, rgba(25, 20, 86, 0.8), rgba(25, 20, 86, 0));
+  -webkit-transition: background 1s;
+  -o-transition: background 1s;
+  transition: background 1s;
   padding: 0 50px; }
   @media screen and (max-width: 1000px) {
     header {
@@ -88,7 +92,11 @@ header {
       height: 70px; } }
   header.atLanding {
     position: absolute;
-    top: calc(100vh - 100px); }
+    top: calc(100vh - 100px);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 20, 86, 0)), color-stop(rgba(25, 20, 86, 0.2)), to(#191456));
+    background: -webkit-linear-gradient(rgba(25, 20, 86, 0), rgba(25, 20, 86, 0.2), #191456);
+    background: -o-linear-gradient(rgba(25, 20, 86, 0), rgba(25, 20, 86, 0.2), #191456);
+    background: linear-gradient(rgba(25, 20, 86, 0), rgba(25, 20, 86, 0.2), #191456); }
     @media screen and (max-width: 1000px) {
       header.atLanding {
         top: calc(100vh - 70px); } }
@@ -320,8 +328,7 @@ header {
   width: 100%;
   overflow: hidden; }
   .page-wrapper section {
-    border-bottom: 1px solid #50E6B4;
-    padding: 100px 0;
+    padding: 50px 0;
     height: 700px; }
     .page-wrapper section .section-wrapper {
       width: 100%;
@@ -340,18 +347,6 @@ header {
     height: 100vh;
     padding: 0;
     border-bottom: none; }
-    .page-wrapper #landing::after {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100px;
-      background: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 20, 86, 0)), color-stop(rgba(25, 20, 86, 0.8)), to(#191456));
-      background: -webkit-linear-gradient(rgba(25, 20, 86, 0), rgba(25, 20, 86, 0.8), #191456);
-      background: -o-linear-gradient(rgba(25, 20, 86, 0), rgba(25, 20, 86, 0.8), #191456);
-      background: linear-gradient(rgba(25, 20, 86, 0), rgba(25, 20, 86, 0.8), #191456); }
     .page-wrapper #landing .section-wrapper {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -369,31 +364,40 @@ header {
         .page-wrapper #landing svg > *:hover {
           fill: #d70050; }
     .page-wrapper #landing .screen {
-      width: 70%;
+      width: 100%;
+      height: 100%;
       position: absolute;
-      top: 50%;
-      right: 10%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      background-color: #28286E; }
-      .page-wrapper #landing .screen::before {
-        content: "";
-        display: block;
-        width: 100%;
-        padding-top: 70%; }
-      .page-wrapper #landing .screen .animate-light, .page-wrapper #landing .screen .mouse-light, .page-wrapper #landing .screen .mask {
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      background: -webkit-gradient(linear, left top, left bottom, from(#191455), to(#0F0A32));
+      background: -webkit-linear-gradient(#191455, #0F0A32);
+      background: -o-linear-gradient(#191455, #0F0A32);
+      background: linear-gradient(#191455, #0F0A32); }
+      .page-wrapper #landing .screen #screen {
+        position: absolute;
+        width: auto;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+        @media screen and (min-aspect-ratio: 16 / 9) {
+          .page-wrapper #landing .screen #screen {
+            width: 100%;
+            height: auto; } }
+      .page-wrapper #landing .screen .mask {
         width: 100%;
         height: 100%;
         position: absolute;
         top: 0;
-        left: 0; }
-      .page-wrapper #landing .screen .mask {
-        border: 0;
-        width: calc(100% + 10px);
-        height: calc(100% + 10px);
-        top: -5px;
-        left: -5px; }
+        left: 0;
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 15, 68, 0)), color-stop(rgba(20, 15, 68, 0.8)), to(rgba(20, 15, 68, 0)));
+        background: -webkit-linear-gradient(rgba(20, 15, 68, 0), rgba(20, 15, 68, 0.8), rgba(20, 15, 68, 0));
+        background: -o-linear-gradient(rgba(20, 15, 68, 0), rgba(20, 15, 68, 0.8), rgba(20, 15, 68, 0));
+        background: linear-gradient(rgba(20, 15, 68, 0), rgba(20, 15, 68, 0.8), rgba(20, 15, 68, 0));
+        pointer-events: none; }
     .page-wrapper #landing .titles {
       width: 85%;
       position: absolute;
@@ -401,12 +405,13 @@ header {
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%, -50%);
+      pointer-events: none; }
       .page-wrapper #landing .titles::before {
         content: "";
         display: block;
         width: 100%;
-        padding-top: 25%; }
+        padding-top: 23%; }
       .page-wrapper #landing .titles .title-wrapper {
         position: absolute;
         top: 0;
@@ -598,15 +603,17 @@ header {
           top: 20px;
           height: 100%;
           display: inline-block;
-          position: absolute; }
+          position: absolute;
+          max-width: 100%; }
           @media screen and (max-width: 1000px) {
             .page-wrapper #description .section-wrapper .descript-right .descript-img {
-              top: -45px; } }
+              top: -45px;
+              height: auto; } }
         .page-wrapper #description .section-wrapper .descript-right .descript-content {
           width: 100%;
           margin-top: 100px;
           font-size: 14px;
-          line-height: 2;
+          line-height: 2em;
           letter-spacing: 1px;
           text-align: left;
           color: #ffffff; }
@@ -677,7 +684,7 @@ header {
             display: inline-block;
             height: 28px;
             font-size: 21px;
-            font-weight: bold;
+            font-weight: 400;
             font-style: normal;
             font-stretch: normal;
             line-height: normal;
@@ -689,7 +696,7 @@ header {
             margin-top: 20px;
             display: block;
             font-size: 14px;
-            font-weight: normal;
+            font-weight: 300;
             font-style: normal;
             font-stretch: normal;
             line-height: 2;
@@ -698,7 +705,7 @@ header {
             color: #ffffff; }
   .page-wrapper #interlude {
     height: auto;
-    padding: 50px; }
+    padding: 0; }
     .page-wrapper #interlude .moving {
       width: 100%;
       height: auto;
@@ -744,7 +751,7 @@ header {
         flex-wrap: wrap; }
         .page-wrapper #program .section-wrapper .tabs .tab {
           line-height: 1.5em;
-          font-weight: 500;
+          font-weight: 400;
           -webkit-box-flex: 0;
           -ms-flex: 0 0 auto;
           flex: 0 0 auto;
@@ -901,9 +908,9 @@ header {
             align-items: flex-start; }
             .page-wrapper #program .section-wrapper .program-container .program-content .program-schedule .schedule-title {
               color: #50E6B4;
-              font-size: 1.3em;
+              font-size: 21px;
               margin-bottom: 20px;
-              font-weight: 500; }
+              font-weight: 400; }
             .page-wrapper #program .section-wrapper .program-container .program-content .program-schedule .schedule-content {
               color: #fff;
               line-height: 1.5em; }
@@ -935,8 +942,8 @@ header {
       max-width: 1400px; }
       .page-wrapper #registration .section-wrapper .registration-title {
         color: #50E6B4;
-        font-size: 2em;
-        font-weight: 500;
+        font-size: 28px;
+        font-weight: 400;
         margin: 40px 0;
         -ms-flex-item-align: start;
         align-self: flex-start; }
@@ -968,8 +975,8 @@ header {
           -webkit-box-flex: 1;
           -ms-flex: 1;
           flex: 1;
-          font-size: 1.3em;
-          font-weight: 500; }
+          font-size: 21px;
+          font-weight: 400; }
           @media screen and (max-width: 1000px) {
             .page-wrapper #registration .section-wrapper .step .no {
               margin-bottom: 10px; } }
@@ -979,8 +986,8 @@ header {
           -webkit-box-flex: 2;
           -ms-flex: 2;
           flex: 2;
-          font-size: 1.3em;
-          font-weight: 500; }
+          font-size: 21px;
+          font-weight: 400; }
           @media screen and (max-width: 1000px) {
             .page-wrapper #registration .section-wrapper .step .step-title {
               margin-bottom: 40px; } }
@@ -988,12 +995,23 @@ header {
           color: #fff;
           -webkit-box-flex: 6;
           -ms-flex: 6;
-          flex: 6; }
+          flex: 6;
+          font-size: 16px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: flex-start; }
           .page-wrapper #registration .section-wrapper .step .step-content p {
             margin-bottom: 15px; }
           @media screen and (max-width: 1000px) {
             .page-wrapper #registration .section-wrapper .step .step-content {
-              font-size: 0.8em; }
+              font-size: 14px; }
               .page-wrapper #registration .section-wrapper .step .step-content p {
                 margin-bottom: 10px; } }
           .page-wrapper #registration .section-wrapper .step .step-content .dot {
@@ -1029,11 +1047,9 @@ header {
               .page-wrapper #registration .section-wrapper .step .step-content .tab {
                 margin-left: 20px; } }
           .page-wrapper #registration .section-wrapper .step .step-content .highlight {
-            display: inline;
             padding: 10px;
-            line-height: 4em;
-            font-weight: 500;
-            margin: 10px 0;
+            font-weight: 400;
+            margin: 20px 0;
             background-color: #50E6B4;
             color: #191456; }
   .page-wrapper #taichi {
@@ -1114,14 +1130,48 @@ header {
           -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
           transform: translateX(-50%); }
+        .page-wrapper #taichi .section-wrapper .section-right .section-right-wrapper-title {
+          width: 100%;
+          font-size: 28px;
+          font-weight: 400;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: 1px;
+          text-align: left;
+          color: #50e6b4; }
+        .page-wrapper #taichi .section-wrapper .section-right .section-right-wrapper-content {
+          width: 100%;
+          padding-top: 67px;
+          font-size: 14px;
+          font-weight: 400;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 2;
+          letter-spacing: 1px;
+          text-align: left;
+          color: #ffffff; }
   .page-wrapper #crew {
-    height: auto; }
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
     .page-wrapper #crew .section-wrapper {
-      width: 90%;
-      margin-left: 9%; }
+      width: 85%;
+      max-width: 1400px; }
       .page-wrapper #crew .section-wrapper .crew-title {
         font-size: 28px;
-        font-weight: bold;
+        font-weight: 400;
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
@@ -1165,7 +1215,7 @@ header {
               .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-left .team-name {
                 display: inline-block;
                 background-color: #d70050;
-                font-weight: 800;
+                font-weight: 400;
                 font-size: 20px;
                 color: #191456;
                 padding: 3px;
@@ -1231,7 +1281,7 @@ header {
                 margin-top: 48px; }
               .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right .one-person .person-name {
                 font-size: 16px;
-                font-weight: 600;
+                font-weight: 400;
                 font-style: normal;
                 font-stretch: normal;
                 line-height: normal;
@@ -1241,7 +1291,7 @@ header {
               .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right .one-person .person-detail {
                 margin-top: 6px;
                 font-size: 16px;
-                font-weight: normal;
+                font-weight: 300;
                 font-style: normal;
                 font-stretch: normal;
                 line-height: normal;
@@ -1250,18 +1300,20 @@ header {
                 color: #ffffff; }
     .page-wrapper #crew .crew-button {
       margin-top: 40px;
-      height: 50px; }
+      height: 50px;
+      -ms-flex-item-align: end;
+      align-self: flex-end;
+      margin-right: 100px;
+      min-width: 170px; }
+      @media screen and (max-width: 1000px) {
+        .page-wrapper #crew .crew-button {
+          margin-right: 0;
+          -ms-flex-item-align: center;
+          align-self: center; } }
       .page-wrapper #crew .crew-button .container {
         position: absolute;
         display: inline-block;
-        right: 15%; }
-        @media screen and (max-width: 1000px) {
-          .page-wrapper #crew .crew-button .container {
-            right: 50%;
-            -webkit-transform: translateX(50%);
-            -ms-transform: translateX(50%);
-            transform: translateX(50%);
-            min-width: 170px; } }
+        min-width: 170px; }
         .page-wrapper #crew .crew-button .container .button {
           cursor: pointer;
           -webkit-user-select: none;
@@ -1269,7 +1321,7 @@ header {
           display: inline-block;
           opacity: 0.6;
           font-size: 41px;
-          font-weight: 600;
+          font-weight: 400;
           font-style: normal;
           font-stretch: normal;
           line-height: normal;
@@ -1303,7 +1355,8 @@ header {
     -ms-flex-pack: center;
     justify-content: center; }
     .page-wrapper #organizer .section-wrapper {
-      width: 90%; }
+      width: 85%;
+      max-width: 1400px; }
       .page-wrapper #organizer .section-wrapper .need-padding-top {
         margin-top: 60px; }
         @media screen and (max-width: 375px) {
@@ -1314,7 +1367,7 @@ header {
         .page-wrapper #organizer .section-wrapper .og-section-block .og-section-title {
           height: 38px;
           font-size: 28px;
-          font-weight: bold;
+          font-weight: 400;
           letter-spacing: 1px;
           color: #50e6b4; }
           @media screen and (max-width: 375px) {
@@ -1416,7 +1469,7 @@ header {
           top: 20px;
           line-height: 1.06;
           font-size: 14px;
-          font-weight: bold;
+          font-weight: 400;
           letter-spacing: 1px;
           text-align: left;
           color: #ffffff; }
@@ -1433,7 +1486,7 @@ header {
           top: 10px;
           font-size: 16px;
           line-height: 1.2;
-          font-weight: 600;
+          font-weight: 400;
           letter-spacing: 1px;
           text-align: left;
           color: #191455; }
@@ -1469,7 +1522,7 @@ footer {
           display: initial; } }
     footer .footer-wrapper .copyright {
       display: inline-block;
-      font-weight: normal;
+      font-weight: 300;
       font-style: normal;
       font-stretch: normal;
       line-height: normal;
@@ -1504,7 +1557,7 @@ footer {
         margin-right: 18px;
         display: inline-block;
         opacity: 0.5;
-        font-weight: normal;
+        font-weight: 300;
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
