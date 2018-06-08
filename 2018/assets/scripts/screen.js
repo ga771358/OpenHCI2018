@@ -1,4 +1,4 @@
-$(window).on("load", animateMase);
+// $(window).on("load", animateMase);
 
 //Aliases
 var Container = PIXI.Container,
