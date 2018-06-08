@@ -491,11 +491,14 @@ header
 		@media screen and (max-width: $breakpoint-sm)
 			padding-bottom: 50px
 		.section-wrapper
-			width: 90%
-			max-width: 1450px
+			width: 85%
+			max-width: 1400px
+			display: flex
+			@media screen and (max-width: $breakpoint)
+				flex-direction: column
 			.descript-left
 				@media screen and (max-width: $breakpoint)
-					display: block
+					// display: block
 					width: 100%
 					margin-top: 0px
 				width: 30%
@@ -507,6 +510,9 @@ header
 				letter-spacing: 1px
 				text-align: left
 				color: #50e6b4
+				display: flex
+				justify-content: flex-start
+				align-items: flex-start
 			.descript-right
 				@media screen and (max-width: $breakpoint)
 					display: block
@@ -544,6 +550,11 @@ header
 					letter-spacing: 1px
 					text-align: left
 					color: #ffffff
+					display: flex
+					flex-direction: column
+					align-items: flex-start
+		span
+			opacity: 0
 	#intro
 		height: auto
 		display: flex
@@ -556,10 +567,9 @@ header
 				justify-content: center
 				.video-frame
 					position: relative
-					width: 50%
+					width: 100%
 					height: auto
-					@media screen and (max-width: $breakpoint)
-						width: 90%
+
 					&::before
 						display: block
 						content: ""
@@ -571,6 +581,7 @@ header
 						top: 0
 						left: 0
 						position: absolute
+						opacity: 0
 			.intro-bottom
 				margin-top: 75px
 				.empty-block
@@ -591,7 +602,7 @@ header
 						@media screen and (max-width: $breakpoint)
 							width: 95%
 						.title
-							padding-right: 50px
+							// padding-right: 50px
 							display: inline-block
 							height: 28px
 							font-size: 21px
@@ -601,8 +612,11 @@ header
 							line-height: normal
 							letter-spacing: normal
 							text-align: left
-							background-color: $green
+							// background-color: $green
 							color: #191455
+							span
+								padding-right: 50px
+								background-color: $green
 						.content
 							margin-top: 20px
 							display: block
@@ -615,6 +629,8 @@ header
 							letter-spacing: 1px
 							text-align: left
 							color: #ffffff
+						span 
+							opacity: 0
 			// .section-left
 			// 	padding-left: 5%
 			// 	vertical-align: top
@@ -712,6 +728,7 @@ header
 					flex-direction: column
 					align-items: flex-start
 					cursor: pointer
+					opacity: 0
 					@media screen and (max-width: $breakpoint) 
 						width: calc(100% / 3)
 						margin: 10px 0
@@ -794,6 +811,7 @@ header
 						align-self: stretch
 						overflow: hidden
 						margin-right: 30px
+						opacity: 0
 						@media screen and (max-width: 500px) 
 							width: 100%
 							margin: 0
@@ -821,9 +839,15 @@ header
 							font-size: 21px
 							margin-bottom: 20px
 							font-weight: 400
+							display: flex
+							flex-direction: column
+							align-items: flex-start
 						.schedule-content
 							color: #fff
 							line-height: 1.5em
+							display: flex
+							flex-direction: column
+							align-items: flex-start
 							p
 								margin-bottom: 15px
 								// font-size: 16px
@@ -831,6 +855,8 @@ header
 								font-size: 0.8em
 								p
 									margin-bottom: 10px
+						span
+							opacity: 0
 	#registration
 		height: auto
 		display: flex
@@ -848,12 +874,15 @@ header
 				font-weight: 400
 				margin: 40px 0
 				align-self: flex-start
+				span 
+					opacity: 0
 			.step
 				width: 100%
 				border-top: 2px solid rgba(#fff,0.3)
 				padding: 40px 100px 40px 20px
 				display: flex
 				line-height: 1.5em
+				opacity: 0
 				@media screen and (max-width: $breakpoint) 
 					flex-direction: column
 					padding: 40px 0
@@ -932,6 +961,8 @@ header
 						margin: 20px 0
 						background-color: $green
 						color: $blue
+					a
+						color: $green
 
 
 
@@ -940,7 +971,7 @@ header
 		display: flex
 		justify-content: center
 		.section-wrapper
-			margin-top: 50px
+			// margin-top: 50px
 			width: 85%	
 			max-width: 1400px
 			@media screen and (max-width: $breakpoint)
@@ -953,73 +984,85 @@ header
 					margin-bottom: 50px
 					left: 50%
 					transform: translateX(-50%)
+					opacity: 0
 				img
 					width: 100%
 			.section-left
 				vertical-align: top
 				display: inline-block
-				width: 49.4%
+				width: 49%
+				padding-right: 20px
 				@media screen and (max-width: $breakpoint)
 					width: 100%
+					padding-right: 0
 				.need-margin-top
 					margin-top: 80px
 				.container
-					width: 80%
-					left: 50%
-					transform: translateX(-50%)
+					width: 100%
+					display: flex
+					flex-direction: column
+					align-items: flex-start
 					.title
-						width: 100%
 						font-size: 28px
-						font-weight: bold
+						font-weight: 400
 						font-style: normal
 						font-stretch: normal
 						line-height: normal
 						letter-spacing: 1px
 						text-align: left
 						color: $green
+						display: flex
+						flex-direction: column
+						align-items: flex-start
 					.content
 						margin-top: 30px
 						font-size: 14px
-						font-weight: normal
+						font-weight: 300
 						font-style: normal
 						font-stretch: normal
 						line-height: 2
 						letter-spacing: 1px
 						text-align: left
 						color: #ffffff
+						display: flex
+						flex-direction: column
+						align-items: flex-start
+						.br
+							margin: 10px 0
+					span
+						opacity: 0
+			
+		.fixed
+			position: absolute
+			top: 50px
+			left: 50%
+			height: auto
+			transform: translateX(-50%)
+			display: flex
+			align-items: flex-start
+			justify-content: flex-end
+			pointer-events: none
+			@media screen and (max-width: $breakpoint)
+				display: none
+			&.sticky
+				position: fixed
+				top: 50%
+				transform: translate(-50%, -50%)
+			&.stay
+				position: absolute
+				top: auto
+				bottom: 50px
+				transform: translateX(-50%)
+
 			.section-right
 				vertical-align: top
 				display: inline-block
-				width: 49.4%
-				height: 100%
-				@media screen and (max-width: $breakpoint)
-					display: none
+				width: 50%
+				padding: 0 20px
+				opacity: 0
 				img
-					top: -13px
-					width: 75%
-					left: 50%
-					transform: translateX(-50%)
-				.section-right-wrapper-title
 					width: 100%
-					font-size: 28px
-					font-weight: 400
-					font-style: normal
-					font-stretch: normal
-					line-height: normal
-					letter-spacing: 1px
-					text-align: left
-					color: #50e6b4
-				.section-right-wrapper-content
-					width: 100%
-					padding-top: 67px
-					font-size: 14px
-					font-weight: 400
-					font-style: normal
-					font-stretch: normal
-					line-height: 2
-					letter-spacing: 1px
-					text-align: left
-					color: #ffffff
+
 
 	#crew
 		height: auto
@@ -1030,7 +1073,9 @@ header
 		.section-wrapper
 			width: 85%
 			max-width: 1400px
-			// margin-left: 9%
+			display: flex
+			flex-direction: column
+			align-items: flex-start
 			.crew-title
 				font-size: 28px
 				font-weight: 400
@@ -1040,11 +1085,14 @@ header
 				letter-spacing: 1px
 				text-align: left
 				color: $green
+				span
+					opacity: 0
 			.crew-content
 				margin-top: 45px
 				display: inline-block
 				width: 100%
 				overflow: hidden
+				opacity: 0
 				.blur-block
 					position: absolute
 					height: 100%
@@ -1153,6 +1201,7 @@ header
 			align-self: flex-end
 			margin-right: 100px
 			min-width: 170px 
+			opacity: 0
 			@media screen and (max-width: $breakpoint)
 				margin-right: 0
 				align-self: center
@@ -1203,16 +1252,17 @@ header
 					margin-top: 30px
 			.og-section-block
 				text-align: left
+				display: flex
+				flex-direction: column
+				align-items: flex-start
 				//height: 200px
 				.og-section-title
-					height: 38px
-					@media screen and (max-width: $breakpoint_sm)
-						font-size: 20px
-						height: 28px
 					font-size: 28px
 					font-weight: 400
 					letter-spacing: 1px
-					color: #50e6b4
+					color: $green
+					span 
+						opacity: 0
 				.og-section-logo-wrapper
 					padding-top: 40px
 					.logo-block
@@ -1220,6 +1270,7 @@ header
 						width: 30%
 						max-width: 260px
 						margin-bottom: 50px
+						opacity: 0
 						@media screen and (max-width: $breakpoint)
 							width: 45%
 							margin-bottom: 40px
@@ -1229,6 +1280,7 @@ header
 								width: 95%
 					.logo-small
 						display: inline-block
+						opacity: 0
 						@media screen and (max-width: $breakpoint)
 							width: 30%
 							margin-bottom: 40px
@@ -1247,17 +1299,11 @@ header
 		//*
 		//	border: solid 1px white
 		.section-wrapper
-			width: 90%
-			//min-width: 714px
-			@media screen and (min-width: $breakpoint)
-				width: 1150px
-			@media screen and (max-width: $breakpoint-sm)
-				width: 335px
-			//background-color: #50e6b4
-			
+			width: 85%
+			max-width: 1400px
 			display: inline-block
 			height: 327px
-			width: 100%
+			opacity: 0
 			.contact-section-map
 				//vertical-align: top
 				@media screen and (max-width: $breakpoint-sm)
@@ -1277,7 +1323,8 @@ header
 					position: relative
 					display: block //center display: block, margin: auto
 					margin: auto
-					width: 335px
+					// width: 335px
+					width: 100%
 					height: 88px
 				//vertical-align: top
 
@@ -1324,6 +1371,7 @@ header
 					@media screen and (max-width: $breakpoint-sm)
 						left: 10px
 						top: 10px
+						font-size: 12px
 					left: 25px
 					top: 10px
 					font-size: 16px
@@ -1338,12 +1386,11 @@ footer
 	justify-content: center
 	height: auto
 	background-color: $footer-bg
-	min-width: 350px
+	width: 100%
 	.footer-wrapper
-		width: 90%
-		max-width: 1150px
-		padding-top: 28px
-		padding-bottom: 28px
+		width: 85%
+		padding: 28px 0
+		max-width: 1400px
 		br
 			display: none
 			@media screen and (max-width: $breakpoint-of-footer)
@@ -1360,6 +1407,8 @@ footer
 			@media screen and (max-width: $breakpoint-of-footer)
 				left: 50%
 				transform: translateX(-50%)
+			@media screen and (max-width: $breakpoint-sm)
+				font-size: 14px
 		.need-margin-right
 			margin-right: 38px	
 		.url-group
@@ -1401,3 +1450,50 @@ footer
 			a
 				img
 					top: -4px
+
+
+//for animate
+.colorAnimate
+	position: relative
+	overflow: hidden
+	span
+		animation: show 1.5s cubic-bezier(0.22, 0.61, 0.36, 1) 1 both
+	&::after
+		content: ""
+		width: 100%
+		height: 100%
+		position: absolute
+		display: block
+		left: 0
+		top: 0
+		background-color: $green
+		animation: colorAni 1.5s cubic-bezier(0.22, 0.61, 0.36, 1) 1 both
+
+// @keyframes colorAni
+// 	0%
+// 		width: 0
+// 	50%
+// 		width: 100%
+// 	// 51%
+// 	// 	left: auto
+// 	// 	right: 0
+// 	100%
+// 		width: 0
+
+@keyframes colorAni
+	0%
+		transform: translateX(-110%)
+	50%
+		transform: translateX(0%)
+	100%
+		transform: translateX(110%)
+
+@keyframes show
+	0%
+		opacity: 0
+	50%
+		opacity: 0
+	51%
+		opacity: 1
+	100%
+		opacity: 1
