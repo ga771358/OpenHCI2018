@@ -79,17 +79,16 @@ body
 						p 「萬物有靈，互聯互網，原始信仰隱喻著未來社會。」
 						p 物件本是空白主體，注入人類智慧，重獲新生。
 						p 擁有了數位靈魂，物體與人類共生，通訊網絡緊密了彼此。
-						p 「實物鏈」將解構對客體的認知，重構對物我的想像，
-						p 共構新一代城市物語。
+						p 「實物鏈」將解構對客體的認知，重構對物我的想像， 共構新一代城市物語。
 						br
-						p “They will be given souls. They will form a unique connection among individuals like us. This is our future, this is ANIMISM.”
+						p “They will be given souls. They will form a unique connection among individuals like us. This is our future. This is ANIMISM.”
 						p Objects were once empty, inorganic, and lifeless. Yet, when artificial intelligence comes into existence, it is time for their rebirth: objects return with a new form. They’ve got digital souls; they are not merely “objects” anymore. They coexist with us, and strongly connect with us. This is a society composed of human beings and “living objects.”
 						p “ANIMISM” OpenHCI Workshop 2018 will deconstruct your perspective on objects, reconstruct your imagination of the relationship between humans and objects, and co-construct a new era of city revolution.
-					
 		section#intro
 			.section-wrapper
 				.intro-top
-					#our-video
+					.video-frame
+						#our-video
 				.intro-bottom
 					.detail-block
 						.container
@@ -99,7 +98,7 @@ body
 					.detail-block
 						.container
 							.title History of OpenHCI
-							.content OpenHCI 2017是第八屆由學生自治籌備的人機互動工作坊，旨在推廣人機互動學門與跨領域合作。 在六天的營期間，來自不同領域的學員會經歷一系列講座與課後實作演練，深入完整 HCI 設計流程，透過合作溝通以實踐構想，將無盡的創意展現給世界！
+							.content OpenHCI 2018是第九屆由學生自治籌備的人機互動工作坊，旨在推廣人機互動學門與跨領域合作。 在六天的工作坊期間，來自不同領域的學員會經歷一系列講座與課後實作演練，深入完整 HCI 設計流程，透過合作溝通以實踐構想，將無盡的創意展現給世界！
 					.empty-block
 					.detail-block
 						.container
@@ -321,20 +320,24 @@ body
 								
 		section#taichi
 			.section-wrapper
+				.breakpoint-block
+					img(src="assets/images/img_pattern_TAICHI_p.png", alt="")
 				.section-left
-					.section-left-wrapper
-						img.img-top(src="assets/images/taichi_section_pic1.png", alt="")
-						img.img-btm(src="assets/images/taichi_section_pic2.png", alt="")
+					.container
+						.title TAICHI - 國內最大HCI研討會
+						.content 台灣人機互動研討會 TAICHI 為臺灣人機互動學會的年度會議，為國內跨領域人機互動學者與社群，提供一個代表台灣人機互動(Human Computer Interaction)研究最前緣之意見交換以及成果交流的年度盛會。<br><br>TAICHI 2018 (第四屆台灣人機互動研討會)由人機互動學會主辦，並持續各領域、校、院間的合作，由交大、台大、清大、政大、台科大、輔大等大專院校之人機互動相關學者共同籌辦，於8月26日至28日在國立交通大學舉辦。此次大會主題為「Bang」，旨在產學、師生、專業人士們之間產生激盪與火花，讓2018成為台灣人機互動成長重要的一年。
+					.container.need-margin-top
+						.title OpenHCI 與 TAICHI 合作
+						.content 你想要讓自己的作品在台灣人機互動年度盛會TAICHI被看見嗎？<br>TAICHI 是台灣人機互動研究領域中最具代表性的研討會，由台灣人機互動學會所舉辦的年度會議，為國內跨領域人機互動學者與社群，提供一個意見交換以及成果交流的年度盛會。<br><br>OpenHCI 工作坊結束之後，OpenHCI將推薦各組成果作品至TAICHI年會展示，除了學員能夠於會議中發表自己的作品、增加曝光度外，也有機會跟眾多國內外HCI、UXD專家交流，不管是向學界、業界前輩取經，或是互相分享經驗，相信對學員的未來求學或工作都有相當大的幫助。 除此之外，參展隊伍所有成員都可以免註冊費參加TAICHI會議期間各場次活動喔！這麼難得的機會，只有OpenHCI學員才有呢～ 
 				.section-right
-					.section-right-wrapper
-						.section-right-wrapper-title OpenHCI 與 TAICHI 合作
-						.section-right-wrapper-content 台灣人機互動研討會 TAICHI 為臺灣人機互動學會的年度會議，為國內跨領域人機互動學者與社群，提供一個代表台灣人機互動(Human Computer Interaction)研究最前緣之意見交換以及成果交流的年度盛會。<br><br>TAICHI 2018 (第四屆台灣人機互動研討會)由人機互動學會主辦，並持續各領域、校、院間的合作，由交大、台大、清大、政大、台科大、輔大等大專院校之人機互動相關學者共同籌辦，於8月26日至28日在國立交通大學舉辦。此次大會主題為「Bang」，旨在產學、師生、專業人士們之間產生激盪與火花，讓2018成為台灣人機互動成長重要的一年。
+					img(src="assets/images/img_pattern_TAICHI.png", alt="")
+						
 		section#crew
 			.section-wrapper
 				h3.crew-title 籌備團隊
 				.crew-content
 					.blur-block
-					.slide-block
+					.slide-block#crew-slide-id
 						.crew-content-block
 							.crew-content-block-left 
 								.team-name.program PROGRAM
@@ -354,6 +357,7 @@ body
 									.person-detail 國立政治大學
 									.person-detail 數位內容碩士學位學程
 									.person-detail 碩一
+						.empty-block
 						.crew-content-block
 							.crew-content-block-left 
 								.team-name.human-resource HUMAN RESOURCE
@@ -373,6 +377,7 @@ body
 									.person-detail 國立臺北科技大學
 									.person-detail 創新設計在職碩班
 									.person-detail 指導教授 彭瑞玟老師
+						.empty-block
 						.crew-content-block
 							.crew-content-block-left 
 								.team-name.web-service WEB SERVICE
@@ -392,6 +397,7 @@ body
 									.person-detail 國立交通大學
 									.person-detail 網路工程研究所
 									.person-detail 指導教授 陳志成老師
+						.empty-block
 						.crew-content-block
 							.crew-content-block-left 
 								.team-name.tech TECH
@@ -417,6 +423,7 @@ body
 									.person-detail 國立臺灣科技大學
 									.person-detail 設計研究所
 									.person-detail 指導教授 陳玲玲老師
+						.empty-block
 						.crew-content-block
 							.crew-content-block-left 
 								.team-name.lecture LECTURE
@@ -431,6 +438,7 @@ body
 									.person-detail 國立清華大學
 									.person-detail 工業工程與工程管理學系
 									.person-detail 大四
+						.empty-block
 						.crew-content-block
 							.crew-content-block-left 
 								.team-name.exhibition EXHIBITION / DEMO
@@ -445,6 +453,7 @@ body
 									.person-detail 國立臺灣科技大學
 									.person-detail 色彩與照明科學研究所
 									.person-detail 指導教授 陳建宇老師
+						.empty-block
 						.crew-content-block
 							.crew-content-block-left 
 								.team-name.publicity PUBLICITY
@@ -464,6 +473,7 @@ body
 									.person-detail 國立臺灣科技大學
 									.person-detail 設計研究所
 									.person-detail 指導教授 陳建雄老師
+						.empty-block
 						.crew-content-block
 							.crew-content-block-left 
 								.team-name.visual-design VISUAL DESIGN
@@ -483,6 +493,7 @@ body
 									.person-detail 國立政治大學
 									.person-detail 數位內容碩士學位學程
 									.person-detail 指導教授 陳聖智老師
+						.empty-block
 						.crew-content-block
 							.crew-content-block-left 
 								.team-name.sponsorship SPONSORSHIP
@@ -497,6 +508,7 @@ body
 									.person-detail 國立臺灣海洋
 									.person-detail 大學資訊工程學系
 									.person-detail 大四
+						.empty-block
 						.crew-content-block
 							.crew-content-block-left 
 								.team-name.treasurer TREASURER
@@ -516,6 +528,7 @@ body
 									.person-detail 國立臺灣大學
 									.person-detail 資訊工程研究所
 									.person-detail 指導教授 陳彥仰老師
+						.empty-block
 						.crew-content-block
 							.crew-content-block-left 
 								.team-name.film-crew FILM CREW
@@ -530,6 +543,7 @@ body
 									.person-detail 國立清華大學
 									.person-detail 資訊工程學系
 									.person-detail 指導教授 陳煥宗老師
+						.empty-block
 						.crew-content-block
 							.crew-content-block-left 
 								.team-name.TA TA CHIEF

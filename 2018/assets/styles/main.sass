@@ -486,7 +486,7 @@ header
 		height: auto
 		display: flex
 		justify-content: center
-		padding-top: 50px
+		padding-top: 30px
 		.section-wrapper
 			width: 90%
 			max-width: 1450px
@@ -515,11 +515,12 @@ header
 				display: inline-block
 				.descript-img
 					right: 0px
-					top: 0px
+					top: 20px
 					@media screen and (max-width: $breakpoint)
 						top: -45px
 						height: auto
 					height: 100%
+					//max-height: 420px
 					display: inline-block
 					position: absolute
 					max-width: 100%
@@ -550,15 +551,28 @@ header
 			.intro-top
 				display: flex
 				justify-content: center
-				#our-video
-					width: 60%
+				.video-frame
+					position: relative
+					width: 50%
+					height: auto
 					@media screen and (max-width: $breakpoint)
-						width: 80%
+						width: 90%
+					&::before
+						display: block
+						content: ""
+						width: 100%
+						padding-top: 56.25%
+					#our-video
+						width: 100%
+						height: 100%
+						top: 0
+						left: 0
+						position: absolute
 			.intro-bottom
 				margin-top: 75px
 				.empty-block
 					display: inline-block
-					width: 3.7%
+					width: 3.3%
 					@media screen and (max-width: $breakpoint)
 						display: none
 				.detail-block
@@ -923,30 +937,65 @@ header
 		display: flex
 		justify-content: center
 		.section-wrapper
+			margin-top: 50px
 			width: 85%	
 			max-width: 1400px
-			min-width: 600px
+			@media screen and (max-width: $breakpoint)
+				margin-top: 0px
+			.breakpoint-block
+				width: 95%
+				display: none
+				@media screen and (max-width: $breakpoint)
+					display: inline-block
+					margin-bottom: 50px
+					left: 50%
+					transform: translateX(-50%)
+				img
+					width: 100%
 			.section-left
 				vertical-align: top
 				display: inline-block
-				width: 49%
-				height: 100%
-				text-align: right
-				.section-left-wrapper
-					display: inline-block
-					width: 76%
-					text-align: right
-					.img-top
-						transform: translateX(-90px)
+				width: 49.4%
+				@media screen and (max-width: $breakpoint)
+					width: 100%
+				.need-margin-top
+					margin-top: 80px
+				.container
+					width: 80%
+					left: 50%
+					transform: translateX(-50%)
+					.title
 						width: 100%
-					.img-btm
-						width: 100%
+						font-size: 28px
+						font-weight: bold
+						font-style: normal
+						font-stretch: normal
+						line-height: normal
+						letter-spacing: 1px
+						text-align: left
+						color: $green
+					.content
+						margin-top: 30px
+						font-size: 14px
+						font-weight: normal
+						font-style: normal
+						font-stretch: normal
+						line-height: 2
+						letter-spacing: 1px
+						text-align: left
+						color: #ffffff
 			.section-right
-				padding-left: 7%
 				vertical-align: top
 				display: inline-block
-				width: 49%
+				width: 49.4%
 				height: 100%
+    		@media screen and (max-width: $breakpoint)
+					display: none
+				img
+					top: -13px
+					width: 75%
+					left: 50%
+					transform: translateX(-50%)
 				.section-right-wrapper-title
 					width: 100%
 					font-size: 28px
@@ -987,7 +1036,7 @@ header
 				line-height: normal
 				letter-spacing: 1px
 				text-align: left
-				color: #50e6b4
+				color: $green
 			.crew-content
 				margin-top: 45px
 				display: inline-block
@@ -1001,12 +1050,14 @@ header
 					z-index: 1
 					background-image: linear-gradient(to right, rgba(25, 20, 85, 0), #191455)
 				.slide-block
-					left: -150px
 					height: 100%
 					white-space: nowrap
 					transition: 0.75s
+					left: 0
+					.empty-block
+						display: inline-block
+						width: 130px
 					.crew-content-block
-						margin-left: 150px
 						display: inline-block
 						height: 100%
 						.crew-content-block-left
@@ -1064,7 +1115,7 @@ header
 									line-height: normal
 									letter-spacing: 1px
 									text-align: left
-									color: #50e6b4
+									color: $green
 								.person-detail
 									margin-top: 6px
 									font-size: 16px
@@ -1102,7 +1153,7 @@ header
 					line-height: normal
 					letter-spacing: 2px
 					text-align: center
-					color: #50e6b4
+					color: $green
 					padding: 5px
 					transition: 0.2s
 					transform: scale(1)
