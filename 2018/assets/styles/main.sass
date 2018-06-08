@@ -63,7 +63,7 @@ table
 a
 	//nothing
 
-// @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css)
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css)
 
 *
 	box-sizing: border-box
@@ -89,8 +89,8 @@ header
 	align-items: center
 	// border: 1px solid #000
 	z-index: 100
-	// background-color: rgba($bg, 0.7)
 	background: linear-gradient(rgba($bg,1), rgba($bg,0.8), rgba($bg,0))
+	transition: background 1s
 	padding: 0 50px
 	@media screen and (max-width: $breakpoint) 
 		padding: 0 20px
@@ -98,6 +98,8 @@ header
 	&.atLanding
 		position: absolute
 		top: calc(100vh - 100px)
+		background: linear-gradient(rgba($bg,0), rgba($bg,0.2), rgba($bg,1))
+		// background-color: rgba($bg, 1)
 		@media screen and (max-width: $breakpoint) 
 			top: calc(100vh - 70px)
 
@@ -265,8 +267,8 @@ header
 	width: 100%
 	overflow: hidden
 	section
-		border-bottom: 1px solid $green
-		padding: 100px 0
+		// border-bottom: 1px solid $green
+		padding: 50px 0
 		height: 700px
 		.section-wrapper
 			width: 100%
@@ -283,15 +285,15 @@ header
 		height: 100vh
 		padding: 0
 		border-bottom: none
-		&::after
-			content: ""
-			display: block
-			position: absolute
-			left: 0
-			bottom: 0
-			width: 100%
-			height: 100px
-			background: linear-gradient(rgba($bg,0), rgba($bg,0.8), rgba($bg,1))
+		// &::after
+		// 	content: ""
+		// 	display: block
+		// 	position: absolute
+		// 	left: 0
+		// 	bottom: 0
+		// 	width: 100%
+		// 	height: 100px
+		// 	background: linear-gradient(rgba($bg,0), rgba($bg,0.8), rgba($bg,1))
 		.section-wrapper
 			display: flex
 			align-items: center
@@ -306,32 +308,59 @@ header
 				&:hover
 					fill: $red
 		.screen
-			width: 70%
+			width: 100%
+			height: 100%
 			position: absolute
-			top: 50%
-			right: 10%
-			transform: translateY(-50%)
-			background-color: #28286E
-			// border: 5px solid #fff
-			&::before
-				content: ""
-				display: block
-				width: 100%
-				padding-top: 70%
-			.animate-light,.mouse-light,.mask
+			top: 0
+			left: 0
+			overflow: hidden
+			background: linear-gradient(#191455, #0F0A32)
+			#screen
+				position: absolute
+				width: auto
+				height: 100%
+				top: 50%
+				left: 50%
+				transform: translate(-50%,-50%)
+				@media screen and (min-aspect-ratio: 16/9)
+					width: 100%
+					height: auto
+			.mask
 				width: 100%
 				height: 100%
 				position: absolute
 				top: 0
 				left: 0
-				// border: 5px solid #fff
-				// box-sizing: border-box
-			.mask
-				border: 0
-				width: calc(100% + 10px)
-				height: calc(100% + 10px)
-				top: -5px
-				left: -5px
+				background: linear-gradient(rgba(#140F44,0),rgba(#140F44,0.8),rgba(#140F44,0))
+				pointer-events: none
+
+		// .screen
+		// 	width: 70%
+		// 	position: absolute
+		// 	top: 50%
+		// 	right: 10%
+		// 	transform: translateY(-50%)
+		// 	background-color: #28286E
+		// 	// border: 5px solid #fff
+		// 	&::before
+		// 		content: ""
+		// 		display: block
+		// 		width: 100%
+		// 		padding-top: 70%
+		// 	.animate-light,.mouse-light,.mask
+		// 		width: 100%
+		// 		height: 100%
+		// 		position: absolute
+		// 		top: 0
+		// 		left: 0
+		// 		// border: 5px solid #fff
+		// 		// box-sizing: border-box
+		// 	.mask
+		// 		border: 0
+		// 		width: calc(100% + 10px)
+		// 		height: calc(100% + 10px)
+		// 		top: -5px
+		// 		left: -5px
 		.titles
 			width: 85%
 			// max-width: 1000px
@@ -339,11 +368,12 @@ header
 			top: 50%
 			left: 50%
 			transform: translate(-50%,-50%)
+			pointer-events: none
 			&::before
 				content: ""
 				display: block
 				width: 100%
-				padding-top: 25%
+				padding-top: 23%
 			.title-wrapper
 				position: absolute
 				top: 0
@@ -456,7 +486,7 @@ header
 		height: auto
 		display: flex
 		justify-content: center
-		padding-top: 50px
+		padding-top: 30px
 		.section-wrapper
 			width: 90%
 			max-width: 1450px
@@ -485,13 +515,15 @@ header
 				display: inline-block
 				.descript-img
 					right: 0px
-					top: 0px
+					top: 20px
 					@media screen and (max-width: $breakpoint)
 						top: -45px
+						height: auto
 					height: 100%
+					//max-height: 420px
 					display: inline-block
 					position: absolute
-					//width: 100%
+					max-width: 100%
 					//background-image: url("../images/img-pattern-animism.png")
 					//background-repeat: no-repeat
 				.descript-content
@@ -499,11 +531,13 @@ header
 						margin-top: 30px
 						left: 0px
 						position: relative
+						// font-size: 0.8em
 					//max-width: 840px
 					width: 100%
 					margin-top: 100px
 					font-size: 14px
-					line-height: 2
+					// font-size: 1em
+					line-height: 2em
 					letter-spacing: 1px
 					text-align: left
 					color: #ffffff
@@ -558,7 +592,7 @@ header
 							display: inline-block
 							height: 28px
 							font-size: 21px
-							font-weight: bold
+							font-weight: 400
 							font-style: normal
 							font-stretch: normal
 							line-height: normal
@@ -570,7 +604,8 @@ header
 							margin-top: 20px
 							display: block
 							font-size: 14px
-							font-weight: normal
+							// font-weight: 4ormal
+							font-weight: 300
 							font-style: normal
 							font-stretch: normal
 							line-height: 2
@@ -598,7 +633,7 @@ header
 			// 				display: inline-block
 			// 				height: 28px
 			// 				font-size: 21px
-			// 				font-weight: bold
+			// 				font-weight: 4old
 			// 				font-style: normal
 			// 				font-stretch: normal
 			// 				line-height: normal
@@ -612,7 +647,7 @@ header
 			// 				display: block
 			// 				// width: 100%
 			// 				font-size: 14px
-			// 				font-weight: normal
+			// 				font-weight: 4ormal
 			// 				font-style: normal
 			// 				font-stretch: normal
 			// 				line-height: 2
@@ -634,7 +669,7 @@ header
 
 	#interlude
 		height: auto
-		padding: 50px
+		padding: 0
 		.moving
 			width: 100%
 			height: auto
@@ -667,7 +702,7 @@ header
 				flex-wrap: wrap
 				.tab
 					line-height: 1.5em
-					font-weight: 500
+					font-weight: 400
 					flex: 0 0 auto
 					width: calc(100% / 6)
 					display: flex
@@ -693,6 +728,7 @@ header
 							order: 6
 					@media screen and (max-width: $breakpoint-sm)
 						font-size: 0.8em 
+						// font-size: 14px
 					p
 						&::before
 							content: ""
@@ -778,14 +814,16 @@ header
 						align-items: flex-start
 						.schedule-title 
 							color: $green
-							font-size: 1.3em
+							// font-size: 1.3em
+							font-size: 21px
 							margin-bottom: 20px
-							font-weight: 500
+							font-weight: 400
 						.schedule-content
 							color: #fff
 							line-height: 1.5em
 							p
 								margin-bottom: 15px
+								// font-size: 16px
 							@media screen and (max-width: $breakpoint) 
 								font-size: 0.8em
 								p
@@ -802,8 +840,9 @@ header
 			max-width: 1400px
 			.registration-title
 				color: $green
-				font-size: 2em
-				font-weight: 500
+				// font-size: 2em
+				font-size: 28px
+				font-weight: 400
 				margin: 40px 0
 				align-self: flex-start
 			.step
@@ -825,8 +864,9 @@ header
 					color: #fff
 					width: 100px
 					flex: 1
-					font-size: 1.3em
-					font-weight: 500
+					// font-size: 1.3em
+					font-size: 21px
+					font-weight: 400
 					// margin-right: 100px
 					@media screen and (max-width: $breakpoint) 
 						margin-bottom: 10px
@@ -834,18 +874,23 @@ header
 					color: $red
 					width: 300px
 					flex: 2
-					font-size: 1.3em
-					font-weight: 500
-					// margin-right: 100px
+					// font-size: 1.3em
+					font-size: 21px
+					font-weight: 400					// margin-right: 100px
 					@media screen and (max-width: $breakpoint) 
 						margin-bottom: 40px
 				.step-content
 					color: #fff
 					flex: 6
+					font-size: 16px
+					display: flex
+					flex-direction: column
+					align-items: flex-start
 					p
 						margin-bottom: 15px
 					@media screen and (max-width: $breakpoint) 
-						font-size: 0.8em
+						// font-size: 0.8em
+						font-size: 14px
 						p
 							margin-bottom: 10px
 					.dot
@@ -879,11 +924,9 @@ header
 						@media screen and (max-width: $breakpoint) 
 							margin-left: 20px
 					.highlight
-						display: inline
 						padding: 10px
-						line-height: 4em
-						font-weight: 500
-						margin: 10px 0
+						font-weight: 400						
+						margin: 20px 0
 						background-color: $green
 						color: $blue
 
@@ -953,15 +996,41 @@ header
 					width: 75%
 					left: 50%
 					transform: translateX(-50%)
+				.section-right-wrapper-title
+					width: 100%
+					font-size: 28px
+					font-weight: 400
+					font-style: normal
+					font-stretch: normal
+					line-height: normal
+					letter-spacing: 1px
+					text-align: left
+					color: #50e6b4
+				.section-right-wrapper-content
+					width: 100%
+					padding-top: 67px
+					font-size: 14px
+					font-weight: 400
+					font-style: normal
+					font-stretch: normal
+					line-height: 2
+					letter-spacing: 1px
+					text-align: left
+					color: #ffffff
 
 	#crew
 		height: auto
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: flex-end
 		.section-wrapper
-			width: 90%
-			margin-left: 9%
+			width: 85%
+			max-width: 1400px
+			// margin-left: 9%
 			.crew-title
 				font-size: 28px
-				font-weight: bold
+				font-weight: 400
 				font-style: normal
 				font-stretch: normal
 				line-height: normal
@@ -996,41 +1065,44 @@ header
 							vertical-align: top
 							width: 22px
 							height: 100%
+							z-index: 1
 							.team-name
 								display: inline-block
 								background-color: #d70050
-								font-weight: 800
+								font-weight: 400
 								font-size: 20px
 								color: $bg
 								padding: 3px
 								padding-right: 60px
+								z-index: 2
 							.program
-								transform: rotate(-90deg) translateY(-79px) translateX(-74px)
+								transform: rotate(-90deg) translateY(-76px) translateX(-70px)
 							.human-resource
-								transform: rotate(-90deg) translateY(-130px) translateX(-126px)
+								transform: rotate(-90deg) translateY(-124px) translateX(-119px)
 							.web-service
-								transform: rotate(-90deg) translateY(-99px) translateX(-94px)
+								transform: rotate(-90deg) translateY(-94px) translateX(-89px)
 							.tech
-								transform: rotate(-90deg) translateY(-51px) translateX(-48px)
+								transform: rotate(-90deg) translateY(-50px) translateX(-45px)
 							.lecture
-								transform: rotate(-90deg) translateY(-74px) translateX(-71px)
+								transform: rotate(-90deg) translateY(-70px) translateX(-67px)
 							.exhibition
-								transform: rotate(-90deg) translateY(-136px) translateX(-133px)
+								transform: rotate(-90deg) translateY(-129px) translateX(-125px)
 							.publicity
-								transform: rotate(-90deg) translateY(-83px) translateX(-79px)
+								transform: rotate(-90deg) translateY(-78px) translateX(-75px)
 							.visual-design
-								transform: rotate(-90deg) translateY(-110px) translateX(-107px)
+								transform: rotate(-90deg) translateY(-105px) translateX(-100px)
 							.sponsorship
-								transform: rotate(-90deg) translateY(-106px) translateX(-102px)
+								transform: rotate(-90deg) translateY(-100px) translateX(-97px)
 							.treasurer
-								transform: rotate(-90deg) translateY(-90px) translateX(-86px)
+								transform: rotate(-90deg) translateY(-86px) translateX(-82px)
 							.film-crew
-								transform: rotate(-90deg) translateY(-85px) translateX(-81px)
+								transform: rotate(-90deg) translateY(-81px) translateX(-77px)
 							.TA
-								transform: rotate(-90deg) translateY(-68px) translateX(-66px)
+								transform: rotate(-90deg) translateY(-70px) translateX(-67px)
 						.need-more-margin-left
 							margin-left: 25px
 						.crew-content-block-right
+							overflow: hidden
 							margin-left: 16px
 							display: inline-block
 							vertical-align: top
@@ -1040,7 +1112,7 @@ header
 							.one-person
 								.person-name
 									font-size: 16px
-									font-weight: 600
+									font-weight: 400
 									font-style: normal
 									font-stretch: normal
 									line-height: normal
@@ -1050,7 +1122,7 @@ header
 								.person-detail
 									margin-top: 6px
 									font-size: 16px
-									font-weight: normal
+									font-weight: 300
 									font-style: normal
 									font-stretch: normal
 									line-height: normal
@@ -1060,14 +1132,17 @@ header
 		.crew-button
 			margin-top: 40px
 			height: 50px
+			align-self: flex-end
+			margin-right: 100px
+			min-width: 170px 
+			@media screen and (max-width: $breakpoint)
+				margin-right: 0
+				align-self: center
 			.container
 				position: absolute
 				display: inline-block
-				right: 15%
-				@media screen and (max-width: $breakpoint)
-					right: 50%
-					transform: translateX(50%)
-					min-width: 170px 
+				// right: 15%
+				min-width: 170px 
 				.button
 					cursor: pointer
 					-webkit-user-select: none
@@ -1075,7 +1150,7 @@ header
 					display: inline-block
 					opacity: 0.6
 					font-size: 41px
-					font-weight: 600
+					font-weight: 400
 					font-style: normal
 					font-stretch: normal
 					line-height: normal
@@ -1103,8 +1178,8 @@ header
 		// *
 		// 	border: solid 1px white
 		.section-wrapper
-			width: 90%
-			//max-width: 1200px
+			width: 85%
+			max-width: 1400px
 			.need-padding-top
 				margin-top: 60px
 				@media screen and (max-width: $breakpoint_sm)
@@ -1118,7 +1193,7 @@ header
 						font-size: 20px
 						height: 28px
 					font-size: 28px
-					font-weight: bold
+					font-weight: 400
 					letter-spacing: 1px
 					color: #50e6b4
 				.og-section-logo-wrapper
@@ -1220,7 +1295,7 @@ header
 					top: 20px
 					line-height: 1.06
 					font-size: 14px
-					font-weight: bold
+					font-weight: 400
 					letter-spacing: 1px
 					text-align: left
 					color: #ffffff
@@ -1236,7 +1311,7 @@ header
 					top: 10px
 					font-size: 16px
 					line-height: 1.2
-					font-weight: 600
+					font-weight: 400
 					letter-spacing: 1px
 					text-align: left
 					color: #191455
@@ -1258,7 +1333,7 @@ footer
 				display: initial
 		.copyright
 			display: inline-block
-			font-weight: normal
+			font-weight: 300
 			font-style: normal
 			font-stretch: normal
 			line-height: normal
@@ -1286,7 +1361,7 @@ footer
 				margin-right: 18px
 				display: inline-block
 				opacity: 0.5
-				font-weight: normal
+				font-weight: 300
 				font-style: normal
 				font-stretch: normal
 				line-height: normal
