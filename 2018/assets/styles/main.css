@@ -569,7 +569,11 @@ header {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding-top: 30px; }
+    padding-top: 30px;
+    padding-bottom: 120px; }
+    @media screen and (max-width: 375px) {
+      .page-wrapper #description {
+        padding-bottom: 50px; } }
     .page-wrapper #description .section-wrapper {
       width: 90%;
       max-width: 1450px; }
