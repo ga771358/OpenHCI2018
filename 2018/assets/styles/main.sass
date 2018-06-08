@@ -487,6 +487,9 @@ header
 		display: flex
 		justify-content: center
 		padding-top: 30px
+		padding-bottom: 120px
+		@media screen and (max-width: $breakpoint-sm)
+			padding-bottom: 50px
 		.section-wrapper
 			width: 85%
 			max-width: 1400px
@@ -1113,6 +1116,7 @@ header
 							vertical-align: top
 							width: 22px
 							height: 100%
+							z-index: 1
 							.team-name
 								display: inline-block
 								background-color: #d70050
@@ -1121,33 +1125,35 @@ header
 								color: $bg
 								padding: 3px
 								padding-right: 60px
+								z-index: 2
 							.program
-								transform: rotate(-90deg) translateY(-79px) translateX(-74px)
+								transform: rotate(-90deg) translateY(-76px) translateX(-70px)
 							.human-resource
-								transform: rotate(-90deg) translateY(-130px) translateX(-126px)
+								transform: rotate(-90deg) translateY(-124px) translateX(-119px)
 							.web-service
-								transform: rotate(-90deg) translateY(-99px) translateX(-94px)
+								transform: rotate(-90deg) translateY(-94px) translateX(-89px)
 							.tech
-								transform: rotate(-90deg) translateY(-51px) translateX(-48px)
+								transform: rotate(-90deg) translateY(-50px) translateX(-45px)
 							.lecture
-								transform: rotate(-90deg) translateY(-74px) translateX(-71px)
+								transform: rotate(-90deg) translateY(-70px) translateX(-67px)
 							.exhibition
-								transform: rotate(-90deg) translateY(-136px) translateX(-133px)
+								transform: rotate(-90deg) translateY(-129px) translateX(-125px)
 							.publicity
-								transform: rotate(-90deg) translateY(-83px) translateX(-79px)
+								transform: rotate(-90deg) translateY(-78px) translateX(-75px)
 							.visual-design
-								transform: rotate(-90deg) translateY(-110px) translateX(-107px)
+								transform: rotate(-90deg) translateY(-105px) translateX(-100px)
 							.sponsorship
-								transform: rotate(-90deg) translateY(-106px) translateX(-102px)
+								transform: rotate(-90deg) translateY(-100px) translateX(-97px)
 							.treasurer
-								transform: rotate(-90deg) translateY(-90px) translateX(-86px)
+								transform: rotate(-90deg) translateY(-86px) translateX(-82px)
 							.film-crew
-								transform: rotate(-90deg) translateY(-85px) translateX(-81px)
+								transform: rotate(-90deg) translateY(-81px) translateX(-77px)
 							.TA
-								transform: rotate(-90deg) translateY(-68px) translateX(-66px)
+								transform: rotate(-90deg) translateY(-70px) translateX(-67px)
 						.need-more-margin-left
 							margin-left: 25px
 						.crew-content-block-right
+							overflow: hidden
 							margin-left: 16px
 							display: inline-block
 							vertical-align: top
@@ -1247,42 +1253,28 @@ header
 					padding-top: 40px
 					.logo-block
 						display: inline-block
-						//height: 45px
-						//width: 400px
 						width: 30%
 						max-width: 260px
 						margin-bottom: 50px
 						opacity: 0
 						@media screen and (max-width: $breakpoint)
-							//height: 35px
 							width: 45%
 							margin-bottom: 40px
 						.og-logo
-							//height: 100%
-							width: 85%
+							width: 90%
 							@media screen and (max-width: $breakpoint-sm)
 								width: 95%
 					.logo-small
 						display: inline-block
 						opacity: 0
 						@media screen and (max-width: $breakpoint)
-							//height: 30px
-							//width: 150px
 							width: 30%
 							margin-bottom: 40px
-						//height: 45px
-						//width: 250px //picture size
 						width: 18%
 						max-width: 234px
 						margin-bottom: 50px
 						.og-logo
-							//height: 80%
 							width: 85%
-							// display: block
-							// margin: auto
-							// padding: 1%
-							// padding-left: 5%
-							// padding-right: 5%
 
 	#contact
 		height: auto

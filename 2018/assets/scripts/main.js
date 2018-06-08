@@ -303,7 +303,12 @@ var crew = 0;
 var block_list = $("#crew-slide-id").children();
 var block_list_length = block_list.length;
 var total_block_size = 0;
-var temp_left_now; // record last slide block 's left
+var temp_left_now;
+
+  // variable for tect block
+var variable_for_six = 0;
+var first_content_div = $(block_list[6]).children(".crew-content-block-right")[0];
+var first_content_div_width = $(first_content_div).width();
 
 // calc the total width
 for(var j=0;j<block_list_length;j++){
@@ -316,6 +321,14 @@ $("#button-crew-left").click(function(){
 		return;
 	}
 	
+	//判斷是tech的時候
+	if($(document).width() <501 && variable_for_six == 1 && crew == 6){
+		$(first_content_div).css("margin-left","16px");
+		$(first_content_div).animate({left: 0,width: first_content_div_width},500);
+		variable_for_six = 0;
+		return;
+	}
+
 	crew = crew - 2;
 
 	//計算位移的大小（crew-content-block & empty-block)
@@ -329,14 +342,18 @@ $("#button-crew-left").click(function(){
 	//變負數
 	total_size_need_to_slide = -total_size_need_to_slide;
 	$(".slide-block").css("left",total_size_need_to_slide+"px");
+	console.log(crew);
 });
 
 $("#button-crew-right").click(function(){
-	console.log(crew);
 	
 	//最右邊了
 	var parent_width = $("#crew-slide-id").width();
 	var document_width = $(document).width();
+	
+	if(crew == 22 ){
+		return;
+	}
 	if( document_width <= 800  && total_block_size < (parent_width + temp_left_now - 80) ){
 		return;
 	}
@@ -344,6 +361,13 @@ $("#button-crew-right").click(function(){
 		return;
 	}
 
+	//判斷是tech的時候
+	if($(document).width() <501 && variable_for_six == 0 && crew == 6){
+		$(first_content_div).css("margin-left","0px");
+		$(first_content_div).animate({left: -first_content_div_width,width: 0},500);
+		variable_for_six = 1;
+		return;
+	}
 	crew = crew + 2;
 
 	//計算位移的大小（crew-content-block & empty-block)
@@ -357,6 +381,7 @@ $("#button-crew-right").click(function(){
 	//變負數
 	total_size_need_to_slide = -total_size_need_to_slide;
 	$(".slide-block").css("left",total_size_need_to_slide+"px");
+	console.log(crew);
 });
 
 // map section
