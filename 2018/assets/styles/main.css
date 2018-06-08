@@ -82,9 +82,9 @@ header {
   background: -webkit-linear-gradient(#191456, rgba(25, 20, 86, 0.8), rgba(25, 20, 86, 0));
   background: -o-linear-gradient(#191456, rgba(25, 20, 86, 0.8), rgba(25, 20, 86, 0));
   background: linear-gradient(#191456, rgba(25, 20, 86, 0.8), rgba(25, 20, 86, 0));
-  -webkit-transition: background 0.3s;
-  -o-transition: background 0.3s;
-  transition: background 0.3s;
+  -webkit-transition: background 1s;
+  -o-transition: background 1s;
+  transition: background 1s;
   padding: 0 50px; }
   @media screen and (max-width: 1000px) {
     header {
@@ -347,18 +347,6 @@ header {
     height: 100vh;
     padding: 0;
     border-bottom: none; }
-    .page-wrapper #landing::after {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100px;
-      background: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 20, 86, 0)), color-stop(rgba(25, 20, 86, 0.8)), to(#191456));
-      background: -webkit-linear-gradient(rgba(25, 20, 86, 0), rgba(25, 20, 86, 0.8), #191456);
-      background: -o-linear-gradient(rgba(25, 20, 86, 0), rgba(25, 20, 86, 0.8), #191456);
-      background: linear-gradient(rgba(25, 20, 86, 0), rgba(25, 20, 86, 0.8), #191456); }
     .page-wrapper #landing .section-wrapper {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -375,45 +363,41 @@ header {
         fill: #1d1762; }
         .page-wrapper #landing svg > *:hover {
           fill: #d70050; }
-    .page-wrapper #landing #screen {
-      position: absolute;
-      width: auto;
-      height: 100%;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); }
-      @media screen and (min-aspect-ratio: 16 / 9) {
-        .page-wrapper #landing #screen {
-          width: 100%;
-          height: auto; } }
     .page-wrapper #landing .screen {
-      width: 70%;
+      width: 100%;
+      height: 100%;
       position: absolute;
-      top: 50%;
-      right: 10%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      background-color: #28286E; }
-      .page-wrapper #landing .screen::before {
-        content: "";
-        display: block;
-        width: 100%;
-        padding-top: 70%; }
-      .page-wrapper #landing .screen .animate-light, .page-wrapper #landing .screen .mouse-light, .page-wrapper #landing .screen .mask {
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      background: -webkit-gradient(linear, left top, left bottom, from(#191455), to(#0F0A32));
+      background: -webkit-linear-gradient(#191455, #0F0A32);
+      background: -o-linear-gradient(#191455, #0F0A32);
+      background: linear-gradient(#191455, #0F0A32); }
+      .page-wrapper #landing .screen #screen {
+        position: absolute;
+        width: auto;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+        @media screen and (min-aspect-ratio: 16 / 9) {
+          .page-wrapper #landing .screen #screen {
+            width: 100%;
+            height: auto; } }
+      .page-wrapper #landing .screen .mask {
         width: 100%;
         height: 100%;
         position: absolute;
         top: 0;
-        left: 0; }
-      .page-wrapper #landing .screen .mask {
-        border: 0;
-        width: calc(100% + 10px);
-        height: calc(100% + 10px);
-        top: -5px;
-        left: -5px; }
+        left: 0;
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 15, 68, 0)), color-stop(rgba(20, 15, 68, 0.8)), to(rgba(20, 15, 68, 0)));
+        background: -webkit-linear-gradient(rgba(20, 15, 68, 0), rgba(20, 15, 68, 0.8), rgba(20, 15, 68, 0));
+        background: -o-linear-gradient(rgba(20, 15, 68, 0), rgba(20, 15, 68, 0.8), rgba(20, 15, 68, 0));
+        background: linear-gradient(rgba(20, 15, 68, 0), rgba(20, 15, 68, 0.8), rgba(20, 15, 68, 0));
+        pointer-events: none; }
     .page-wrapper #landing .titles {
       width: 85%;
       position: absolute;

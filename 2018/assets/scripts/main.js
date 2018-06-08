@@ -11,6 +11,26 @@ $(".menu-btn,.black-screen").on("click", function() {
 	$(".m-menu-opener").removeClass('close');
 })
 
+//glitch
+var frequency = 5;
+var glitchCount = 0;
+function glitch() {
+	requestAnimationFrame(glitch);
+	glitchCount++;
+	if(glitchCount == frequency) {
+		if(Math.random() < 0.1) {
+			var ran = Math.round(Math.random()*4);
+			$(".glitch").removeClass('active');
+			$("#logo"+ran).addClass('active');
+		} else {
+			$(".glitch").removeClass('active');
+			$("#logo0").addClass('active');
+		}
+		glitchCount = 0;
+	}
+}
+glitch();
+
 //scrollmagic init
 var controller = new ScrollMagic.Controller();
 
