@@ -11,23 +11,25 @@ $(".menu-btn,.black-screen").on("click", function() {
 	$(".m-menu-opener").removeClass('close');
 })
 
-//切換menu動畫樣式
-function changeMenuAnimate(index) {
-	$(".menu").removeClass('menu-cir');
-	$(".menu").removeClass('menu-fadein');
-	$(".menu").removeClass('menu-slidein');
-	switch(index) {
-		case 1:
-			$(".menu").addClass('menu-cir');
-			break;
-		case 2:
-			$(".menu").addClass('menu-fadein');
-			break;
-		case 3:
-			$(".menu").addClass('menu-slidein');
-			break;
+//glitch
+var frequency = 5;
+var glitchCount = 0;
+function glitch() {
+	requestAnimationFrame(glitch);
+	glitchCount++;
+	if(glitchCount == frequency) {
+		if(Math.random() < 0.1) {
+			var ran = Math.round(Math.random()*4);
+			$(".glitch").removeClass('active');
+			$("#logo"+ran).addClass('active');
+		} else {
+			$(".glitch").removeClass('active');
+			$("#logo0").addClass('active');
+		}
+		glitchCount = 0;
 	}
 }
+glitch();
 
 //scrollmagic init
 var controller = new ScrollMagic.Controller();

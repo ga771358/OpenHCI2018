@@ -32,8 +32,8 @@
     <section id="landing">
       <div class="section-wrapper">
         <div class="screen">
-          <div class="animate-light"></div>
-          <div class="mouse-light"></div><img src="assets/images/animism.png" alt="" class="mask"/>
+          <canvas id="screen"></canvas>
+          <div class="mask"></div>
         </div>
         <div class="titles">
           <div class="title-wrapper">
@@ -310,7 +310,7 @@
             <p>報名表單包含「資料填寫」和「IDCard 製作」兩部份：</p>
             <p class="dot">「資料填寫」包含個人基本資料、相關經歷等內容。</p>
             <p class="dot">「IDCard 製作」內容包含 「個人簡歷」 、「作品集」與「問題回答」。請依格式製作一份三頁之A4橫式PDF檔，檔案上傳至個人雲端（Google Drive, Dropbox, etc）後，再將雲端連結貼上報名表單送出。</p>
-            <p class="highlight">IDCard 內容說明</p>
+            <div class="highlight">IDCard 內容說明</div>
             <p>第一頁｜個人簡歷：請放個人簡歷，表達格式不限。</p>
             <p>第二頁｜作品集：請放上個人最滿意的作品（研究、專題、設計皆可），可透過文字、圖片或另附影片表達。</p>
             <p>第三頁｜問題回答：請從你的經驗中去發想並回答以下兩問題，可透過文字、圖片或另附影片表達，數量、格式均不限。</p>
@@ -319,7 +319,7 @@
             <p class="tab">⁃	 那項日常物品為何</p>
             <p class="tab">⁃	 這新賦予的生命意義為何</p>
             <p class="tab">⁃	 「它」與人會有什麼樣的互動</p>
-            <p class="highlight">IDCard 格式設定</p>
+            <div class="highlight">IDCard 格式設定</div>
             <p>1. IDCard 檔案請自行製作與編排，並輸出PDF檔。</p>
             <p>2. IDCard 檔名格式： IDCard_姓名 (範例：IDCard_王曉明)。</p>
             <p>3. 若檔案格式或檔名格式不符，造成漏檔，報名者請自行負責。</p>
@@ -706,7 +706,7 @@
   </div>
   <footer id="footer">
     <div class="footer-wrapper">
-      <p class="copyright need-margin-right">＠COPYRIGHT 2018 OpenHCI'18</p><br/>
+      <p class="copyright need-margin-right">© COPYRIGHT 2018 OpenHCI'18</p><br/>
       <div class="url-group">
         <div class="part1"><a href="#footer" class="div-url">2017</a><a href="#footer" class="div-url">2016</a><a href="#footer" class="div-url">2015</a><a href="#footer" class="div-url">2014</a></div>
         <div class="part2"><a href="#footer" class="div-url">2013</a><a href="#footer" class="div-url">2012</a><a href="#footer" class="div-url">2011</a><a href="#footer" class="div-url">2009</a></div>
@@ -717,11 +717,12 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ColorPropsPlugin.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.4/pixi.min.js"></script>
-<script src="assets/scripts/main.js"></script>
-<script src="assets/scripts/landing.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcF4jmxdoDeeDWS_1TdOmkFZ8Hs4kzQxs&amp;callback=initMap" async="" defer=""></script>
 <script src="https://www.youtube.com/iframe_api"></script>
+<script src="assets/scripts/main.js"></script>
+<script src="assets/scripts/screen2.js"></script>
