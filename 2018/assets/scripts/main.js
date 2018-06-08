@@ -265,34 +265,29 @@ $("#button-crew-right").click(function(){
 	
 
 	// //判斷是tech-studio的時候
-	if( variable_for_tech_studio == 0 && crew == 6){
-		// $(tech_studio_right_div).css("margin-left","0px");
+	if( document_width <= 550 && variable_for_tech_studio == 0 && crew == 6){
 		$(tech_studio_right_div).animate({left: -tech_studio_right_div_width,width: 0,marginLeft: '-=16px'},500);
 		variable_for_tech_studio = 1;
 		return;
 	}
 	// //判斷是TA_team_design的時候
-	if( variable_for_TA_team_design == 0 && crew == 22){
-		// $(TA_team_design_first_right_div).css("margin-left","0px");
+	if( document_width <= 850 && variable_for_TA_team_design == 0 && crew == 22){
 		$(TA_team_design_first_right_div).animate({left: -TA_team_design_first_right_div_width,width: 0,marginLeft: '-=16px'},500);
 		variable_for_TA_team_design = 1;
 		return;
 	}
-	if( variable_for_TA_team_design == 1 && crew == 22){
-		// $(TA_team_design_second_right_div).css("margin-left","0px");
+	if( document_width <= 850 && variable_for_TA_team_design == 1 && crew == 22){
 		$(TA_team_design_second_right_div).animate({left: -TA_team_design_second_right_div_width,width: 0,marginLeft: '-=16px'},500);
 		variable_for_TA_team_design = 2;
 		return;
 	}
 	// //判斷是TA_team_tech的時候
-	if( variable_for_TA_team_tech == 0 && crew == 24){
-		// $(TA_team_tech_first_right_div).css("margin-left","0px");
+	if( document_width <= 850 && variable_for_TA_team_tech == 0 && crew == 24){
 		$(TA_team_tech_first_right_div).animate({left: -TA_team_tech_first_right_div_width,width: 0,marginLeft: '-=16px'},500);
 		variable_for_TA_team_tech = 1;
 		return;
 	}
-	if( variable_for_TA_team_tech == 1 && crew == 24){
-		// $(TA_team_tech_second_right_div).css("margin-left","0px");
+	if( document_width <= 850 && variable_for_TA_team_tech == 1 && crew == 24){
 		$(TA_team_tech_second_right_div).animate({left: -TA_team_tech_second_right_div_width,width: 0,marginLeft: '-=16px'},500);
 		variable_for_TA_team_tech = 2;
 		return;
