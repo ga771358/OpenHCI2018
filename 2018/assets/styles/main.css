@@ -569,7 +569,11 @@ header {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding-top: 30px; }
+    padding-top: 30px;
+    padding-bottom: 120px; }
+    @media screen and (max-width: 375px) {
+      .page-wrapper #description {
+        padding-bottom: 50px; } }
     .page-wrapper #description .section-wrapper {
       width: 90%;
       max-width: 1450px; }
@@ -1401,7 +1405,7 @@ header {
                 width: 45%;
                 margin-bottom: 40px; } }
             .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block .og-logo {
-              width: 85%; }
+              width: 90%; }
               @media screen and (max-width: 375px) {
                 .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block .og-logo {
                   width: 95%; } }
