@@ -112,8 +112,6 @@ header {
     position: absolute;
     top: calc(100vh - 100px);
     background: none; }
-    header.atLanding::before {
-      opacity: 0; }
     @media screen and (max-width: 1000px) {
       header.atLanding {
         top: calc(100vh - 70px); } }
@@ -442,7 +440,7 @@ header {
           background: linear-gradient(rgba(25, 20, 86, 0), rgba(25, 20, 86, 0.2), #191456); }
           @media screen and (max-width: 1000px) {
             .page-wrapper #landing .screen .mask::after {
-              width: 70px; } }
+              height: 70px; } }
     .page-wrapper #landing .titles {
       width: 85%;
       position: absolute;
