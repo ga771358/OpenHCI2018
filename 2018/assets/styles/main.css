@@ -1328,7 +1328,7 @@ header {
               .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-left .team-name {
                 display: inline-block;
                 background-color: #d70050;
-                font-weight: 400;
+                font-weight: 600;
                 font-size: 20px;
                 color: #191456;
                 padding: 3px;
@@ -1447,7 +1447,7 @@ header {
         .page-wrapper #crew .crew-button .container .button {
           cursor: pointer;
           -webkit-user-select: none;
-          border-bottom: solid 3px white;
+          border-bottom: solid 1.5px white;
           display: inline-block;
           font-size: 41px;
           font-weight: 400;
@@ -1461,14 +1461,7 @@ header {
           -webkit-transition: 0.2s;
           -o-transition: 0.2s;
           transition: 0.2s;
-          -webkit-transform: scale(1);
-          -ms-transform: scale(1);
-          transform: scale(1);
           top: 0px; }
-          .page-wrapper #crew .crew-button .container .button:hover {
-            -webkit-transform: scale(1.15);
-            -ms-transform: scale(1.15);
-            transform: scale(1.15); }
         .page-wrapper #crew .crew-button .container #button-crew-left {
           padding-left: 30px;
           opacity: 0.6; }

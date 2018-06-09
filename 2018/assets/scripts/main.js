@@ -303,6 +303,10 @@ var crew = 0;
 var block_list = $("#crew-slide-id").children();
 var block_list_length = block_list.length;
 
+// for button
+var button_left_able = 0;
+var button_right_able = 1;
+
 // variable for block of more than one line
 var variable_for_tech_studio = 0;
 var tech_studio_right_div = $(block_list[6]).children(".crew-content-block-right")[0];
@@ -334,6 +338,7 @@ $("#button-crew-left").click(function(){
 	
 	//上面沒被return的話，就表示可以滑了，所以右按鈕開啟
 	$("#button-crew-right").css("opacity","1");
+	button_right_able = 1;
 
 	// //判斷是TA_team_tech的時候
 	if( variable_for_TA_team_tech == 2 && crew == 24){
@@ -376,7 +381,11 @@ $("#button-crew-left").click(function(){
 	$(".slide-block").css("left",-total_size_need_to_slide+"px");
 	
 	//如果是最左了，就讓左按鈕暗
-	if(crew == 0){ $("#button-crew-left").css("opacity","0.6"); }
+	if(crew == 0){ 
+		$("#button-crew-left").css("opacity","0.6");
+		$("#button-crew-left").attr("src","assets/images/crew-section/icon-left.svg");
+		button_left_able = 0;
+	}
 });
 
 $("#button-crew-right").click(function(){	
@@ -390,6 +399,7 @@ $("#button-crew-right").click(function(){
 
 	//上面沒被return的話，就表示可以滑了，所以右按鈕開啟
 	$("#button-crew-left").css("opacity","1");
+	button_left_able = 1;
 
 	// //判斷是tech-studio的時候
 	if( document_width < 520 && variable_for_tech_studio == 0 && crew == 6){
@@ -418,6 +428,8 @@ $("#button-crew-right").click(function(){
 		$(TA_team_tech_second_right_div).animate({left: -TA_team_tech_second_right_div_width,width: 0,marginLeft: '-=16px'},500);
 		variable_for_TA_team_tech = 2;
 		$("#button-crew-right").css("opacity","0.6"); //因為最右了，所以直接讓右按鈕暗
+		$("#button-crew-right").attr("src","assets/images/crew-section/icon-right.svg");
+		button_right_able = 0;
 		return;
 	}
 
@@ -433,7 +445,29 @@ $("#button-crew-right").click(function(){
 	$(".slide-block").css("left",-total_size_need_to_slide+"px");
 
 	//如果是最左了，就讓右按鈕暗
-	if(document_width >= 800 && crew == 24){ $("#button-crew-right").css("opacity","0.6"); }
+	if(document_width >= 800 && crew == 24){ 
+		$("#button-crew-right").css("opacity","0.6");
+		$("#button-crew-right").attr("src","assets/images/crew-section/icon-right.svg");
+		button_right_able = 0;
+	}
+});
+
+//crew button
+$("#button-crew-left").mouseover(function(){
+	if(button_left_able == 1){
+		$(this).attr("src","assets/images/crew-section/icon-left-red.svg");
+	}
+});
+$("#button-crew-left").mouseout(function(){
+	$(this).attr("src","assets/images/crew-section/icon-left.svg");
+});
+$("#button-crew-right").mouseover(function(){
+	if(button_right_able == 1){
+		$(this).attr("src","assets/images/crew-section/icon-right-red.svg");
+	}
+});
+$("#button-crew-right").mouseout(function(){
+	$(this).attr("src","assets/images/crew-section/icon-right.svg");
 });
 
 // map section
