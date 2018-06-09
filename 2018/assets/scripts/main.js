@@ -94,8 +94,8 @@ function scene3Enter(event) {
 	var tl = new TimelineMax({repeat:0});
 	tl.staggerFromTo($("#program .tabs .tab"), 0.5, {y:-50,opacity:0},{y:0,opacity:1},0.2);
 	tl.fromTo($("#program .program-content.active .program-img"), 0.5, {x:-30,opacity:0},{x:0,opacity:1});
-	tl.to($("#program .program-content.active .schedule-title p"), 0.5, {className:"+=colorAnimate"});
-	tl.staggerTo($("#program .program-content.active .schedule-content p"), 1, {className:"+=colorAnimate"},0.1);
+	tl.to($("#program .program-content.active .schedule-title p"), 0.2, {className:"+=colorAnimate"});
+	tl.staggerTo($("#program .program-content.active .schedule-content p"), 1, {className:"+=colorAnimate"},0.05);
 }
 
 //registration
@@ -138,12 +138,8 @@ scene7.on("enter", scene7Enter);
 
 function scene7Enter(event) {
 	var tl = new TimelineMax({repeat:0});
-	tl.to($("#organizer .og-section-title").eq(0), 0.8, {className:"+=colorAnimate"});
-	tl.staggerFromTo($("#organizer .og-section-logo-wrapper").eq(0).find('.logo-block'), 0.2, {x:-10,opacity:0},{x:0,opacity:1},0.2);
-	tl.to($("#organizer .og-section-title").eq(1), 0.8, {className:"+=colorAnimate"});
-	tl.staggerFromTo($("#organizer .og-section-logo-wrapper").eq(1).find('.logo-block'), 0.2, {x:-10,opacity:0},{x:0,opacity:1},0.2);
-	tl.to($("#organizer .og-section-title").eq(2), 0.8, {className:"+=colorAnimate"});
-	tl.staggerFromTo($("#organizer .og-section-logo-wrapper").eq(2).find('.logo-small'), 0.2, {x:-10,opacity:0},{x:0,opacity:1},0.2);
+	tl.to($("#organizer .og-section-title"), 0.8, {className:"+=colorAnimate"});
+	tl.fromTo($("#organizer .logo-block, #organizer .logo-small"), 0.5, {x:-10,opacity:0},{x:0,opacity:1});
 }
 
 //contact
@@ -275,8 +271,8 @@ $("#program .tab").on("click", function(){
 function tabAnimate(){
 	var tl = new TimelineMax({repeat:0});
 	tl.fromTo($("#program .program-content.active .program-img"), 0.5, {x:-30,opacity:0},{x:0,opacity:1});
-	tl.to($("#program .program-content.active .schedule-title p"), 0.5, {className:"+=colorAnimate"});
-	tl.staggerTo($("#program .program-content.active .schedule-content p"), 1, {className:"+=colorAnimate"},0.1);
+	tl.to($("#program .program-content.active .schedule-title p"), 0.2, {className:"+=colorAnimate"});
+	tl.staggerTo($("#program .program-content.active .schedule-content p"), 1, {className:"+=colorAnimate"},0.05);
 }
 
 //intro section
