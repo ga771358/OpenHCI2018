@@ -773,7 +773,7 @@ header {
             margin-top: 20px;
             display: block;
             font-size: 14px;
-            font-weight: normal;
+            font-weight: 300;
             font-style: normal;
             font-stretch: normal;
             line-height: 2;
@@ -1492,7 +1492,7 @@ header {
         .page-wrapper #crew .crew-button .container .button {
           cursor: pointer;
           -webkit-user-select: none;
-          border-bottom: solid 3px white;
+          border-bottom: solid 1.5px white;
           display: inline-block;
           font-size: 41px;
           font-weight: bold;
@@ -1506,14 +1506,7 @@ header {
           -webkit-transition: 0.2s;
           -o-transition: 0.2s;
           transition: 0.2s;
-          -webkit-transform: scale(1);
-          -ms-transform: scale(1);
-          transform: scale(1);
           top: 0px; }
-          .page-wrapper #crew .crew-button .container .button:hover {
-            -webkit-transform: scale(1.15);
-            -ms-transform: scale(1.15);
-            transform: scale(1.15); }
         .page-wrapper #crew .crew-button .container #button-crew-left {
           padding-left: 30px;
           opacity: 0.6; }
