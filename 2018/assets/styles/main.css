@@ -384,6 +384,17 @@ header {
       background: -webkit-linear-gradient(#191455, #0F0A32);
       background: -o-linear-gradient(#191455, #0F0A32);
       background: linear-gradient(#191455, #0F0A32); }
+      .page-wrapper #landing .screen::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        display: none; }
+        @media screen and (max-width: 1000px) {
+          .page-wrapper #landing .screen::after {
+            display: block; } }
       .page-wrapper #landing .screen #screen {
         position: absolute;
         width: auto;

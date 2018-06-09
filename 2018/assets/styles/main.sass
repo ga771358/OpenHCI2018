@@ -327,6 +327,17 @@ header
 			left: 0
 			overflow: hidden
 			background: linear-gradient(#191455, #0F0A32)
+			&::after
+				content: ""
+				width: 100%
+				height: 100%
+				top: 0
+				left: 0
+				position: absolute
+				display: none
+				@media screen and (max-width: $breakpoint)
+					display: block
+
 			#screen
 				position: absolute
 				width: auto
