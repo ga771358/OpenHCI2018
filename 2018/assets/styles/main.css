@@ -2,7 +2,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/
  * v2.0 | 20110126
  * License: none (public domain) */
-@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -47,6 +46,14 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: NotoSansUI;
+  src: url("./noto_sans_ui/NotoSansUI-Regular.ttf");
+  font-weight: normal; }
+@font-face {
+  font-family: NotoSansUI;
+  src: url("./noto_sans_ui/NotoSansUI-Bold.ttf");
+  font-weight: bold; }
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -54,8 +61,8 @@ table {
   outline: none; }
 
 html, body {
-  font-family: "Noto Sans TC", sans-serif;
-  font-weight: 300;
+  font-family: NotoSansUI, PingFangTC, "微軟正黑體", sans-serif;
+  font-weight: normal;
   letter-spacing: 2px;
   -webkit-transition: height 0.5s;
   -o-transition: height 0.5s;
@@ -123,12 +130,15 @@ header {
       header .menu .menu-container .out-site {
         border-left: 1px solid #fff; }
       header .menu .menu-container .menu-btn {
-        margin-left: 30px;
+        margin-left: 25px;
         color: #fff;
-        font-weight: 300;
-        font-size: 0.9em; }
+        font-weight: normal;
+        font-size: 0.9em;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto; }
         header .menu .menu-container .menu-btn:last-child {
-          margin-right: 30px; }
+          margin-right: 25px; }
         header .menu .menu-container .menu-btn::before {
           content: "";
           display: block;
@@ -592,7 +602,7 @@ header {
         display: inline-block;
         margin-top: 100px;
         font-size: 28px;
-        font-weight: 400;
+        font-weight: bold;
         letter-spacing: 1px;
         text-align: left;
         color: #50e6b4;
@@ -714,7 +724,7 @@ header {
             display: inline-block;
             height: 28px;
             font-size: 21px;
-            font-weight: 400;
+            font-weight: bold;
             font-style: normal;
             font-stretch: normal;
             line-height: normal;
@@ -728,7 +738,7 @@ header {
             margin-top: 20px;
             display: block;
             font-size: 14px;
-            font-weight: 300;
+            font-weight: normal;
             font-style: normal;
             font-stretch: normal;
             line-height: 2;
@@ -785,7 +795,7 @@ header {
         flex-wrap: wrap; }
         .page-wrapper #program .section-wrapper .tabs .tab {
           line-height: 1.5em;
-          font-weight: 400;
+          font-weight: bold;
           -webkit-box-flex: 0;
           -ms-flex: 0 0 auto;
           flex: 0 0 auto;
@@ -946,7 +956,8 @@ header {
               color: #50E6B4;
               font-size: 21px;
               margin-bottom: 20px;
-              font-weight: 400;
+              line-height: 1.5em;
+              font-weight: bold;
               display: -webkit-box;
               display: -ms-flexbox;
               display: flex;
@@ -1001,7 +1012,7 @@ header {
       .page-wrapper #registration .section-wrapper .registration-title {
         color: #50E6B4;
         font-size: 28px;
-        font-weight: 400;
+        font-weight: bold;
         margin: 40px 0;
         -ms-flex-item-align: start;
         align-self: flex-start; }
@@ -1037,7 +1048,7 @@ header {
           -ms-flex: 1;
           flex: 1;
           font-size: 21px;
-          font-weight: 400; }
+          font-weight: bold; }
           @media screen and (max-width: 1000px) {
             .page-wrapper #registration .section-wrapper .step .no {
               margin-bottom: 10px; } }
@@ -1048,7 +1059,7 @@ header {
           -ms-flex: 2;
           flex: 2;
           font-size: 21px;
-          font-weight: 400; }
+          font-weight: bold; }
           @media screen and (max-width: 1000px) {
             .page-wrapper #registration .section-wrapper .step .step-title {
               margin-bottom: 40px; } }
@@ -1069,12 +1080,12 @@ header {
           -ms-flex-align: start;
           align-items: flex-start; }
           .page-wrapper #registration .section-wrapper .step .step-content p {
-            margin-bottom: 15px; }
+            line-height: 2em; }
+          .page-wrapper #registration .section-wrapper .step .step-content .br {
+            margin: 10px; }
           @media screen and (max-width: 1000px) {
             .page-wrapper #registration .section-wrapper .step .step-content {
-              font-size: 14px; }
-              .page-wrapper #registration .section-wrapper .step .step-content p {
-                margin-bottom: 10px; } }
+              font-size: 14px; } }
           .page-wrapper #registration .section-wrapper .step .step-content .dot {
             margin-left: 20px; }
             .page-wrapper #registration .section-wrapper .step .step-content .dot::before {
@@ -1109,7 +1120,7 @@ header {
                 margin-left: 20px; } }
           .page-wrapper #registration .section-wrapper .step .step-content .highlight {
             padding: 10px;
-            font-weight: 400;
+            font-weight: bold;
             margin: 20px 0;
             background-color: #50E6B4;
             color: #191456; }
@@ -1168,7 +1179,7 @@ header {
           align-items: flex-start; }
           .page-wrapper #taichi .section-wrapper .section-left .container .title {
             font-size: 28px;
-            font-weight: 400;
+            font-weight: bold;
             font-style: normal;
             font-stretch: normal;
             line-height: normal;
@@ -1188,7 +1199,7 @@ header {
           .page-wrapper #taichi .section-wrapper .section-left .container .content {
             margin-top: 30px;
             font-size: 14px;
-            font-weight: 300;
+            font-weight: normal;
             font-style: normal;
             font-stretch: normal;
             line-height: 2;
@@ -1281,7 +1292,7 @@ header {
       align-items: flex-start; }
       .page-wrapper #crew .section-wrapper .crew-title {
         font-size: 28px;
-        font-weight: 400;
+        font-weight: bold;
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
@@ -1328,7 +1339,7 @@ header {
               .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-left .team-name {
                 display: inline-block;
                 background-color: #d70050;
-                font-weight: 400;
+                font-weight: bold;
                 font-size: 20px;
                 color: #191456;
                 padding: 3px;
@@ -1398,7 +1409,7 @@ header {
                 margin-top: 48px; }
               .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right .one-person .person-name, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right2 .one-person .person-name, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right3 .one-person .person-name {
                 font-size: 16px;
-                font-weight: 400;
+                font-weight: bold;
                 font-style: normal;
                 font-stretch: normal;
                 line-height: normal;
@@ -1420,7 +1431,7 @@ header {
                 height: 24px;
                 margin-top: 6px;
                 font-size: 16px;
-                font-weight: 300;
+                font-weight: normal;
                 font-style: normal;
                 font-stretch: normal;
                 line-height: normal;
@@ -1450,7 +1461,7 @@ header {
           border-bottom: solid 3px white;
           display: inline-block;
           font-size: 41px;
-          font-weight: 400;
+          font-weight: bold;
           font-style: normal;
           font-stretch: normal;
           line-height: normal;
@@ -1505,7 +1516,7 @@ header {
         align-items: flex-start; }
         .page-wrapper #organizer .section-wrapper .og-section-block .og-section-title {
           font-size: 28px;
-          font-weight: 400;
+          font-weight: bold;
           letter-spacing: 1px;
           color: #50E6B4; }
           .page-wrapper #organizer .section-wrapper .og-section-block .og-section-title span {
@@ -1602,7 +1613,7 @@ header {
           top: 20px;
           line-height: 1.06;
           font-size: 14px;
-          font-weight: 400;
+          font-weight: bold;
           letter-spacing: 1px;
           text-align: left;
           color: #ffffff; }
@@ -1619,7 +1630,7 @@ header {
           top: 10px;
           font-size: 16px;
           line-height: 1.2;
-          font-weight: 400;
+          font-weight: bold;
           letter-spacing: 1px;
           text-align: left;
           color: #191455; }
@@ -1655,7 +1666,7 @@ footer {
           display: initial; } }
     footer .footer-wrapper .copyright {
       display: inline-block;
-      font-weight: 300;
+      font-weight: normal;
       font-style: normal;
       font-stretch: normal;
       line-height: normal;
@@ -1693,7 +1704,7 @@ footer {
         margin-right: 18px;
         display: inline-block;
         opacity: 0.5;
-        font-weight: 300;
+        font-weight: normal;
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
@@ -1702,7 +1713,8 @@ footer {
         color: #ffffff; }
         footer .footer-wrapper .url-group .div-url:hover {
           opacity: 1;
-          color: #d70050; }
+          color: #d70050;
+          font-weight: bold; }
     footer .footer-wrapper .button-group {
       display: inline-block;
       position: absolute;
