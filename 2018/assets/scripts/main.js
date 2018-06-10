@@ -532,7 +532,7 @@ $(rightbtn).mouseout(function(){
 
 Hammer_leftbtn.on("tap", function(ev) {
     if(ev.type == "tap") {
-		if(button_left_able == 1){
+		if(button_left_able == 1 && $("#crew").width() <= 1000){
 			$(leftbtn).attr("src","assets/images/crew-section/icon-left-red.svg");
 			setTimeout(function(){
 				$(leftbtn).attr("src","assets/images/crew-section/icon-left.svg");
@@ -543,7 +543,7 @@ Hammer_leftbtn.on("tap", function(ev) {
 
 Hammer_rightbtn.on("tap", function(ev) {
     if(ev.type == "tap") {
-		if(button_right_able == 1){
+		if(button_right_able == 1 && $("#crew").width() <= 1000){
 			$(rightbtn).attr("src","assets/images/crew-section/icon-right-red.svg");
 			setTimeout(function(){
 				$(rightbtn).attr("src","assets/images/crew-section/icon-right.svg");
