@@ -614,7 +614,6 @@ header {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding-top: 30px;
     padding-bottom: 120px; }
     @media screen and (max-width: 1000px) {
       .page-wrapper #description {
@@ -674,7 +673,7 @@ header {
           max-width: 100%; }
           @media screen and (max-width: 1000px) {
             .page-wrapper #description .section-wrapper .descript-right .descript-img {
-              top: -45px;
+              top: -20px;
               height: auto; } }
         .page-wrapper #description .section-wrapper .descript-right .descript-content {
           width: 100%;
