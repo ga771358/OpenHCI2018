@@ -1321,6 +1321,7 @@ header {
     -ms-flex-pack: end;
     justify-content: flex-end; }
     .page-wrapper #crew .section-wrapper {
+      height: auto;
       width: 85%;
       max-width: 1400px;
       display: -webkit-box;
