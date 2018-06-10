@@ -1161,7 +1161,7 @@ header
 								font-weight: bold
 								font-size: 20px
 								color: $bg
-								padding: 3px
+								// padding: 1px
 								padding-right: 46px
 								z-index: 2
 							.program
@@ -1190,8 +1190,6 @@ header
 								transform: rotate(-90deg) translateY(-107px) translateX(-104px)
 							.TA-team-tech
 								transform: rotate(-90deg) translateY(-95px) translateX(-92px)
-						.need-more-margin-left
-							margin-left: 25px
 						.crew-content-block-right,.crew-content-block-right2,.crew-content-block-right3
 							overflow: hidden
 							margin-left: 16px
@@ -1199,7 +1197,7 @@ header
 							vertical-align: top
 							width: calc(100%-20px)
 							.need-margin-top
-								margin-top: 48px
+								margin-top: 18px
 							.one-person
 								.person-name
 									font-size: 14px
@@ -1232,7 +1230,8 @@ header
 									letter-spacing: 1px
 									text-align: left
 									color: #ffffff
-
+						.need-more-margin-left
+							margin-left: 130px
 		.crew-button
 			margin-top: 40px
 			height: 50px
@@ -1446,7 +1445,7 @@ footer
 			@media screen and (max-width: $breakpoint-sm)
 				font-size: 14px
 		.need-margin-right
-			margin-right: 38px	
+			margin-right: 28px	
 		.url-group
 			display: inline-block
 			@media screen and (max-width: $breakpoint-of-footer)
@@ -1470,6 +1469,7 @@ footer
 				letter-spacing: 1px
 				text-align: left
 				color: #ffffff
+				transition-duration: 0.25s
 				&:hover
 					opacity: 1
 					color: $red
