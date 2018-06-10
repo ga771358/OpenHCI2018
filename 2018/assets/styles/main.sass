@@ -635,6 +635,8 @@ header
 					display: flex
 					flex-direction: column
 					align-items: flex-start
+					.br
+						margin: 10px
 		span
 			opacity: 0
 	#intro
@@ -714,20 +716,20 @@ header
 	#interlude
 		height: auto
 		padding: 0
+		.section-wrapper
+			height: auto
 		.moving
 			width: 100%
 			height: auto
 			display: flex
 			align-items: center
-			img
-				// flex: 1
+			.moving-container
 				width: 100%
+				flex: 0 0 auto
 				@media screen and (max-width: $breakpoint) 
 					width: 200%
-
-
-				// height: auto
-				// float: left
+			img
+				width: 100%
 
 	#program
 		height: auto
