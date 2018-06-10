@@ -458,14 +458,21 @@ var slide_block = document.getElementById('crew-slide-id');
 var Hammer_leftbtn = new Hammer(leftbtn);
 var Hammer_rightbtn = new Hammer(rightbtn);
 var Hammer_slide_block = new Hammer(slide_block);
+var left_pan = 0, right_pan;
 
 // listen to events...
-Hammer_slide_block.on("panleft panright", function(ev) {
+Hammer_slide_block.on("panend panleft panright", function(ev) {
 	if(ev.type == "panleft") {
-		$(rightbtn).click();
+		left_pan = 1;
+		right_pan = 0;
 	}
 	if(ev.type == "panright") {
-		$(leftbtn).click();
+		left_pan = 0;
+		right_pan = 1;
+	}
+	if(ev.type == "panend") {
+		if(left_pan) $(rightbtn).click();
+		if(right_pan) $(leftbtn).click();
 	}
 });
 
@@ -490,8 +497,6 @@ Hammer_rightbtn.on("tap", function(ev) {
 		}
 	}
 });
-
-
 
 // map section
 var map, styledMapType;
