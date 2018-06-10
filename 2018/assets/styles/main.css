@@ -606,10 +606,10 @@ header {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding-top: 30px;
     padding-bottom: 120px; }
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1000px) {
       .page-wrapper #description {
+        padding-top: 60px;
         padding-bottom: 50px; } }
     .page-wrapper #description .section-wrapper {
       width: 85%;
@@ -665,7 +665,7 @@ header {
           max-width: 100%; }
           @media screen and (max-width: 1000px) {
             .page-wrapper #description .section-wrapper .descript-right .descript-img {
-              top: -45px;
+              top: -20px;
               height: auto; } }
         .page-wrapper #description .section-wrapper .descript-right .descript-content {
           width: 100%;
