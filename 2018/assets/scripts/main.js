@@ -478,7 +478,7 @@ Hammer_slide_block.on("panend panleft panright", function(ev, ptr, thres) {
 			if(left_pan) $(rightbtn).click();
 			if(right_pan) $(leftbtn).click();
 		}
-		alert(dist/50);
+		
 	}
 });
 
