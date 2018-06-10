@@ -5,15 +5,21 @@
   <title>OpenHCI 2018 | 實物鏈</title>
   <link rel="stylesheet" href="assets/styles/main.css"/>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-  <meta name="title" content=""/>
-  <meta name="description" content=""/>
-  <meta name="keywords" content=""/>
-  <meta property="og:title" content=""/>
+  <meta name="title" content="OpenHCI 2018 | 實物鏈"/>
+  <meta name="description" content="「萬物有靈，互聯互網，原始信仰隱喻著未來社會。」物件本是空白主體，注入人類智慧，重獲新生。擁有了數位靈魂，物體與人類共生，通訊網絡緊密了彼此。「實物鏈」將解構對客體的認知，重構對物我的想像， 共構新一代城市物語。"/>
+  <meta name="keywords" content="OpenHCI 實物鏈"/>
+  <meta property="og:title" content="OpenHCI 2018 | 實物鏈"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content=""/>
   <meta property="og:image" content=""/>
-  <meta property="og:description" content=""/>
-  <meta property="og:site_name" content=""/>
+  <meta property="og:description" content="「萬物有靈，互聯互網，原始信仰隱喻著未來社會。」物件本是空白主體，注入人類智慧，重獲新生。擁有了數位靈魂，物體與人類共生，通訊網絡緊密了彼此。「實物鏈」將解構對客體的認知，重構對物我的想像， 共構新一代城市物語。"/>
+  <meta property="og:site_name" content="OpenHCI 2018 | 實物鏈"/>
+  <script>
+    //Ga
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-120612636-1', 'auto');
+    ga('send', 'pageview','進站pageview');
+  </script>
 </head>
 <body>
   <header class="atLanding"><a href="#landing" class="logo"><img src="assets/images/nav-logo.svg" alt=""/></a>
@@ -21,7 +27,7 @@
     <div class="menu menu-slidein">
       <div class="menu-bg"></div>
       <div class="menu-container">
-        <div class="in-site"><a id="menu0" href="#description" class="menu-btn">主題敘述</a><a id="menu1" href="#intro" class="menu-btn">工作坊介紹</a><a id="menu2" href="#program" class="menu-btn">工作坊日程</a><a id="menu3" href="#registration" class="menu-btn">報名方式</a><a id="menu4" href="#taichi" class="menu-btn">TAICHI合作</a><a id="menu5" href="#crew" class="menu-btn">籌備團隊</a><a id="menu6" href="#organizer" class="menu-btn">籌辦單位</a><a id="sign-up" href="" class="menu-btn">我要報名</a>
+        <div class="in-site"><a id="menu0" href="#description" class="menu-btn">主題敘述</a><a id="menu1" href="#intro" class="menu-btn">工作坊介紹</a><a id="menu2" href="#program" class="menu-btn">工作坊日程</a><a id="menu3" href="#registration" class="menu-btn">報名方式</a><a id="menu4" href="#taichi" class="menu-btn">TAICHI合作</a><a id="menu5" href="#crew" class="menu-btn">籌備團隊</a><a id="menu6" href="#organizer" class="menu-btn">籌辦單位</a><a id="sign-up" href="https://openhci2018.typeform.com/to/FhMMO0" target="_blank" class="menu-btn">我要報名</a>
         </div>
       </div>
     </div>
@@ -31,9 +37,8 @@
   <div class="page-wrapper">
     <section id="landing">
       <div class="section-wrapper">
-        <div class="screen">
-          <canvas id="screen"></canvas>
-          <div class="mask"></div>
+        <div class="screen"><img src="assets/images/light.png" alt="" class="light"/>
+          <div class="light-mask"></div><img src="assets/images/landing.png" alt="" class="mask"/>
         </div>
         <div class="titles">
           <div class="title-wrapper">
@@ -185,10 +190,9 @@
                 <p> <span>09:00 - 09:30</span><span>前情提要與分享</span></p>
                 <p> <span>09:30 - 10:30</span><span>演講 III 林昆穎</span></p>
                 <p> <span>10:30 - 10:50</span><span>中場休息</span></p>
-                <p> <span>10:50 - 11:50</span><span>演講 IV</span></p>
+                <p> <span>10:50 - 11:50</span><span>演講 IV 蔡文傑</span></p>
                 <p> <span>11:50 - 13:30</span><span>午餐時間</span></p>
-                <p> <span>13:30 - 14:00</span><span>數位製造</span></p>
-                <p> <span>14:00 - 16:30</span><span>點子發想</span></p>
+                <p> <span>13:30 - 16:30</span><span>點子發想</span></p>
                 <p> <span>16:30 - 18:00</span><span>主題討論與實作</span></p>
               </div>
             </div>
@@ -768,14 +772,20 @@
         <div class="og-section-block need-padding-top">
           <div class="og-section-title"> <span>SPONSOR</span></div>
           <div class="og-section-logo-wrapper">
-            <div class="logo-small"><img src="assets/images/organizer_logo/s_15.png" alt="" class="og-logo"/></div>
+            <!--.logo-small-->
+            <!--	img.og-logo(src="assets/images/organizer_logo/s_15.png", alt="")-->
             <div class="logo-small"><img src="assets/images/organizer_logo/s_14.png" alt="" class="og-logo"/></div>
-            <div class="logo-small"><img src="assets/images/organizer_logo/s_8.png" alt="" class="og-logo"/></div>
-            <div class="logo-small"><img src="assets/images/organizer_logo/s_9.png" alt="" class="og-logo"/></div>
+            <!--.logo-small-->
+            <!--	img.og-logo(src="assets/images/organizer_logo/s_8.png", alt="")-->
+            <!--.logo-small-->
+            <!--	img.og-logo(src="assets/images/organizer_logo/s_9.png", alt="")-->
             <div class="logo-small"><img src="assets/images/organizer_logo/s_16.png" alt="" class="og-logo"/></div>
-            <div class="logo-small"><img src="assets/images/organizer_logo/s_13.png" alt="" class="og-logo"/></div>
-            <div class="logo-small"><img src="assets/images/organizer_logo/s_7.png" alt="" class="og-logo"/></div>
-            <div class="logo-small"><img src="assets/images/organizer_logo/s_18.png" alt="" class="og-logo"/></div>
+            <!--.logo-small-->
+            <!--	img.og-logo(src="assets/images/organizer_logo/s_13.png", alt="")-->
+            <!--.logo-small-->
+            <!--	img.og-logo(src="assets/images/organizer_logo/s_7.png", alt="")-->
+            <!--.logo-small-->
+            <!--	img.og-logo(src="assets/images/organizer_logo/s_18.png", alt="")-->
           </div>
         </div>
       </div>
@@ -813,14 +823,13 @@
   </footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ColorPropsPlugin.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ColorPropsPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.4/pixi.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcF4jmxdoDeeDWS_1TdOmkFZ8Hs4kzQxs&amp;callback=initMap" async="" defer=""></script>
 <script src="https://www.youtube.com/iframe_api"></script>
 <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
 <script src="assets/scripts/main.js"></script>
-<script src="assets/scripts/screen2.js"></script>
