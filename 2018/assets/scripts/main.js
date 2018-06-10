@@ -330,7 +330,7 @@ $("#button-crew-left").click(function(){
 
 	// console.log("from:" + crew);
 	//如果是最左了，則不進行任何動作
-	if(crew == 0){ return;}
+	if(crew == 0){ return; }
 	
 	//上面沒被return的話，就表示可以滑了，所以右按鈕開啟
 	$("#button-crew-right").css("opacity","1");
@@ -369,7 +369,7 @@ $("#button-crew-left").click(function(){
 
 	//計算位移的大小（crew-content-block & empty-block & 5)
 	var total_size_need_to_slide = 0;
-	for(var i=0;i<crew;i++){
+	for(var i=0;i<crew;i++) {
 		total_size_need_to_slide += $(block_list[i]).width() + 5;
 	}
 
@@ -440,7 +440,7 @@ $("#button-crew-right").click(function(){
 	//do scroll
 	$(".slide-block").css("left",-total_size_need_to_slide+"px");
 
-	//如果是最左了，就讓右按鈕暗
+	//如果是最右了，就讓右按鈕暗
 	if(document_width >= 800 && crew == 24){ 
 		$("#button-crew-right").css("opacity","0.6");
 		$("#button-crew-right").attr("src","assets/images/crew-section/icon-right.svg");
@@ -449,22 +449,49 @@ $("#button-crew-right").click(function(){
 });
 
 //crew button
-$("#button-crew-left").mouseover(function(){
-	if(button_left_able == 1){
-		$(this).attr("src","assets/images/crew-section/icon-left-red.svg");
+var leftbtn = document.getElementById('button-crew-left');
+var rightbtn = document.getElementById('button-crew-right');
+var slide_block = document.getElementById('crew-slide-id');
+
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var Hammer_leftbtn = new Hammer(leftbtn);
+var Hammer_rightbtn = new Hammer(rightbtn);
+var Hammer_slide_block = new Hammer(slide_block);
+
+// listen to events...
+Hammer_slide_block.on("panleft panright", function(ev) {
+	if(ev.type == "panleft") {
+		$(rightbtn).click();
+	}
+	if(ev.type == "panright") {
+		$(leftbtn).click();
 	}
 });
-$("#button-crew-left").mouseout(function(){
-	$(this).attr("src","assets/images/crew-section/icon-left.svg");
-});
-$("#button-crew-right").mouseover(function(){
-	if(button_right_able == 1){
-		$(this).attr("src","assets/images/crew-section/icon-right-red.svg");
+
+Hammer_leftbtn.on("tap", function(ev) {
+    if(ev.type == "tap") {
+		if(button_left_able == 1){
+			$(leftbtn).attr("src","assets/images/crew-section/icon-left-red.svg");
+			setTimeout(function(){
+				$(leftbtn).attr("src","assets/images/crew-section/icon-left.svg");
+			},500);
+		}
 	}
 });
-$("#button-crew-right").mouseout(function(){
-	$(this).attr("src","assets/images/crew-section/icon-right.svg");
+
+Hammer_rightbtn.on("tap", function(ev) {
+    if(ev.type == "tap") {
+		if(button_right_able == 1){
+			$(rightbtn).attr("src","assets/images/crew-section/icon-right-red.svg");
+			setTimeout(function(){
+				$(rightbtn).attr("src","assets/images/crew-section/icon-right.svg");
+			},500);
+		}
+	}
 });
+
+
 
 // map section
 var map, styledMapType;
