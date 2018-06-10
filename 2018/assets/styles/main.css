@@ -1340,7 +1340,8 @@ header {
         display: inline-block;
         width: 100%;
         overflow: hidden;
-        opacity: 0; }
+        opacity: 0;
+        border-left: solid 1px white; }
         .page-wrapper #crew .section-wrapper .crew-content .blur-block {
           position: absolute;
           height: 100%;
@@ -1431,8 +1432,6 @@ header {
                 -webkit-transform: rotate(-90deg) translateY(-95px) translateX(-92px);
                 -ms-transform: rotate(-90deg) translateY(-95px) translateX(-92px);
                 transform: rotate(-90deg) translateY(-95px) translateX(-92px); }
-            .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .need-more-margin-left {
-              margin-left: 25px; }
             .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right2, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right3 {
               overflow: hidden;
               margin-left: 16px;
@@ -1440,7 +1439,7 @@ header {
               vertical-align: top;
               width: calc(100%-20px); }
               .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right .need-margin-top, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right2 .need-margin-top, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right3 .need-margin-top {
-                margin-top: 48px; }
+                margin-top: 18px; }
               .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right .one-person .person-name, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right2 .one-person .person-name, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right3 .one-person .person-name {
                 font-size: 14px;
                 font-weight: bold;
@@ -1472,6 +1471,8 @@ header {
                 letter-spacing: 1px;
                 text-align: left;
                 color: #ffffff; }
+            .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .need-more-margin-left {
+              margin-left: 130px; }
     .page-wrapper #crew .crew-button {
       margin-top: 40px;
       height: 50px;
