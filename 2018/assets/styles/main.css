@@ -1340,8 +1340,7 @@ header {
         display: inline-block;
         width: 100%;
         overflow: hidden;
-        opacity: 0;
-        border: solid 1px white; }
+        opacity: 0; }
         .page-wrapper #crew .section-wrapper .crew-content .blur-block {
           position: absolute;
           height: 100%;
@@ -1377,7 +1376,6 @@ header {
                 font-weight: bold;
                 font-size: 20px;
                 color: #191456;
-                padding: 1px;
                 padding-right: 46px;
                 z-index: 2; }
               .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-left .program {
