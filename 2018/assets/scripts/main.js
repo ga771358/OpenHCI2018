@@ -3,6 +3,11 @@ $(".m-menu-opener").on("click", function() {
 	$(".menu").toggleClass('active');
 	$(".black-screen").toggleClass('active');
 	$(".m-menu-opener").toggleClass('close');
+	if($("header").hasClass('atLanding')) {
+		$('html, body').animate({
+			scrollTop: $("#landing").height() - $("header").height()
+		}, 400);
+	}
 })
 
 $(".menu-btn,.black-screen").on("click", function() {

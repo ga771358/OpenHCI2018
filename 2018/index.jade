@@ -49,13 +49,16 @@ body
 		section#landing
 			.section-wrapper
 				//- include ./assets/images/landing.svg
-				.screen
+				//- .screen
 					canvas#screen
 					.mask
-				//- .screen
-					.animate-light
-					.mouse-light
-					img.mask(src="assets/images/animism.png", alt="")
+				.screen
+					//- .animate-light
+					//- .mouse-light
+					//- canvas#light
+					img.light(src="assets/images/light.png", alt="")
+					.light-mask
+					img.mask(src="assets/images/landing.png", alt="")
 
 				.titles
 					.title-wrapper
@@ -896,4 +899,4 @@ script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDcF4jmxdoDeeDWS_1T
 script(src="https://www.youtube.com/iframe_api")
 script(src="assets/scripts/main.js")
 //- script(src="assets/scripts/landing.js")
-script(src="assets/scripts/screen2.js")
+//- script(src="assets/scripts/screen2.js")
