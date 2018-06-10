@@ -609,7 +609,7 @@ header {
     padding-bottom: 120px; }
     @media screen and (max-width: 1000px) {
       .page-wrapper #description {
-        padding-top: 90px;
+        padding-top: 150px;
         padding-bottom: 50px; } }
     .page-wrapper #description .section-wrapper {
       width: 85%;
@@ -665,7 +665,7 @@ header {
           max-width: 100%; }
           @media screen and (max-width: 1000px) {
             .page-wrapper #description .section-wrapper .descript-right .descript-img {
-              top: -20px;
+              top: -15px;
               height: auto; } }
         .page-wrapper #description .section-wrapper .descript-right .descript-content {
           width: 100%;
