@@ -458,10 +458,10 @@ var slide_block = document.getElementById('crew-slide-id');
 var Hammer_leftbtn = new Hammer(leftbtn);
 var Hammer_rightbtn = new Hammer(rightbtn);
 var Hammer_slide_block = new Hammer(slide_block);
-var left_pan = 0, right_pan = 0;
+var left_pan = 0, right_pan = 0, dist = 0;
 
 // listen to events...
-Hammer_slide_block.on("panend panleft panright", function(ev) {
+Hammer_slide_block.on("panend panleft panright", function(ev, ptr, thres) {
 	if(ev.type == "panleft") {
 		left_pan = 1;
 		right_pan = 0;
@@ -471,8 +471,14 @@ Hammer_slide_block.on("panend panleft panright", function(ev) {
 		right_pan = 1;
 	}
 	if(ev.type == "panend") {
-		if(left_pan) $(rightbtn).click();
-		if(right_pan) $(leftbtn).click();
+		if(left_pan) dist = -ev.deltaX;
+		if(right_pan) dist = ev.deltaX;
+
+		for(i = 0; i < dist/50; i++) {
+			if(left_pan) $(rightbtn).click();
+			if(right_pan) $(leftbtn).click();
+		}
+		alert(dist/50);
 	}
 });
 
