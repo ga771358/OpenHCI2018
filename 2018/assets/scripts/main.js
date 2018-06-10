@@ -74,7 +74,7 @@ function scene1Enter(event) {
 }
 
 //intro
-var scene2 = new ScrollMagic.Scene({triggerElement: "#intro",triggerHook: 0.2,reverse: false});
+var scene2 = new ScrollMagic.Scene({triggerElement: "#intro",triggerHook: 0.5,reverse: false});
 scene2.addTo(controller);
 scene2.on("enter", scene2Enter);
 
@@ -680,7 +680,7 @@ function initMap() {
     position: pos,
 	map: map,
 	animation: google.maps.Animation.DROP,
-	icon: '../assets/images/icon-location.png'
+	icon: './assets/images/icon-location.png'
   });
   
   map.mapTypes.set('styled_map', styledMapType);
