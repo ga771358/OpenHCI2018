@@ -116,7 +116,7 @@ header {
       opacity: 0; }
     @media screen and (max-width: 1000px) {
       header.atLanding {
-        top: calc(100vh - 70px); } }
+        top: 100vh; } }
   header .logo {
     width: 100px;
     margin-left: 15px; }
@@ -609,7 +609,7 @@ header {
     padding-bottom: 120px; }
     @media screen and (max-width: 1000px) {
       .page-wrapper #description {
-        padding-top: 60px;
+        padding-top: 100px;
         padding-bottom: 50px; } }
     .page-wrapper #description .section-wrapper {
       width: 85%;
