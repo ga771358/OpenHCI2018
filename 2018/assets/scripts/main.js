@@ -477,7 +477,7 @@ $("#button-crew-right").click(function(){
 //crew button
 var leftbtn = document.getElementById('button-crew-left');
 var rightbtn = document.getElementById('button-crew-right');
-var slide_block = document.getElementById('crew-slide-id');
+var slide_block = document.getElementById('crew-content-id');
 
 // create a simple instance
 // by default, it only adds horizontal recognizers
@@ -487,7 +487,7 @@ var Hammer_slide_block = new Hammer(slide_block);
 var left_pan = 0, right_pan = 0, dist = 0, dist_base = 50;
 
 // listen to events...
-Hammer_slide_block.on("panend panleft panright", function(ev, ptr, thres) {
+Hammer_slide_block.on("panend panleft panright", function(ev) {
 	if(ev.type == "panleft") {
 		left_pan = 1;
 		right_pan = 0;
@@ -510,6 +510,25 @@ Hammer_slide_block.on("panend panleft panright", function(ev, ptr, thres) {
 		}
 	}
 });
+
+
+$(leftbtn).mouseover(function(){
+	if(button_left_able == 1 && $("#crew").width() > 1000){
+		$(this).attr("src","assets/images/crew-section/icon-left-red.svg");
+	}
+});
+$(leftbtn).mouseout(function(){
+	$(this).attr("src","assets/images/crew-section/icon-left.svg");
+});
+$(rightbtn).mouseover(function(){
+	if(button_right_able == 1 && $("#crew").width() > 1000){
+		$(this).attr("src","assets/images/crew-section/icon-right-red.svg");
+	}
+});
+$(rightbtn).mouseout(function(){
+	$(this).attr("src","assets/images/crew-section/icon-right.svg");
+});
+
 
 Hammer_leftbtn.on("tap", function(ev) {
     if(ev.type == "tap") {
