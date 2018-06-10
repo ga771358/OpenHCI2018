@@ -204,7 +204,7 @@ $(function() {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 			if (target.length) {
-			  	// ga('send', 'event','menu','click', 'menu_'+$(this).attr('href').substring(1));
+			  	ga('send', 'event','menu','click', 'menu_'+$(this).attr('href').substring(1));
 				isScrolling = true;// 確保animate就算先做執行 也不會做完ga
 				$('html, body').animate({
 				scrollTop: target.offset().top - scrollOffset
@@ -218,6 +218,33 @@ $(function() {
 		}
 	});
 });
+
+//ga
+var section_arr = [$("#landing"), $("#description"), $("#intro"), $("#program"), $("#registration"), $("#taichi"), $("#crew"), $("#organizer"), $("#contact")];
+var nowSectionID = 999;
+// any number!=0 1 2 3 4 (array)
+
+$(window).on("scroll", scrollHandler);
+
+function scrollHandler() {
+	if( isScrolling == true ) return;//避免同一個section因快速來回滾動計算多次 true會直接離開
+
+	var nowScrollTop = $(window).scrollTop();
+	// var wh = $(window).height();
+	for( var i=section_arr.length-1; i>=0; i-- ) {
+    	if( nowScrollTop + $(window).height() >= section_arr[i].offset().top + 100) {
+      		if( nowSectionID !== i ) {
+        		ga('send', 'pageview', 'page_'+section_arr[i].attr("id") );
+        		nowSectionID = i;
+      		}
+      		break;
+    	}
+  	}
+}
+
+$("#sign-up").on("click",function(){
+	ga('send', 'event','menu','click', 'menu_signup');
+})
 
 //steps accordion
 var stepOpenTime = 500;
