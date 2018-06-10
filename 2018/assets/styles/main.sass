@@ -126,7 +126,7 @@ header
 		&::before
 			opacity: 0
 		@media screen and (max-width: $breakpoint) 
-			top: calc(100vh - 70px)
+			top: 100vh
 
 	.logo
 		width: 100px
@@ -567,7 +567,7 @@ header
 		height: auto
 		display: flex
 		justify-content: center
-		//padding-top: 30px
+		// padding-top: 70px
 		padding-bottom: 120px
 		@media screen and (max-width: $breakpoint)
 			padding-top: 150px
@@ -635,6 +635,8 @@ header
 					display: flex
 					flex-direction: column
 					align-items: flex-start
+					.br
+						margin: 10px
 		span
 			opacity: 0
 	#intro
@@ -714,20 +716,20 @@ header
 	#interlude
 		height: auto
 		padding: 0
+		.section-wrapper
+			height: auto
 		.moving
 			width: 100%
 			height: auto
 			display: flex
 			align-items: center
-			img
-				// flex: 1
+			.moving-container
 				width: 100%
+				flex: 0 0 auto
 				@media screen and (max-width: $breakpoint) 
 					width: 200%
-
-
-				// height: auto
-				// float: left
+			img
+				width: 100%
 
 	#program
 		height: auto
@@ -1109,6 +1111,7 @@ header
 		align-items: center
 		justify-content: flex-end
 		.section-wrapper
+			height: auto
 			width: 85%
 			max-width: 1400px
 			display: flex
@@ -1161,7 +1164,7 @@ header
 								font-weight: bold
 								font-size: 20px
 								color: $bg
-								padding: 3px
+								// padding: 1px
 								padding-right: 46px
 								z-index: 2
 							.program
@@ -1190,8 +1193,6 @@ header
 								transform: rotate(-90deg) translateY(-107px) translateX(-104px)
 							.TA-team-tech
 								transform: rotate(-90deg) translateY(-95px) translateX(-92px)
-						.need-more-margin-left
-							margin-left: 25px
 						.crew-content-block-right,.crew-content-block-right2,.crew-content-block-right3
 							overflow: hidden
 							margin-left: 16px
@@ -1199,7 +1200,7 @@ header
 							vertical-align: top
 							width: calc(100%-20px)
 							.need-margin-top
-								margin-top: 48px
+								margin-top: 18px
 							.one-person
 								.person-name
 									font-size: 14px
@@ -1232,7 +1233,8 @@ header
 									letter-spacing: 1px
 									text-align: left
 									color: #ffffff
-
+						.need-more-margin-left
+							margin-left: 130px
 		.crew-button
 			margin-top: 40px
 			height: 50px
@@ -1446,7 +1448,7 @@ footer
 			@media screen and (max-width: $breakpoint-sm)
 				font-size: 14px
 		.need-margin-right
-			margin-right: 38px	
+			margin-right: 28px	
 		.url-group
 			display: inline-block
 			@media screen and (max-width: $breakpoint-of-footer)
@@ -1470,6 +1472,7 @@ footer
 				letter-spacing: 1px
 				text-align: left
 				color: #ffffff
+				transition-duration: 0.25s
 				&:hover
 					opacity: 1
 					color: $red

@@ -116,7 +116,7 @@ header {
       opacity: 0; }
     @media screen and (max-width: 1000px) {
       header.atLanding {
-        top: calc(100vh - 70px); } }
+        top: 100vh; } }
   header .logo {
     width: 100px;
     margin-left: 15px; }
@@ -609,7 +609,11 @@ header {
     padding-bottom: 120px; }
     @media screen and (max-width: 1000px) {
       .page-wrapper #description {
+<<<<<<< HEAD
         padding-top: 150px;
+=======
+        padding-top: 100px;
+>>>>>>> master
         padding-bottom: 50px; } }
     .page-wrapper #description .section-wrapper {
       width: 85%;
@@ -690,6 +694,8 @@ header {
               margin-top: 30px;
               left: 0px;
               position: relative; } }
+          .page-wrapper #description .section-wrapper .descript-right .descript-content .br {
+            margin: 10px; }
     .page-wrapper #description span {
       opacity: 0; }
   .page-wrapper #intro {
@@ -777,6 +783,8 @@ header {
   .page-wrapper #interlude {
     height: auto;
     padding: 0; }
+    .page-wrapper #interlude .section-wrapper {
+      height: auto; }
     .page-wrapper #interlude .moving {
       width: 100%;
       height: auto;
@@ -786,11 +794,16 @@ header {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
+      .page-wrapper #interlude .moving .moving-container {
+        width: 100%;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto; }
+        @media screen and (max-width: 1000px) {
+          .page-wrapper #interlude .moving .moving-container {
+            width: 200%; } }
       .page-wrapper #interlude .moving img {
         width: 100%; }
-        @media screen and (max-width: 1000px) {
-          .page-wrapper #interlude .moving img {
-            width: 200%; } }
   .page-wrapper #program {
     height: auto;
     display: -webkit-box;
@@ -1312,6 +1325,7 @@ header {
     -ms-flex-pack: end;
     justify-content: flex-end; }
     .page-wrapper #crew .section-wrapper {
+      height: auto;
       width: 85%;
       max-width: 1400px;
       display: -webkit-box;
@@ -1376,7 +1390,6 @@ header {
                 font-weight: bold;
                 font-size: 20px;
                 color: #191456;
-                padding: 3px;
                 padding-right: 46px;
                 z-index: 2; }
               .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-left .program {
@@ -1431,8 +1444,6 @@ header {
                 -webkit-transform: rotate(-90deg) translateY(-95px) translateX(-92px);
                 -ms-transform: rotate(-90deg) translateY(-95px) translateX(-92px);
                 transform: rotate(-90deg) translateY(-95px) translateX(-92px); }
-            .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .need-more-margin-left {
-              margin-left: 25px; }
             .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right2, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right3 {
               overflow: hidden;
               margin-left: 16px;
@@ -1440,7 +1451,7 @@ header {
               vertical-align: top;
               width: calc(100%-20px); }
               .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right .need-margin-top, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right2 .need-margin-top, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right3 .need-margin-top {
-                margin-top: 48px; }
+                margin-top: 18px; }
               .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right .one-person .person-name, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right2 .one-person .person-name, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right3 .one-person .person-name {
                 font-size: 14px;
                 font-weight: bold;
@@ -1472,6 +1483,8 @@ header {
                 letter-spacing: 1px;
                 text-align: left;
                 color: #ffffff; }
+            .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .need-more-margin-left {
+              margin-left: 130px; }
     .page-wrapper #crew .crew-button {
       margin-top: 40px;
       height: 50px;
@@ -1711,7 +1724,7 @@ footer {
         footer .footer-wrapper .copyright {
           font-size: 14px; } }
     footer .footer-wrapper .need-margin-right {
-      margin-right: 38px; }
+      margin-right: 28px; }
     footer .footer-wrapper .url-group {
       display: inline-block; }
       @media screen and (max-width: 1100px) {
@@ -1738,7 +1751,10 @@ footer {
         line-height: normal;
         letter-spacing: 1px;
         text-align: left;
-        color: #ffffff; }
+        color: #ffffff;
+        -webkit-transition-duration: 0.25s;
+        -o-transition-duration: 0.25s;
+        transition-duration: 0.25s; }
         footer .footer-wrapper .url-group .div-url:hover {
           opacity: 1;
           color: #d70050;
