@@ -458,7 +458,7 @@ var slide_block = document.getElementById('crew-slide-id');
 var Hammer_leftbtn = new Hammer(leftbtn);
 var Hammer_rightbtn = new Hammer(rightbtn);
 var Hammer_slide_block = new Hammer(slide_block);
-var left_pan = 0, right_pan;
+var left_pan = 0, right_pan = 0;
 
 // listen to events...
 Hammer_slide_block.on("panend panleft panright", function(ev) {
