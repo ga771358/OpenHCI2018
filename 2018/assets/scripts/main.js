@@ -473,8 +473,10 @@ Hammer_slide_block.on("panend panleft panright", function(ev, ptr, thres) {
 	if(ev.type == "panend") {
 		if(left_pan) dist = -ev.deltaX;
 		if(right_pan) dist = ev.deltaX;
-		if($(".slide-block").width() > 1000) dist_base = 50;
-		else dist_base = 20;
+		if($("#crew").width() > 1000) 
+			dist_base = 80;
+		else 
+			dist_base = 50;
 		
 		for(i = 0; i < dist/dist_base; i++) {
 			if(left_pan) $(rightbtn).click();
