@@ -474,7 +474,7 @@ Hammer_slide_block.on("panend panleft panright", function(ev, ptr, thres) {
 		if(left_pan) dist = -ev.deltaX;
 		if(right_pan) dist = ev.deltaX;
 		if($("#crew").width() > 1000) 
-			dist_base = 80;
+			dist_base = 70;
 		else 
 			dist_base = 50;
 		
