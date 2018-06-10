@@ -571,8 +571,9 @@ header {
     justify-content: center;
     padding-top: 30px;
     padding-bottom: 120px; }
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1000px) {
       .page-wrapper #description {
+        padding-top: 60px;
         padding-bottom: 50px; } }
     .page-wrapper #description .section-wrapper {
       width: 90%;
