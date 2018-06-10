@@ -16,6 +16,13 @@ $(".menu-btn,.black-screen").on("click", function() {
 	$(".m-menu-opener").removeClass('close');
 })
 
+//firefox bug
+$("#landing .title-logo").width($("#landing .empty").width());
+$(window).on("resize", function(){
+	$("#landing .title-logo").width($("#landing .empty").width());
+})
+
+
 //glitch
 var frequency = 5;
 var glitchCount = 0;
