@@ -5,7 +5,7 @@ $(".m-menu-opener").on("click", function() {
 	$(".m-menu-opener").toggleClass('close');
 	if($("header").hasClass('atLanding')) {
 		$('html, body').animate({
-			scrollTop: $("#landing").height() - $("header").height()
+			scrollTop: $("#landing").height() - ($("header").height()==100?100:0)
 		}, 400);
 	}
 })
@@ -40,12 +40,12 @@ glitch();
 var controller = new ScrollMagic.Controller();
 
 //header sticky
-var sectionHeight = $("#landing").height() - $("header").height();
+var sectionHeight = $("#landing").height() - ($("header").height()==100?100:0);
 var sceneHeader = new ScrollMagic.Scene({triggerElement: "#landing", duration: sectionHeight, triggerHook: 0})
 .setClassToggle("header", "atLanding")
 .addTo(controller);
 $(window).on("resize", function(){
-	sectionHeight = $("#landing").height() - $("header").height();
+	sectionHeight = $("#landing").height() - ($("header").height()==100?100:0);
 	sceneHeader.remove();
 	sceneHeader = new ScrollMagic.Scene({triggerElement: "#landing", duration: sectionHeight, triggerHook: 0})
 	.setClassToggle("header", "atLanding")
@@ -202,7 +202,7 @@ $(window).on("scroll",function(){
 //smooth scroll
 var isScrolling = false;
 //滾動偏移量
-var scrollOffset = $("header").height();
+// var scrollOffset = $("header").height();
 $(function() {
 	$('a[href*="#"]:not([href="#"])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -212,7 +212,7 @@ $(function() {
 			  	ga('send', 'event','menu','click', 'menu_'+$(this).attr('href').substring(1));
 				isScrolling = true;// 確保animate就算先做執行 也不會做完ga
 				$('html, body').animate({
-				scrollTop: target.offset().top - scrollOffset
+				scrollTop: target.offset().top - ($("header").height()==100?100:0)
 				}, 400, function(){
 					setTimeout(function(){
 						isScrolling = false;
