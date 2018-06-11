@@ -491,6 +491,7 @@ header {
             .page-wrapper #landing .titles .title-wrapper .left .title-logo .empty {
               height: 100%; }
           .page-wrapper #landing .titles .title-wrapper .left .col {
+            height: 100%;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
