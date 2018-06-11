@@ -985,7 +985,7 @@ header {
                   height: auto;
                   left: 0; } }
           .page-wrapper #program .section-wrapper .program-container .program-content:nth-child(3) img {
-            left: 0;
+            left: 9%;
             -webkit-transform: translateX(-10%);
             -ms-transform: translateX(-10%);
             transform: translateX(-10%); }
@@ -995,7 +995,7 @@ header {
                 -ms-transform: translateX(0);
                 transform: translateX(0); } }
           .page-wrapper #program .section-wrapper .program-container .program-content:nth-child(5) img {
-            left: 0;
+            left: 26%;
             -webkit-transform: translateX(-20%);
             -ms-transform: translateX(-20%);
             transform: translateX(-20%); }
