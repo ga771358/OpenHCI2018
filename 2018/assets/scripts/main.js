@@ -398,7 +398,7 @@ $("#button-crew-left").click(function(){
 		return;
 	}
 	
-	console.log(crew);
+	//console.log(crew);
 	if(document_width > 1150 && crew == 24){
 		crew = 	crew - 2;
 	}
