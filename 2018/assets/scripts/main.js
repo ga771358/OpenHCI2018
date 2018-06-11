@@ -3,11 +3,6 @@ $(".m-menu-opener").on("click", function() {
 	$(".menu").toggleClass('active');
 	$(".black-screen").toggleClass('active');
 	$(".m-menu-opener").toggleClass('close');
-	if($("header").hasClass('atLanding')) {
-		$('html, body').animate({
-			scrollTop: $("#landing").height() - ($("header").height()==100?100:0)
-		}, 400);
-	}
 })
 
 $(".menu-btn,.black-screen").on("click", function() {
@@ -95,7 +90,7 @@ scene2.on("enter", scene2Enter);
 
 function scene2Enter(event) {
 	var tl = new TimelineMax({repeat:0});
-	tl.to($("#intro #our-video"), 1, {opacity:1});
+	tl.to($("#intro .video-frame"), 1, {opacity:1});
 	tl.staggerTo($("#intro .title"), 1, {className:"+=colorAnimate"},0.5,"+0");
 	tl.staggerTo($("#intro .content"), 1, {className:"+=colorAnimate"},0.5,"+0");
 }
@@ -367,6 +362,8 @@ var TA_team_tech_second_right_div_width = $(TA_team_tech_second_right_div).width
 $("#button-crew-left").click(function(){
 
 	// console.log("from:" + crew);
+	var document_width = $(document).width();
+
 	//如果是最左了，則不進行任何動作
 	if(crew == 0){ return; }
 	
@@ -403,8 +400,23 @@ $("#button-crew-left").click(function(){
 		return;
 	}
 	
-	crew = crew - 2;
-
+	// console.log(crew);
+	if(document_width > 1150 && crew == 24){
+		crew = 	crew - 2;
+	}
+	else if(document_width > 1150 && crew == 22){
+		crew = 	crew - 6;
+	}
+	else if(document_width > 1150 && crew == 10){
+		crew = 	crew - 4;
+	}
+	else if(document_width > 1150){
+		crew = 	crew - 6;
+	}
+	else{
+		crew = crew - 2;
+	}
+	
 	//計算位移的大小（crew-content-block & empty-block & 5)
 	var total_size_need_to_slide = 0;
 	for(var i=0;i<crew;i++) {
@@ -467,7 +479,19 @@ $("#button-crew-right").click(function(){
 		return;
 	}
 
-	crew = crew + 2;
+	// console.log(crew);
+	if(document_width > 1150 && crew == 6){
+		crew = 	crew + 4;
+	}
+	else if(document_width > 1150 && crew == 22){
+		crew = 	crew + 2;
+	}
+	else if(document_width > 1150){
+		crew = 	crew + 6;
+	}
+	else{
+		crew = crew + 2;
+	}
 
 	//計算位移的大小（crew-content-block & empty-block & 5)
 	var total_size_need_to_slide = 0;
