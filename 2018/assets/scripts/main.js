@@ -17,9 +17,12 @@ $(".menu-btn,.black-screen").on("click", function() {
 })
 
 //firefox bug
-$("#landing .title-logo").width($("#landing .empty").width());
-$(window).on("resize", function(){
-	$("#landing .title-logo").width($("#landing .empty").width());
+$(window).on("load resize", function(){
+	if($("header").height()==100) {
+		$("#landing .title-logo").width($("#landing .empty").width());
+	} else {
+		$("#landing .title-logo").width("");
+	}
 })
 
 
