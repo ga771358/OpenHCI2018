@@ -265,9 +265,9 @@ header
 		span
 			display: block
 			width: 100%
-			height: 3px
+			height: 2px
 			background-color: $header_menu_font
-			margin-bottom: 5px
+			margin-bottom: 7px
 			transition: 0.3s
 		span:nth-child(3)
 			margin-bottom: 0
@@ -280,7 +280,7 @@ header
 				&:nth-child(2)
 					transform: rotate(45deg)
 				&:nth-child(3)
-					transform: translateY(-3px) rotate(-45deg)
+					transform: translateY(-2px) rotate(-45deg)
 
 .loading
 	position: fixed
@@ -523,7 +523,7 @@ header
 						.title-logo
 							height: auto
 							width: 75%
-							max-width: 270px
+							max-width: 400px
 							margin-right: 0
 							margin-bottom: 50px
 							z-index: 1
@@ -545,16 +545,16 @@ header
 							justify-content: space-between
 							align-items: flex-start
 							padding: 0
-							width: 45%
+							width: 75%
 							flex: 0 0 auto
-							max-width: 160px
+							max-width: 400px
 							.title1
 								height: auto
 								width: 100%
 					.right
 						height: 100%
 						width: 10%
-						max-width: 40px
+						max-width: 70px
 						img
 							height: auto
 							width: 100%
@@ -726,6 +726,7 @@ header
 			.moving-container
 				width: 100%
 				flex: 0 0 auto
+				margin-right: 50px
 				@media screen and (max-width: $breakpoint) 
 					width: 200%
 			img
@@ -810,11 +811,19 @@ header
 						p:last-child
 							&::before
 								transition-delay: 0.1s
+					&:hover
+						p
+							&::before
+								background-color: rgba($green,1)
+								width: calc(100% + 10px)
+							span 
+								color: $blue
+						p:last-child
+							&::before
+								transition-delay: 0.1s
 			.program-container
 				width: 100%
-				margin-top: 100px
-				@media screen and (max-width: $breakpoint) 
-					margin-top: 30px
+				margin-top: 30px
 				.program-content
 					width: 100%
 					display: flex
@@ -856,6 +865,23 @@ header
 								width: 100%
 								height: auto
 								left: 0
+					&:nth-child(3)
+						img
+							left: 0
+							transform: translateX(-10%)
+							@media screen and (max-width: 500px) 
+								transform: translateX(0)
+					&:nth-child(5)
+						img
+							left: 0
+							transform: translateX(-20%)
+							@media screen and (max-width: 500px) 
+								transform: translateX(0)
+					&:nth-child(6)
+						img
+							transform: translateX(-43%)
+							@media screen and (max-width: 500px) 
+								transform: translateX(0)
 					.program-schedule
 						flex: 1
 						flex-direction: column
@@ -945,9 +971,10 @@ header
 					flex: 2
 					// font-size: 1.3em
 					font-size: 21px
-					font-weight: bold					// margin-right: 100px
+					font-weight: bold
+					line-height: 1.5em
 					@media screen and (max-width: $breakpoint) 
-						margin-bottom: 40px
+						margin-bottom: 20px
 				.step-content
 					color: #fff
 					flex: 6
@@ -996,7 +1023,7 @@ header
 						@media screen and (max-width: $breakpoint) 
 							margin-left: 20px
 					.highlight
-						padding: 10px
+						padding: 5px 10px
 						font-weight: bold						
 						margin: 20px 0
 						background-color: $green
