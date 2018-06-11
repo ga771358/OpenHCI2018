@@ -21,7 +21,11 @@ $(window).on("load resize", function(){
 })
 
 //landing bg light
-$(window).on("load", function(){
+
+if($(".mask")[0].complete) {
+	$("#landing .light").addClass('active');
+}
+$(".mask").on("load", function(){
 	$("#landing .light").addClass('active');
 })
 
