@@ -1046,6 +1046,8 @@ header
 		height: auto
 		display: flex
 		justify-content: center
+		@media screen and (max-width: $breakpoint-mid)
+			padding-top: 0px
 		.section-wrapper
 			// margin-top: 50px
 			width: 85%	
@@ -1061,6 +1063,8 @@ header
 					left: 50%
 					transform: translateX(-50%)
 					opacity: 0
+				@media screen and (max-width: $breakpoint-mid)
+					margin-bottom: 20px
 				img
 					width: 100%
 			.section-left
