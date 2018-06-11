@@ -422,7 +422,10 @@ header {
         top: 0;
         left: 0;
         -webkit-animation: light 5s linear infinite;
-        animation: light 5s linear infinite; }
+        animation: light 5s linear infinite;
+        opacity: 0; }
+        .page-wrapper #landing .screen .light.active {
+          opacity: 1; }
       .page-wrapper #landing .screen .light-mask {
         width: 100%;
         height: 100%;

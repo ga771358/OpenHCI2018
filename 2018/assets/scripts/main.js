@@ -20,6 +20,15 @@ $(window).on("load resize", function(){
 	}
 })
 
+//landing bg light
+
+if($(".mask")[0].complete) {
+	$("#landing .light").addClass('active');
+}
+$(".mask").on("load", function(){
+	$("#landing .light").addClass('active');
+})
+
 
 //glitch
 var frequency = 5;
