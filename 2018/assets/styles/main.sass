@@ -1355,12 +1355,24 @@ header
 					justify-content: flex-start
 					@media screen and (max-width: $breakpoint)
 						flex-wrap: wrap
-					.logo-block,.logo-small
+					.logo-block
 						height: 100px
 						opacity: 0
 						margin-right: 40px
 						@media screen and (max-width: $breakpoint)
 							height: 80px
+						&:last-child
+							margin-right: 0
+						.og-logo
+							height: 100%
+					.logo-small
+						height: 80px
+						opacity: 0
+						margin-right: 40px
+						margin-bottom: 30px
+						@media screen and (max-width: $breakpoint)
+							height: 44px
+							margin-right: 15px
 						&:last-child
 							margin-right: 0
 						.og-logo
