@@ -1090,7 +1090,8 @@ header {
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    padding-bottom: 30px; }
     .page-wrapper #registration .section-wrapper {
       height: auto;
       display: -webkit-box;
@@ -1238,16 +1239,12 @@ header {
         .page-wrapper #taichi .section-wrapper {
           margin-top: 0px; } }
       .page-wrapper #taichi .section-wrapper .breakpoint-block {
-        width: 95%;
+        width: 100%;
         display: none; }
         @media screen and (max-width: 1000px) {
           .page-wrapper #taichi .section-wrapper .breakpoint-block {
             display: inline-block;
             margin-bottom: 50px;
-            left: 50%;
-            -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
             opacity: 0; } }
         @media screen and (max-width: 768px) {
           .page-wrapper #taichi .section-wrapper .breakpoint-block {
