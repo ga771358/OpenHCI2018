@@ -867,21 +867,27 @@ header
 								left: 0
 					&:nth-child(3)
 						img
-							left: 9%
-							transform: translateX(-10%)
+							@media screen and (max-width: $breakpoint)
+								left: 9%
+								transform: translateX(-10%)
 							@media screen and (max-width: 500px) 
 								transform: translateX(0)
+								left: 0
 					&:nth-child(5)
 						img
-							left: 26%
-							transform: translateX(-20%)
+							@media screen and (max-width: $breakpoint) 
+								left: 26%
+								transform: translateX(-20%)
 							@media screen and (max-width: 500px) 
 								transform: translateX(0)
+								left: 0
 					&:nth-child(6)
 						img
-							transform: translateX(-43%)
+							@media screen and (max-width: $breakpoint)
+								transform: translateX(-43%)
 							@media screen and (max-width: 500px) 
 								transform: translateX(0)
+								left: 0
 					.program-schedule
 						flex: 1
 						flex-direction: column
