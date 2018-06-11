@@ -318,7 +318,7 @@ function tabAnimate(){
 var player;
 function onYouTubeIframeAPIReady() {
 	player = new YT.Player('our-video', {
-		videoId: 'kfXdP7nZIiE', //Youtube 影片ID
+		videoId: '9Nyb16IrJQM', //Youtube 影片ID
 		playerVars: { 'autoplay': 0, 'controls': 1,'showinfo':0,'rel':0,'modestbranding':0,'loop':1}
 	});
 }
