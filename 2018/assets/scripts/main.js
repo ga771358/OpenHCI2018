@@ -398,7 +398,7 @@ $("#button-crew-left").click(function(){
 		return;
 	}
 	
-	//console.log(crew);
+	// console.log(crew);
 	if(document_width > 1150 && crew == 24){
 		crew = 	crew - 2;
 	}
@@ -408,8 +408,11 @@ $("#button-crew-left").click(function(){
 	else if(document_width > 1150 && crew == 10){
 		crew = 	crew - 4;
 	}
+	else if(document_width > 1150){
+		crew = 	crew - 6;
+	}
 	else{
-		crew = crew - 6;
+		crew = crew - 2;
 	}
 	
 	//計算位移的大小（crew-content-block & empty-block & 5)
@@ -474,6 +477,7 @@ $("#button-crew-right").click(function(){
 		return;
 	}
 
+	// console.log(crew);
 	if(document_width > 1150 && crew == 6){
 		crew = 	crew + 4;
 	}
