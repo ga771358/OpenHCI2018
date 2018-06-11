@@ -1613,6 +1613,8 @@ header {
           .page-wrapper #organizer .section-wrapper .og-section-block .og-section-title span {
             opacity: 0; }
         .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper {
+          -ms-flex-flow: wrap;
+          flex-flow: wrap;
           padding: 40px 0;
           width: 100%;
           display: -webkit-box;
