@@ -3,11 +3,6 @@ $(".m-menu-opener").on("click", function() {
 	$(".menu").toggleClass('active');
 	$(".black-screen").toggleClass('active');
 	$(".m-menu-opener").toggleClass('close');
-	if($("header").hasClass('atLanding')) {
-		$('html, body').animate({
-			scrollTop: $("#landing").height() - ($("header").height()==100?100:0)
-		}, 400);
-	}
 })
 
 $(".menu-btn,.black-screen").on("click", function() {
@@ -95,7 +90,7 @@ scene2.on("enter", scene2Enter);
 
 function scene2Enter(event) {
 	var tl = new TimelineMax({repeat:0});
-	tl.to($("#intro #our-video"), 1, {opacity:1});
+	tl.to($("#intro .video-frame"), 1, {opacity:1});
 	tl.staggerTo($("#intro .title"), 1, {className:"+=colorAnimate"},0.5,"+0");
 	tl.staggerTo($("#intro .content"), 1, {className:"+=colorAnimate"},0.5,"+0");
 }
