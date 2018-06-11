@@ -1224,6 +1224,9 @@ header {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
+    @media screen and (max-width: 768px) {
+      .page-wrapper #taichi {
+        padding-top: 0px; } }
     .page-wrapper #taichi .section-wrapper {
       width: 85%;
       max-width: 1400px; }
@@ -1242,6 +1245,9 @@ header {
             -ms-transform: translateX(-50%);
             transform: translateX(-50%);
             opacity: 0; } }
+        @media screen and (max-width: 768px) {
+          .page-wrapper #taichi .section-wrapper .breakpoint-block {
+            margin-bottom: 20px; } }
         .page-wrapper #taichi .section-wrapper .breakpoint-block img {
           width: 100%; }
       .page-wrapper #taichi .section-wrapper .section-left {
@@ -1618,10 +1624,21 @@ header {
                 width: 45%;
                 margin-bottom: 40px; } }
             .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block .og-logo {
+              -webkit-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+              left: 50%;
               width: 90%; }
               @media screen and (max-width: 375px) {
                 .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block .og-logo {
                   width: 95%; } }
+            .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block .logo1 {
+              width: 40%;
+              top: 5px; }
+            .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block .logo2 {
+              bottom: 5px; }
+            .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block .logo4 {
+              top: 5px; }
           .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small {
             display: inline-block;
             opacity: 0;
@@ -1633,6 +1650,10 @@ header {
                 width: 30%;
                 margin-bottom: 40px; } }
             .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small .og-logo {
+              -webkit-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+              left: 50%;
               width: 85%; }
   .page-wrapper #contact {
     height: auto;
