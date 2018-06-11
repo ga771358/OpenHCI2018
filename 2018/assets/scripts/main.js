@@ -738,7 +738,7 @@ function initMap() {
     position: pos,
 	map: map,
 	animation: google.maps.Animation.DROP,
-	icon: './assets/images/icon-location.png'
+	icon: './assets/images/icon-location.svg'
   });
   
   map.mapTypes.set('styled_map', styledMapType);
