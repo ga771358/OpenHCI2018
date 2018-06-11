@@ -1627,16 +1627,29 @@ header {
             .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper {
               -ms-flex-wrap: wrap;
               flex-wrap: wrap; } }
-          .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block, .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small {
+          .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block {
             height: 100px;
             opacity: 0;
             margin-right: 40px; }
             @media screen and (max-width: 1000px) {
-              .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block, .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small {
+              .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block {
                 height: 80px; } }
-            .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block:last-child, .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small:last-child {
+            .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block:last-child {
               margin-right: 0; }
-            .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block .og-logo, .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small .og-logo {
+            .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-block .og-logo {
+              height: 100%; }
+          .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small {
+            height: 80px;
+            opacity: 0;
+            margin-right: 40px;
+            margin-bottom: 30px; }
+            @media screen and (max-width: 1000px) {
+              .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small {
+                height: 44px;
+                margin-right: 15px; } }
+            .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small:last-child {
+              margin-right: 0; }
+            .page-wrapper #organizer .section-wrapper .og-section-block .og-section-logo-wrapper .logo-small .og-logo {
               height: 100%; }
   .page-wrapper #contact {
     height: auto;
