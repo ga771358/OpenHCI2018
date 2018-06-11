@@ -194,7 +194,6 @@ header {
       header .menu {
         position: fixed;
         width: 100%;
-        height: 80vh;
         top: 0;
         left: 0;
         -webkit-transition: 0.5s;
@@ -206,7 +205,6 @@ header {
           visibility: visible; }
         header .menu .menu-container {
           width: 100%;
-          height: 100%;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -242,13 +240,8 @@ header {
             -ms-flex-align: center;
             align-items: center;
             width: 100%;
-            height: 100%;
-            padding: 80px 0 50px 0;
-            border: 0; } }
-      @media screen and (max-width: 1000px) and (max-width: 1000px) {
-        header .menu .menu-container .in-site, header .menu .menu-container .out-site {
-          padding: 50px 0 30px 0; } }
-    @media screen and (max-width: 1000px) {
+            border: 0;
+            padding: 50px 0 30px 0; }
             header .menu .menu-container .in-site .menu-btn, header .menu .menu-container .out-site .menu-btn {
               width: 90%;
               height: 45px;
@@ -263,12 +256,17 @@ header {
               -ms-flex-align: center;
               align-items: center;
               margin: 0;
-              font-size: 1.3em; }
+              font-size: 16px; } }
+        @media screen and (max-width: 1000px) and (max-width: 375px) {
+          header .menu .menu-container .in-site .menu-btn, header .menu .menu-container .out-site .menu-btn {
+            font-size: 14px; } }
+    @media screen and (max-width: 1000px) {
               header .menu .menu-container .in-site .menu-btn::before, header .menu .menu-container .out-site .menu-btn::before {
                 display: none; }
             header .menu .menu-container .in-site #sign-up, header .menu .menu-container .out-site #sign-up {
               width: 90%;
-              height: 45px; } }
+              height: 45px;
+              margin-top: 10px; } }
   @media screen and (max-width: 1000px) {
     header .menu-slidein {
       top: -100%; }
@@ -281,21 +279,22 @@ header {
         -o-transition: none;
         transition: none;
         opacity: 1; } }
-  header .black-screen {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; }
-    header .black-screen.active {
-      visibility: visible;
-      opacity: 1; }
+  @media screen and (max-width: 1000px) {
+    header .black-screen {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      visibility: hidden;
+      opacity: 0;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+      header .black-screen.active {
+        visibility: visible;
+        opacity: 1; } }
   header .m-menu-opener {
     cursor: pointer;
     height: 30px;
