@@ -1197,21 +1197,23 @@ header {
                 margin-left: 20px; }
                 .page-wrapper #registration .section-wrapper .step .step-content .dot::before {
                   left: -20px; } }
-          .page-wrapper #registration .section-wrapper .step .step-content .q1, .page-wrapper #registration .section-wrapper .step .step-content .q2 {
+          .page-wrapper #registration .section-wrapper .step .step-content .q1, .page-wrapper #registration .section-wrapper .step .step-content .q2, .page-wrapper #registration .section-wrapper .step .step-content .q3 {
             margin-left: 20px; }
-            .page-wrapper #registration .section-wrapper .step .step-content .q1::before, .page-wrapper #registration .section-wrapper .step .step-content .q2::before {
+            .page-wrapper #registration .section-wrapper .step .step-content .q1::before, .page-wrapper #registration .section-wrapper .step .step-content .q2::before, .page-wrapper #registration .section-wrapper .step .step-content .q3::before {
               position: absolute;
               top: 0;
               left: -20px; }
             @media screen and (max-width: 1000px) {
-              .page-wrapper #registration .section-wrapper .step .step-content .q1, .page-wrapper #registration .section-wrapper .step .step-content .q2 {
+              .page-wrapper #registration .section-wrapper .step .step-content .q1, .page-wrapper #registration .section-wrapper .step .step-content .q2, .page-wrapper #registration .section-wrapper .step .step-content .q3 {
                 margin-left: 20px; }
-                .page-wrapper #registration .section-wrapper .step .step-content .q1::before, .page-wrapper #registration .section-wrapper .step .step-content .q2::before {
+                .page-wrapper #registration .section-wrapper .step .step-content .q1::before, .page-wrapper #registration .section-wrapper .step .step-content .q2::before, .page-wrapper #registration .section-wrapper .step .step-content .q3::before {
                   left: -20px; } }
           .page-wrapper #registration .section-wrapper .step .step-content .q1::before {
             content: "1."; }
           .page-wrapper #registration .section-wrapper .step .step-content .q2::before {
             content: "2."; }
+          .page-wrapper #registration .section-wrapper .step .step-content .q3::before {
+            content: "3."; }
           .page-wrapper #registration .section-wrapper .step .step-content .tab {
             margin-left: 20px; }
             @media screen and (max-width: 1000px) {
