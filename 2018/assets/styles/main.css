@@ -1518,7 +1518,7 @@ header {
                 letter-spacing: 1px;
                 text-align: left;
                 color: #50E6B4;
-                margin-bottom: 5px; }
+                margin-bottom: 6px; }
                 .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right .one-person .person-name .chief-TA, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right2 .one-person .person-name .chief-TA, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right3 .one-person .person-name .chief-TA {
                   margin-left: 5px;
                   display: inline-block;
@@ -1532,7 +1532,6 @@ header {
                   text-align: left; }
               .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right .one-person .person-detail, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right2 .one-person .person-detail, .page-wrapper #crew .section-wrapper .crew-content .slide-block .crew-content-block .crew-content-block-right3 .one-person .person-detail {
                 height: 24px;
-                margin-top: 1px;
                 font-size: 14px;
                 font-weight: normal;
                 font-style: normal;
