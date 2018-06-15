@@ -1409,8 +1409,8 @@ header {
         margin-top: 45px;
         display: inline-block;
         width: 100%;
-        opacity: 0;
-        border: solid 1px white; }
+        overflow: hidden;
+        opacity: 0; }
         .page-wrapper #crew .section-wrapper .crew-content .blur-block {
           position: absolute;
           height: 100%;
