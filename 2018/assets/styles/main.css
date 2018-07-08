@@ -355,9 +355,10 @@ header {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding: 100px 0;
   top: -150%;
   background-image: url("../images/lightbox-bg.png");
   background-size: cover;
@@ -368,12 +369,6 @@ header {
   transition: 0.5s; }
   .lightbox.active {
     top: 0; }
-  @media screen and (max-width: 650px) {
-    .lightbox {
-      -webkit-box-align: start;
-      -ms-flex-align: start;
-      align-items: flex-start;
-      padding: 100px 0; } }
   .lightbox .logo {
     position: absolute;
     top: 20px;
@@ -499,22 +494,33 @@ header {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        margin-bottom: 20px; }
-        @media screen and (max-width: 650px) {
-          .lightbox .section-wrapper .list .title {
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column; } }
+        margin-bottom: 20px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
         .lightbox .section-wrapper .list .title .main {
           font-size: 16px;
           color: #d70050;
           font-weight: 600;
-          margin-right: 20px; }
+          margin-right: 20px;
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 auto;
+          flex: 0 0 auto; }
           @media screen and (max-width: 650px) {
             .lightbox .section-wrapper .list .title .main {
               margin-bottom: 10px; } }
         .lightbox .section-wrapper .list .title .sub {
+          opacity: 0.7;
           font-size: 14px;
           line-height: 1.5; }
       .lightbox .section-wrapper .list .content {
