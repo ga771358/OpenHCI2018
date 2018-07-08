@@ -298,7 +298,8 @@ header
 	height: 100%
 	display: flex
 	justify-content: center
-	align-items: center
+	align-items: flex-start
+	padding: 100px 0
 	top: -150%
 	background-image: url("../images/lightbox-bg.png")
 	background-size: cover
@@ -309,8 +310,7 @@ header
 		top: 0
 	@media screen and (max-width: 650px)
 		// height: auto
-		align-items: flex-start
-		padding: 100px 0
+		
 	.logo
 		position: absolute
 		top: 20px
@@ -395,18 +395,23 @@ header
 			.title
 				display: flex
 				margin-bottom: 20px
+				align-items: center
 				@media screen and (max-width: 650px)
 					flex-direction: column
+					align-items: flex-start
+					justify-content: center
 				.main
 					font-size: 16px
 					color: $red
 					font-weight: 600
 					margin-right: 20px
+					flex: 0 0 auto
 					@media screen and (max-width: 650px)
 						margin-bottom: 10px
 				.sub
 					font-size: 14px
 					line-height: 1.5
+					// flex: 0 0 auto
 			.content
 				display: flex
 				flex-wrap: wrap
