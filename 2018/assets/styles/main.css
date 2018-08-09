@@ -515,7 +515,8 @@ header {
           margin-right: 20px;
           -webkit-box-flex: 0;
           -ms-flex: 0 0 auto;
-          flex: 0 0 auto; }
+          flex: 0 0 auto;
+          margin-bottom: 5px; }
           @media screen and (max-width: 650px) {
             .lightbox .section-wrapper .list .title .main {
               margin-bottom: 10px; } }
